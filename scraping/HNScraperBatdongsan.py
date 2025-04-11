@@ -12,8 +12,8 @@ import time
 
 
 def save_data(lock, url_data, data):
-    url_tsv_file = "/Users/ducan/Documents/test/data/hn_batdongsan_url.tsv"
-    data_tsv_file = "/Users/ducan/Documents/test/data/hn_batdongsan.tsv"
+    url_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/hn_batdongsan_url.tsv"
+    data_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/hn_batdongsan.tsv"
 
     url_df = pd.DataFrame([url_data])
     data_df = pd.DataFrame([data])
@@ -43,19 +43,17 @@ def extract_id_from_url(url: str):
 
 def create_driver(user_data_dir):
     chrome_options = Options()
-    chrome_options.add_argument("--headless=new")  # more reliable on macOS
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("--headless") 
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
     # chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
 
-    # prefs = {
-    #     "profile.managed_default_content_settings.images": 2,
-    #     "profile.managed_default_content_settings.stylesheets": 2,
-    #     "profile.managed_default_content_settings.fonts": 2
-    # }
-    # chrome_options.add_experimental_option("prefs", prefs)
+    prefs = {
+        "profile.managed_default_content_settings.images": 2,
+        "profile.managed_default_content_settings.stylesheets": 2,
+        "profile.managed_default_content_settings.fonts": 2
+    }
+    chrome_options.add_experimental_option("prefs", prefs)
 
     return webdriver.Chrome(options=chrome_options)
 
@@ -196,8 +194,8 @@ def load_crawled_ids(tsv_file_path):
 
 
 if __name__ == '__main__':
-    input_file = "/Users/ducan/Documents/test/data/hn_batdongsan_links.txt"
-    url_tsv_file = "/Users/ducan/Documents/test/data/hn_batdongsan_url.tsv"
+    input_file = "/home/ducan/Documents/anmd/test-crawl/data/hn_batdongsan_links.txt"
+    url_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/hn_batdongsan_url.tsv"
 
     crawled_ids = load_crawled_ids(url_tsv_file)
 
@@ -210,7 +208,7 @@ if __name__ == '__main__':
 
         jobs = [(url, lock, shared_ids) for url in links]
 
-        with Pool(processes=4) as pool:  # Adjust number of processes based on your system
+        with Pool(processes=5) as pool:  # Adjust number of processes based on your system
             pool.map(scrape_one_url, jobs)
 
     print("✅ Scraping completed.")
