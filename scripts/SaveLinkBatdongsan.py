@@ -21,14 +21,15 @@ def clear_file(file_path):
         file.truncate(0)  
 
 def scrape_links():
-    output_file = "/Users/ducan/Documents/test/data/hn_batdongsan_links.txt"
-    error_file = "/Users/ducan/Documents/test/data/hn_batdongsan_error_links.txt"
+    output_file = "/Users/ducan/Documents/test/data/batdongsan_links.txt"
+    error_file = "/Users/ducan/Documents/test/data/batdongsan_error_links.txt"
     
     unscraped_links = set()
     with open(output_file, 'r', encoding='utf-8') as existing_links_file:
         existing_links = existing_links_file.read().splitlines()
         unscraped_links.update(existing_links)
-    sourceUrl = 'https://batdongsan.com.vn/nha-dat-ban-ha-noi'
+    sourceUrl = 'https://batdongsan.com.vn/nha-dat-ban'
+    path = "?gtn=7-ty&gcn=30-ty"
     filter_path = "?gtn=7-ty&gcn=30-ty"
 
     chrome_options = Options()
@@ -42,7 +43,7 @@ def scrape_links():
 
     page_index = 0
 
-    while page_index < 1190:
+    while page_index < 3058:
         page_index += 1
         driver = webdriver.Chrome(options=chrome_options)
         page_path = "/p" + str(page_index)
@@ -79,6 +80,9 @@ def scrape_links():
 
     print("Retrying error URLs...")
 
+    # if not os.path.exists(error_file):
+    #     print("No error file found. Done.")
+    #     return
 
     with open(error_file, 'r', encoding='utf-8') as ef:
         error_urls = ef.read().splitlines()
