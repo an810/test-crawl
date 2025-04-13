@@ -193,22 +193,60 @@ def load_crawled_ids(tsv_file_path):
     return set(df["id"].astype(str))
 
 
-if __name__ == '__main__':
-    input_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan_links.txt"
-    url_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan_url.tsv"
+# if __name__ == '__main__':
+#     input_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan_links.txt"
+#     url_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan_url.tsv"
 
-    crawled_ids = load_crawled_ids(url_tsv_file)
+#     crawled_ids = load_crawled_ids(url_tsv_file)
 
-    with open(input_file, 'r', encoding='utf-8') as file:
-        links = file.read().splitlines()
+#     with open(input_file, 'r', encoding='utf-8') as file:
+#         links = file.read().splitlines()
 
-    with Manager() as manager:
-        lock = manager.Lock()
-        shared_ids = manager.list(crawled_ids)
+#     with Manager() as manager:
+#         lock = manager.Lock()
+#         shared_ids = manager.list(crawled_ids)
 
-        jobs = [(url, lock, shared_ids) for url in links]
+#         jobs = [(url, lock, shared_ids) for url in links]
 
-        with Pool(processes=5) as pool:  # Adjust number of processes based on your system
-            pool.map(scrape_one_url, jobs)
+#         with Pool(processes=5) as pool:  # Adjust number of processes based on your system
+#             pool.map(scrape_one_url, jobs)
 
-    print("✅ Scraping completed.")
+#     print("✅ Scraping completed.")
+
+def scrape_data():
+    """
+    Main scraping function that can be called by the Airflow DAG
+    """
+    try:
+        # Read links from file
+        with open('/opt/airflow/data/batdongsan_links.txt', 'r', encoding='utf-8') as f:
+            urls = f.read().splitlines()
+
+        # Initialize list to store all property data
+        all_properties = []
+        
+        # Process each URL
+        for url in urls:
+            try:
+                property_data = scrape_property_data(url)
+                all_properties.append(property_data)
+                time.sleep(random.uniform(1, 3))  # Random delay between requests
+            except Exception as e:
+                logging.error(f"Error scraping {url}: {e}")
+                continue
+
+        # Convert to DataFrame and save
+        df = pd.DataFrame(all_properties)
+        output_path = '/opt/airflow/data/batdongsan_data.csv'
+        df.to_csv(output_path, index=False, encoding='utf-8')
+        
+        logging.info(f"Successfully scraped {len(all_properties)} properties")
+        return True
+
+    except Exception as e:
+        logging.error(f"Error in scrape_data: {e}")
+        return False
+
+if __name__ == "__main__":
+    # This block only runs if the script is executed directly
+    scrape_data()

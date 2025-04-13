@@ -8,7 +8,7 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
 from SaveLinkBatdongsan import scrape_links
-from ScraperBatdongsan import main as scrape_data
+from ScraperBatdongsan import scrape_data
 
 default_args = {
     'owner': 'airflow',
