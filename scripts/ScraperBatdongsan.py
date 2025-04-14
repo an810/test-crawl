@@ -9,11 +9,40 @@ import tempfile
 import shutil
 from multiprocessing import Pool, Lock, Manager
 import time
+import logging
+import random
 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Define output directories
+AIRFLOW_DATA_DIR = '/opt/airflow/data'
+LOCAL_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data')
+
+# Create output directories if they don't exist
+def ensure_directories_exist():
+    """Create output directories if they don't exist"""
+    directories = [AIRFLOW_DATA_DIR, LOCAL_DATA_DIR]
+    for directory in directories:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+            logging.info(f"Created directory: {directory}")
+
+# Call this function at the beginning
+ensure_directories_exist()
 
 def save_data(lock, url_data, data):
-    url_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan_url.tsv"
-    data_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan.tsv"
+    # Determine which directory to use based on environment
+    if os.path.exists(AIRFLOW_DATA_DIR):
+        base_dir = AIRFLOW_DATA_DIR
+    else:
+        base_dir = LOCAL_DATA_DIR
+        
+    url_tsv_file = os.path.join(base_dir, "batdongsan_url.tsv")
+    data_tsv_file = os.path.join(base_dir, "batdongsan.tsv")
 
     url_df = pd.DataFrame([url_data])
     data_df = pd.DataFrame([data])
@@ -193,54 +222,58 @@ def load_crawled_ids(tsv_file_path):
     return set(df["id"].astype(str))
 
 
-# if __name__ == '__main__':
-#     input_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan_links.txt"
-#     url_tsv_file = "/home/ducan/Documents/anmd/test-crawl/data/batdongsan_url.tsv"
-
-#     crawled_ids = load_crawled_ids(url_tsv_file)
-
-#     with open(input_file, 'r', encoding='utf-8') as file:
-#         links = file.read().splitlines()
-
-#     with Manager() as manager:
-#         lock = manager.Lock()
-#         shared_ids = manager.list(crawled_ids)
-
-#         jobs = [(url, lock, shared_ids) for url in links]
-
-#         with Pool(processes=5) as pool:  # Adjust number of processes based on your system
-#             pool.map(scrape_one_url, jobs)
-
-#     print("✅ Scraping completed.")
-
-def scrape_data():
+def scrape_data(use_multiprocessing=False):
     """
     Main scraping function that can be called by the Airflow DAG
+    Args:
+        use_multiprocessing (bool): Whether to use multiprocessing for parallel scraping
     """
     try:
+        # Ensure directories exist
+        ensure_directories_exist()
+        
+        # Determine which input file to use based on environment
+        if os.path.exists(AIRFLOW_DATA_DIR):
+            input_file = os.path.join(AIRFLOW_DATA_DIR, "batdongsan_links.txt")
+        else:
+            input_file = os.path.join(LOCAL_DATA_DIR, "batdongsan_links.txt")
+            
         # Read links from file
-        with open('/opt/airflow/data/batdongsan_links.txt', 'r', encoding='utf-8') as f:
+        with open(input_file, 'r', encoding='utf-8') as f:
             urls = f.read().splitlines()
 
-        # Initialize list to store all property data
-        all_properties = []
-        
-        # Process each URL
-        for url in urls:
-            try:
-                property_data = scrape_property_data(url)
-                all_properties.append(property_data)
-                time.sleep(random.uniform(1, 3))  # Random delay between requests
-            except Exception as e:
-                logging.error(f"Error scraping {url}: {e}")
-                continue
+        if use_multiprocessing:
+            # Initialize manager and lock for multiprocessing
+            with Manager() as manager:
+                lock = manager.Lock()
+                crawled_ids = load_crawled_ids(os.path.join(AIRFLOW_DATA_DIR if os.path.exists(AIRFLOW_DATA_DIR) else LOCAL_DATA_DIR, "batdongsan_url.tsv"))
+                shared_ids = manager.list(crawled_ids)
 
-        # Convert to DataFrame and save
-        df = pd.DataFrame(all_properties)
-        output_path = '/opt/airflow/data/batdongsan_data.csv'
-        df.to_csv(output_path, index=False, encoding='utf-8')
-        
-        logging.info(f"Successfully scraped {len(all_properties)} properties")
+                # Create jobs for parallel processing
+                jobs = [(url, lock, shared_ids) for url in urls]
+
+                # Process URLs in parallel
+                with Pool(processes=5) as pool:
+                    pool.map(scrape_one_url, jobs)
+        else:
+            # Sequential processing for Airflow
+            crawled_ids = load_crawled_ids(os.path.join(AIRFLOW_DATA_DIR if os.path.exists(AIRFLOW_DATA_DIR) else LOCAL_DATA_DIR, "batdongsan_url.tsv"))
+            lock = Lock()
+            
+            for url in urls:
+                item_id = extract_id_from_url(url)
+                if item_id in crawled_ids:
+                    logging.info(f"[Skipped] Already crawled: {url}")
+                    continue
+                
+                try:
+                    scrape_one_url((url, lock, crawled_ids))
+                    crawled_ids.add(item_id)
+                except Exception as e:
+                    logging.error(f"Error scraping {url}: {e}")
+                    continue
+
+        logging.info("✅ Scraping completed successfully")
         return True
 
     except Exception as e:
@@ -249,4 +282,4 @@ def scrape_data():
 
 if __name__ == "__main__":
     # This block only runs if the script is executed directly
-    scrape_data()
+    scrape_data(use_multiprocessing=True)

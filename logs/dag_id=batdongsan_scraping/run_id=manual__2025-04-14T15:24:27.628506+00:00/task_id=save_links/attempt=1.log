@@ -1,0 +1,287 @@
+[2025-04-14T15:24:29.673+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T15:24:29.684+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: batdongsan_scraping.save_links manual__2025-04-14T15:24:27.628506+00:00 [queued]>
+[2025-04-14T15:24:29.691+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: batdongsan_scraping.save_links manual__2025-04-14T15:24:27.628506+00:00 [queued]>
+[2025-04-14T15:24:29.692+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-04-14T15:24:29.699+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): save_links> on 2025-04-14 15:24:27.628506+00:00
+[2025-04-14T15:24:29.727+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'batdongsan_scraping', 'save_links', 'manual__2025-04-14T15:24:27.628506+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/batdongsan_scraping_dag.py', '--cfg-path', '/tmp/tmpl957t6o6']
+[2025-04-14T15:24:29.731+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask save_links
+[2025-04-14T15:24:29.731+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1828) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-14T15:24:29.733+0000] {standard_task_runner.py:72} INFO - Started process 1829 to run task
+[2025-04-14T15:24:29.774+0000] {task_command.py:467} INFO - Running <TaskInstance: batdongsan_scraping.save_links manual__2025-04-14T15:24:27.628506+00:00 [running]> on host 932270897c9d
+[2025-04-14T15:24:29.839+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='batdongsan_scraping' AIRFLOW_CTX_TASK_ID='save_links' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T15:24:27.628506+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T15:24:27.628506+00:00'
+[2025-04-14T15:24:29.840+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T15:24:29.900+0000] {SaveLinkBatdongsan.py:111} INFO - Loaded 60334 existing links
+[2025-04-14T15:24:30.471+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 1: https://batdongsan.com.vn/nha-dat-ban/p1?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:24:33.747+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 1
+[2025-04-14T15:24:34.417+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 2: https://batdongsan.com.vn/nha-dat-ban/p2?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:24:37.919+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 2
+[2025-04-14T15:24:38.356+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 3: https://batdongsan.com.vn/nha-dat-ban/p3?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:24:41.100+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 3
+[2025-04-14T15:24:41.404+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 4: https://batdongsan.com.vn/nha-dat-ban/p4?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:24:43.912+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 4
+[2025-04-14T15:24:44.422+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 5: https://batdongsan.com.vn/nha-dat-ban/p5?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:24:47.440+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 5
+[2025-04-14T15:24:47.774+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 6: https://batdongsan.com.vn/nha-dat-ban/p6?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:24:53.195+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 6
+[2025-04-14T15:24:53.515+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 7: https://batdongsan.com.vn/nha-dat-ban/p7?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:24:57.119+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 7
+[2025-04-14T15:24:57.742+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 8: https://batdongsan.com.vn/nha-dat-ban/p8?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:02.881+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 8
+[2025-04-14T15:25:03.755+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 9: https://batdongsan.com.vn/nha-dat-ban/p9?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:07.521+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 9
+[2025-04-14T15:25:09.793+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 10: https://batdongsan.com.vn/nha-dat-ban/p10?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:13.344+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 10
+[2025-04-14T15:25:13.691+0000] {SaveLinkBatdongsan.py:118} INFO - Saved 60460 links to /opt/***/data/batdongsan_links.txt
+[2025-04-14T15:25:13.692+0000] {SaveLinkBatdongsan.py:167} INFO - Progress saved at page 10
+[2025-04-14T15:25:14.095+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 11: https://batdongsan.com.vn/nha-dat-ban/p11?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:18.226+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 11
+[2025-04-14T15:25:19.653+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 12: https://batdongsan.com.vn/nha-dat-ban/p12?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:26.647+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 12
+[2025-04-14T15:25:27.358+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 13: https://batdongsan.com.vn/nha-dat-ban/p13?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:30.905+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 13
+[2025-04-14T15:25:31.409+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 14: https://batdongsan.com.vn/nha-dat-ban/p14?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:35.778+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 14
+[2025-04-14T15:25:37.500+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 15: https://batdongsan.com.vn/nha-dat-ban/p15?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:41.592+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 15
+[2025-04-14T15:25:42.269+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 16: https://batdongsan.com.vn/nha-dat-ban/p16?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:47.249+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 16
+[2025-04-14T15:25:48.185+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 17: https://batdongsan.com.vn/nha-dat-ban/p17?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:51.638+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 17
+[2025-04-14T15:25:52.131+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 18: https://batdongsan.com.vn/nha-dat-ban/p18?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:25:56.332+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 18
+[2025-04-14T15:25:57.113+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 19: https://batdongsan.com.vn/nha-dat-ban/p19?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:00.300+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 19
+[2025-04-14T15:26:00.830+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 20: https://batdongsan.com.vn/nha-dat-ban/p20?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:04.576+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 20
+[2025-04-14T15:26:04.988+0000] {SaveLinkBatdongsan.py:118} INFO - Saved 60598 links to /opt/***/data/batdongsan_links.txt
+[2025-04-14T15:26:04.989+0000] {SaveLinkBatdongsan.py:167} INFO - Progress saved at page 20
+[2025-04-14T15:26:05.704+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 21: https://batdongsan.com.vn/nha-dat-ban/p21?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:09.672+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 21
+[2025-04-14T15:26:10.415+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 22: https://batdongsan.com.vn/nha-dat-ban/p22?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:17.196+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 22
+[2025-04-14T15:26:18.036+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 23: https://batdongsan.com.vn/nha-dat-ban/p23?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:21.868+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 23
+[2025-04-14T15:26:23.262+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 24: https://batdongsan.com.vn/nha-dat-ban/p24?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:27.214+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 24
+[2025-04-14T15:26:27.979+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 25: https://batdongsan.com.vn/nha-dat-ban/p25?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:32.257+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 25
+[2025-04-14T15:26:32.924+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 26: https://batdongsan.com.vn/nha-dat-ban/p26?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:36.619+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 26
+[2025-04-14T15:26:37.317+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 27: https://batdongsan.com.vn/nha-dat-ban/p27?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:40.502+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 27
+[2025-04-14T15:26:40.799+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 28: https://batdongsan.com.vn/nha-dat-ban/p28?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:44.071+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 28
+[2025-04-14T15:26:44.696+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 29: https://batdongsan.com.vn/nha-dat-ban/p29?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:48.443+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 29
+[2025-04-14T15:26:49.116+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 30: https://batdongsan.com.vn/nha-dat-ban/p30?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:26:56.141+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 30
+[2025-04-14T15:26:57.461+0000] {SaveLinkBatdongsan.py:118} INFO - Saved 60733 links to /opt/***/data/batdongsan_links.txt
+[2025-04-14T15:26:57.467+0000] {SaveLinkBatdongsan.py:167} INFO - Progress saved at page 30
+[2025-04-14T15:26:58.658+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 31: https://batdongsan.com.vn/nha-dat-ban/p31?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:04.159+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 31
+[2025-04-14T15:27:04.761+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 32: https://batdongsan.com.vn/nha-dat-ban/p32?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:09.037+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 32
+[2025-04-14T15:27:09.662+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 33: https://batdongsan.com.vn/nha-dat-ban/p33?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:13.051+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 33
+[2025-04-14T15:27:13.542+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 34: https://batdongsan.com.vn/nha-dat-ban/p34?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:18.114+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 34
+[2025-04-14T15:27:18.643+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 35: https://batdongsan.com.vn/nha-dat-ban/p35?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:21.946+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 35
+[2025-04-14T15:27:22.505+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 36: https://batdongsan.com.vn/nha-dat-ban/p36?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:26.131+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 36
+[2025-04-14T15:27:26.572+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 37: https://batdongsan.com.vn/nha-dat-ban/p37?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:29.876+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 37
+[2025-04-14T15:27:30.287+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 38: https://batdongsan.com.vn/nha-dat-ban/p38?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:35.160+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 38
+[2025-04-14T15:27:35.738+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 39: https://batdongsan.com.vn/nha-dat-ban/p39?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:39.202+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 39
+[2025-04-14T15:27:39.649+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 40: https://batdongsan.com.vn/nha-dat-ban/p40?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:27:44.295+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 40
+[2025-04-14T15:27:46.657+0000] {SaveLinkBatdongsan.py:118} INFO - Saved 60847 links to /opt/***/data/batdongsan_links.txt
+[2025-04-14T15:27:46.665+0000] {SaveLinkBatdongsan.py:167} INFO - Progress saved at page 40
+[2025-04-14T15:27:49.736+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 41: https://batdongsan.com.vn/nha-dat-ban/p41?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:28:00.935+0000] {SaveLinkBatdongsan.py:133} INFO - Found 0 links on page 41
+[2025-04-14T15:28:00.953+0000] {SaveLinkBatdongsan.py:139} WARNING - No links found on page 41, added to error file
+[2025-04-14T15:28:02.292+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 42: https://batdongsan.com.vn/nha-dat-ban/p42?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:28:06.741+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 42
+[2025-04-14T15:28:07.300+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 43: https://batdongsan.com.vn/nha-dat-ban/p43?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:28:11.362+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 43
+[2025-04-14T15:28:12.777+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 44: https://batdongsan.com.vn/nha-dat-ban/p44?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:28:16.858+0000] {SaveLinkBatdongsan.py:133} INFO - Found 20 links on page 44
+[2025-04-14T15:28:17.408+0000] {SaveLinkBatdongsan.py:127} INFO - Scraping page 45: https://batdongsan.com.vn/nha-dat-ban/p45?gtn=7-ty&gcn=30-ty
+[2025-04-14T15:28:19.624+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2025-04-14T15:28:19.649+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-04-14T15:28:19.656+0000] {process_utils.py:132} INFO - Sending 15 to group 1829. PIDs of all processes in the group: [8639, 8645, 8664, 8666, 8688, 8697, 8742, 8751, 8784, 8687, 1829]
+[2025-04-14T15:28:19.657+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1829
+[2025-04-14T15:28:19.658+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-14T15:28:19.672+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8751, status='terminated', started='15:28:17') (8751) terminated with exit code None
+[2025-04-14T15:28:19.691+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 990, in _execute
+    executor.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/batdongsan_scraping_dag.py", line 47, in save_links_task
+    scraper.run()
+  File "/opt/***/dags/../scripts/SaveLinkBatdongsan.py", line 240, in run
+    with self.links_lock:
+  File "/opt/***/dags/../scripts/SaveLinkBatdongsan.py", line 161, in scrape_all_pages
+    if driver:
+  File "/opt/***/dags/../scripts/SaveLinkBatdongsan.py", line 128, in scrape_page
+    """Scrape a single page and return any error URLs."""
+  File "/opt/***/dags/../scripts/SaveLinkBatdongsan.py", line 95, in get_page_with_retries
+    except ImportError:
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 356, in get
+    self.execute(Command.GET, {"url": url})
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 302, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 322, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/local/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-04-14T15:28:19.698+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89b65b80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1ced40fcb2d05ecada0d82fe39ecacde
+[2025-04-14T15:28:19.698+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff890807a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1ced40fcb2d05ecada0d82fe39ecacde
+[2025-04-14T15:28:19.699+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89080800>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1ced40fcb2d05ecada0d82fe39ecacde
+[2025-04-14T15:28:19.780+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8645, status='terminated', started='15:28:16') (8645) terminated with exit code None
+[2025-04-14T15:28:19.783+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8664, status='terminated', started='15:28:16') (8664) terminated with exit code None
+[2025-04-14T15:28:19.783+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8697, status='terminated', started='15:28:16') (8697) terminated with exit code None
+[2025-04-14T15:28:19.785+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8687, status='terminated', started='15:28:16') (8687) terminated with exit code None
+[2025-04-14T15:28:19.787+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8666, status='terminated', started='15:28:16') (8666) terminated with exit code None
+[2025-04-14T15:28:19.789+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8688, status='terminated', started='15:28:16') (8688) terminated with exit code None
+[2025-04-14T15:28:19.789+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8639, status='terminated', started='15:28:16') (8639) terminated with exit code None
+[2025-04-14T15:28:19.790+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8742, status='terminated', started='15:28:16') (8742) terminated with exit code None
+[2025-04-14T15:28:19.790+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=8784, status='terminated', started='15:28:18') (8784) terminated with exit code None
+[2025-04-14T15:28:19.796+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T15:28:19.821+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1829, status='terminated', exitcode=0, started='15:24:29') (1829) terminated with exit code 0

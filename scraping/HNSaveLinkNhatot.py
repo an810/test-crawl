@@ -1,51 +1,19 @@
 import os
 import time
 import logging
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
-import random
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+import requests
+import json
+from tqdm import tqdm
 
-OUTPUT_FILE = "/home/ducan/Documents/anmd/test-crawl/data/hn_nhatot_links.txt"
-ERROR_FILE = "/home/ducan/Documents/anmd/test-crawl/data/hn_nhatot_error_links.txt"
+OUTPUT_FILE = "/Users/ducan/Documents/test/data/hn_nhatot_links.txt"
+ERROR_FILE = "/Users/ducan/Documents/test/data/hn_nhatot_error_links.txt"
 BASE_URL = "https://www.nhatot.com"
-PAGE_PATH = "/mua-ban-bat-dong-san-ha-noi?price=7000000000-30000000000&page="
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 def clear_file(file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.truncate(0)
-
-
-def create_driver():
-    options = Options()
-    options.add_argument("--headless")
-    options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
-    return webdriver.Chrome(options=options)
-
-
-def get_page_with_retries(driver, url, retries=5, delay=3):
-    for attempt in range(retries):
-        try:
-            driver.get(url)
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "a[href*='/mua-ban-'][href$='.htm']"))
-            )
-            time.sleep(random.uniform(1, 2))  # nhẹ hơn
-            return driver.page_source
-        except Exception as e:
-            logging.warning(f"[Attempt {attempt+1}] Failed to get page: {e}")
-            time.sleep(delay)
-    return None
-
 
 def write_links(file_path, links):
     clear_file(file_path)
@@ -54,62 +22,66 @@ def write_links(file_path, links):
             f.write(link + '\n')
     logging.info(f"✅ Written {len(links)} links to {file_path}")
 
-
-def get_page_links(html_content, base_url):
-    soup = BeautifulSoup(html_content, 'html.parser')
-    if soup.find('div', class_='NotFound_content__KtIbC'):
+def get_api_data(region_v2, cg, start_partition, page):
+    api_gateway = 'https://gateway.chotot.com/v1/public/ad-listing?region_v2={}&cg={}&o={}&page={}&st=s,k&limit=20&w=1&key_param_included=true'
+    api_url = api_gateway.format(region_v2, cg, start_partition, page)
+    
+    try:
+        response = requests.get(api_url)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        logging.error(f"Error fetching data from API: {e}")
         return None
-
-    links = set()
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        if href.startswith('/mua-ban-') and '.htm' in href:
-            full_url = base_url + href
-            
-            links.add(full_url)
-    logging.info(f"Found {len(links)} links on the page.")
-    return links
-
 
 def scrape_links():
     all_links = set()
+    error_urls = []
 
+    # Load existing links if file exists
     if os.path.exists(OUTPUT_FILE):
         with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
             all_links.update(f.read().splitlines())
 
-    error_urls = []
-    driver = create_driver()
-    page_index = 1
+    # API parameters
+    region_v2 = 12000  # Hanoi region
+    cg = 1000  # Real estate category
+    page = 1
 
-    try:
-        while page_index < 10:
-            full_url = BASE_URL + PAGE_PATH + str(page_index)
-            logging.info(f"[Scraping] {full_url}")
-            html_content = get_page_with_retries(driver, full_url)
+    # Get initial data to determine total number of pages
+    initial_data = get_api_data(region_v2, cg, 0, page)
+    if not initial_data:
+        logging.error("Failed to get initial data from API")
+        return
 
-            if not html_content:
-                error_urls.append(full_url)
-                break  # Optional: or continue depending on tolerance
-            page_links = get_page_links(html_content, BASE_URL)
+    total_news = initial_data['total']
+    max_pages = total_news // 20 + 1
+    logging.info(f"Total listings: {total_news}, Max pages: {max_pages}")
 
-            if page_links is None:
-                logging.warning(f"[Stop] Page {page_index} is empty or not found.")
-                break
+    # Process each page
+    for page_th in tqdm(range(1, max_pages + 1)):
+        start_partition = (page_th - 1) * 20
+        data = get_api_data(region_v2, cg, start_partition, page_th)
 
-            all_links.update(page_links)
+        if not data:
+            error_urls.append(f"API request failed for page {page_th}")
+            continue
 
-            if page_index % 10 == 0:
-                write_links(OUTPUT_FILE, all_links)
+        if len(data.get('ads', [])) != 0:
+            for item in data['ads']:
+                list_id = item['list_id']
+                link = f"{BASE_URL}/mua-ban-bat-dong-san/{list_id}.htm"
+                all_links.add(link)
 
-            page_index += 1
-            time.sleep(1)
+        # Save progress every 10 pages
+        if page_th % 10 == 0:
+            write_links(OUTPUT_FILE, all_links)
+            time.sleep(1)  # Small delay to prevent overwhelming the API
 
-    finally:
-        driver.quit()
-
+    # Final save of all links
     write_links(OUTPUT_FILE, all_links)
 
+    # Log any errors
     if error_urls:
         with open(ERROR_FILE, 'w', encoding='utf-8') as ef:
             for url in error_urls:
@@ -117,7 +89,6 @@ def scrape_links():
         logging.warning(f"❌ Failed to scrape {len(error_urls)} pages. Logged in {ERROR_FILE}")
 
     logging.info("✅ Scraping completed.")
-
 
 if __name__ == "__main__":
     scrape_links()

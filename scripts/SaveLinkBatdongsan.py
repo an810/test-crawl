@@ -1,17 +1,18 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
 import time
 import random
 import logging
 import os
-from typing import List, Set, Optional
+import platform
+import concurrent.futures
+from typing import List, Set, Optional, Dict, Tuple
+from queue import Queue
+from threading import Lock
 
 class BatDongSanScraper:
-    """
-    A class to scrape property links from BatDongSan website.
-    Designed to be used in DAGs and other workflow systems.
-    """
     
     def __init__(
         self,
@@ -22,21 +23,10 @@ class BatDongSanScraper:
         max_pages: int = 3058,
         save_interval: int = 10,
         retry_attempts: int = 5,
-        retry_delay: int = 3
+        retry_delay: int = 3,
+        max_workers: int = 5
     ):
-        """
-        Initialize the scraper with configurable parameters.
         
-        Args:
-            output_file: Path to save the scraped links
-            error_file: Path to save error URLs
-            base_url: Base URL for the website
-            filter_path: Filter parameters for the URL
-            max_pages: Maximum number of pages to scrape
-            save_interval: How often to save progress (in pages)
-            retry_attempts: Number of retry attempts for failed URLs
-            retry_delay: Delay between retries in seconds
-        """
         self.output_file = output_file
         self.error_file = error_file
         self.base_url = base_url
@@ -45,8 +35,11 @@ class BatDongSanScraper:
         self.save_interval = save_interval
         self.retry_attempts = retry_attempts
         self.retry_delay = retry_delay
+        self.max_workers = max_workers
         self.unscraped_links = set()
-        self.chrome_options = self._setup_chrome_options()
+        self.links_lock = Lock()
+        self.error_urls = []
+        self.error_urls_lock = Lock()
         
         # Create output directory if it doesn't exist
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
@@ -60,31 +53,50 @@ class BatDongSanScraper:
         self.logger = logging.getLogger("BatDongSanScraper")
     
     def _setup_chrome_options(self) -> Options:
-        """Set up Chrome options for headless browsing."""
         chrome_options = Options()
         chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
         chrome_options.add_argument('--disable-blink-features=AutomationControlled')
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
+        
+        # Use Chromium binary if specified in environment
+        if os.environ.get('CHROME_BIN'):
+            chrome_options.binary_location = os.environ.get('CHROME_BIN')
+            
         return chrome_options
     
-    def get_page_with_retries(self, driver: webdriver.Chrome, url: str, retries: int = 10, delay: int = 10) -> str:
-        """
-        Get a page with retry logic.
+    def _create_webdriver(self):
+        """Create a WebDriver instance that works on different architectures."""
+        # Create a new ChromeOptions object each time
+        chrome_options = self._setup_chrome_options()
         
-        Args:
-            driver: Selenium WebDriver instance
-            url: URL to fetch
-            retries: Number of retry attempts
-            delay: Delay between retries in seconds
+        try:
+            # Try to use the ChromeDriver from environment variable
+            if os.environ.get('CHROMEDRIVER_PATH'):
+                service = Service(executable_path=os.environ.get('CHROMEDRIVER_PATH'))
+                return webdriver.Chrome(service=service, options=chrome_options)
             
-        Returns:
-            Page source as string
-            
-        Raises:
-            Exception: If all retry attempts fail
-        """
+            # Try to use the default Chrome driver
+            return webdriver.Chrome(options=chrome_options)
+        except Exception as e:
+            self.logger.error(f"Error creating WebDriver: {e}")
+            # Try to use undetected-chromedriver as a fallback
+            try:
+                import undetected_chromedriver as uc
+                # Create a new options object for undetected-chromedriver
+                uc_options = uc.ChromeOptions()
+                uc_options.add_argument("--headless")
+                uc_options.add_argument("--no-sandbox")
+                uc_options.add_argument("--disable-dev-shm-usage")
+                return uc.Chrome(options=uc_options)
+            except ImportError:
+                self.logger.error("undetected-chromedriver not installed. Please install it with: pip install undetected-chromedriver")
+                raise
+    
+    def get_page_with_retries(self, driver: webdriver.Chrome, url: str, retries: int = 10, delay: int = 10) -> str:
         for attempt in range(retries): 
             try:
                 driver.get(url)
@@ -95,12 +107,10 @@ class BatDongSanScraper:
         raise Exception(f"Failed to load page after {retries} attempts: {url}")
     
     def clear_file(self, file_path: str) -> None:
-        """Clear the contents of a file."""
         with open(file_path, 'w', encoding='utf-8') as file:
             file.truncate(0)
     
     def load_existing_links(self) -> None:
-        """Load existing links from the output file if it exists."""
         if os.path.exists(self.output_file):
             with open(self.output_file, 'r', encoding='utf-8') as existing_links_file:
                 existing_links = existing_links_file.read().splitlines()
@@ -108,7 +118,6 @@ class BatDongSanScraper:
                 self.logger.info(f"Loaded {len(existing_links)} existing links")
     
     def save_links(self) -> None:
-        """Save all collected links to the output file."""
         self.clear_file(self.output_file)
         with open(self.output_file, 'w', encoding='utf-8') as linksfile:
             for link in self.unscraped_links:
@@ -116,22 +125,13 @@ class BatDongSanScraper:
         self.logger.info(f"Saved {len(self.unscraped_links)} links to {self.output_file}")
     
     def scrape_page(self, page_index: int) -> List[str]:
-        """
-        Scrape links from a single page.
-        
-        Args:
-            page_index: Page number to scrape
-            
-        Returns:
-            List of error URLs if any
-        """
+        """Scrape a single page and return any error URLs."""
         error_urls = []
         driver = None
+        full_path = f"{self.base_url}/p{page_index}{self.filter_path}"
+        
         try:
-            driver = webdriver.Chrome(options=self.chrome_options)
-            page_path = f"/p{page_index}"
-            full_path = f"{self.base_url}{page_path}{self.filter_path}"
-            
+            driver = self._create_webdriver()
             self.logger.info(f"Scraping page {page_index}: {full_path}")
             html_content = self.get_page_with_retries(driver, full_path)
             soup = BeautifulSoup(html_content, 'html.parser')
@@ -146,11 +146,13 @@ class BatDongSanScraper:
                     ef.write(full_path + '\n')
                 self.logger.warning(f"No links found on page {page_index}, added to error file")
             
-            for link in links:
-                if link.get('data-product-id') == "0":
-                    continue
-                href = link.get('href')
-                self.unscraped_links.add(self.base_url + href)
+            # Use a lock to safely update the shared set
+            with self.links_lock:
+                for link in links:
+                    if link.get('data-product-id') == "0":
+                        continue
+                    href = link.get('href')
+                    self.unscraped_links.add(self.base_url + href)
                 
         except Exception as e:
             self.logger.error(f"Error scraping page {page_index}: {e}")
@@ -161,32 +163,52 @@ class BatDongSanScraper:
                 
         return error_urls
     
-    def scrape_all_pages(self) -> None:
-        """Scrape all pages and save links periodically."""
+    def scrape_page_wrapper(self, page_index: int) -> None:
+        """Wrapper function for thread pool executor."""
+        error_urls = self.scrape_page(page_index)
+        if error_urls:
+            with self.error_urls_lock:
+                self.error_urls.extend(error_urls)
+    
+    def scrape_all_pages(self):
+        """Scrape all pages using multiple threads."""
         self.load_existing_links()
-        error_urls = []
+        self.error_urls = []
         
-        for page_index in range(1, self.max_pages + 1):
-            page_errors = self.scrape_page(page_index)
-            error_urls.extend(page_errors)
+        # Create a thread pool
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_workers) as executor:
+            # Submit all page scraping tasks
+            futures = {executor.submit(self.scrape_page_wrapper, page_index): page_index 
+                      for page_index in range(1, self.max_pages + 1)}
             
-            # Save progress periodically
-            if page_index % self.save_interval == 0:
-                self.save_links()
-                self.logger.info(f"Progress saved at page {page_index}")
+            # Process completed tasks and save progress periodically
+            completed = 0
+            for future in concurrent.futures.as_completed(futures):
+                page_index = futures[future]
+                try:
+                    future.result()  # This will raise any exceptions that occurred
+                    completed += 1
+                    
+                    # Save progress periodically
+                    if completed % self.save_interval == 0:
+                        self.save_links()
+                        self.logger.info(f"Progress saved at {completed}/{self.max_pages} pages")
+                        
+                except Exception as e:
+                    self.logger.error(f"Error processing page {page_index}: {e}")
         
         # Final save
         self.save_links()
         
         # Save error URLs
-        if error_urls:
+        if self.error_urls:
             with open(self.error_file, 'w', encoding='utf-8') as ef:
-                for url in error_urls:
+                for url in self.error_urls:
                     ef.write(url + '\n')
-            self.logger.info(f"Saved {len(error_urls)} error URLs to {self.error_file}")
+            self.logger.info(f"Saved {len(self.error_urls)} error URLs to {self.error_file}")
     
-    def retry_error_urls(self) -> None:
-        """Retry scraping URLs that previously failed."""
+    def retry_error_urls(self):
+        """Retry scraping URLs that previously failed using multiple threads."""
         if not os.path.exists(self.error_file):
             self.logger.info("No error file found. Nothing to retry.")
             return
@@ -200,27 +222,28 @@ class BatDongSanScraper:
             
         self.logger.info(f"Retrying {len(error_urls)} error URLs...")
         remaining_errors = []
+        remaining_errors_lock = Lock()
         
-        for url in error_urls:
-            success = False
+        def retry_url(url):
+            """Retry a single URL with multiple attempts."""
             for attempt in range(self.retry_attempts):
                 self.logger.info(f"Retrying ({attempt+1}/{self.retry_attempts}): {url}")
                 driver = None
                 try:
-                    driver = webdriver.Chrome(options=self.chrome_options)
+                    driver = self._create_webdriver()
                     html_content = self.get_page_with_retries(driver, url)
                     soup = BeautifulSoup(html_content, 'html.parser')
                     links = soup.find_all('a', class_='js__product-link-for-product-id')
                     
                     if links:
                         self.logger.info(f"✅ Success on attempt {attempt+1}: Found {len(links)} links.")
-                        for link in links:
-                            if link.get('data-product-id') == "0":
-                                continue
-                            href = link.get('href')
-                            self.unscraped_links.add(self.base_url + href)
-                        success = True
-                        break
+                        with self.links_lock:
+                            for link in links:
+                                if link.get('data-product-id') == "0":
+                                    continue
+                                href = link.get('href')
+                                self.unscraped_links.add(self.base_url + href)
+                        return True
                     else:
                         self.logger.warning("No links found.")
                         
@@ -230,11 +253,28 @@ class BatDongSanScraper:
                     if driver:
                         driver.quit()
                         
-                if not success:
+                if attempt < self.retry_attempts - 1:
                     time.sleep(random.uniform(1, self.retry_delay))
-                    
-            if not success:
+            
+            # If we get here, all attempts failed
+            with remaining_errors_lock:
                 remaining_errors.append(url)
+            return False
+        
+        # Use a thread pool to retry URLs in parallel
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_workers) as executor:
+            # Submit all retry tasks
+            futures = {executor.submit(retry_url, url): url for url in error_urls}
+            
+            # Process completed tasks
+            for future in concurrent.futures.as_completed(futures):
+                url = futures[future]
+                try:
+                    future.result()
+                except Exception as e:
+                    self.logger.error(f"Error retrying {url}: {e}")
+                    with remaining_errors_lock:
+                        remaining_errors.append(url)
                 
         # Write updated error file
         with open(self.error_file, 'w', encoding='utf-8') as ef:
@@ -246,8 +286,7 @@ class BatDongSanScraper:
         # Save all collected links
         self.save_links()
     
-    def run(self) -> None:
-        """Run the complete scraping process."""
+    def run(self):
         self.scrape_all_pages()
         self.retry_error_urls()
         self.logger.info("Scraping process completed.")
@@ -258,25 +297,16 @@ def scrape_links(
     error_file: str = "/opt/airflow/data/batdongsan_error_links.txt",
     base_url: str = "https://batdongsan.com.vn/nha-dat-ban",
     filter_path: str = "?gtn=7-ty&gcn=30-ty",
-    max_pages: int = 3058
-) -> None:
-    """
-    Convenience function to run the scraper with default settings.
-    This function can be imported and used in DAGs.
-    
-    Args:
-        output_file: Path to save the scraped links
-        error_file: Path to save error URLs
-        base_url: Base URL for the website
-        filter_path: Filter parameters for the URL
-        max_pages: Maximum number of pages to scrape
-    """
+    max_pages: int = 3000,
+    max_workers: int = 5
+):
     scraper = BatDongSanScraper(
         output_file=output_file,
         error_file=error_file,
         base_url=base_url,
         filter_path=filter_path,
-        max_pages=max_pages
+        max_pages=max_pages,
+        max_workers=max_workers
     )
     scraper.run()
 

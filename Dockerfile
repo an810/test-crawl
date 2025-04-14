@@ -2,27 +2,28 @@ FROM apache/airflow:2.10.5
 
 USER root
 
-# Install Chrome and ChromeDriver
+# Install Chromium and dependencies
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
     unzip \
     curl \
-    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
-    && apt-get update \
-    && apt-get install -y google-chrome-stable
+    chromium \
+    chromium-driver \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install specific version of ChromeDriver
-RUN CHROMEDRIVER_VERSION=114.0.5735.90 \
-    && wget -q "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" \
-    && unzip chromedriver_linux64.zip \
-    && mv chromedriver /usr/local/bin/ \
-    && chmod +x /usr/local/bin/chromedriver \
-    && rm chromedriver_linux64.zip
+# Set environment variables for Selenium to use Chromium
+ENV CHROME_BIN=/usr/bin/chromium
+ENV CHROMIUM_PATH=/usr/bin/chromium
+ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
+ENV CHROMIUM_FLAGS="--headless --no-sandbox --disable-dev-shm-usage"
+
+# Create a symbolic link for Chrome binary to make it easier to find
+RUN ln -sf /usr/bin/chromium /usr/bin/google-chrome
 
 USER airflow
 
 # Install Python dependencies
 COPY requirements.txt /requirements.txt
-RUN pip install --no-cache-dir -r /requirements.txt 
+RUN pip install --no-cache-dir -r /requirements.txt \
+    && pip install --no-cache-dir undetected-chromedriver==3.5.5 
