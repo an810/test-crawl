@@ -1,0 +1,455 @@
+[2025-04-14T17:31:54.953+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-14T17:31:55.113+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: batdongsan_scraping.scrape_data manual__2025-04-14T17:31:22.628767+00:00 [queued]>
+[2025-04-14T17:31:55.177+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: batdongsan_scraping.scrape_data manual__2025-04-14T17:31:22.628767+00:00 [queued]>
+[2025-04-14T17:31:55.184+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-14T17:31:55.257+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): scrape_data> on 2025-04-14 17:31:22.628767+00:00
+[2025-04-14T17:31:55.329+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'batdongsan_scraping', 'scrape_data', 'manual__2025-04-14T17:31:22.628767+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/batdongsan_scraping_dag.py', '--cfg-path', '/tmp/tmpg2n8iu55']
+[2025-04-14T17:31:55.338+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask scrape_data
+[2025-04-14T17:31:55.366+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2364) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-14T17:31:55.369+0000] {standard_task_runner.py:72} INFO - Started process 2826 to run task
+[2025-04-14T17:31:55.582+0000] {task_command.py:467} INFO - Running <TaskInstance: batdongsan_scraping.scrape_data manual__2025-04-14T17:31:22.628767+00:00 [running]> on host 9b73e981a31f
+[2025-04-14T17:31:56.096+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='batdongsan_scraping' AIRFLOW_CTX_TASK_ID='scrape_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T17:31:22.628767+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T17:31:22.628767+00:00'
+[2025-04-14T17:31:56.100+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-14T17:31:57.025+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-le-hong-phong-phuong-phuoc-hai-prj-khu-do-thi-le-hong-phong-ii/ban-vip-3-tang-kdt-ha-quang-2-da-hoan-cong-ho-tro-vay-70-100m2-8ty5-pr42649211
+[2025-04-14T17:31:57.033+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-de-la-thanh_1-phuong-o-cho-dua/ban-gap-gia-re-tai-thanh-ch-dng-da-ha-ni-4-tang-45m2-mt-t-7m-gia-9-ty-pr42600668
+[2025-04-14T17:31:57.035+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-ten-lua-phuong-binh-tri-dong-b/ban-210m2-khu-moi-dep-de-lai-het-noi-that-gan-aeon-mall-tan-pr38514798
+[2025-04-14T17:31:57.053+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-ngo-quyen-phuong-an-hai-bac-prj-phuc-loc-vien/ban-huong-tay-noi-that-dep-gia-10-5-ty-toan-huy-hoang-pr42352610
+[2025-04-14T17:31:57.056+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-trinh-dinh-cuu-phuong-dinh-cong/hang-vip-kdt-54m2x4t-gia-nho-19-ty-oto-vao-pr42593940
+[2025-04-14T17:31:57.063+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-xuan-dinh-phuong-xuan-dinh/-dep-thang-may-gara-oto-ngo-thong-dan-tri-cao-day-du-tien-ich-65m2-x-5tang-17-ty-pr42278629
+[2025-04-14T17:31:57.066+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-quoc-lo-70-xa-tan-trieu-prj-khu-do-thi-moi-cau-buou/ban-bt-song-lap-sdcc-125m2-4t-mt-8m-xay-tho-gia-19-5-ty-re-nhat-truong-pr42149060
+[2025-04-14T17:31:57.080+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-pham-van-bach-phuong-hoa-cuong-nam/can-ban-mat-tien-hai-chau-pr42578073
+[2025-04-14T17:31:57.082+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-nen-du-an-duong-lien-phuong-phuong-phu-huu-2-prj-khu-dan-cu-so-van-hoa-thong-tin/ban-mat-tien-kdc-dt-6x15-90m-vi-tri-dep-pr42577455
+[2025-04-14T17:31:57.099+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-ut-tich_1-phuong-4-20/ban-hxh-tich-4-1x18-ngay-khu-vip-de-t-khach-san-3-tang-chi-15-2-ty-pr42117037
+[2025-04-14T17:31:57.124+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-dinh-cong-phuong-dinh-cong/qua-hiem-ban-than-may-vi-tri-dep-oto-do-cua-moi-xay-thiet-ke-hien-dai-noi-that-pr42124711
+[2025-04-14T17:31:57.125+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-sai-dong/9-8ty-co-can-biet-thu-6-tang-tan-co-dien-thang-may-gara-oto-7c-vao-lo-goc-kinh-doanh-pr42606063
+[2025-04-14T17:31:57.132+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-mai-dang-chon-phuong-hoa-quy/7-5-ty-lo-goc-hiem-ban-mt-ngu-hanh-son-gan-lang-dai-hoc-da-nang-15m-pr42444898
+[2025-04-14T17:31:57.141+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-phuong-thuong-ly-prj-vinhomes-imperia-hai-phong/200m2-paris-co-thang-may-vi-tri-vip-canh-cong-vien-be-boi-cac-tien-ich-pr42148523
+[2025-04-14T17:31:57.149+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-pham-van-bach-phuong-yen-hoa-2-prj-golden-park-tower/em-huyen-chuyen-nhuong-quy-ngoai-giao-3n-95m2-gia-tot-nhat-thi-truong-pr41637060
+[2025-04-14T17:31:57.150+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-truong-han-sieu-phuong-da-kao/mt-cho-dinh-t-hoang-q1-4-5-nh-x-15m-5t-chi-con-12-8-ty-tl-tammy-pr42642435
+[2025-04-14T17:31:57.151+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-vo-an-ninh-phuong-hoa-xuan/ban-2-lo-mat-tien-10-5m-anh-cam-le-da-nang-pr42136514
+[2025-04-14T17:31:57.152+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-nguyen-van-troi-phuong-hiep-thanh/lo-mat-tien-thu-dau-mot-gan-ql13-vi-tri-tot-kinh-doanh-dau-tu-pr42626222
+[2025-04-14T17:31:57.153+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-xuan-dinh-phuong-xuan-dinh-prj-khu-ngoai-giao-doan/chinh-chu-ban-gap-115m2-full-noi-that-3pn-2wc-bac-tu-liem-gia-4-6-ty-pr38004098
+[2025-04-14T17:31:57.159+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-phuong-thanh-my-loi-prj-waterina-suites/-goc-3pn-160m2-tang-cao-view-song-270-do-chat-luong-qte-so-hong-pr42627111
+[2025-04-14T17:31:57.162+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-dai-lo-thang-long-xa-tien-xuan-prj-xanh-villas/chinh-chu-ban-goc-huong-dong-nam-view-trieu-do-de-o-nghi-tuyet-voi-lh-pr41914263
+[2025-04-14T17:31:57.163+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-phan-dinh-phung-phuong-2-21/5x17m-3-lau-hxh-gan-pho-am-thuc-xich-long-gia-14-9-ty-pr42546771
+[2025-04-14T17:31:57.169+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-huynh-dinh-hai-phuong-14-7/ban-mt-p-14-binh-thanh-dt-4-5mx20m-gia-16ty-4-tang-pr41915326
+[2025-04-14T17:31:57.170+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-doan-gioi-phuong-son-ky/ban-goc-2mt-9-9-ty-80m2-5pn-5wc-tan-phu-hcm-pr42619768
+[2025-04-14T17:31:57.171+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-thi-tran-thuong-tin/ban-4pn-4wc-68m2-tai-ha-noi-gia-tot-pr42617788
+[2025-04-14T17:31:57.172+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-hon-chong_1-phuong-vinh-hai/ban-can-goc-2-tien-khu-cg-san-toa-can-ho-tuyet-dep-dang-kinh-doanh-pr41919764
+[2025-04-14T17:31:57.176+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-pho-ta-quang-buu-phuong-bach-khoa/ban-25-8-ty-80m2-chinh-chu-gia-uu-dai-hai-ba-trung-ha-noi-pr42626294
+[2025-04-14T17:31:57.180+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-thanh-liet-xa-thanh-liet-prj-khu-nha-o-thap-tang-hai-ngan/can-ban-l-gc-2-mat-tien-dep-90m2-3-5-truc-5m-t-va-mat-tien-14m-pr42610377
+[2025-04-14T17:31:57.185+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-9-12/gap-ban-nhinh-7ty-co-100m2-4pn-ngay-nga-tu-phu-nhuan-pr41021167
+[2025-04-14T17:31:57.188+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-nen-du-an-duong-do-xuan-hop-phuong-phuoc-long-b-prj-khu-dan-cu-nam-long/chinh-chu-can-ra-gap-lo-tai-kdc-11-9-trieu-120-m2-thuong-luong-ho-tro-vay-ngan-hang-pr42148150
+[2025-04-14T17:31:57.189+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-so-13-phuong-phuoc-hai-prj-khu-do-thi-le-hong-phong-ii/ban-4-tang-13-ha-quang-2-trang-sau-cong-vien-thoang-dep-pr42591459
+[2025-04-14T17:31:57.194+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-dang-tien-dong-phuong-trung-liet/-tt-da-7-tang-thang-may-1-ngo-1-3-thoang-via-he-pr42598599
+[2025-04-14T17:31:57.197+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-ho-tung-mau-phuong-phu-dien/sieu-hat-re-oto-do-cong-chdv-97m2-7t-15pkk-cua-so-dong-tien-75-tr-th-pccc-tm-pr42340768
+[2025-04-14T17:31:57.204+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-lien-mac-phuong-lien-mac/ban-o-bac-tu-liem-ha-noi-20-ty-100m2-5pn-5wc-pr42582621
+[2025-04-14T17:31:57.205+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-tran-khanh-du-phuong-my-an/-toa-can-ho-5-tang-lo-goc-135m2-doanh-thu-60tr-thang-lh-lvcc-pr42575429
+[2025-04-14T17:31:57.210+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-tran-khat-chan-phuong-thanh-nhan/-dep-o-ngay-sat-pho-oto-cho-vao-vua-o-vua-kinh-doanh-mat-tien-khung-pr42197903
+[2025-04-14T17:31:57.213+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-bui-huy-bich-phuong-hoang-liet/ban-can-goc-ngo-2-o-to-7-cho-tranh-u-gan-cong-vien-vui-choi-pr42346850
+[2025-04-14T17:31:57.219+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-xa-long-hung-prj-the-empire-vinhomes-ocean-park-2/song-lap-ngoc-trai-146m2-chi-29-ty-view-song-sau-co-be-boi-pha-le-4-mua-danh-rieng-cho-cu-dan-vip-pr42580684
+[2025-04-14T17:31:57.220+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-vu-trong-phung-phuong-thanh-xuan-trung-prj-rivera-park-ha-noi/-ban-gap-3pn-dep-lung-linh-full-do-gia-8-6-ty-lh-call-zalo-sms-pr42598225
+[2025-04-14T17:31:57.222+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-minh-khai-phuong-hoang-van-thu-4/tuyet-tac-kien-truc-ngo-goc-de-mai-7tang-thang-may-71m-24-5-ty-pr42654678
+[2025-04-14T17:31:57.225+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-vu-pham-ham-phuong-yen-hoa-2-prj-khu-do-thi-yen-hoa/ban-gap-chcc-3-phong-ngu-toa-sunshine-gia-7-ty-lien-he-pr42591361
+[2025-04-14T17:31:57.226+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-phuong-ham-tien/chu-can-ban-r-huong-pho-sau-lung-huong-bien-golf-thanh-pho-phan-thiet-pr40565321
+[2025-04-14T17:31:57.228+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-shophouse-nha-pho-thuong-mai-duong-nguyen-huu-tho-xa-phuoc-kieng-prj-celesta-avenue/ban-2-mat-tien-tt-30-cho-den-khi-n-lh-0911937898-pr37084686
+[2025-04-14T17:31:57.229+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-trieu-viet-vuong-phuong-4_3/can-von-ban-gap-can-tam-huyet-434m2-ngang-21m-da-hoan-cong-22-ty-pr42573144
+[2025-04-14T17:31:57.234+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-dong-van-cong-phuong-thanh-my-loi-prj-feliz-en-vista/ban-duplex-3pn-143m2-view-landmark-81-full-nt-gia-re-chi-11-ty-lh-0911937898-pr37084680
+[2025-04-14T17:31:57.238+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-dinh-cong-thuong-phuong-dinh-cong/can-ban-gap-dt50m-5t-gia-12-5ty-vi-tri-dep-lo-goc-o-to-dau-do-vong-quanh-pr42517935
+[2025-04-14T17:31:57.242+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-pham-van-dong-phuong-xuan-dinh/-lo-goc-be-the-sieu-tai-co-hoi-so-huu-hiem-co-pr42634992
+[2025-04-14T17:31:57.244+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-so-7-phuong-an-phu/bao-gia-thi-truong-chinh-chu-b-3-tg-co-thg-may-tai-dt-5x20-gia-18-ty-pr42164191
+[2025-04-14T17:31:57.249+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-do-muoi-phuong-duong-quan-prj-hoang-huy-new-city/ban-nam-sau-mat-y-nguyen-hai-phong-pr42524808
+[2025-04-14T17:31:57.254+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-23-10-xa-vinh-thanh-10/ban-ngay-23-10-trung-tam-dep-vuong-vuc-ngang-12-5m-so-do-tho-cu-pr42612046
+[2025-04-14T17:31:57.254+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-dien-bien-phu-phuong-22-prj-the-landmark-81-vinhomes-central-park/ban-vinmes-3pn-2wc-109m2-toa-lm81-gia-22-ty-tang-trung-suat-hdmb-nnn-pr42613636
+[2025-04-14T17:31:57.257+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-trieu-khuc-phuong-thanh-xuan-bac-prj-pandora-53-trieu-khuc/ban-53-8-4-ty-101-4m2-gia-tot-t-pr42598001
+[2025-04-14T17:31:57.261+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-pham-hung-phuong-my-dinh-2-prj-sunshine-center/-t-ban-3pn-108m-toa-sunhine-da-set-noi-that-cuc-dep-lh-pr39334520
+[2025-04-14T17:31:57.265+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-le-trong-tan-phuong-phu-la-prj-khu-do-thi-moi-van-phu/chinh-chu-gui-ban-85m-mat-cong-vien-gia-sieu-re-lh-0904588816-pr34842296
+[2025-04-14T17:31:57.267+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-nguyen-trai-phuong-3-14/ban-hem-vip-xe-hoi-80-p3-quan-5-5x23m-gia-sieu-tot-23-ty-pr42547285
+[2025-04-14T17:31:57.269+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-my-dinh-phuong-my-dinh-2/chi-11-5-ty-45m-6-tang-nam-tu-liem-o-to-qua-an-sinh-tot-di-lai-thuan-tien-pr42638828
+[2025-04-14T17:31:57.271+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-nguyen-canh-di-phuong-dai-kim-prj-khu-do-thi-dai-kim/ban-phan-lo-kdt-hoang-mai-55m2-x-4-tang-gia-nhinh-9-ty-0963789823-pr32390073
+[2025-04-14T17:31:57.273+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-nguyen-co-thach-phuong-an-khanh-prj-zeit-river-thu-thiem/chinh-chu-ban-1pn-tang-san-vuon-chi-mot-duy-nhat-gia-sieu-tot-thanh-toan-toi-07-2025-pr42047363
+[2025-04-14T17:31:57.275+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-so-793-phuong-tan-hung-14/ban-cap-4-mat-tien-793-q-7-dt-5x24-thich-hop-xay-moi-lh-pr42304411
+[2025-04-14T17:31:57.279+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-tho-lao-phuong-dong-nhan/ban-hai-ba-trung-dt-66m2-7t-mt-8-8m-gia-23-ty-lh-thu-phuong-pr42549698
+[2025-04-14T17:31:57.282+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-lac-long-quan-phuong-nghia-do-1/ban-5-tang-dt43-4m2-mat-tien-5m-2-mat-ngo-pr40851506
+[2025-04-14T17:31:57.292+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-so-7-phuong-linh-trung/ban-mat-tien-kinh-doanh-7-tp-thu-duc-pr42615987
+[2025-04-14T17:31:57.294+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-pho-tran-binh-phuong-my-dinh-2-prj-dolphin-plaza/em-ban-164m-gom-3-1pn-tang-cao-vip-full-noi-that-dep-co-slot-oto-co-so-do-chu-thien-chi-ban-pr42526471
+[2025-04-14T17:31:57.303+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-dinh-cong-phuong-dinh-cong/ban-gap-hoang-mai-lo-goc-gan-pho-xay-moi-6-tang-thang-may-noi-that-day-du-pr42633282
+[2025-04-14T17:31:57.306+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-bac-cau-phuong-ngoc-thuy/-view-ti-do-co-1-khong-2-giua-trung-tam-ha-noi-phap-ly-chuan-len-tin-la-bay-pr42603921
+[2025-04-14T17:31:57.308+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-lien-phuong-phuong-hiep-thanh/ban-tien-kinh-doanh-gan-vong-xoay-3-pr40747084
+[2025-04-14T17:31:57.311+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-32-xa-di-trach-prj-chung-cu-the-wisteria/chinh-chu-ban-4pn-132m2-hinode-pr42638074
+[2025-04-14T17:31:57.315+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-n1-phuong-son-ky-prj-diamond-centery/mua-nha-ngay-aeon-tan-phu-ghcdt-200-ctbh-tt20-nhan-nha-an-han-goc-lai-24th-tt-95-ck-khung-pr42431718
+[2025-04-14T17:31:57.320+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-van-cao-phuong-phu-thanh/ban-gap-4pn-5wc-68m2-gia-tot-tai-tan-hcm-pr42500097
+[2025-04-14T17:31:57.324+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-pho-lieu-giai-phuong-ngoc-khanh-prj-vinhomes-metropolis-lieu-giai/xem-nha-24-7-binh-minh-land-chuyen-ban-cc-gia-tot-nhat-thi-truong-vay-70-pr41775396
+[2025-04-14T17:31:57.328+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-to-huu-phuong-la-khe-prj-usilk-city/ban-4-ngu-3vs-165m2-ban-cong-san-vuon-tai-khu-van-ha-dong-pr42575811
+[2025-04-14T17:31:57.333+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-nguyen-huu-tho-xa-phuoc-kieng-prj-zeitgeist-city/gio-hang-ban-tai-du-an-gs-metrocity-zeigeist-gia-tot-nhat-pr41627175
+[2025-04-14T17:31:57.340+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-nguyen-van-cu-1-xa-my-khanh/ban-12-cong-mat-tien-dan-cau-vam-xang-noi-va-quoc-lo-61c-pr42626181
+[2025-04-14T17:31:57.347+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-van-cao-phuong-phu-thanh/ban-goc-2mtkd-tan-lh-pr42655431
+[2025-04-14T17:31:57.349+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-phuong-phu-tan/-phan-lo-sieu-vip-77x35-gan-tp-moi-binh-duong-pr42591528
+[2025-04-14T17:31:57.353+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-dai-lo-vong-cung-phuong-an-khanh-prj-the-crest-residence/-ban-2pn-115m2-metropole-thu-thiem-toa-tang-cao-view-song-gia-chi-26ty-all-in-pr42655111
+[2025-04-14T17:31:57.356+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-thinh-quang/ban-toa-ccmn-gan-nga-tu-so-90m-8t-mt-8m-27-phong-khep-kin-pccc-chuan-dong-tien-150tr-thang-pr42334028
+[2025-04-14T17:31:57.357+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-pho-ky-dong-xa-phu-xuan-5-prj-thai-binh-dragon-city/ban-bt-gia-cuc-chat-12-9-ty-352m2-pr42585247
+[2025-04-14T17:31:57.360+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-nguyen-van-huyen-phuong-nghia-tan-3/-phan-lo-o-to-tai-45m2x-6-tang-mt-3-6m-18-5-ty-pr42647300
+[2025-04-14T17:31:57.365+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-ngoc-thuy-phuong-thuong-thanh-1-prj-khai-son-hill/ban-cat-lo-gap-pho-100m2-huong-bac-sieu-vip-sieu-hiem-lh-pr40239865
+[2025-04-14T17:31:57.366+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-shophouse-nha-pho-thuong-mai-phuong-thuy-ha-prj-vinhomes-royal-island/quy-hang-doc-quyen-vip-nhat-va-gia-tot-hon-thi-truong-9-10-vu-yen-pr42632332
+[2025-04-14T17:31:57.368+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-xuan-dinh-phuong-xuan-dinh/ban-tai-12-2-ty-88m2-phap-ly-day-du-mat-tien-6m-pr42532109
+[2025-04-14T17:31:57.369+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-pho-phuong-liet-phuong-phuong-liet/ban-toa-7-tang-thang-may-gan-sat-65-m2-gia-13-9-ty-pr42505574
+[2025-04-14T17:31:57.372+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-van-phuc-1/hiem-43m2-4-tang-hang-xom-louis-vi-tri-dinh-oto-do-cua-kinh-doanh-tot-chi-9ty6-pr42621306
+[2025-04-14T17:31:57.376+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-xa-la-phuong-phuc-la/-kd-khung-thang-may-1-1-sau-kdt-s60-70m2t2-19-2-ty-tl-pr42218195
+[2025-04-14T17:31:57.385+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-thon-dia-nam-hong-xa-nam-hong-3/ban-thuoc-khu-dau-gia-12-8-ty-95m2-8pn-4wc-5-tang-tien-5m-pr42135450
+[2025-04-14T17:31:57.391+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-nguyen-thuong-hien-phuong-5-14/ban-q-bt-hxh-5m-5-tang-btct-4pn-7-4-ty-pr42541444
+[2025-04-14T17:31:57.408+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-13-phuong-an-loi-dong-prj-sadora-sala/ban-gap-3-phong-ngu-goc-tang-cao-dt-118m2-noi-that-co-ban-gia-13-5ty-allin-pr42619359
+[2025-04-14T17:31:57.417+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-thoai-ngoc-hau-phuong-hoa-thanh-prj-res-green-tower/ban-gap-penth-140m2-3pn-3wc-da-co-so-gia-8-9-ty-tl-pr42587759
+[2025-04-14T17:31:57.434+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-vuon-lai-phuong-an-phu-dong-1/ban-421-24-ty-320m2-gia-cuc-chat-pr42454042
+[2025-04-14T17:31:57.441+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-quoc-lo-13-phuong-lai-thieu/-cap-4-tien-13-ngay-nga-tu-cau-ong-bo-thuoc-kp-nguyen-trai-p-tp-thuan-bd-pr42598342
+[2025-04-14T17:31:57.446+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-shophouse-nha-pho-thuong-mai-duong-to-huu-phuong-duong-noi-prj-khu-do-thi-moi-duong-noi/-dt-218-m2-khoi-de-chung-cu-anland-lakeview-mat-le-quang-dao-keo-dai-pr42655315
+[2025-04-14T17:31:57.449+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-pham-van-chieu-phuong-14-8/sieu-pho-6tang-thang-may-hem-xe-tai-full-noi-that-chi-9-2-ty-tl-pr42593823
+[2025-04-14T17:31:57.452+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-nguyen-van-loc-phuong-mo-lao/ban-3-tang-tai-pho-ha-dong-dien-tich-49-5m-gia-tot-pr41573523
+[2025-04-14T17:31:57.455+0000] {logging_mixin.py:190} INFO - [Scraping] https://batdongsan.com.vn/nha-dat-ban/ban-dat-xa-co-dong/ban-lo-gan-full-tho-cu-gia-tot-pr42719294
+[2025-04-14T17:32:12.913+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-phuong-giang-bien-1/ban-tien-7m-6-tang-thang-may-kinh-doanh-dinh-dong-tien-tot-pr42602436
+[2025-04-14T17:32:12.921+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-khuong-dinh/ban-chi-vai-buoc-chan-ra-pho-ngo-to-kinh-doanh-tot-oto-qua-50mx5t-gia-9-8-ty-pr42587278
+[2025-04-14T17:32:12.922+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-bung-ong-thoan-phuong-phu-huu-2-prj-villa-park/danh-sach-song-lap-dep-gia-tot-t12-2024-chinh-chu-lam-viec-tuc-sang-ten-nhanh-gon-pr41724402
+[2025-04-14T17:32:12.926+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-le-quang-sung-phuong-6-9/ban-gap-hxh-4-tang-btct-5-pn-4-wc-chi-30m-ra-mat-tien-gan-cho-binh-tay-pr42369343
+[2025-04-14T17:32:12.927+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-dai-mo-phuong-dai-mo-prj-tig-dai-mo-green-garden-house/ban-lk-mt-6m-xay-4-tang-so-do-o-to-tranh-ngo-thong-tu-phia-qh-40m-gia-tot-pr40251463
+[2025-04-14T17:32:12.929+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-phuoc-thien-phuong-long-binh-3/ban-lo-goc-2mt-khu-tai-dinh-cu-198m2-gia-13-5-ty-pr38696537
+[2025-04-14T17:32:12.935+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-pho-thach-lam-phuong-tan-thanh/chu-di-nuoc-ngoai-can-ban-tien-4-5m-x-16m-pr42576206
+[2025-04-14T17:32:12.940+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-suoi-da-3-phuong-tho-quang/ban-3-vi-tri-dep-pr41918214
+[2025-04-14T17:32:12.941+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-quoc-lo-32-thi-tran-tram-troi-prj-khu-do-thi-moi-lideco-bac-quoc-lo-32/chinh-chu-gui-ban-tai-ngay-gan-mat-32-pr42631873
+[2025-04-14T17:32:12.945+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-quoc-lo-32-thi-tran-tram-troi-prj-khu-do-thi-moi-lideco-bac-quoc-lo-32/chinh-chu-gui-ban-can-224m-du-an-da-hoan-thien-dag-khai-thac-dong-tien-50tr-t-pr42649366
+[2025-04-14T17:32:12.947+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-le-trong-tan-xa-an-khanh-4-prj-khu-a-d-geleximco-le-trong-tan/ban-b-geximco-100m-19-2-ty-2-mat-thoang-pr42588319
+[2025-04-14T17:32:12.953+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-xa-long-hung-prj-the-empire-vinhomes-ocean-park-2/ban-gap-dao-dua-56m2-ngay-sat-cong-vien-be-boi-pha-le-gia-chi-7-ti-gia-re-nhat-vin2-pr40299313
+[2025-04-14T17:32:12.960+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-phu-thuong-1/ban-65m2-16-ty-8pn-6wc-tai-tay-ho-ha-noi-chinh-chu-gia-tot-pr42474124
+[2025-04-14T17:32:12.967+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-duong-dinh-nghe-phuong-an-hai-bac/gia-can-ban-tien-da-nang-pr41613675
+[2025-04-14T17:32:12.973+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-nen-du-an-phuong-phuoc-hai-prj-vcn-phuoc-long/ban-lo-kdt-1-mat-tien-duong-thich-quang-duc-tp-nha-trang-pr42656123
+[2025-04-14T17:32:12.978+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-27-4-phuong-phuoc-hung-4/ban-236-27-4-tp-ba-ria-pr35575332
+[2025-04-14T17:32:12.982+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-xa-nghia-tru/chinh-chu-ban-209m2-full-tho-cu-mat-tien-hang-xom-vinhomes-ocean-park-pr42607067
+[2025-04-14T17:32:12.991+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-thuy-khue-phuong-buoi/ban-sieu-hiem-6-tang-lo-goc-view-ho-tay-full-khach-tay-thue-36m2-9-5-ty-pr42618328
+[2025-04-14T17:32:12.994+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-dai-tu-phuong-dai-kim/ban-moi-dep-ngo-o-to-47m-5-tang-gia-hop-ly-vi-tri-ngo-o-to-lui-tan-cua-cach-o-to-tai-pr42530210
+[2025-04-14T17:32:13.001+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-pho-phung-chi-kien-phuong-nghia-do-1/ban-42m-ngo-7-cau-giay-pr42376696
+[2025-04-14T17:32:13.009+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-pham-van-chieu-phuong-13-8/ban-tai-go-vap-ho-chi-minh-gia-uu-dai-11-5-ty-125m2-pr42608267
+[2025-04-14T17:32:13.015+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-lac-long-quan-phuong-3-18/khu-phan-lo-vip-sat-dam-sen-4-tang-moi-xay-dep-lung-linh-chi-8-dong-hon-pr42631365
+[2025-04-14T17:32:13.016+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-yen-lang-phuong-trung-liet/-phan-lo-oto-pho-50mx6t-thang-may-gia-15-7-ty-pr42459160
+[2025-04-14T17:32:13.019+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-le-van-luong-xa-phuoc-kieng/ban-tang-full-noi-that-cao-cap-hem-xe-hoi-kien-pr42355134
+[2025-04-14T17:32:13.024+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-bac-son-phuong-vinh-hai/-bien-trang-3-tang-10m-3p-tam-bien-pr42346237
+[2025-04-14T17:32:13.026+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-trau-quy-thi-tran-trau-quy/ban-manh-118m-o-khu-do-31ha-gia-lam-lh-pr42607618
+[2025-04-14T17:32:13.030+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-dai-tu-phuong-dai-kim-prj-toa-nha-licogi-12/ban-tai-lidaco-vinaconex-7-so-19-ang-mai-160m-so-do-lh-pr41640537
+[2025-04-14T17:32:13.031+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-le-thuoc-phuong-an-hai-bac/ban-cap-dt-180m-ngang-10m-ngay-cv-ho-nghinh-pr42634476
+[2025-04-14T17:32:13.035+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-quoc-lo-32-xa-tan-lap-24-prj-khu-do-thi-moi-tan-tay-do/cc-ban-lk-san-so-giao-dich-pr39756313
+[2025-04-14T17:32:13.038+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-phuc-dong/-dep-6-tang-thang-may-oto-7-cho-gia-8-7-ty-ctl-pr42472858
+[2025-04-14T17:32:13.040+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-kho-nha-xuong-duong-truong-thi-hoa-phuong-tan-thoi-hiep/ban-2-mt-thong-10x15m-hang-hiem-tai-8-2-ty-vnd-146m2-pr41529025
+[2025-04-14T17:32:13.046+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-xuan-dieu-phuong-quang-an-2/ban-pho-7-tang-thang-may-dep-xuat-sac-cho-tay-thue-noi-that-chau-au-pr42616104
+[2025-04-14T17:32:13.051+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-bung-ong-thoan-phuong-phu-huu-2-prj-villa-park/bt-160m2-18t-don-gia-re-nhat-re-hon-tho-pr42500511
+[2025-04-14T17:32:13.052+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-lang-phuong-thinh-quang/ccmn-cuc-dep-dong-da-2-thoang-70m2-7-tang-10pkk-pccc-xin-so-gia-12-ty-pr41630386
+[2025-04-14T17:32:13.052+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-hoang-van-thai-phuong-khuong-trung/chinh-chu-ban-thanh-xuan-kinh-doanh-da-dang-60m2-x-4-tang-x-mt-5m-17-5-ty-pr42037378
+[2025-04-14T17:32:13.053+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-shophouse-nha-pho-thuong-mai-duong-ham-nghi-phuong-cau-dien-prj-vinhomes-gardenia/-duy-nhat-can-chi-10-ty-tai-du-an-lh-em-chau-pr42275333
+[2025-04-14T17:32:13.053+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-nguyen-duc-canh-phuong-tuong-mai/-5-tang-o-to-do-cua-nhinh-7-ty-ko-co-can-thu-2-dep-hoang-o-ngay-pr42606234
+[2025-04-14T17:32:13.055+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-van-quan-phuong-van-quan-prj-khu-do-thi-moi-van-quan/dep-nhat-phan-lo-via-he-o-to-tranh-chay-vong-h-kinh-doanh-phong-dt-85m-x-6t-pr42579300
+[2025-04-14T17:32:13.060+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-chinh-trung-thi-tran-trau-quy/-chu-gui-ban-lo-123-5m2-tai-khu-31ha-tt-vi-tri-dep-gia-dau-tu-dep-pr42564816
+[2025-04-14T17:32:13.062+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-luy-ban-bich-phuong-hoa-thanh/truc-chinh-kinh-doanh-doi-dien-chcc-carillon-va-idico-4-tang-4x20-pr42438068
+[2025-04-14T17:32:13.063+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-so-21-phuong-8-12/ban-4-tang-ngay-truong-tieu-hoc-luong-the-vinh-p8-gv-hxh-4-9x13-5m-chi-7-1-ty-pr42523635
+[2025-04-14T17:32:13.064+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-xa-tan-xa/chinh-chu-nho-ban-lo-100m2-mat-ho-kinh-doanh-sam-uat-nhat-hoa-lac-gia-chi-160tr-m2-pr42646263
+[2025-04-14T17:32:13.066+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-nen-du-an-phuong-an-phu-prj-khu-dan-cu-nam-rach-chiec/-gap-lam-roi-80m2-gia-11-ty-gan-song-global-city-sach-se-duong-to-xay-cao-pr42594971
+[2025-04-14T17:32:13.069+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-dao-tan-phuong-cong-vi/ban-ba-dinh-dt-50m-x-5t-x-mt-3-6m-gia-16-8-ty-co-thuong-luong-pr42578229
+[2025-04-14T17:32:13.070+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-xa-tan-hoi-7-prj-vinhomes-wonder-city/quy-can-96m2-re-nhat-dan-phuong-mat-tien-8m-hoan-thien-4-tang-pr42554958
+[2025-04-14T17:32:13.072+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-xuan-thieu-phuong-hoa-khanh-bac/ban-2-lo-biet-thu-lien-ke-giap-2-mat-tien-kdc-j258-doi-dien-cong-cong-vien-nuoc-mikayuki-pr42008203
+[2025-04-14T17:32:13.074+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-nguyen-van-huong-phuong-thao-dien-prj-xi-riverview-palace/doc-quyen-145m2-11-3ty-185m2-14-9ty-202m2-19-3ty-penthouse-500m2-65ty-pr42443742
+[2025-04-14T17:32:13.076+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-hoa-binh-1-phuong-ham-tien/ban-500m2-tmdv-mat-bien-phan-thiet-mat-bien-20m-gia-15-ty-pr42447694
+[2025-04-14T17:32:13.080+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-kha-van-can-phuong-linh-chieu/-3-tang-80m2-4x20m-4pn-4wc-o-to-dau-tan-cua-7-5-ty-pr42414636
+[2025-04-14T17:32:13.082+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-thuy-khue-phuong-thuy-khue/ban-tay-ho-40m-mat-tien-3-9m-so-vuong-dep-vi-tri-cuc-dep-ngo-thong-gia-10-8-ty-pr42540570
+[2025-04-14T17:32:13.083+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-dinh-thon-phuong-cau-dien/toa-hiem-16-phong-dong-tien-1-5-ty-1-nam-dt-108m2-9-tang-nhinh-29-ty-quan-giay-pr42617484
+[2025-04-14T17:32:13.084+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-nguyen-canh-di-phuong-dai-kim-prj-khu-do-thi-dai-kim/ban-phan-lo-tai-et-05-tang-dien-tich-54-3m2-mat-tien-4m2-pr41364605
+[2025-04-14T17:32:13.090+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-bui-bang-doan-phuong-phu-my-9/-villa-ven-song-noi-dai-cach-khu-chateau-pmh-500m-12-x-20-gia-125tr-m2-pr40829900
+[2025-04-14T17:32:13.094+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-cach-mang-thang-tam-phuong-13-5/-to-gia-sieu-hiem-goc-2mt-hxh-4m-cmt8-q-10-dt-5m-x-15m-72m2-gan-khu-ha-do-trung-sg-pr39511326
+[2025-04-14T17:32:13.105+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-nguyen-van-linh-phuong-tan-phong-9-prj-khu-dan-cu-ven-song-sadeco/chinh-chu-gia-tot-t-that-khong-ao-100-7x18m-gia-18-ty-pho-5x18m-gia-14-ty-pr38544645
+[2025-04-14T17:32:13.112+0000] {logging_mixin.py:190} INFO - [Scraping] https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-xa-tan-hoi-7-prj-vinhomes-wonder-city/dau-tu-hom-nay-sinh-loi-kep-tai-voi-von-tu-4-8-ty-ck-12-7-co-trung-xe-vf8-pr42723817
+[2025-04-14T17:32:24.873+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-le-hong-phong-phuong-2-18/ban-mt-p-quan-10-dt-5mx22m-6-tang-lau-hdt-80-trieu-gia-chi-30-ty-pr42638782
+[2025-04-14T17:32:24.877+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-duong-lam-1-phuong-nai-hien-dong-prj-marina-complex/can-ban-3-tang-hai-tien-144m2-trung-tam-da-nang-so-do-lau-dai-pr41563189
+[2025-04-14T17:32:24.885+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-trang-trai-khu-nghi-duong-pho-phan-dang-luu-xa-tam-an-2/b-nha-vuon-ket-hop-qu-cafe-ngai-long-dien-brvt-pr41359922
+[2025-04-14T17:32:24.888+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-mini-duong-vo-chi-cong-phuong-nghia-do-1/ban-toa-21-phong-quan-cau-giay-6-tang-thang-may-lo-goc-thoang-dong-tien-hon-100-trieu-thang-pr42655751
+[2025-04-14T17:32:24.894+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-van-cao-phuong-lieu-giai/ban-mat-ngo-pho-ba-dinh-39-m2-x-5-tang-thang-may-mat-tien-4-3-m-so-vuong-13-ty-pr42652723
+[2025-04-14T17:32:24.900+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-do-xuan-hop-phuong-phuoc-long-a-1/ban-tien-90m2-so-hong-gia-re-pr42488587
+[2025-04-14T17:32:24.905+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-cach-mang-thang-tam-phuong-15-8/mat-tien-khu-ngay-ga-metro-cong-vien-le-thi-dien-tich-4-x-17-m-pr42446387
+[2025-04-14T17:32:24.908+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-pho-tram-phuong-thach-ban-1/-dt95m2-x-5-tang-chi-27-5-ty-via-he-kinh-doanh-sam-uat-lh-pr42585270
+[2025-04-14T17:32:24.909+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-xa-nam-phuong-tien/gia-dinh-ban-co-san-nha-vuon-sau-ubnd-tien-pr40494130
+[2025-04-14T17:32:24.910+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-trang-trai-khu-nghi-duong-xa-dong-xuan-2/khuon-vien-tai-quoc-oai-ha-noi-pr42514851
+[2025-04-14T17:32:24.912+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-b-phuong-di-an/c-lo-khu-tthc-tp-d-pr42516646
+[2025-04-14T17:32:24.913+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-to-hieu-phuong-hiep-tan/ban-hem-xe-hoi-202-quan-phu-dt-4x21m-1-lau-gia-8-4-ty-pr40540886
+[2025-04-14T17:32:24.916+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-huynh-thuc-khang-phuong-lang-thuong/hiem-lo-goc-khu-phan-lo-dong-da-52m2-mt-5-1m-oto-vao-gia-nhinh-17-ty-lh-pr42575343
+[2025-04-14T17:32:24.920+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-pho-lang-ha-phuong-lang-ha/giang-vo-dan-xay-dep-o-ngay-xung-quanh-nhieu-tien-ich-gia-hop-ly-70m2x3-5-tang-pr41390845
+[2025-04-14T17:32:24.924+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-nguyen-van-linh-phuong-thach-ban-1/sieu-hiem-can-kinh-doanh-bat-chap-trung-tam-long-bien-ha-noi-80m-x-6t-17-5-ty-pr41403546
+[2025-04-14T17:32:24.926+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-shophouse-nha-pho-thuong-mai-duong-pham-van-dong-phuong-hoa-phu-2-prj-artisan-park/ban-3-mat-tien-tpm-binh-loi-nhuan-cho-thue-18-100m2-5x20-chi-10-5-ty-ky-hdmb-pr42606087
+[2025-04-14T17:32:24.931+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-tu-xuong-phuong-hiep-phu/-mat-tien-104m2-ngang-4-4m-so-dep-gan-ben-truong-hoa-lu-hon-8-ty-tl-pr42584343
+[2025-04-14T17:32:24.937+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-bung-ong-thoan-phuong-phu-huu-2/ban-mat-tien-dien-tich-130m2-quy-hoach-30m-phap-ly-so-h-rieng-pr41735587
+[2025-04-14T17:32:24.939+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-duong-su-van-hanh-phuong-12-5/hang-hiem-ban-gap-p12-q10-dt-3-6x19m-2-lau-gia-chi-12-5-ty-pr42643867
+[2025-04-14T17:32:24.940+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-bui-the-my-phuong-10-10/ban-gap-mt-kd-dinh-tan-binh-133m-4-tang-btct-ngang-5m-8pn-7wc-18-75-ty-pr40810293
+[2025-04-14T17:32:24.941+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-loc-ha-xa-mai-lam/ban-lo-goc-8-5-ty-60m2-mat-tien-4m-pp-ly-day-du-pr42599690
+[2025-04-14T17:32:24.943+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-biet-thu-lien-ke-duong-quoc-lo-51-xa-dai-phuoc-1-prj-swan-bay/cap-nhat-ro-hang-swanbay-thang-8-nhieu-can-gia-tot-vi-tri-dep-rieng-gia-tu-45tr-m2-pr40545063
+[2025-04-14T17:32:24.945+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-nen-du-an-phuong-phu-thuy-1-prj-ocean-dunes/ban-280m2-b5-view-bien-view-cong-vien-hoa-binh-phan-thiet-pr40862357
+[2025-04-14T17:32:24.946+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-nen-du-an-duong-nam-ky-khoi-nghia-phuong-hoa-hai-prj-fpt-city-da-nang/ban-lo-biet-thu-view-kenh-sinh-thai-gia-chi-29tr-m2-pr42194161
+[2025-04-14T17:32:24.948+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-nguyen-tuan-phuong-thanh-xuan-trung-prj-thong-nhat-complex/chinh-chu-ban-122m2-3pn-2wc-tang-gia-10-ty-o-full-nt-lh-pr42609666
+[2025-04-14T17:32:24.954+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-tan-phong-9/ban-quan-7-kdc-quy-dong-hiem-ban-4-g-200m2-chi-13-ty-nhinh-pr42608919
+[2025-04-14T17:32:24.958+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-pho-thai-ha-phuong-trung-liet/ban-n-mat-ngo-52-4m-mat-tien-5-24m-via-he-rong-ot-o-tranh-nu-thoai-mai-pr42093557
+[2025-04-14T17:32:24.965+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-mat-pho-duong-phan-dinh-giot-phuong-la-khe/ban-ha-dong-dt-50m2-3-5-tang-mt-5-1m-6-3-ty-o-to-tranh-kinh-doanh-pr33809912
+[2025-04-14T17:32:24.967+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-can-ho-chung-cu-duong-n1-phuong-son-ky-prj-celadon-city/sky-linked-villa-biet-thu-tren-khong-chay-xe-len-nha-ro-clear-stock-tt-cham-3-nam-pr42511617
+[2025-04-14T17:32:24.971+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-nha-rieng-phuong-thinh-quang/-dep-tt-dong-da-2-mat-thoang-8-phong-khep-kin-45m-5t-chi-8-ty-pr40685206
+[2025-04-14T17:32:24.973+0000] {ScraperBatdongsan.py:266} INFO - [Skipped] Already crawled: https://batdongsan.com.vn/nha-dat-ban/ban-dat-duong-nguyen-thai-hoc-phuong-minh-nong/ban-dep-tai-viet-tri-phu-tho-35-2-trieu-m2-326-8-m2-pr42577736
+[2025-04-14T17:32:24.976+0000] {logging_mixin.py:190} INFO - [Scraping] https://batdongsan.com.vn/nha-dat-ban/ban-dat-nen-du-an-duong-lien-phuong-phuong-phuoc-long-b-prj-kdc-phu-nhuan-phuoc-long-b/cap-nhat-gio-hang-20-chuyen-nhuong-gia-tot-nhat-thang-04-2025-canh-global-city-pr42708270
+[2025-04-14T17:32:26.061+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-04-14T17:32:26.064+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-04-14T17:32:26.074+0000] {process_utils.py:132} INFO - Sending 15 to group 2826. PIDs of all processes in the group: [5280, 5291, 5329, 5334, 5377, 5350, 5388, 5376, 2826]
+[2025-04-14T17:32:26.080+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2826
+[2025-04-14T17:32:26.081+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-14T17:32:26.124+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5388, status='terminated', started='17:32:25') (5388) terminated with exit code None
+[2025-04-14T17:32:26.128+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5334, status='terminated', started='17:32:24') (5334) terminated with exit code None
+[2025-04-14T17:32:26.117+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 990, in _execute
+    executor.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/batdongsan_scraping_dag.py", line 67, in scrape_data_task
+    result = scrape_data(use_multiprocessing=False)
+  File "/opt/***/dags/../scripts/ScraperBatdongsan.py", line 270, in scrape_data
+    scrape_one_url((url, lock, crawled_ids))
+  File "/opt/***/dags/../scripts/ScraperBatdongsan.py", line 101, in scrape_one_url
+    driver = create_driver(user_data_dir)
+  File "/opt/***/dags/../scripts/ScraperBatdongsan.py", line 87, in create_driver
+    return webdriver.Chrome(options=chrome_options)
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/chromium/webdriver.py", line 61, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 302, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 322, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/local/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-04-14T17:32:26.170+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/batdongsan_scraping_dag.py", line 67, in scrape_data_task
+    result = scrape_data(use_multiprocessing=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 270, in scrape_data
+    scrape_one_url((url, lock, crawled_ids))
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 101, in scrape_one_url
+    driver = create_driver(user_data_dir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 87, in create_driver
+    return webdriver.Chrome(options=chrome_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.12/site-packages/selenium/webdriver/chromium/webdriver.py", line 61, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/home/airflow/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "/home/airflow/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 302, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 322, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3097, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-04-14T17:32:26.185+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=batdongsan_scraping, task_id=scrape_data, run_id=manual__2025-04-14T17:31:22.628767+00:00, execution_date=20250414T173122, start_date=20250414T173155, end_date=20250414T173226
+[2025-04-14T17:32:26.280+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5350, status='terminated', started='17:32:25') (5350) terminated with exit code None
+[2025-04-14T17:32:26.313+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-14T17:32:26.397+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5329, status='terminated', started='17:32:24') (5329) terminated with exit code None
+[2025-04-14T17:32:26.403+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5376, status='terminated', started='17:32:25') (5376) terminated with exit code None
+[2025-04-14T17:32:26.404+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2826, status='terminated', exitcode=2, started='17:31:54') (2826) terminated with exit code 2
+[2025-04-14T17:32:26.413+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5377, status='terminated', started='17:32:25') (5377) terminated with exit code None
+[2025-04-14T17:32:26.414+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5291, status='terminated', started='17:32:24') (5291) terminated with exit code None
+[2025-04-14T17:32:26.420+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5280, status='terminated', started='17:32:24') (5280) terminated with exit code None
