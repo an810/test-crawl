@@ -43,7 +43,7 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
 # Specify the file path
-input_file_path = os.path.join(DATA_DIR, 'hn_batdongsan_old.tsv')
+input_file_path = os.path.join(DATA_DIR, 'hn_batdongsan.tsv')
 
 # Check if input file exists
 if not os.path.exists(input_file_path):
@@ -98,7 +98,7 @@ filtered_counts = value_counts[value_counts > 10]
 # print(df[['area', 'width', 'number_of_bedrooms', 'number_of_toilets', 'price', 'lat', 'lon', 'furniture', 'legal']].head(10))
 
 # Save the processed data
-output_file_path = os.path.join(OUTPUT_DIR, 'hn_batdongsan_old.tsv')
+output_file_path = os.path.join(OUTPUT_DIR, 'hn_batdongsan.tsv')
 try:
     df.to_csv(output_file_path, sep='\t', index=False)
     logging.info(f"Successfully saved processed data to {output_file_path}")

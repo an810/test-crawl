@@ -141,23 +141,18 @@ def scrape_one_url(args):
             "province": None
         }
 
-        # Extract title
-        title_tag = soup.find('h1', class_='AdDecriptionVeh_adTitle__vEuKD')
+        # Extract title - updated selector
+        title_tag = soup.find('div', class_='cd9gm5n').find('h1')
         data["title"] = title_tag.text.strip() if title_tag else None
 
-        # Extract price
-        price_span = soup.find('span', class_='AdDecriptionVeh_price__u_N83')
-        data["price"] = price_span.text.split('-')[0].strip() if price_span else None
+        # Extract price - updated selector
+        price_span = soup.find('b', class_='pyhk1dv')
+        data["price"] = price_span.text if price_span else None
 
-        # Extract address
-        address_tag = soup.find('div', class_='media-body media-middle AdParam_address__5wp1F AdParam_addressClickable__coDWA')
-        if address_tag:
-            span = address_tag.find('span', class_='fz13')
-            if span:
-                sub = span.find('span', class_='AdParam_addressClickableLoadMap__FLeKT')
-                if sub:
-                    sub.extract()
-                data["address"] = span.text.strip()
+        # Extract address - updated selector
+        address_span = soup.find('div', class_='sf0dbrp r9vw5if').find('span', class_='bwq0cbs')
+        if address_span:
+            data["address"] = address_span.text.strip()
 
         # Extract province and district
         if data["address"]:
@@ -179,8 +174,8 @@ def scrape_one_url(args):
                     data["lat"] = lat_match.group(1)
                 break
 
-        # Extract property specifications
-        specs_items = soup.find_all('div', class_='media-body media-middle')
+        # Extract property specifications - updated selector
+        specs_items = soup.find_all('div', class_='col-xs-6 abzctes')
         label_map = {
             "Diện tích đất": "area",
             "Chiều ngang": "width",
@@ -192,9 +187,11 @@ def scrape_one_url(args):
         }
 
         for item in specs_items:
-            parts = item.get_text(strip=True).split(':')
-            if len(parts) == 2:
-                label, value = parts[0].strip(), parts[1].strip()
+            label_div = item.find('div', class_='a4ep88f')
+            value_div = item.find('strong', class_='a3jfi3v')
+            if label_div and value_div:
+                label = label_div.text.strip()
+                value = value_div.text.strip()
                 key = label_map.get(label)
                 if key:
                     data[key] = value
@@ -226,7 +223,6 @@ def scrape_data(use_multiprocessing=False):
         logging.info(f"Found {len(urls)} URLs to scrape")
 
         if use_multiprocessing:
-            # Use multiprocessing for parallel scraping
             # Use multiprocessing for parallel scraping
             with Pool() as pool:
                 manager = Manager()

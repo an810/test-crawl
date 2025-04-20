@@ -1,0 +1,363 @@
+[2025-04-16T00:14:05.949+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T00:14:05.957+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: batdongsan_scraping.save_links scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-16T00:14:05.963+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: batdongsan_scraping.save_links scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-16T00:14:05.964+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-04-16T00:14:05.972+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): save_links> on 2025-04-15 00:00:00+00:00
+[2025-04-16T00:14:05.980+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=49703) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-16T00:14:05.980+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'batdongsan_scraping', 'save_links', 'scheduled__2025-04-15T00:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/batdongsan_scraping_dag.py', '--cfg-path', '/tmp/tmp63nnynmo']
+[2025-04-16T00:14:05.985+0000] {standard_task_runner.py:72} INFO - Started process 49709 to run task
+[2025-04-16T00:14:05.985+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask save_links
+[2025-04-16T00:14:06.024+0000] {task_command.py:467} INFO - Running <TaskInstance: batdongsan_scraping.save_links scheduled__2025-04-15T00:00:00+00:00 [running]> on host 932270897c9d
+[2025-04-16T00:14:06.100+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='batdongsan_scraping' AIRFLOW_CTX_TASK_ID='save_links' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-15T00:00:00+00:00'
+[2025-04-16T00:14:06.103+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-16T00:14:06.339+0000] {SaveLinkBatdongsan.py:118} INFO - Loaded 61720 existing links
+[2025-04-16T00:14:11.910+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 5: https://batdongsan.com.vn/nha-dat-ban/p5?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:14:11.908+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 2: https://batdongsan.com.vn/nha-dat-ban/p2?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:14:11.927+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 1: https://batdongsan.com.vn/nha-dat-ban/p1?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:14:11.945+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 4: https://batdongsan.com.vn/nha-dat-ban/p4?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:14:11.975+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 3: https://batdongsan.com.vn/nha-dat-ban/p3?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:37.676+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 5
+[2025-04-16T00:40:37.726+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 2
+[2025-04-16T00:40:37.934+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 4
+[2025-04-16T00:40:38.017+0000] {job.py:229} INFO - Heartbeat recovered after 1565.86 seconds
+[2025-04-16T00:40:38.701+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 8: https://batdongsan.com.vn/nha-dat-ban/p8?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:38.729+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 7: https://batdongsan.com.vn/nha-dat-ban/p7?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:38.736+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 6: https://batdongsan.com.vn/nha-dat-ban/p6?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:43.437+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 6
+[2025-04-16T00:40:44.220+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 7
+[2025-04-16T00:40:44.325+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 8
+[2025-04-16T00:40:44.456+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 3
+[2025-04-16T00:40:44.854+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 9: https://batdongsan.com.vn/nha-dat-ban/p9?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:44.958+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 11: https://batdongsan.com.vn/nha-dat-ban/p11?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:45.034+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 10: https://batdongsan.com.vn/nha-dat-ban/p10?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:45.097+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 12: https://batdongsan.com.vn/nha-dat-ban/p12?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:48.339+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2025-04-16T00:40:48.345+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-04-16T00:40:48.354+0000] {process_utils.py:132} INFO - Sending 15 to group 49709. PIDs of all processes in the group: [49717, 51077, 51098, 51149, 51247, 51279, 51348, 51349, 51445, 51449, 51542, 51564, 51668, 51440, 51179, 51263, 51265, 51350, 51359, 51484, 51529, 51649, 51345, 51104, 51159, 51161, 51237, 51248, 51474, 51552, 51677, 51236, 51084, 51112, 51113, 51148, 51170, 51351, 51501, 51656, 51692, 51693, 51146, 49744, 49832, 49836, 49965, 51686, 50013, 50234, 50288, 50428, 51620, 49937, 49709]
+[2025-04-16T00:40:48.359+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 49709
+[2025-04-16T00:40:48.402+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51449, status='terminated', started='00:14:43') (51449) terminated with exit code None
+[2025-04-16T00:40:48.423+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51440, status='terminated', started='00:14:43') (51440) terminated with exit code None
+[2025-04-16T00:40:48.422+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 1 failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-04-16T00:40:48.443+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51542, status='terminated', started='00:14:43') (51542) terminated with exit code None
+[2025-04-16T00:40:48.421+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 1 failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-04-16T00:40:48.449+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51113, status='terminated', started='00:14:43') (51113) terminated with exit code None
+[2025-04-16T00:40:48.450+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51179, status='terminated', started='00:14:43') (51179) terminated with exit code None
+[2025-04-16T00:40:48.450+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51146, status='terminated', started='00:14:43') (51146) terminated with exit code None
+[2025-04-16T00:40:48.451+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51104, status='terminated', started='00:14:43') (51104) terminated with exit code None
+[2025-04-16T00:40:48.444+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /session/b5451e1ae8378360e3a1c76ad8460937/source
+[2025-04-16T00:40:48.452+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51237, status='terminated', started='00:14:43') (51237) terminated with exit code None
+[2025-04-16T00:40:48.452+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51677, status='terminated', started='00:14:45') (51677) terminated with exit code None
+[2025-04-16T00:40:48.452+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51668, status='terminated', started='00:14:45') (51668) terminated with exit code None
+[2025-04-16T00:40:48.444+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 1 failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-04-16T00:40:48.430+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-16T00:40:48.483+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51345, status='terminated', started='00:14:43') (51345) terminated with exit code None
+[2025-04-16T00:40:48.484+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=49832, status='terminated', started='00:14:06') (49832) terminated with exit code None
+[2025-04-16T00:40:48.484+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51148, status='terminated', started='00:14:43') (51148) terminated with exit code None
+[2025-04-16T00:40:48.485+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51501, status='terminated', started='00:14:43') (51501) terminated with exit code None
+[2025-04-16T00:40:48.485+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51564, status='terminated', started='00:14:44') (51564) terminated with exit code None
+[2025-04-16T00:40:48.486+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51359, status='terminated', started='00:14:43') (51359) terminated with exit code None
+[2025-04-16T00:40:48.486+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51263, status='terminated', started='00:14:43') (51263) terminated with exit code None
+[2025-04-16T00:40:48.486+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51350, status='terminated', started='00:14:43') (51350) terminated with exit code None
+[2025-04-16T00:40:48.476+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e48710>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/source
+[2025-04-16T00:40:48.481+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 9
+[2025-04-16T00:40:48.491+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89551790>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/source
+[2025-04-16T00:40:48.494+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff881f05c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a5ac60e4691c6ad7ce202c06e1431e3c
+[2025-04-16T00:40:48.495+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 1 failed: HTTPConnectionPool(host='localhost', port=35209): Max retries exceeded with url: /session/b5451e1ae8378360e3a1c76ad8460937/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89551970>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:40:48.496+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89551e50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a5ac60e4691c6ad7ce202c06e1431e3c
+[2025-04-16T00:40:48.496+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff895522d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a5ac60e4691c6ad7ce202c06e1431e3c
+[2025-04-16T00:40:48.505+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=49965, status='terminated', started='00:14:07') (49965) terminated with exit code None
+[2025-04-16T00:40:48.508+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51620, status='terminated', started='00:14:44') (51620) terminated with exit code None
+[2025-04-16T00:40:48.508+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51349, status='terminated', started='00:14:43') (51349) terminated with exit code None
+[2025-04-16T00:40:48.518+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 990, in _execute
+    executor.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/batdongsan_scraping_dag.py", line 50, in save_links_task
+    scraper.run()
+  File "/opt/***/dags/../scripts/SaveLinkBatdongsan.py", line 290, in run
+    self.scrape_all_pages()
+  File "/opt/***/dags/../scripts/SaveLinkBatdongsan.py", line 186, in scrape_all_pages
+    for future in concurrent.futures.as_completed(futures):
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 243, in as_completed
+    waiter.event.wait(wait_timeout)
+  File "/usr/local/lib/python3.12/threading.py", line 655, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/local/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-04-16T00:40:48.539+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=50288, status='terminated', started='00:14:11') (50288) terminated with exit code None
+[2025-04-16T00:40:48.540+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51077, status='terminated', started='00:14:43') (51077) terminated with exit code None
+[2025-04-16T00:40:48.540+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51265, status='terminated', started='00:14:43') (51265) terminated with exit code None
+[2025-04-16T00:40:48.540+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51529, status='terminated', started='00:14:43') (51529) terminated with exit code None
+[2025-04-16T00:40:48.541+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51112, status='terminated', started='00:14:43') (51112) terminated with exit code None
+[2025-04-16T00:40:48.541+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51474, status='terminated', started='00:14:43') (51474) terminated with exit code None
+[2025-04-16T00:40:48.541+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51279, status='terminated', started='00:14:43') (51279) terminated with exit code None
+[2025-04-16T00:40:48.541+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51170, status='terminated', started='00:14:43') (51170) terminated with exit code None
+[2025-04-16T00:40:48.542+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51686, status='terminated', started='00:14:45') (51686) terminated with exit code None
+[2025-04-16T00:40:48.542+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51159, status='terminated', started='00:14:43') (51159) terminated with exit code None
+[2025-04-16T00:40:48.562+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51656, status='terminated', started='00:14:45') (51656) terminated with exit code None
+[2025-04-16T00:40:48.563+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=50013, status='terminated', started='00:14:07') (50013) terminated with exit code None
+[2025-04-16T00:40:48.563+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=50428, status='terminated', started='00:14:16') (50428) terminated with exit code None
+[2025-04-16T00:40:48.563+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51692, status='terminated', started='00:14:47') (51692) terminated with exit code None
+[2025-04-16T00:40:48.563+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=49744, status='terminated', started='00:14:06') (49744) terminated with exit code None
+[2025-04-16T00:40:48.564+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51693, status='terminated', started='00:14:47') (51693) terminated with exit code None
+[2025-04-16T00:40:48.564+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51236, status='terminated', started='00:14:43') (51236) terminated with exit code None
+[2025-04-16T00:40:48.564+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51248, status='terminated', started='00:14:43') (51248) terminated with exit code None
+[2025-04-16T00:40:48.564+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51552, status='terminated', started='00:14:44') (51552) terminated with exit code None
+[2025-04-16T00:40:48.565+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51445, status='terminated', started='00:14:43') (51445) terminated with exit code None
+[2025-04-16T00:40:48.565+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51084, status='terminated', started='00:14:43') (51084) terminated with exit code None
+[2025-04-16T00:40:48.565+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51348, status='terminated', started='00:14:43') (51348) terminated with exit code None
+[2025-04-16T00:40:48.565+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51161, status='terminated', started='00:14:43') (51161) terminated with exit code None
+[2025-04-16T00:40:48.565+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=49937, status='terminated', started='00:14:07') (49937) terminated with exit code None
+[2025-04-16T00:40:48.566+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=50234, status='terminated', started='00:14:10') (50234) terminated with exit code None
+[2025-04-16T00:40:48.566+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51649, status='terminated', started='00:14:45') (51649) terminated with exit code None
+[2025-04-16T00:40:48.566+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=49836, status='terminated', started='00:14:06') (49836) terminated with exit code None
+[2025-04-16T00:40:48.597+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51351, status='terminated', started='00:14:43') (51351) terminated with exit code None
+[2025-04-16T00:40:48.598+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51484, status='terminated', started='00:14:43') (51484) terminated with exit code None
+[2025-04-16T00:40:48.787+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 13: https://batdongsan.com.vn/nha-dat-ban/p13?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:51.372+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 13
+[2025-04-16T00:40:51.630+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 14: https://batdongsan.com.vn/nha-dat-ban/p14?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:53.879+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 14
+[2025-04-16T00:40:54.115+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 15: https://batdongsan.com.vn/nha-dat-ban/p15?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:56.185+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 15
+[2025-04-16T00:40:56.447+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 16: https://batdongsan.com.vn/nha-dat-ban/p16?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:40:58.434+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6d7f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:40:58.436+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6dac0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:40:58.437+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6dd00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:40:58.438+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 2 failed: HTTPConnectionPool(host='localhost', port=54675): Max retries exceeded with url: /session/0157037bc238a74e6fea715f83737a5f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6dfa0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:40:58.453+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6e360>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:40:58.454+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6e600>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:40:58.455+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6ea20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:40:58.456+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 2 failed: HTTPConnectionPool(host='localhost', port=43203): Max retries exceeded with url: /session/2677da056982d0ec6af157e1f44902dd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6ee10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:40:58.478+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6f200>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:40:58.479+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6f590>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:40:58.479+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6f800>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:40:58.480+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 2 failed: HTTPConnectionPool(host='localhost', port=57399): Max retries exceeded with url: /session/2accbc30dd8c9ac31df9526d49305e4e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff83c6fa10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:40:58.642+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8367fad0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:40:58.654+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff883cc260>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:40:58.679+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 16
+[2025-04-16T00:40:58.680+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff888641a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:40:58.681+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 2 failed: HTTPConnectionPool(host='localhost', port=35209): Max retries exceeded with url: /session/b5451e1ae8378360e3a1c76ad8460937/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8811d490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:40:58.923+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 17: https://batdongsan.com.vn/nha-dat-ban/p17?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:01.279+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 17
+[2025-04-16T00:41:01.560+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 18: https://batdongsan.com.vn/nha-dat-ban/p18?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:04.698+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 18
+[2025-04-16T00:41:05.151+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 19: https://batdongsan.com.vn/nha-dat-ban/p19?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:08.007+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 19
+[2025-04-16T00:41:08.279+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 20: https://batdongsan.com.vn/nha-dat-ban/p20?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:08.504+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ee1370>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:08.505+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ee0fb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:08.506+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ee0c20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:08.506+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 3 failed: HTTPConnectionPool(host='localhost', port=54675): Max retries exceeded with url: /session/0157037bc238a74e6fea715f83737a5f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ee0590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:08.522+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ee00e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:08.523+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846d7f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:08.523+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846fd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:08.524+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 3 failed: HTTPConnectionPool(host='localhost', port=43203): Max retries exceeded with url: /session/2677da056982d0ec6af157e1f44902dd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846fb30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:08.549+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846fb90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:08.549+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846f980>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:08.550+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846edb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:08.550+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 3 failed: HTTPConnectionPool(host='localhost', port=57399): Max retries exceeded with url: /session/2accbc30dd8c9ac31df9526d49305e4e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846eab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:08.755+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846e330>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:08.766+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846e0c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:08.767+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846dd90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:08.768+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 3 failed: HTTPConnectionPool(host='localhost', port=35209): Max retries exceeded with url: /session/b5451e1ae8378360e3a1c76ad8460937/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8846ff80>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:10.662+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 20
+[2025-04-16T00:41:10.929+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 21: https://batdongsan.com.vn/nha-dat-ban/p21?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:13.241+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 21
+[2025-04-16T00:41:13.495+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 22: https://batdongsan.com.vn/nha-dat-ban/p22?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:15.703+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 22
+[2025-04-16T00:41:15.945+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 23: https://batdongsan.com.vn/nha-dat-ban/p23?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:18.267+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 23
+[2025-04-16T00:41:18.508+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adcbc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:18.509+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adcf80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:18.509+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88add1f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:18.510+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 4 failed: HTTPConnectionPool(host='localhost', port=54675): Max retries exceeded with url: /session/0157037bc238a74e6fea715f83737a5f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88add5b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:18.525+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88add910>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:18.525+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adda00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:18.526+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adddc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:18.526+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 4 failed: HTTPConnectionPool(host='localhost', port=43203): Max retries exceeded with url: /session/2677da056982d0ec6af157e1f44902dd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ade0c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:18.552+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ade3c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:18.553+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ade600>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:18.553+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ade870>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:18.554+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 4 failed: HTTPConnectionPool(host='localhost', port=57399): Max retries exceeded with url: /session/2accbc30dd8c9ac31df9526d49305e4e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88ade9c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:18.562+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 24: https://batdongsan.com.vn/nha-dat-ban/p24?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:18.769+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adee10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:18.770+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adf080>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:18.771+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adf410>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:18.771+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 4 failed: HTTPConnectionPool(host='localhost', port=35209): Max retries exceeded with url: /session/b5451e1ae8378360e3a1c76ad8460937/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88adf740>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:20.688+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 24
+[2025-04-16T00:41:20.965+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 25: https://batdongsan.com.vn/nha-dat-ban/p25?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:23.161+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 25
+[2025-04-16T00:41:23.406+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 26: https://batdongsan.com.vn/nha-dat-ban/p26?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:26.132+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 26
+[2025-04-16T00:41:26.374+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 27: https://batdongsan.com.vn/nha-dat-ban/p27?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:28.514+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff889cf5f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:28.515+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff889cfad0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:28.516+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff889cffb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:28.516+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 5 failed: HTTPConnectionPool(host='localhost', port=54675): Max retries exceeded with url: /session/0157037bc238a74e6fea715f83737a5f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88244350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:28.528+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88244440>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:28.529+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88244050>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:28.530+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88244a70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:28.530+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 5 failed: HTTPConnectionPool(host='localhost', port=43203): Max retries exceeded with url: /session/2677da056982d0ec6af157e1f44902dd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88244f20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:28.557+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff882455b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:28.557+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88245a00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:28.558+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88244bc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:28.559+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 5 failed: HTTPConnectionPool(host='localhost', port=57399): Max retries exceeded with url: /session/2accbc30dd8c9ac31df9526d49305e4e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff882459d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:28.773+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff882467e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:28.773+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff882467b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:28.775+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff882460c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:28.776+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 5 failed: HTTPConnectionPool(host='localhost', port=35209): Max retries exceeded with url: /session/b5451e1ae8378360e3a1c76ad8460937/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88246ba0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:29.772+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 27
+[2025-04-16T00:41:30.041+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 28: https://batdongsan.com.vn/nha-dat-ban/p28?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:32.348+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 28
+[2025-04-16T00:41:32.672+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 29: https://batdongsan.com.vn/nha-dat-ban/p29?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:35.567+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 29
+[2025-04-16T00:41:35.857+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 30: https://batdongsan.com.vn/nha-dat-ban/p30?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:38.525+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88194620>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:38.527+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88194320>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:38.528+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff881940b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0157037bc238a74e6fea715f83737a5f/url
+[2025-04-16T00:41:38.528+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 6 failed: HTTPConnectionPool(host='localhost', port=54675): Max retries exceeded with url: /session/0157037bc238a74e6fea715f83737a5f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88194ec0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:38.534+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e56c00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:38.535+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e57140>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:38.536+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e563f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2677da056982d0ec6af157e1f44902dd/url
+[2025-04-16T00:41:38.536+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 6 failed: HTTPConnectionPool(host='localhost', port=43203): Max retries exceeded with url: /session/2677da056982d0ec6af157e1f44902dd/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e576b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:38.562+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e57ad0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:38.562+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e574a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:38.563+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e56120>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2accbc30dd8c9ac31df9526d49305e4e/url
+[2025-04-16T00:41:38.564+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 6 failed: HTTPConnectionPool(host='localhost', port=57399): Max retries exceeded with url: /session/2accbc30dd8c9ac31df9526d49305e4e/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e56cf0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:38.781+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e566f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:38.782+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e564b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:38.782+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e547a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b5451e1ae8378360e3a1c76ad8460937/url
+[2025-04-16T00:41:38.783+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 6 failed: HTTPConnectionPool(host='localhost', port=35209): Max retries exceeded with url: /session/b5451e1ae8378360e3a1c76ad8460937/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff88e56510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-04-16T00:41:40.157+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 30
+[2025-04-16T00:41:40.507+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 31: https://batdongsan.com.vn/nha-dat-ban/p31?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:42.639+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 31
+[2025-04-16T00:41:42.908+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 32: https://batdongsan.com.vn/nha-dat-ban/p32?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:45.555+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 32
+[2025-04-16T00:41:45.808+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 33: https://batdongsan.com.vn/nha-dat-ban/p33?gtn=7-ty&gcn=30-ty
+[2025-04-16T00:41:48.216+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 33
+[2025-04-16T00:41:48.454+0000] {process_utils.py:150} WARNING - process psutil.Process(pid=49709, name='airflow task ru', status='sleeping', started='00:14:05') did not respond to SIGTERM. Trying SIGKILL
+[2025-04-16T00:41:48.462+0000] {process_utils.py:150} WARNING - process psutil.Process(pid=51149, name='chromedriver', status='zombie', started='00:14:43') did not respond to SIGTERM. Trying SIGKILL
+[2025-04-16T00:41:48.463+0000] {process_utils.py:150} WARNING - process psutil.Process(pid=49717, name='chromedriver', status='zombie', started='00:14:06') did not respond to SIGTERM. Trying SIGKILL
+[2025-04-16T00:41:48.463+0000] {process_utils.py:150} WARNING - process psutil.Process(pid=51247, name='chromedriver', status='zombie', started='00:14:43') did not respond to SIGTERM. Trying SIGKILL
+[2025-04-16T00:41:48.464+0000] {process_utils.py:150} WARNING - process psutil.Process(pid=51098, name='chromedriver', status='zombie', started='00:14:43') did not respond to SIGTERM. Trying SIGKILL
+[2025-04-16T00:41:48.464+0000] {process_utils.py:87} INFO - Sending the signal 9 to group 49709
+[2025-04-16T00:41:48.499+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=49709, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='00:14:05') (49709) terminated with exit code -9
+[2025-04-16T00:41:48.500+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51149, name='chromedriver', status='terminated', started='00:14:43') (51149) terminated with exit code None
+[2025-04-16T00:41:48.501+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=49717, name='chromedriver', status='terminated', started='00:14:06') (49717) terminated with exit code None
+[2025-04-16T00:41:48.501+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51247, name='chromedriver', status='terminated', started='00:14:43') (51247) terminated with exit code None
+[2025-04-16T00:41:48.501+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=51098, name='chromedriver', status='terminated', started='00:14:43') (51098) terminated with exit code None
+[2025-04-16T00:41:48.502+0000] {standard_task_runner.py:190} ERROR - ('Job 47 was killed before it finished (likely due to running out of memory)', 'For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed')
