@@ -1,0 +1,342 @@
+[2025-04-20T14:38:54.722+0000] {processor.py:186} INFO - Started process (PID=185) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:38:54.725+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:38:54.729+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:38:54.729+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:38:55.477+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:38:55.502+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:38:55.501+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:38:55.516+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:38:55.516+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:38:55.529+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 0.836 seconds
+[2025-04-20T14:39:26.171+0000] {processor.py:186} INFO - Started process (PID=2571) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:39:26.176+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:39:26.183+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:39:26.182+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:39:37.910+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:39:38.473+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:39:38.472+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:39:38.684+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:39:38.684+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:39:38.774+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 12.634 seconds
+[2025-04-20T14:40:10.586+0000] {processor.py:186} INFO - Started process (PID=5394) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:40:10.594+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:40:10.603+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:10.601+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:40:16.439+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:40:16.837+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:16.801+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:40:16.983+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:16.983+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:40:17.151+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 6.629 seconds
+[2025-04-20T14:40:49.175+0000] {processor.py:186} INFO - Started process (PID=7437) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:40:49.186+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:40:49.210+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:49.205+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:40:57.835+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:40:57.952+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:57.950+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:40:58.034+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:58.033+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:40:58.167+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 9.506 seconds
+[2025-04-20T14:41:30.741+0000] {processor.py:186} INFO - Started process (PID=8368) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:41:30.816+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:41:31.029+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:41:31.027+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:41:56.586+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:41:57.846+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:41:57.796+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:41:58.432+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:41:58.425+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:41:58.551+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 28.213 seconds
+[2025-04-20T14:42:31.335+0000] {processor.py:186} INFO - Started process (PID=11131) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:42:31.340+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:42:31.389+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:42:31.388+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:42:59.399+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:42:59.587+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:42:59.586+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:42:59.684+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:42:59.684+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:42:59.861+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 28.658 seconds
+[2025-04-20T14:43:35.465+0000] {processor.py:186} INFO - Started process (PID=12060) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:43:35.472+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:43:35.615+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:43:35.597+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:43:56.972+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:43:57.936+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:43:57.931+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:43:58.246+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:43:58.245+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:43:58.345+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 23.417 seconds
+[2025-04-20T14:44:31.878+0000] {processor.py:186} INFO - Started process (PID=12706) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:44:31.889+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:44:31.915+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:44:31.907+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:45:02.416+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:45:02.247+0000] {timeout.py:68} ERROR - Process timed out, PID: 12706
+[2025-04-20T14:45:02.623+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:45:02.508+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/batdongsan_test_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/batdongsan_test_scraping_dag.py", line 11, in <module>
+    from ScraperBatdongsan import scrape_data
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 6, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/__init__.py", line 49, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/api.py", line 28, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/__init__.py", line 21, in <module>
+    from pandas.core.arrays.string_arrow import ArrowStringArray
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/string_arrow.py", line 51, in <module>
+    from pandas.core.arrays.arrow._arrow_utils import fallback_performancewarning
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+  File "<frozen importlib._bootstrap_external>", line 757, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/batdongsan_test_scraping_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 12706
+[2025-04-20T14:45:02.644+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:45:02.790+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 31.024 seconds
+[2025-04-20T14:45:37.522+0000] {processor.py:186} INFO - Started process (PID=13797) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:45:37.643+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:45:37.683+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:45:37.670+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:46:11.528+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:46:11.526+0000] {timeout.py:68} ERROR - Process timed out, PID: 13797
+[2025-04-20T14:46:11.529+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <function _collection_gced at 0xffffb53bfc40>
+[2025-04-20T14:46:11.529+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2025-04-20T14:46:11.530+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/event/registry.py", line 53, in _collection_gced
+[2025-04-20T14:46:11.533+0000] {logging_mixin.py:190} WARNING -     def _collection_gced(ref):
+[2025-04-20T14:46:11.534+0000] {logging_mixin.py:190} WARNING -     
+[2025-04-20T14:46:11.536+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2025-04-20T14:46:11.541+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2025-04-20T14:46:11.543+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/batdongsan_test_scraping_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 13797
+[2025-04-20T14:46:14.711+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:46:16.886+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:46:16.862+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:46:17.313+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:46:17.311+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:46:17.554+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 40.708 seconds
+[2025-04-20T14:46:49.681+0000] {processor.py:186} INFO - Started process (PID=15822) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:46:49.686+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:46:49.695+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:46:49.692+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:47:19.898+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:47:19.849+0000] {timeout.py:68} ERROR - Process timed out, PID: 15822
+[2025-04-20T14:47:20.145+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:47:19.932+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/batdongsan_test_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/batdongsan_test_scraping_dag.py", line 11, in <module>
+    from ScraperBatdongsan import scrape_data
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 6, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/__init__.py", line 49, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/api.py", line 47, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 68, in <module>
+    from pandas.core.frame import DataFrame
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 149, in <module>
+    from pandas.core.generic import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 152, in <module>
+    from pandas.core import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexing.py", line 79, in <module>
+    from pandas.core.indexes.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/api.py", line 20, in <module>
+    from pandas.core.indexes.base import (
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+  File "<frozen importlib._bootstrap_external>", line 757, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/batdongsan_test_scraping_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 15822
+[2025-04-20T14:47:20.168+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:47:20.386+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 30.823 seconds
+[2025-04-20T14:47:51.858+0000] {processor.py:186} INFO - Started process (PID=17795) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:47:51.865+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:47:51.886+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:47:51.872+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:48:11.676+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:48:17.607+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:48:17.416+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:48:20.092+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:48:20.075+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:48:20.755+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 28.980 seconds
+[2025-04-20T14:48:54.592+0000] {processor.py:186} INFO - Started process (PID=18958) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:48:54.628+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:48:54.672+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:48:54.657+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:49:15.729+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:49:16.094+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:49:16.092+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:49:16.346+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:49:16.344+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:49:16.519+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 22.078 seconds
+[2025-04-20T14:49:48.099+0000] {processor.py:186} INFO - Started process (PID=19921) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:49:48.117+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:49:48.155+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:49:48.140+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:50:02.649+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:50:03.237+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:03.220+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:50:03.616+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:03.597+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:50:03.939+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 15.907 seconds
+[2025-04-20T14:50:37.035+0000] {processor.py:186} INFO - Started process (PID=21734) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:50:37.144+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:50:37.335+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:37.333+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:50:55.825+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:50:56.630+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:56.590+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:50:56.733+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:56.732+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:50:56.928+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 20.059 seconds
+[2025-04-20T14:51:28.615+0000] {processor.py:186} INFO - Started process (PID=22953) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:51:28.625+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:51:28.736+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:51:28.697+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:51:43.357+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:51:45.087+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:51:44.997+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:51:46.090+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:51:46.089+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:51:46.511+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 18.067 seconds
+[2025-04-20T14:52:17.747+0000] {processor.py:186} INFO - Started process (PID=24954) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:52:17.792+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:52:17.822+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:52:17.821+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:52:48.132+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:52:47.929+0000] {timeout.py:68} ERROR - Process timed out, PID: 24954
+[2025-04-20T14:52:48.868+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:52:48.181+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/batdongsan_test_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/batdongsan_test_scraping_dag.py", line 11, in <module>
+    from ScraperBatdongsan import scrape_data
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 6, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/__init__.py", line 49, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/api.py", line 47, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 68, in <module>
+    from pandas.core.frame import DataFrame
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 149, in <module>
+    from pandas.core.generic import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 193, in <module>
+    from pandas.core.window import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/window/__init__.py", line 1, in <module>
+    from pandas.core.window.ewm import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/window/ewm.py", line 29, in <module>
+    from pandas.core.util.numba_ import (
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1306, in _find_and_load_unlocked
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/batdongsan_test_scraping_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 24954
+[2025-04-20T14:52:48.932+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:52:49.208+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 31.566 seconds
+[2025-04-20T14:53:23.324+0000] {processor.py:186} INFO - Started process (PID=26105) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:53:23.337+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:53:23.414+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:53:23.372+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:53:53.957+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:53:53.682+0000] {timeout.py:68} ERROR - Process timed out, PID: 26105
+[2025-04-20T14:53:54.015+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:53:53.970+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/batdongsan_test_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/batdongsan_test_scraping_dag.py", line 11, in <module>
+    from ScraperBatdongsan import scrape_data
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 6, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/__init__.py", line 49, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/api.py", line 28, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/__init__.py", line 12, in <module>
+    from pandas.core.arrays.interval import IntervalArray
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1532, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1506, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1638, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 161, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 153, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 147, in _path_stat
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/batdongsan_test_scraping_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 26105
+[2025-04-20T14:53:54.038+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:53:54.292+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 31.065 seconds
+[2025-04-20T14:54:27.634+0000] {processor.py:186} INFO - Started process (PID=28723) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:54:27.726+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:54:27.875+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:54:27.874+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:54:58.117+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:54:57.993+0000] {timeout.py:68} ERROR - Process timed out, PID: 28723
+[2025-04-20T14:54:58.299+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:54:58.202+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/batdongsan_test_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/batdongsan_test_scraping_dag.py", line 11, in <module>
+    from ScraperBatdongsan import scrape_data
+  File "/opt/airflow/dags/../scripts/ScraperBatdongsan.py", line 6, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/__init__.py", line 49, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/api.py", line 28, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/__init__.py", line 1, in <module>
+    from pandas.core.arrays.arrow import ArrowExtensionArray
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/arrow/__init__.py", line 1, in <module>
+    from pandas.core.arrays.arrow.accessors import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/arrays/arrow/accessors.py", line 23, in <module>
+    import pyarrow.compute as pc
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 336, in <module>
+    _make_global_functions()
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 333, in _make_global_functions
+    g[cpp_name] = g[name] = _wrap_function(name, func)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 304, in _wrap_function
+    return _decorate_compute_function(wrapper, name, func, options_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/compute.py", line 166, in _decorate_compute_function
+    doc_pieces.append("    Argument to compute function.\n")
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/batdongsan_test_scraping_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 28723
+[2025-04-20T14:54:58.374+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:54:59.004+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 31.636 seconds
+[2025-04-20T14:55:33.486+0000] {processor.py:186} INFO - Started process (PID=29801) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:55:33.557+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:55:33.615+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:55:33.583+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:55:45.610+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:55:46.332+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:55:46.323+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:55:46.478+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:55:46.477+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:55:46.663+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 13.885 seconds
+[2025-04-20T14:56:18.924+0000] {processor.py:186} INFO - Started process (PID=32077) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:56:18.942+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:56:18.954+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:56:18.952+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:56:28.322+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:56:28.563+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:56:28.553+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:56:28.776+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:56:28.775+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:56:28.933+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 10.408 seconds
+[2025-04-20T14:57:02.008+0000] {processor.py:186} INFO - Started process (PID=32707) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:57:02.296+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:57:02.369+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:57:02.344+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:57:32.121+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:57:34.120+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:57:33.760+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:57:35.392+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:57:35.385+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:57:36.461+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 35.393 seconds
+[2025-04-20T14:58:13.360+0000] {processor.py:186} INFO - Started process (PID=34488) to work on /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:58:13.363+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/batdongsan_test_scraping_dag.py for tasks to queue
+[2025-04-20T14:58:13.439+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:58:13.411+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:58:44.538+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:58:44.523+0000] {timeout.py:68} ERROR - Process timed out, PID: 34488
+[2025-04-20T14:58:44.542+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <function _collection_gced at 0xffffb53bfc40>
+[2025-04-20T14:58:44.545+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2025-04-20T14:58:44.546+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/event/registry.py", line 53, in _collection_gced
+[2025-04-20T14:58:44.567+0000] {logging_mixin.py:190} WARNING -     def _collection_gced(ref):
+[2025-04-20T14:58:44.573+0000] {logging_mixin.py:190} WARNING -     
+[2025-04-20T14:58:44.576+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+[2025-04-20T14:58:44.587+0000] {logging_mixin.py:190} WARNING -     raise AirflowTaskTimeout(self.error_message)
+[2025-04-20T14:58:44.602+0000] {logging_mixin.py:190} WARNING - airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/batdongsan_test_scraping_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 34488
+[2025-04-20T14:58:58.498+0000] {processor.py:925} INFO - DAG(s) 'batdongsan_test_scraping' retrieved from /opt/airflow/dags/batdongsan_test_scraping_dag.py
+[2025-04-20T14:59:00.368+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:59:00.345+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-20T14:59:01.325+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:59:01.323+0000] {dag.py:4180} INFO - Setting next_dagrun for batdongsan_test_scraping to 2025-04-20 14:00:00+00:00, run_after=2025-04-20 15:00:00+00:00
+[2025-04-20T14:59:01.959+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/batdongsan_test_scraping_dag.py took 48.730 seconds

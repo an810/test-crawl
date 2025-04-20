@@ -1,0 +1,490 @@
+[2025-04-20T14:38:53.584+0000] {processor.py:186} INFO - Started process (PID=168) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:38:53.585+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:38:53.587+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:38:53.587+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:38:53.609+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:38:53.607+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:38:53.609+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:38:53.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.062 seconds
+[2025-04-20T14:39:24.648+0000] {processor.py:186} INFO - Started process (PID=2477) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:39:24.660+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:39:24.680+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:39:24.679+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:39:24.746+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:39:24.739+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:39:24.750+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:39:24.967+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.400 seconds
+[2025-04-20T14:39:56.327+0000] {processor.py:186} INFO - Started process (PID=5127) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:39:56.338+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:39:56.432+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:39:56.431+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:39:56.548+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:39:56.528+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:39:56.550+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:39:56.814+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.506 seconds
+[2025-04-20T14:40:28.074+0000] {processor.py:186} INFO - Started process (PID=5995) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:40:28.144+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:40:28.285+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:28.237+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:40:28.504+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:40:28.434+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:40:28.531+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:40:29.131+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.199 seconds
+[2025-04-20T14:41:02.486+0000] {processor.py:186} INFO - Started process (PID=8023) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:41:02.489+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:41:02.523+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:41:02.513+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:41:02.580+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:41:02.553+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:41:02.593+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:41:02.931+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.456 seconds
+[2025-04-20T14:41:34.827+0000] {processor.py:186} INFO - Started process (PID=8517) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:41:34.841+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:41:34.883+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:41:34.879+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:41:35.163+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:41:35.086+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:41:35.175+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:41:35.288+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.600 seconds
+[2025-04-20T14:42:07.256+0000] {processor.py:186} INFO - Started process (PID=9847) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:42:07.293+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:42:07.334+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:42:07.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:42:07.447+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:42:07.435+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:42:07.449+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:42:07.594+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.470 seconds
+[2025-04-20T14:42:40.732+0000] {processor.py:186} INFO - Started process (PID=11246) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:42:40.748+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:42:40.813+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:42:40.812+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:42:41.129+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:42:41.097+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:42:41.142+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:42:41.460+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.022 seconds
+[2025-04-20T14:43:15.998+0000] {processor.py:186} INFO - Started process (PID=11767) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:43:16.025+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:43:16.077+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:43:16.076+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:43:16.218+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:43:16.151+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:43:16.229+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:43:16.358+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.415 seconds
+[2025-04-20T14:43:48.918+0000] {processor.py:186} INFO - Started process (PID=12208) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:43:49.077+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:43:49.253+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:43:49.200+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:43:49.489+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:43:49.449+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:43:49.502+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:43:50.265+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 2.130 seconds
+[2025-04-20T14:44:22.202+0000] {processor.py:186} INFO - Started process (PID=12645) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:44:22.244+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:44:22.278+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:44:22.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:44:22.530+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:44:22.456+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:44:22.538+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:44:22.985+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.642 seconds
+[2025-04-20T14:44:57.175+0000] {processor.py:186} INFO - Started process (PID=12942) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:44:57.231+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:44:57.283+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:44:57.245+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:44:57.414+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:44:57.404+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:44:57.416+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:44:57.536+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.694 seconds
+[2025-04-20T14:45:31.740+0000] {processor.py:186} INFO - Started process (PID=13640) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:45:31.818+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:45:31.929+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:45:31.888+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:45:32.128+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:45:32.089+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:45:32.135+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:45:34.526+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 4.505 seconds
+[2025-04-20T14:46:19.528+0000] {processor.py:186} INFO - Started process (PID=15079) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:46:19.633+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:46:19.646+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:46:19.639+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:46:19.820+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:46:19.783+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:46:19.823+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:46:20.104+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.703 seconds
+[2025-04-20T14:47:24.108+0000] {processor.py:186} INFO - Started process (PID=16572) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:47:24.146+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:47:24.178+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:47:24.171+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:47:24.506+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:47:24.364+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:47:24.668+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:47:25.260+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.213 seconds
+[2025-04-20T14:47:57.270+0000] {processor.py:186} INFO - Started process (PID=17991) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:47:57.291+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:47:57.317+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:47:57.316+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:47:57.594+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:47:57.550+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:47:57.598+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:47:58.277+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.218 seconds
+[2025-04-20T14:48:28.744+0000] {processor.py:186} INFO - Started process (PID=18527) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:48:28.748+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:48:28.770+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:48:28.756+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:48:28.862+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:48:28.852+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:48:28.864+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:48:28.949+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.242 seconds
+[2025-04-20T14:48:59.794+0000] {processor.py:186} INFO - Started process (PID=19109) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:48:59.834+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:48:59.843+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:48:59.843+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:48:59.908+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:48:59.891+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:48:59.912+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:49:00.098+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.497 seconds
+[2025-04-20T14:49:31.901+0000] {processor.py:186} INFO - Started process (PID=19516) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:49:31.956+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:49:31.975+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:49:31.974+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:49:32.085+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:49:32.060+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:49:32.109+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:49:32.485+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.844 seconds
+[2025-04-20T14:50:06.603+0000] {processor.py:186} INFO - Started process (PID=20770) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:50:06.612+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:50:06.625+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:06.624+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:50:06.674+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:06.666+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:50:06.678+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:50:07.104+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.535 seconds
+[2025-04-20T14:50:39.212+0000] {processor.py:186} INFO - Started process (PID=21753) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:50:39.233+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:50:39.280+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:39.257+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:50:39.313+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:50:39.306+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:50:39.318+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:50:39.442+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.441 seconds
+[2025-04-20T14:51:10.277+0000] {processor.py:186} INFO - Started process (PID=22532) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:51:10.282+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:51:10.293+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:51:10.291+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:51:10.359+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:51:10.334+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:51:10.363+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:51:10.618+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.408 seconds
+[2025-04-20T14:51:45.024+0000] {processor.py:186} INFO - Started process (PID=23299) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:51:45.044+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:51:45.065+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:51:45.064+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:51:45.395+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:51:45.325+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:51:45.417+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:51:46.277+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.640 seconds
+[2025-04-20T14:52:17.855+0000] {processor.py:186} INFO - Started process (PID=24952) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:52:17.892+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:52:17.906+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:52:17.905+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:52:18.075+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:52:18.004+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:52:18.096+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:52:18.686+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.997 seconds
+[2025-04-20T14:52:52.935+0000] {processor.py:186} INFO - Started process (PID=25681) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:52:52.964+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:52:53.020+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:52:52.996+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:52:53.188+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:52:53.172+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:52:53.195+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:52:53.433+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.787 seconds
+[2025-04-20T14:53:25.724+0000] {processor.py:186} INFO - Started process (PID=26182) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:53:25.764+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:53:25.874+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:53:25.845+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:53:26.043+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:53:26.002+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:53:26.064+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:53:26.516+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.978 seconds
+[2025-04-20T14:53:57.361+0000] {processor.py:186} INFO - Started process (PID=27299) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:53:57.370+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:53:57.376+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:53:57.375+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:53:57.594+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:53:57.553+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:53:57.598+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:53:58.351+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.101 seconds
+[2025-04-20T14:54:52.528+0000] {processor.py:186} INFO - Started process (PID=29107) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:54:52.622+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:54:52.679+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:54:52.676+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:54:52.815+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:54:52.797+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:54:52.819+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:54:52.995+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.040 seconds
+[2025-04-20T14:55:23.653+0000] {processor.py:186} INFO - Started process (PID=29546) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:55:23.662+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:55:23.689+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:55:23.683+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:55:23.775+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:55:23.764+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:55:23.786+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:55:23.955+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.424 seconds
+[2025-04-20T14:55:56.078+0000] {processor.py:186} INFO - Started process (PID=30807) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:55:56.119+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:55:56.156+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:55:56.137+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:55:56.295+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:55:56.259+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:55:56.302+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:55:56.520+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.864 seconds
+[2025-04-20T14:56:32.653+0000] {processor.py:186} INFO - Started process (PID=32195) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:56:32.668+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:56:32.678+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:56:32.678+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:56:32.883+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:56:32.780+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:56:32.904+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:56:33.231+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 0.743 seconds
+[2025-04-20T14:57:05.157+0000] {processor.py:186} INFO - Started process (PID=32744) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:57:05.184+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:57:05.319+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:57:05.238+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:57:05.790+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:57:05.783+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:57:05.799+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:57:06.255+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.592 seconds
+[2025-04-20T14:57:46.586+0000] {processor.py:186} INFO - Started process (PID=33916) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:57:46.802+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:57:46.875+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:57:46.829+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:57:47.089+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:57:47.062+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:57:47.101+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:57:47.690+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 2.132 seconds
+[2025-04-20T14:58:21.170+0000] {processor.py:186} INFO - Started process (PID=34595) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:58:21.197+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:58:21.217+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:58:21.214+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:58:21.288+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:58:21.265+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:58:21.291+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:58:21.561+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.139 seconds
+[2025-04-20T14:59:11.422+0000] {processor.py:186} INFO - Started process (PID=35192) to work on /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:59:11.642+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nhatot_scraping_dag.py for tasks to queue
+[2025-04-20T14:59:11.654+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:59:11.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:59:11.712+0000] {logging_mixin.py:190} INFO - [2025-04-20T14:59:11.688+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/nhatot_scraping_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/nhatot_scraping_dag.py", line 12, in <module>
+    from HNSaveLinkNhatot import scrape_links, HNNhatotScraper
+ModuleNotFoundError: No module named 'HNSaveLinkNhatot'
+[2025-04-20T14:59:11.713+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/nhatot_scraping_dag.py
+[2025-04-20T14:59:11.909+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nhatot_scraping_dag.py took 1.566 seconds
