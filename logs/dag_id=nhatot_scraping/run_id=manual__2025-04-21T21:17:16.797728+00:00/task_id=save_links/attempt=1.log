@@ -1,0 +1,641 @@
+[2025-04-21T21:17:19.910+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-21T21:17:19.919+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nhatot_scraping.save_links manual__2025-04-21T21:17:16.797728+00:00 [queued]>
+[2025-04-21T21:17:19.923+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nhatot_scraping.save_links manual__2025-04-21T21:17:16.797728+00:00 [queued]>
+[2025-04-21T21:17:19.924+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-04-21T21:17:19.933+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): save_links> on 2025-04-21 21:17:16.797728+00:00
+[2025-04-21T21:17:19.947+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=247) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-21T21:17:19.948+0000] {standard_task_runner.py:72} INFO - Started process 249 to run task
+[2025-04-21T21:17:19.948+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'nhatot_scraping', 'save_links', 'manual__2025-04-21T21:17:16.797728+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/nhatot_scraping_dag.py', '--cfg-path', '/tmp/tmpwjhtalpe']
+[2025-04-21T21:17:19.952+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask save_links
+[2025-04-21T21:17:19.990+0000] {task_command.py:467} INFO - Running <TaskInstance: nhatot_scraping.save_links manual__2025-04-21T21:17:16.797728+00:00 [running]> on host 41850ba5140c
+[2025-04-21T21:17:20.040+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nhatot_scraping' AIRFLOW_CTX_TASK_ID='save_links' AIRFLOW_CTX_EXECUTION_DATE='2025-04-21T21:17:16.797728+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-21T21:17:16.797728+00:00'
+[2025-04-21T21:17:20.042+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-21T21:17:20.459+0000] {SaveLinkNhatot.py:102} INFO - Total listings: 10000, Max pages: 501
+[2025-04-21T21:17:20.465+0000] {logging_mixin.py:190} WARNING -   0%|          | 0/501 [00:00<?, ?it/s]
+[2025-04-21T21:17:20.688+0000] {logging_mixin.py:190} WARNING -   0%|          | 1/501 [00:00<01:51,  4.50it/s]
+[2025-04-21T21:17:20.955+0000] {logging_mixin.py:190} WARNING -   0%|          | 2/501 [00:00<02:04,  4.02it/s]
+[2025-04-21T21:17:21.267+0000] {logging_mixin.py:190} WARNING -   1%|          | 3/501 [00:00<02:18,  3.60it/s]
+[2025-04-21T21:17:21.454+0000] {logging_mixin.py:190} WARNING -   1%|          | 4/501 [00:00<02:00,  4.14it/s]
+[2025-04-21T21:17:21.714+0000] {logging_mixin.py:190} WARNING -   1%|          | 5/501 [00:01<02:03,  4.02it/s]
+[2025-04-21T21:17:21.981+0000] {logging_mixin.py:190} WARNING -   1%|1         | 6/501 [00:01<02:06,  3.92it/s]
+[2025-04-21T21:17:22.254+0000] {logging_mixin.py:190} WARNING -   1%|1         | 7/501 [00:01<02:08,  3.84it/s]
+[2025-04-21T21:17:22.523+0000] {logging_mixin.py:190} WARNING -   2%|1         | 8/501 [00:02<02:09,  3.80it/s]
+[2025-04-21T21:17:22.772+0000] {logging_mixin.py:190} WARNING -   2%|1         | 9/501 [00:02<02:07,  3.86it/s]
+[2025-04-21T21:17:23.023+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:23.025+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 200 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:24.032+0000] {logging_mixin.py:190} WARNING -   2%|1         | 10/501 [00:03<04:38,  1.76it/s]
+[2025-04-21T21:17:24.332+0000] {logging_mixin.py:190} WARNING -   2%|2         | 11/501 [00:03<03:58,  2.06it/s]
+[2025-04-21T21:17:24.622+0000] {logging_mixin.py:190} WARNING -   2%|2         | 12/501 [00:04<03:28,  2.35it/s]
+[2025-04-21T21:17:24.960+0000] {logging_mixin.py:190} WARNING -   3%|2         | 13/501 [00:04<03:14,  2.50it/s]
+[2025-04-21T21:17:25.248+0000] {logging_mixin.py:190} WARNING -   3%|2         | 14/501 [00:04<02:58,  2.73it/s]
+[2025-04-21T21:17:25.567+0000] {logging_mixin.py:190} WARNING -   3%|2         | 15/501 [00:05<02:51,  2.84it/s]
+[2025-04-21T21:17:25.874+0000] {logging_mixin.py:190} WARNING -   3%|3         | 16/501 [00:05<02:44,  2.96it/s]
+[2025-04-21T21:17:26.188+0000] {logging_mixin.py:190} WARNING -   3%|3         | 17/501 [00:05<02:40,  3.02it/s]
+[2025-04-21T21:17:26.438+0000] {logging_mixin.py:190} WARNING -   4%|3         | 18/501 [00:05<02:28,  3.26it/s]
+[2025-04-21T21:17:26.748+0000] {logging_mixin.py:190} WARNING -   4%|3         | 19/501 [00:06<02:28,  3.25it/s]
+[2025-04-21T21:17:27.013+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:27.015+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 400 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:28.018+0000] {logging_mixin.py:190} WARNING -   4%|3         | 20/501 [00:07<04:46,  1.68it/s]
+[2025-04-21T21:17:28.292+0000] {logging_mixin.py:190} WARNING -   4%|4         | 21/501 [00:07<03:59,  2.00it/s]
+[2025-04-21T21:17:28.553+0000] {logging_mixin.py:190} WARNING -   4%|4         | 22/501 [00:08<03:25,  2.34it/s]
+[2025-04-21T21:17:28.837+0000] {logging_mixin.py:190} WARNING -   5%|4         | 23/501 [00:08<03:03,  2.60it/s]
+[2025-04-21T21:17:29.096+0000] {logging_mixin.py:190} WARNING -   5%|4         | 24/501 [00:08<02:45,  2.88it/s]
+[2025-04-21T21:17:29.189+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=480&page=25&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:17:32.437+0000] {logging_mixin.py:190} WARNING -   5%|4         | 25/501 [00:11<09:52,  1.25s/it]
+[2025-04-21T21:17:32.709+0000] {logging_mixin.py:190} WARNING -   5%|5         | 26/501 [00:12<07:32,  1.05it/s]
+[2025-04-21T21:17:32.983+0000] {logging_mixin.py:190} WARNING -   5%|5         | 27/501 [00:12<05:55,  1.33it/s]
+[2025-04-21T21:17:33.270+0000] {logging_mixin.py:190} WARNING -   6%|5         | 28/501 [00:12<04:48,  1.64it/s]
+[2025-04-21T21:17:33.597+0000] {logging_mixin.py:190} WARNING -   6%|5         | 29/501 [00:13<04:08,  1.90it/s]
+[2025-04-21T21:17:33.871+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:33.874+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 600 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:34.876+0000] {logging_mixin.py:190} WARNING -   6%|5         | 30/501 [00:14<05:54,  1.33it/s]
+[2025-04-21T21:17:35.151+0000] {logging_mixin.py:190} WARNING -   6%|6         | 31/501 [00:14<04:46,  1.64it/s]
+[2025-04-21T21:17:35.422+0000] {logging_mixin.py:190} WARNING -   6%|6         | 32/501 [00:14<03:57,  1.97it/s]
+[2025-04-21T21:17:35.680+0000] {logging_mixin.py:190} WARNING -   7%|6         | 33/501 [00:15<03:22,  2.31it/s]
+[2025-04-21T21:17:35.950+0000] {logging_mixin.py:190} WARNING -   7%|6         | 34/501 [00:15<02:59,  2.61it/s]
+[2025-04-21T21:17:36.219+0000] {logging_mixin.py:190} WARNING -   7%|6         | 35/501 [00:15<02:42,  2.86it/s]
+[2025-04-21T21:17:36.476+0000] {logging_mixin.py:190} WARNING -   7%|7         | 36/501 [00:16<02:29,  3.11it/s]
+[2025-04-21T21:17:36.726+0000] {logging_mixin.py:190} WARNING -   7%|7         | 37/501 [00:16<02:19,  3.33it/s]
+[2025-04-21T21:17:37.378+0000] {logging_mixin.py:190} WARNING -   8%|7         | 38/501 [00:16<03:07,  2.46it/s]
+[2025-04-21T21:17:37.698+0000] {logging_mixin.py:190} WARNING -   8%|7         | 39/501 [00:17<02:55,  2.63it/s]
+[2025-04-21T21:17:37.976+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:37.978+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 800 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:38.985+0000] {logging_mixin.py:190} WARNING -   8%|7         | 40/501 [00:18<05:00,  1.53it/s]
+[2025-04-21T21:17:39.257+0000] {logging_mixin.py:190} WARNING -   8%|8         | 41/501 [00:18<04:07,  1.86it/s]
+[2025-04-21T21:17:39.531+0000] {logging_mixin.py:190} WARNING -   8%|8         | 42/501 [00:19<03:30,  2.18it/s]
+[2025-04-21T21:17:39.790+0000] {logging_mixin.py:190} WARNING -   9%|8         | 43/501 [00:19<03:02,  2.51it/s]
+[2025-04-21T21:17:40.104+0000] {logging_mixin.py:190} WARNING -   9%|8         | 44/501 [00:19<02:50,  2.68it/s]
+[2025-04-21T21:17:40.421+0000] {logging_mixin.py:190} WARNING -   9%|8         | 45/501 [00:19<02:42,  2.80it/s]
+[2025-04-21T21:17:40.697+0000] {logging_mixin.py:190} WARNING -   9%|9         | 46/501 [00:20<02:31,  3.01it/s]
+[2025-04-21T21:17:40.965+0000] {logging_mixin.py:190} WARNING -   9%|9         | 47/501 [00:20<02:22,  3.19it/s]
+[2025-04-21T21:17:41.285+0000] {logging_mixin.py:190} WARNING -  10%|9         | 48/501 [00:20<02:22,  3.17it/s]
+[2025-04-21T21:17:41.532+0000] {logging_mixin.py:190} WARNING -  10%|9         | 49/501 [00:21<02:13,  3.39it/s]
+[2025-04-21T21:17:41.797+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:41.800+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 1000 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:42.801+0000] {logging_mixin.py:190} WARNING -  10%|9         | 50/501 [00:22<04:24,  1.70it/s]
+[2025-04-21T21:17:43.039+0000] {logging_mixin.py:190} WARNING -  10%|#         | 51/501 [00:22<03:37,  2.07it/s]
+[2025-04-21T21:17:43.303+0000] {logging_mixin.py:190} WARNING -  10%|#         | 52/501 [00:22<03:07,  2.40it/s]
+[2025-04-21T21:17:43.543+0000] {logging_mixin.py:190} WARNING -  11%|#         | 53/501 [00:23<02:42,  2.75it/s]
+[2025-04-21T21:17:43.805+0000] {logging_mixin.py:190} WARNING -  11%|#         | 54/501 [00:23<02:28,  3.00it/s]
+[2025-04-21T21:17:44.112+0000] {logging_mixin.py:190} WARNING -  11%|#         | 55/501 [00:23<02:25,  3.07it/s]
+[2025-04-21T21:17:44.348+0000] {logging_mixin.py:190} WARNING -  11%|#1        | 56/501 [00:23<02:12,  3.35it/s]
+[2025-04-21T21:17:44.607+0000] {logging_mixin.py:190} WARNING -  11%|#1        | 57/501 [00:24<02:07,  3.49it/s]
+[2025-04-21T21:17:44.917+0000] {logging_mixin.py:190} WARNING -  12%|#1        | 58/501 [00:24<02:10,  3.41it/s]
+[2025-04-21T21:17:45.158+0000] {logging_mixin.py:190} WARNING -  12%|#1        | 59/501 [00:24<02:02,  3.60it/s]
+[2025-04-21T21:17:45.426+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:45.429+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 1200 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:46.431+0000] {logging_mixin.py:190} WARNING -  12%|#1        | 60/501 [00:25<04:14,  1.73it/s]
+[2025-04-21T21:17:46.747+0000] {logging_mixin.py:190} WARNING -  12%|#2        | 61/501 [00:26<03:39,  2.01it/s]
+[2025-04-21T21:17:47.082+0000] {logging_mixin.py:190} WARNING -  12%|#2        | 62/501 [00:26<03:17,  2.23it/s]
+[2025-04-21T21:17:47.340+0000] {logging_mixin.py:190} WARNING -  13%|#2        | 63/501 [00:26<02:51,  2.55it/s]
+[2025-04-21T21:17:47.666+0000] {logging_mixin.py:190} WARNING -  13%|#2        | 64/501 [00:27<02:42,  2.69it/s]
+[2025-04-21T21:17:47.925+0000] {logging_mixin.py:190} WARNING -  13%|#2        | 65/501 [00:27<02:27,  2.96it/s]
+[2025-04-21T21:17:48.201+0000] {logging_mixin.py:190} WARNING -  13%|#3        | 66/501 [00:27<02:18,  3.13it/s]
+[2025-04-21T21:17:48.511+0000] {logging_mixin.py:190} WARNING -  13%|#3        | 67/501 [00:28<02:17,  3.16it/s]
+[2025-04-21T21:17:48.778+0000] {logging_mixin.py:190} WARNING -  14%|#3        | 68/501 [00:28<02:10,  3.31it/s]
+[2025-04-21T21:17:49.049+0000] {logging_mixin.py:190} WARNING -  14%|#3        | 69/501 [00:28<02:06,  3.42it/s]
+[2025-04-21T21:17:49.320+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:49.327+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 1400 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:50.334+0000] {logging_mixin.py:190} WARNING -  14%|#3        | 70/501 [00:29<04:14,  1.69it/s]
+[2025-04-21T21:17:50.646+0000] {logging_mixin.py:190} WARNING -  14%|#4        | 71/501 [00:30<03:37,  1.97it/s]
+[2025-04-21T21:17:50.895+0000] {logging_mixin.py:190} WARNING -  14%|#4        | 72/501 [00:30<03:04,  2.33it/s]
+[2025-04-21T21:17:51.139+0000] {logging_mixin.py:190} WARNING -  15%|#4        | 73/501 [00:30<02:40,  2.67it/s]
+[2025-04-21T21:17:51.392+0000] {logging_mixin.py:190} WARNING -  15%|#4        | 74/501 [00:30<02:24,  2.96it/s]
+[2025-04-21T21:17:51.635+0000] {logging_mixin.py:190} WARNING -  15%|#4        | 75/501 [00:31<02:11,  3.23it/s]
+[2025-04-21T21:17:51.890+0000] {logging_mixin.py:190} WARNING -  15%|#5        | 76/501 [00:31<02:04,  3.41it/s]
+[2025-04-21T21:17:52.155+0000] {logging_mixin.py:190} WARNING -  15%|#5        | 77/501 [00:31<02:00,  3.52it/s]
+[2025-04-21T21:17:52.436+0000] {logging_mixin.py:190} WARNING -  16%|#5        | 78/501 [00:31<01:59,  3.53it/s]
+[2025-04-21T21:17:52.747+0000] {logging_mixin.py:190} WARNING -  16%|#5        | 79/501 [00:32<02:03,  3.43it/s]
+[2025-04-21T21:17:53.089+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:53.096+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 1600 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:17:54.098+0000] {logging_mixin.py:190} WARNING -  16%|#5        | 80/501 [00:33<04:16,  1.64it/s]
+[2025-04-21T21:17:54.377+0000] {logging_mixin.py:190} WARNING -  16%|#6        | 81/501 [00:33<03:34,  1.96it/s]
+[2025-04-21T21:17:54.672+0000] {logging_mixin.py:190} WARNING -  16%|#6        | 82/501 [00:34<03:06,  2.24it/s]
+[2025-04-21T21:17:55.189+0000] {logging_mixin.py:190} WARNING -  17%|#6        | 83/501 [00:34<03:15,  2.14it/s]
+[2025-04-21T21:17:55.441+0000] {logging_mixin.py:190} WARNING -  17%|#6        | 84/501 [00:34<02:47,  2.48it/s]
+[2025-04-21T21:17:55.704+0000] {logging_mixin.py:190} WARNING -  17%|#6        | 85/501 [00:35<02:30,  2.77it/s]
+[2025-04-21T21:17:55.981+0000] {logging_mixin.py:190} WARNING -  17%|#7        | 86/501 [00:35<02:19,  2.98it/s]
+[2025-04-21T21:17:56.258+0000] {logging_mixin.py:190} WARNING -  17%|#7        | 87/501 [00:35<02:11,  3.15it/s]
+[2025-04-21T21:17:56.587+0000] {logging_mixin.py:190} WARNING -  18%|#7        | 88/501 [00:36<02:12,  3.11it/s]
+[2025-04-21T21:17:56.855+0000] {logging_mixin.py:190} WARNING -  18%|#7        | 89/501 [00:36<02:05,  3.28it/s]
+[2025-04-21T21:17:56.951+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=1780&page=90&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:18:00.248+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:00.255+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 1800 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:01.257+0000] {logging_mixin.py:190} WARNING -  18%|#7        | 90/501 [00:40<10:30,  1.53s/it]
+[2025-04-21T21:18:01.529+0000] {logging_mixin.py:190} WARNING -  18%|#8        | 91/501 [00:41<07:53,  1.16s/it]
+[2025-04-21T21:18:01.862+0000] {logging_mixin.py:190} WARNING -  18%|#8        | 92/501 [00:41<06:11,  1.10it/s]
+[2025-04-21T21:18:02.176+0000] {logging_mixin.py:190} WARNING -  19%|#8        | 93/501 [00:41<04:58,  1.37it/s]
+[2025-04-21T21:18:02.466+0000] {logging_mixin.py:190} WARNING -  19%|#8        | 94/501 [00:42<04:03,  1.67it/s]
+[2025-04-21T21:18:02.748+0000] {logging_mixin.py:190} WARNING -  19%|#8        | 95/501 [00:42<03:24,  1.99it/s]
+[2025-04-21T21:18:03.058+0000] {logging_mixin.py:190} WARNING -  19%|#9        | 96/501 [00:42<03:00,  2.24it/s]
+[2025-04-21T21:18:03.327+0000] {logging_mixin.py:190} WARNING -  19%|#9        | 97/501 [00:42<02:38,  2.55it/s]
+[2025-04-21T21:18:03.592+0000] {logging_mixin.py:190} WARNING -  20%|#9        | 98/501 [00:43<02:22,  2.82it/s]
+[2025-04-21T21:18:03.876+0000] {logging_mixin.py:190} WARNING -  20%|#9        | 99/501 [00:43<02:13,  3.00it/s]
+[2025-04-21T21:18:04.131+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:04.137+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 2000 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:05.139+0000] {logging_mixin.py:190} WARNING -  20%|#9        | 100/501 [00:44<04:05,  1.63it/s]
+[2025-04-21T21:18:05.412+0000] {logging_mixin.py:190} WARNING -  20%|##        | 101/501 [00:44<03:24,  1.96it/s]
+[2025-04-21T21:18:05.670+0000] {logging_mixin.py:190} WARNING -  20%|##        | 102/501 [00:45<02:53,  2.30it/s]
+[2025-04-21T21:18:05.928+0000] {logging_mixin.py:190} WARNING -  21%|##        | 103/501 [00:45<02:31,  2.62it/s]
+[2025-04-21T21:18:06.214+0000] {logging_mixin.py:190} WARNING -  21%|##        | 104/501 [00:45<02:20,  2.83it/s]
+[2025-04-21T21:18:06.491+0000] {logging_mixin.py:190} WARNING -  21%|##        | 105/501 [00:46<02:10,  3.03it/s]
+[2025-04-21T21:18:06.774+0000] {logging_mixin.py:190} WARNING -  21%|##1       | 106/501 [00:46<02:04,  3.16it/s]
+[2025-04-21T21:18:07.040+0000] {logging_mixin.py:190} WARNING -  21%|##1       | 107/501 [00:46<01:58,  3.32it/s]
+[2025-04-21T21:18:07.311+0000] {logging_mixin.py:190} WARNING -  22%|##1       | 108/501 [00:46<01:54,  3.42it/s]
+[2025-04-21T21:18:07.573+0000] {logging_mixin.py:190} WARNING -  22%|##1       | 109/501 [00:47<01:50,  3.53it/s]
+[2025-04-21T21:18:07.837+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:07.844+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 2200 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:08.845+0000] {logging_mixin.py:190} WARNING -  22%|##1       | 110/501 [00:48<03:46,  1.73it/s]
+[2025-04-21T21:18:09.119+0000] {logging_mixin.py:190} WARNING -  22%|##2       | 111/501 [00:48<03:10,  2.05it/s]
+[2025-04-21T21:18:09.375+0000] {logging_mixin.py:190} WARNING -  22%|##2       | 112/501 [00:48<02:42,  2.39it/s]
+[2025-04-21T21:18:09.639+0000] {logging_mixin.py:190} WARNING -  23%|##2       | 113/501 [00:49<02:24,  2.69it/s]
+[2025-04-21T21:18:09.900+0000] {logging_mixin.py:190} WARNING -  23%|##2       | 114/501 [00:49<02:11,  2.95it/s]
+[2025-04-21T21:18:10.191+0000] {logging_mixin.py:190} WARNING -  23%|##2       | 115/501 [00:49<02:05,  3.08it/s]
+[2025-04-21T21:18:10.504+0000] {logging_mixin.py:190} WARNING -  23%|##3       | 116/501 [00:50<02:03,  3.12it/s]
+[2025-04-21T21:18:10.756+0000] {logging_mixin.py:190} WARNING -  23%|##3       | 117/501 [00:50<01:55,  3.33it/s]
+[2025-04-21T21:18:11.018+0000] {logging_mixin.py:190} WARNING -  24%|##3       | 118/501 [00:50<01:50,  3.46it/s]
+[2025-04-21T21:18:11.292+0000] {logging_mixin.py:190} WARNING -  24%|##3       | 119/501 [00:50<01:48,  3.52it/s]
+[2025-04-21T21:18:11.577+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:11.582+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 2400 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:12.584+0000] {logging_mixin.py:190} WARNING -  24%|##3       | 120/501 [00:52<03:43,  1.70it/s]
+[2025-04-21T21:18:12.842+0000] {logging_mixin.py:190} WARNING -  24%|##4       | 121/501 [00:52<03:05,  2.05it/s]
+[2025-04-21T21:18:13.162+0000] {logging_mixin.py:190} WARNING -  24%|##4       | 122/501 [00:52<02:45,  2.28it/s]
+[2025-04-21T21:18:13.424+0000] {logging_mixin.py:190} WARNING -  25%|##4       | 123/501 [00:52<02:25,  2.60it/s]
+[2025-04-21T21:18:13.674+0000] {logging_mixin.py:190} WARNING -  25%|##4       | 124/501 [00:53<02:09,  2.90it/s]
+[2025-04-21T21:18:13.937+0000] {logging_mixin.py:190} WARNING -  25%|##4       | 125/501 [00:53<02:00,  3.13it/s]
+[2025-04-21T21:18:14.209+0000] {logging_mixin.py:190} WARNING -  25%|##5       | 126/501 [00:53<01:54,  3.27it/s]
+[2025-04-21T21:18:14.481+0000] {logging_mixin.py:190} WARNING -  25%|##5       | 127/501 [00:54<01:50,  3.38it/s]
+[2025-04-21T21:18:14.752+0000] {logging_mixin.py:190} WARNING -  26%|##5       | 128/501 [00:54<01:47,  3.47it/s]
+[2025-04-21T21:18:15.010+0000] {logging_mixin.py:190} WARNING -  26%|##5       | 129/501 [00:54<01:43,  3.58it/s]
+[2025-04-21T21:18:15.293+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:15.298+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 2600 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:16.301+0000] {logging_mixin.py:190} WARNING -  26%|##5       | 130/501 [00:55<03:36,  1.72it/s]
+[2025-04-21T21:18:16.631+0000] {logging_mixin.py:190} WARNING -  26%|##6       | 131/501 [00:56<03:07,  1.97it/s]
+[2025-04-21T21:18:16.898+0000] {logging_mixin.py:190} WARNING -  26%|##6       | 132/501 [00:56<02:40,  2.30it/s]
+[2025-04-21T21:18:17.191+0000] {logging_mixin.py:190} WARNING -  27%|##6       | 133/501 [00:56<02:24,  2.55it/s]
+[2025-04-21T21:18:17.454+0000] {logging_mixin.py:190} WARNING -  27%|##6       | 134/501 [00:56<02:09,  2.83it/s]
+[2025-04-21T21:18:17.698+0000] {logging_mixin.py:190} WARNING -  27%|##6       | 135/501 [00:57<01:57,  3.12it/s]
+[2025-04-21T21:18:17.970+0000] {logging_mixin.py:190} WARNING -  27%|##7       | 136/501 [00:57<01:51,  3.27it/s]
+[2025-04-21T21:18:18.239+0000] {logging_mixin.py:190} WARNING -  27%|##7       | 137/501 [00:57<01:47,  3.39it/s]
+[2025-04-21T21:18:18.591+0000] {logging_mixin.py:190} WARNING -  28%|##7       | 138/501 [00:58<01:53,  3.21it/s]
+[2025-04-21T21:18:18.909+0000] {logging_mixin.py:190} WARNING -  28%|##7       | 139/501 [00:58<01:53,  3.19it/s]
+[2025-04-21T21:18:19.180+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:19.188+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 2800 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:20.190+0000] {logging_mixin.py:190} WARNING -  28%|##7       | 140/501 [00:59<03:38,  1.66it/s]
+[2025-04-21T21:18:20.444+0000] {logging_mixin.py:190} WARNING -  28%|##8       | 141/501 [00:59<02:59,  2.00it/s]
+[2025-04-21T21:18:20.690+0000] {logging_mixin.py:190} WARNING -  28%|##8       | 142/501 [01:00<02:31,  2.36it/s]
+[2025-04-21T21:18:21.566+0000] {logging_mixin.py:190} WARNING -  29%|##8       | 143/501 [01:01<03:20,  1.79it/s]
+[2025-04-21T21:18:21.828+0000] {logging_mixin.py:190} WARNING -  29%|##8       | 144/501 [01:01<02:47,  2.13it/s]
+[2025-04-21T21:18:22.082+0000] {logging_mixin.py:190} WARNING -  29%|##8       | 145/501 [01:01<02:24,  2.47it/s]
+[2025-04-21T21:18:22.350+0000] {logging_mixin.py:190} WARNING -  29%|##9       | 146/501 [01:01<02:09,  2.75it/s]
+[2025-04-21T21:18:22.626+0000] {logging_mixin.py:190} WARNING -  29%|##9       | 147/501 [01:02<01:59,  2.96it/s]
+[2025-04-21T21:18:22.881+0000] {logging_mixin.py:190} WARNING -  30%|##9       | 148/501 [01:02<01:50,  3.20it/s]
+[2025-04-21T21:18:23.152+0000] {logging_mixin.py:190} WARNING -  30%|##9       | 149/501 [01:02<01:45,  3.33it/s]
+[2025-04-21T21:18:23.411+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:23.422+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 3000 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:24.427+0000] {logging_mixin.py:190} WARNING -  30%|##9       | 150/501 [01:03<03:28,  1.69it/s]
+[2025-04-21T21:18:24.670+0000] {logging_mixin.py:190} WARNING -  30%|###       | 151/501 [01:04<02:50,  2.05it/s]
+[2025-04-21T21:18:24.936+0000] {logging_mixin.py:190} WARNING -  30%|###       | 152/501 [01:04<02:27,  2.37it/s]
+[2025-04-21T21:18:25.189+0000] {logging_mixin.py:190} WARNING -  31%|###       | 153/501 [01:04<02:08,  2.70it/s]
+[2025-04-21T21:18:25.510+0000] {logging_mixin.py:190} WARNING -  31%|###       | 154/501 [01:05<02:03,  2.81it/s]
+[2025-04-21T21:18:25.768+0000] {logging_mixin.py:190} WARNING -  31%|###       | 155/501 [01:05<01:52,  3.06it/s]
+[2025-04-21T21:18:26.073+0000] {logging_mixin.py:190} WARNING -  31%|###1      | 156/501 [01:05<01:50,  3.13it/s]
+[2025-04-21T21:18:26.354+0000] {logging_mixin.py:190} WARNING -  31%|###1      | 157/501 [01:05<01:46,  3.24it/s]
+[2025-04-21T21:18:26.680+0000] {logging_mixin.py:190} WARNING -  32%|###1      | 158/501 [01:06<01:47,  3.19it/s]
+[2025-04-21T21:18:26.967+0000] {logging_mixin.py:190} WARNING -  32%|###1      | 159/501 [01:06<01:44,  3.27it/s]
+[2025-04-21T21:18:27.228+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:27.234+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 3200 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:28.241+0000] {logging_mixin.py:190} WARNING -  32%|###1      | 160/501 [01:07<03:22,  1.68it/s]
+[2025-04-21T21:18:28.540+0000] {logging_mixin.py:190} WARNING -  32%|###2      | 161/501 [01:08<02:52,  1.97it/s]
+[2025-04-21T21:18:28.812+0000] {logging_mixin.py:190} WARNING -  32%|###2      | 162/501 [01:08<02:28,  2.29it/s]
+[2025-04-21T21:18:29.075+0000] {logging_mixin.py:190} WARNING -  33%|###2      | 163/501 [01:08<02:10,  2.60it/s]
+[2025-04-21T21:18:29.391+0000] {logging_mixin.py:190} WARNING -  33%|###2      | 164/501 [01:08<02:02,  2.75it/s]
+[2025-04-21T21:18:29.655+0000] {logging_mixin.py:190} WARNING -  33%|###2      | 165/501 [01:09<01:52,  3.00it/s]
+[2025-04-21T21:18:29.925+0000] {logging_mixin.py:190} WARNING -  33%|###3      | 166/501 [01:09<01:45,  3.18it/s]
+[2025-04-21T21:18:30.200+0000] {logging_mixin.py:190} WARNING -  33%|###3      | 167/501 [01:09<01:41,  3.30it/s]
+[2025-04-21T21:18:30.467+0000] {logging_mixin.py:190} WARNING -  34%|###3      | 168/501 [01:10<01:37,  3.42it/s]
+[2025-04-21T21:18:30.756+0000] {logging_mixin.py:190} WARNING -  34%|###3      | 169/501 [01:10<01:36,  3.43it/s]
+[2025-04-21T21:18:31.031+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:31.041+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 3400 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:32.045+0000] {logging_mixin.py:190} WARNING -  34%|###3      | 170/501 [01:11<03:15,  1.69it/s]
+[2025-04-21T21:18:32.288+0000] {logging_mixin.py:190} WARNING -  34%|###4      | 171/501 [01:11<02:40,  2.06it/s]
+[2025-04-21T21:18:32.597+0000] {logging_mixin.py:190} WARNING -  34%|###4      | 172/501 [01:12<02:22,  2.31it/s]
+[2025-04-21T21:18:32.862+0000] {logging_mixin.py:190} WARNING -  35%|###4      | 173/501 [01:12<02:05,  2.61it/s]
+[2025-04-21T21:18:33.139+0000] {logging_mixin.py:190} WARNING -  35%|###4      | 174/501 [01:12<01:54,  2.85it/s]
+[2025-04-21T21:18:33.401+0000] {logging_mixin.py:190} WARNING -  35%|###4      | 175/501 [01:12<01:45,  3.08it/s]
+[2025-04-21T21:18:33.666+0000] {logging_mixin.py:190} WARNING -  35%|###5      | 176/501 [01:13<01:39,  3.26it/s]
+[2025-04-21T21:18:33.923+0000] {logging_mixin.py:190} WARNING -  35%|###5      | 177/501 [01:13<01:34,  3.43it/s]
+[2025-04-21T21:18:34.030+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=3540&page=178&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:18:37.285+0000] {logging_mixin.py:190} WARNING -  36%|###5      | 178/501 [01:16<06:31,  1.21s/it]
+[2025-04-21T21:18:37.539+0000] {logging_mixin.py:190} WARNING -  36%|###5      | 179/501 [01:17<04:57,  1.08it/s]
+[2025-04-21T21:18:37.813+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:37.821+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 3600 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:38.825+0000] {logging_mixin.py:190} WARNING -  36%|###5      | 180/501 [01:18<05:31,  1.03s/it]
+[2025-04-21T21:18:39.080+0000] {logging_mixin.py:190} WARNING -  36%|###6      | 181/501 [01:18<04:15,  1.25it/s]
+[2025-04-21T21:18:39.331+0000] {logging_mixin.py:190} WARNING -  36%|###6      | 182/501 [01:18<03:22,  1.57it/s]
+[2025-04-21T21:18:39.590+0000] {logging_mixin.py:190} WARNING -  37%|###6      | 183/501 [01:19<02:46,  1.91it/s]
+[2025-04-21T21:18:39.843+0000] {logging_mixin.py:190} WARNING -  37%|###6      | 184/501 [01:19<02:20,  2.26it/s]
+[2025-04-21T21:18:40.189+0000] {logging_mixin.py:190} WARNING -  37%|###6      | 185/501 [01:19<02:10,  2.42it/s]
+[2025-04-21T21:18:40.438+0000] {logging_mixin.py:190} WARNING -  37%|###7      | 186/501 [01:19<01:54,  2.75it/s]
+[2025-04-21T21:18:40.540+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=3720&page=187&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:18:43.755+0000] {logging_mixin.py:190} WARNING -  37%|###7      | 187/501 [01:23<06:32,  1.25s/it]
+[2025-04-21T21:18:43.951+0000] {logging_mixin.py:190} WARNING -  38%|###7      | 188/501 [01:23<04:52,  1.07it/s]
+[2025-04-21T21:18:44.140+0000] {logging_mixin.py:190} WARNING -  38%|###7      | 189/501 [01:23<03:41,  1.41it/s]
+[2025-04-21T21:18:44.336+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:44.344+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 3800 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:45.346+0000] {logging_mixin.py:190} WARNING -  38%|###7      | 190/501 [01:24<04:27,  1.16it/s]
+[2025-04-21T21:18:45.542+0000] {logging_mixin.py:190} WARNING -  38%|###8      | 191/501 [01:25<03:24,  1.51it/s]
+[2025-04-21T21:18:45.734+0000] {logging_mixin.py:190} WARNING -  38%|###8      | 192/501 [01:25<02:40,  1.92it/s]
+[2025-04-21T21:18:45.925+0000] {logging_mixin.py:190} WARNING -  39%|###8      | 193/501 [01:25<02:09,  2.38it/s]
+[2025-04-21T21:18:46.139+0000] {logging_mixin.py:190} WARNING -  39%|###8      | 194/501 [01:25<01:50,  2.79it/s]
+[2025-04-21T21:18:46.350+0000] {logging_mixin.py:190} WARNING -  39%|###8      | 195/501 [01:25<01:36,  3.18it/s]
+[2025-04-21T21:18:46.581+0000] {logging_mixin.py:190} WARNING -  39%|###9      | 196/501 [01:26<01:28,  3.46it/s]
+[2025-04-21T21:18:46.788+0000] {logging_mixin.py:190} WARNING -  39%|###9      | 197/501 [01:26<01:20,  3.78it/s]
+[2025-04-21T21:18:46.977+0000] {logging_mixin.py:190} WARNING -  40%|###9      | 198/501 [01:26<01:13,  4.13it/s]
+[2025-04-21T21:18:47.186+0000] {logging_mixin.py:190} WARNING -  40%|###9      | 199/501 [01:26<01:10,  4.31it/s]
+[2025-04-21T21:18:47.383+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:47.393+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 3999 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:48.395+0000] {logging_mixin.py:190} WARNING -  40%|###9      | 200/501 [01:27<02:38,  1.90it/s]
+[2025-04-21T21:18:48.581+0000] {logging_mixin.py:190} WARNING -  40%|####      | 201/501 [01:28<02:07,  2.36it/s]
+[2025-04-21T21:18:48.776+0000] {logging_mixin.py:190} WARNING -  40%|####      | 202/501 [01:28<01:46,  2.82it/s]
+[2025-04-21T21:18:48.964+0000] {logging_mixin.py:190} WARNING -  41%|####      | 203/501 [01:28<01:30,  3.28it/s]
+[2025-04-21T21:18:49.067+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=4060&page=204&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:18:52.278+0000] {logging_mixin.py:190} WARNING -  41%|####      | 204/501 [01:31<05:58,  1.21s/it]
+[2025-04-21T21:18:52.474+0000] {logging_mixin.py:190} WARNING -  41%|####      | 205/501 [01:32<04:27,  1.11it/s]
+[2025-04-21T21:18:52.655+0000] {logging_mixin.py:190} WARNING -  41%|####1     | 206/501 [01:32<03:22,  1.46it/s]
+[2025-04-21T21:18:52.862+0000] {logging_mixin.py:190} WARNING -  41%|####1     | 207/501 [01:32<02:39,  1.84it/s]
+[2025-04-21T21:18:53.024+0000] {logging_mixin.py:190} WARNING -  42%|####1     | 208/501 [01:32<02:05,  2.33it/s]
+[2025-04-21T21:18:53.217+0000] {logging_mixin.py:190} WARNING -  42%|####1     | 209/501 [01:32<01:44,  2.79it/s]
+[2025-04-21T21:18:53.415+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:53.421+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 4199 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:54.427+0000] {logging_mixin.py:190} WARNING -  42%|####1     | 210/501 [01:33<02:58,  1.63it/s]
+[2025-04-21T21:18:54.629+0000] {logging_mixin.py:190} WARNING -  42%|####2     | 211/501 [01:34<02:22,  2.04it/s]
+[2025-04-21T21:18:54.852+0000] {logging_mixin.py:190} WARNING -  42%|####2     | 212/501 [01:34<01:58,  2.44it/s]
+[2025-04-21T21:18:55.054+0000] {logging_mixin.py:190} WARNING -  43%|####2     | 213/501 [01:34<01:40,  2.88it/s]
+[2025-04-21T21:18:55.254+0000] {logging_mixin.py:190} WARNING -  43%|####2     | 214/501 [01:34<01:27,  3.30it/s]
+[2025-04-21T21:18:55.469+0000] {logging_mixin.py:190} WARNING -  43%|####2     | 215/501 [01:35<01:19,  3.61it/s]
+[2025-04-21T21:18:55.683+0000] {logging_mixin.py:190} WARNING -  43%|####3     | 216/501 [01:35<01:13,  3.87it/s]
+[2025-04-21T21:18:55.876+0000] {logging_mixin.py:190} WARNING -  43%|####3     | 217/501 [01:35<01:07,  4.19it/s]
+[2025-04-21T21:18:56.085+0000] {logging_mixin.py:190} WARNING -  44%|####3     | 218/501 [01:35<01:05,  4.35it/s]
+[2025-04-21T21:18:56.209+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=4360&page=219&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:18:59.418+0000] {logging_mixin.py:190} WARNING -  44%|####3     | 219/501 [01:38<05:27,  1.16s/it]
+[2025-04-21T21:18:59.620+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:18:59.629+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 4399 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:00.631+0000] {logging_mixin.py:190} WARNING -  44%|####3     | 220/501 [01:40<05:30,  1.18s/it]
+[2025-04-21T21:19:00.821+0000] {logging_mixin.py:190} WARNING -  44%|####4     | 221/501 [01:40<04:06,  1.14it/s]
+[2025-04-21T21:19:01.008+0000] {logging_mixin.py:190} WARNING -  44%|####4     | 222/501 [01:40<03:07,  1.49it/s]
+[2025-04-21T21:19:01.197+0000] {logging_mixin.py:190} WARNING -  45%|####4     | 223/501 [01:40<02:26,  1.90it/s]
+[2025-04-21T21:19:01.433+0000] {logging_mixin.py:190} WARNING -  45%|####4     | 224/501 [01:40<02:01,  2.27it/s]
+[2025-04-21T21:19:01.634+0000] {logging_mixin.py:190} WARNING -  45%|####4     | 225/501 [01:41<01:41,  2.72it/s]
+[2025-04-21T21:19:01.851+0000] {logging_mixin.py:190} WARNING -  45%|####5     | 226/501 [01:41<01:28,  3.10it/s]
+[2025-04-21T21:19:02.062+0000] {logging_mixin.py:190} WARNING -  45%|####5     | 227/501 [01:41<01:19,  3.46it/s]
+[2025-04-21T21:19:02.273+0000] {logging_mixin.py:190} WARNING -  46%|####5     | 228/501 [01:41<01:12,  3.76it/s]
+[2025-04-21T21:19:02.490+0000] {logging_mixin.py:190} WARNING -  46%|####5     | 229/501 [01:42<01:08,  3.98it/s]
+[2025-04-21T21:19:02.702+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:02.709+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 4599 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:03.712+0000] {logging_mixin.py:190} WARNING -  46%|####5     | 230/501 [01:43<02:26,  1.84it/s]
+[2025-04-21T21:19:03.903+0000] {logging_mixin.py:190} WARNING -  46%|####6     | 231/501 [01:43<01:58,  2.29it/s]
+[2025-04-21T21:19:04.109+0000] {logging_mixin.py:190} WARNING -  46%|####6     | 232/501 [01:43<01:38,  2.72it/s]
+[2025-04-21T21:19:04.306+0000] {logging_mixin.py:190} WARNING -  47%|####6     | 233/501 [01:43<01:24,  3.16it/s]
+[2025-04-21T21:19:04.511+0000] {logging_mixin.py:190} WARNING -  47%|####6     | 234/501 [01:44<01:15,  3.53it/s]
+[2025-04-21T21:19:04.612+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=4680&page=235&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:19:07.824+0000] {logging_mixin.py:190} WARNING -  47%|####6     | 235/501 [01:47<05:17,  1.19s/it]
+[2025-04-21T21:19:08.017+0000] {logging_mixin.py:190} WARNING -  47%|####7     | 236/501 [01:47<03:56,  1.12it/s]
+[2025-04-21T21:19:08.215+0000] {logging_mixin.py:190} WARNING -  47%|####7     | 237/501 [01:47<03:00,  1.46it/s]
+[2025-04-21T21:19:08.415+0000] {logging_mixin.py:190} WARNING -  48%|####7     | 238/501 [01:47<02:21,  1.86it/s]
+[2025-04-21T21:19:08.603+0000] {logging_mixin.py:190} WARNING -  48%|####7     | 239/501 [01:48<01:53,  2.31it/s]
+[2025-04-21T21:19:08.833+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:08.842+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 4799 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:09.849+0000] {logging_mixin.py:190} WARNING -  48%|####7     | 240/501 [01:49<02:56,  1.48it/s]
+[2025-04-21T21:19:10.029+0000] {logging_mixin.py:190} WARNING -  48%|####8     | 241/501 [01:49<02:17,  1.89it/s]
+[2025-04-21T21:19:10.217+0000] {logging_mixin.py:190} WARNING -  48%|####8     | 242/501 [01:49<01:50,  2.35it/s]
+[2025-04-21T21:19:10.416+0000] {logging_mixin.py:190} WARNING -  49%|####8     | 243/501 [01:49<01:32,  2.79it/s]
+[2025-04-21T21:19:10.620+0000] {logging_mixin.py:190} WARNING -  49%|####8     | 244/501 [01:50<01:20,  3.21it/s]
+[2025-04-21T21:19:10.799+0000] {logging_mixin.py:190} WARNING -  49%|####8     | 245/501 [01:50<01:09,  3.68it/s]
+[2025-04-21T21:19:11.011+0000] {logging_mixin.py:190} WARNING -  49%|####9     | 246/501 [01:50<01:04,  3.94it/s]
+[2025-04-21T21:19:11.221+0000] {logging_mixin.py:190} WARNING -  49%|####9     | 247/501 [01:50<01:01,  4.15it/s]
+[2025-04-21T21:19:11.416+0000] {logging_mixin.py:190} WARNING -  50%|####9     | 248/501 [01:50<00:57,  4.40it/s]
+[2025-04-21T21:19:11.607+0000] {logging_mixin.py:190} WARNING -  50%|####9     | 249/501 [01:51<00:54,  4.62it/s]
+[2025-04-21T21:19:11.803+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:11.811+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 4999 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:12.813+0000] {logging_mixin.py:190} WARNING -  50%|####9     | 250/501 [01:52<02:08,  1.95it/s]
+[2025-04-21T21:19:13.013+0000] {logging_mixin.py:190} WARNING -  50%|#####     | 251/501 [01:52<01:44,  2.38it/s]
+[2025-04-21T21:19:13.204+0000] {logging_mixin.py:190} WARNING -  50%|#####     | 252/501 [01:52<01:27,  2.85it/s]
+[2025-04-21T21:19:13.404+0000] {logging_mixin.py:190} WARNING -  50%|#####     | 253/501 [01:52<01:15,  3.27it/s]
+[2025-04-21T21:19:13.603+0000] {logging_mixin.py:190} WARNING -  51%|#####     | 254/501 [01:53<01:07,  3.66it/s]
+[2025-04-21T21:19:13.795+0000] {logging_mixin.py:190} WARNING -  51%|#####     | 255/501 [01:53<01:01,  4.01it/s]
+[2025-04-21T21:19:13.989+0000] {logging_mixin.py:190} WARNING -  51%|#####1    | 256/501 [01:53<00:56,  4.30it/s]
+[2025-04-21T21:19:14.188+0000] {logging_mixin.py:190} WARNING -  51%|#####1    | 257/501 [01:53<00:54,  4.49it/s]
+[2025-04-21T21:19:14.410+0000] {logging_mixin.py:190} WARNING -  51%|#####1    | 258/501 [01:53<00:54,  4.50it/s]
+[2025-04-21T21:19:14.595+0000] {logging_mixin.py:190} WARNING -  52%|#####1    | 259/501 [01:54<00:51,  4.73it/s]
+[2025-04-21T21:19:14.701+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=5180&page=260&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:19:17.917+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:17.926+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 5199 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:18.928+0000] {logging_mixin.py:190} WARNING -  52%|#####1    | 260/501 [01:58<05:48,  1.45s/it]
+[2025-04-21T21:19:19.140+0000] {logging_mixin.py:190} WARNING -  52%|#####2    | 261/501 [01:58<04:18,  1.08s/it]
+[2025-04-21T21:19:19.366+0000] {logging_mixin.py:190} WARNING -  52%|#####2    | 262/501 [01:58<03:16,  1.22it/s]
+[2025-04-21T21:19:19.575+0000] {logging_mixin.py:190} WARNING -  52%|#####2    | 263/501 [01:59<02:31,  1.57it/s]
+[2025-04-21T21:19:19.772+0000] {logging_mixin.py:190} WARNING -  53%|#####2    | 264/501 [01:59<01:59,  1.98it/s]
+[2025-04-21T21:19:20.062+0000] {logging_mixin.py:190} WARNING -  53%|#####2    | 265/501 [01:59<01:44,  2.27it/s]
+[2025-04-21T21:19:20.264+0000] {logging_mixin.py:190} WARNING -  53%|#####3    | 266/501 [01:59<01:26,  2.71it/s]
+[2025-04-21T21:19:20.467+0000] {logging_mixin.py:190} WARNING -  53%|#####3    | 267/501 [02:00<01:14,  3.13it/s]
+[2025-04-21T21:19:20.655+0000] {logging_mixin.py:190} WARNING -  53%|#####3    | 268/501 [02:00<01:05,  3.57it/s]
+[2025-04-21T21:19:20.855+0000] {logging_mixin.py:190} WARNING -  54%|#####3    | 269/501 [02:00<00:59,  3.91it/s]
+[2025-04-21T21:19:21.055+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:21.071+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 5399 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:22.074+0000] {logging_mixin.py:190} WARNING -  54%|#####3    | 270/501 [02:01<02:05,  1.84it/s]
+[2025-04-21T21:19:22.277+0000] {logging_mixin.py:190} WARNING -  54%|#####4    | 271/501 [02:01<01:41,  2.26it/s]
+[2025-04-21T21:19:22.505+0000] {logging_mixin.py:190} WARNING -  54%|#####4    | 272/501 [02:02<01:26,  2.65it/s]
+[2025-04-21T21:19:22.723+0000] {logging_mixin.py:190} WARNING -  54%|#####4    | 273/501 [02:02<01:15,  3.03it/s]
+[2025-04-21T21:19:23.166+0000] {logging_mixin.py:190} WARNING -  55%|#####4    | 274/501 [02:02<01:22,  2.75it/s]
+[2025-04-21T21:19:23.361+0000] {logging_mixin.py:190} WARNING -  55%|#####4    | 275/501 [02:02<01:10,  3.19it/s]
+[2025-04-21T21:19:23.589+0000] {logging_mixin.py:190} WARNING -  55%|#####5    | 276/501 [02:03<01:04,  3.48it/s]
+[2025-04-21T21:19:23.801+0000] {logging_mixin.py:190} WARNING -  55%|#####5    | 277/501 [02:03<00:59,  3.77it/s]
+[2025-04-21T21:19:24.020+0000] {logging_mixin.py:190} WARNING -  55%|#####5    | 278/501 [02:03<00:55,  3.98it/s]
+[2025-04-21T21:19:24.223+0000] {logging_mixin.py:190} WARNING -  56%|#####5    | 279/501 [02:03<00:52,  4.22it/s]
+[2025-04-21T21:19:24.430+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:24.445+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 5599 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:25.450+0000] {logging_mixin.py:190} WARNING -  56%|#####5    | 280/501 [02:04<01:57,  1.87it/s]
+[2025-04-21T21:19:25.645+0000] {logging_mixin.py:190} WARNING -  56%|#####6    | 281/501 [02:05<01:35,  2.31it/s]
+[2025-04-21T21:19:25.837+0000] {logging_mixin.py:190} WARNING -  56%|#####6    | 282/501 [02:05<01:18,  2.78it/s]
+[2025-04-21T21:19:26.056+0000] {logging_mixin.py:190} WARNING -  56%|#####6    | 283/501 [02:05<01:09,  3.15it/s]
+[2025-04-21T21:19:26.164+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=5660&page=284&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:19:29.385+0000] {logging_mixin.py:190} WARNING -  57%|#####6    | 284/501 [02:08<04:24,  1.22s/it]
+[2025-04-21T21:19:29.598+0000] {logging_mixin.py:190} WARNING -  57%|#####6    | 285/501 [02:09<03:18,  1.09it/s]
+[2025-04-21T21:19:29.876+0000] {logging_mixin.py:190} WARNING -  57%|#####7    | 286/501 [02:09<02:36,  1.38it/s]
+[2025-04-21T21:19:30.082+0000] {logging_mixin.py:190} WARNING -  57%|#####7    | 287/501 [02:09<02:02,  1.75it/s]
+[2025-04-21T21:19:30.288+0000] {logging_mixin.py:190} WARNING -  57%|#####7    | 288/501 [02:09<01:38,  2.17it/s]
+[2025-04-21T21:19:30.523+0000] {logging_mixin.py:190} WARNING -  58%|#####7    | 289/501 [02:10<01:23,  2.54it/s]
+[2025-04-21T21:19:30.704+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:30.714+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 5799 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:31.715+0000] {logging_mixin.py:190} WARNING -  58%|#####7    | 290/501 [02:11<02:13,  1.58it/s]
+[2025-04-21T21:19:31.931+0000] {logging_mixin.py:190} WARNING -  58%|#####8    | 291/501 [02:11<01:46,  1.97it/s]
+[2025-04-21T21:19:32.138+0000] {logging_mixin.py:190} WARNING -  58%|#####8    | 292/501 [02:11<01:27,  2.40it/s]
+[2025-04-21T21:19:32.404+0000] {logging_mixin.py:190} WARNING -  58%|#####8    | 293/501 [02:11<01:17,  2.69it/s]
+[2025-04-21T21:19:32.591+0000] {logging_mixin.py:190} WARNING -  59%|#####8    | 294/501 [02:12<01:05,  3.16it/s]
+[2025-04-21T21:19:32.784+0000] {logging_mixin.py:190} WARNING -  59%|#####8    | 295/501 [02:12<00:57,  3.58it/s]
+[2025-04-21T21:19:34.047+0000] {logging_mixin.py:190} WARNING -  59%|#####9    | 296/501 [02:13<01:57,  1.74it/s]
+[2025-04-21T21:19:34.263+0000] {logging_mixin.py:190} WARNING -  59%|#####9    | 297/501 [02:13<01:35,  2.14it/s]
+[2025-04-21T21:19:34.450+0000] {logging_mixin.py:190} WARNING -  59%|#####9    | 298/501 [02:13<01:17,  2.61it/s]
+[2025-04-21T21:19:34.657+0000] {logging_mixin.py:190} WARNING -  60%|#####9    | 299/501 [02:14<01:06,  3.03it/s]
+[2025-04-21T21:19:34.872+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:34.880+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 5999 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:35.881+0000] {logging_mixin.py:190} WARNING -  60%|#####9    | 300/501 [02:15<02:00,  1.67it/s]
+[2025-04-21T21:19:36.074+0000] {logging_mixin.py:190} WARNING -  60%|######    | 301/501 [02:15<01:35,  2.10it/s]
+[2025-04-21T21:19:36.293+0000] {logging_mixin.py:190} WARNING -  60%|######    | 302/501 [02:15<01:19,  2.50it/s]
+[2025-04-21T21:19:36.498+0000] {logging_mixin.py:190} WARNING -  60%|######    | 303/501 [02:16<01:07,  2.93it/s]
+[2025-04-21T21:19:36.709+0000] {logging_mixin.py:190} WARNING -  61%|######    | 304/501 [02:16<00:59,  3.31it/s]
+[2025-04-21T21:19:36.936+0000] {logging_mixin.py:190} WARNING -  61%|######    | 305/501 [02:16<00:54,  3.57it/s]
+[2025-04-21T21:19:37.140+0000] {logging_mixin.py:190} WARNING -  61%|######1   | 306/501 [02:16<00:50,  3.89it/s]
+[2025-04-21T21:19:37.254+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=6120&page=307&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:19:40.471+0000] {logging_mixin.py:190} WARNING -  61%|######1   | 307/501 [02:20<03:48,  1.18s/it]
+[2025-04-21T21:19:40.663+0000] {logging_mixin.py:190} WARNING -  61%|######1   | 308/501 [02:20<02:50,  1.13it/s]
+[2025-04-21T21:19:40.864+0000] {logging_mixin.py:190} WARNING -  62%|######1   | 309/501 [02:20<02:10,  1.47it/s]
+[2025-04-21T21:19:41.073+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:41.085+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 6199 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:42.087+0000] {logging_mixin.py:190} WARNING -  62%|######1   | 310/501 [02:21<02:40,  1.19it/s]
+[2025-04-21T21:19:42.291+0000] {logging_mixin.py:190} WARNING -  62%|######2   | 311/501 [02:21<02:03,  1.54it/s]
+[2025-04-21T21:19:42.514+0000] {logging_mixin.py:190} WARNING -  62%|######2   | 312/501 [02:22<01:38,  1.91it/s]
+[2025-04-21T21:19:42.721+0000] {logging_mixin.py:190} WARNING -  62%|######2   | 313/501 [02:22<01:20,  2.34it/s]
+[2025-04-21T21:19:42.914+0000] {logging_mixin.py:190} WARNING -  63%|######2   | 314/501 [02:22<01:06,  2.80it/s]
+[2025-04-21T21:19:43.118+0000] {logging_mixin.py:190} WARNING -  63%|######2   | 315/501 [02:22<00:57,  3.21it/s]
+[2025-04-21T21:19:43.308+0000] {logging_mixin.py:190} WARNING -  63%|######3   | 316/501 [02:22<00:50,  3.64it/s]
+[2025-04-21T21:19:43.504+0000] {logging_mixin.py:190} WARNING -  63%|######3   | 317/501 [02:23<00:46,  3.98it/s]
+[2025-04-21T21:19:43.720+0000] {logging_mixin.py:190} WARNING -  63%|######3   | 318/501 [02:23<00:44,  4.16it/s]
+[2025-04-21T21:19:44.148+0000] {logging_mixin.py:190} WARNING -  64%|######3   | 319/501 [02:23<00:54,  3.37it/s]
+[2025-04-21T21:19:44.411+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:44.429+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 6399 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:45.432+0000] {logging_mixin.py:190} WARNING -  64%|######3   | 320/501 [02:24<01:47,  1.69it/s]
+[2025-04-21T21:19:46.133+0000] {logging_mixin.py:190} WARNING -  64%|######4   | 321/501 [02:25<01:52,  1.60it/s]
+[2025-04-21T21:19:46.344+0000] {logging_mixin.py:190} WARNING -  64%|######4   | 322/501 [02:25<01:29,  2.00it/s]
+[2025-04-21T21:19:46.528+0000] {logging_mixin.py:190} WARNING -  64%|######4   | 323/501 [02:26<01:12,  2.46it/s]
+[2025-04-21T21:19:46.753+0000] {logging_mixin.py:190} WARNING -  65%|######4   | 324/501 [02:26<01:02,  2.84it/s]
+[2025-04-21T21:19:46.948+0000] {logging_mixin.py:190} WARNING -  65%|######4   | 325/501 [02:26<00:53,  3.28it/s]
+[2025-04-21T21:19:47.178+0000] {logging_mixin.py:190} WARNING -  65%|######5   | 326/501 [02:26<00:49,  3.54it/s]
+[2025-04-21T21:19:47.369+0000] {logging_mixin.py:190} WARNING -  65%|######5   | 327/501 [02:26<00:44,  3.92it/s]
+[2025-04-21T21:19:47.560+0000] {logging_mixin.py:190} WARNING -  65%|######5   | 328/501 [02:27<00:40,  4.24it/s]
+[2025-04-21T21:19:47.649+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=6560&page=329&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:19:50.852+0000] {logging_mixin.py:190} WARNING -  66%|######5   | 329/501 [02:30<03:18,  1.15s/it]
+[2025-04-21T21:19:51.053+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:51.070+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 6599 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:52.072+0000] {logging_mixin.py:190} WARNING -  66%|######5   | 330/501 [02:31<03:20,  1.17s/it]
+[2025-04-21T21:19:52.280+0000] {logging_mixin.py:190} WARNING -  66%|######6   | 331/501 [02:31<02:30,  1.13it/s]
+[2025-04-21T21:19:52.504+0000] {logging_mixin.py:190} WARNING -  66%|######6   | 332/501 [02:32<01:55,  1.46it/s]
+[2025-04-21T21:19:52.707+0000] {logging_mixin.py:190} WARNING -  66%|######6   | 333/501 [02:32<01:30,  1.85it/s]
+[2025-04-21T21:19:52.903+0000] {logging_mixin.py:190} WARNING -  67%|######6   | 334/501 [02:32<01:13,  2.29it/s]
+[2025-04-21T21:19:53.116+0000] {logging_mixin.py:190} WARNING -  67%|######6   | 335/501 [02:32<01:01,  2.70it/s]
+[2025-04-21T21:19:53.324+0000] {logging_mixin.py:190} WARNING -  67%|######7   | 336/501 [02:32<00:53,  3.11it/s]
+[2025-04-21T21:19:53.522+0000] {logging_mixin.py:190} WARNING -  67%|######7   | 337/501 [02:33<00:46,  3.52it/s]
+[2025-04-21T21:19:53.718+0000] {logging_mixin.py:190} WARNING -  67%|######7   | 338/501 [02:33<00:42,  3.88it/s]
+[2025-04-21T21:19:53.937+0000] {logging_mixin.py:190} WARNING -  68%|######7   | 339/501 [02:33<00:39,  4.06it/s]
+[2025-04-21T21:19:54.144+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:54.154+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 6799 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:19:55.156+0000] {logging_mixin.py:190} WARNING -  68%|######7   | 340/501 [02:34<01:26,  1.86it/s]
+[2025-04-21T21:19:55.392+0000] {logging_mixin.py:190} WARNING -  68%|######8   | 341/501 [02:34<01:11,  2.23it/s]
+[2025-04-21T21:19:55.590+0000] {logging_mixin.py:190} WARNING -  68%|######8   | 342/501 [02:35<00:59,  2.68it/s]
+[2025-04-21T21:19:55.789+0000] {logging_mixin.py:190} WARNING -  68%|######8   | 343/501 [02:35<00:50,  3.12it/s]
+[2025-04-21T21:19:56.007+0000] {logging_mixin.py:190} WARNING -  69%|######8   | 344/501 [02:35<00:45,  3.45it/s]
+[2025-04-21T21:19:56.260+0000] {logging_mixin.py:190} WARNING -  69%|######8   | 345/501 [02:35<00:43,  3.59it/s]
+[2025-04-21T21:19:56.450+0000] {logging_mixin.py:190} WARNING -  69%|######9   | 346/501 [02:35<00:39,  3.97it/s]
+[2025-04-21T21:19:56.551+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=6920&page=347&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:19:59.773+0000] {logging_mixin.py:190} WARNING -  69%|######9   | 347/501 [02:39<03:00,  1.17s/it]
+[2025-04-21T21:19:59.977+0000] {logging_mixin.py:190} WARNING -  69%|######9   | 348/501 [02:39<02:15,  1.13it/s]
+[2025-04-21T21:20:00.181+0000] {logging_mixin.py:190} WARNING -  70%|######9   | 349/501 [02:39<01:43,  1.47it/s]
+[2025-04-21T21:20:00.398+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:00.416+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 6999 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:01.426+0000] {logging_mixin.py:190} WARNING -  70%|######9   | 350/501 [02:40<02:07,  1.18it/s]
+[2025-04-21T21:20:01.631+0000] {logging_mixin.py:190} WARNING -  70%|#######   | 351/501 [02:41<01:38,  1.52it/s]
+[2025-04-21T21:20:01.848+0000] {logging_mixin.py:190} WARNING -  70%|#######   | 352/501 [02:41<01:18,  1.91it/s]
+[2025-04-21T21:20:02.053+0000] {logging_mixin.py:190} WARNING -  70%|#######   | 353/501 [02:41<01:03,  2.33it/s]
+[2025-04-21T21:20:02.263+0000] {logging_mixin.py:190} WARNING -  71%|#######   | 354/501 [02:41<00:53,  2.75it/s]
+[2025-04-21T21:20:02.470+0000] {logging_mixin.py:190} WARNING -  71%|#######   | 355/501 [02:42<00:46,  3.16it/s]
+[2025-04-21T21:20:02.663+0000] {logging_mixin.py:190} WARNING -  71%|#######1  | 356/501 [02:42<00:40,  3.58it/s]
+[2025-04-21T21:20:02.883+0000] {logging_mixin.py:190} WARNING -  71%|#######1  | 357/501 [02:42<00:37,  3.82it/s]
+[2025-04-21T21:20:03.090+0000] {logging_mixin.py:190} WARNING -  71%|#######1  | 358/501 [02:42<00:35,  4.08it/s]
+[2025-04-21T21:20:03.296+0000] {logging_mixin.py:190} WARNING -  72%|#######1  | 359/501 [02:42<00:33,  4.28it/s]
+[2025-04-21T21:20:03.515+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:03.531+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 7199 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:04.536+0000] {logging_mixin.py:190} WARNING -  72%|#######1  | 360/501 [02:44<01:15,  1.87it/s]
+[2025-04-21T21:20:04.740+0000] {logging_mixin.py:190} WARNING -  72%|#######2  | 361/501 [02:44<01:01,  2.29it/s]
+[2025-04-21T21:20:04.950+0000] {logging_mixin.py:190} WARNING -  72%|#######2  | 362/501 [02:44<00:51,  2.72it/s]
+[2025-04-21T21:20:05.169+0000] {logging_mixin.py:190} WARNING -  72%|#######2  | 363/501 [02:44<00:44,  3.09it/s]
+[2025-04-21T21:20:05.391+0000] {logging_mixin.py:190} WARNING -  73%|#######2  | 364/501 [02:44<00:40,  3.41it/s]
+[2025-04-21T21:20:05.591+0000] {logging_mixin.py:190} WARNING -  73%|#######2  | 365/501 [02:45<00:36,  3.77it/s]
+[2025-04-21T21:20:05.779+0000] {logging_mixin.py:190} WARNING -  73%|#######3  | 366/501 [02:45<00:32,  4.13it/s]
+[2025-04-21T21:20:05.973+0000] {logging_mixin.py:190} WARNING -  73%|#######3  | 367/501 [02:45<00:30,  4.39it/s]
+[2025-04-21T21:20:06.192+0000] {logging_mixin.py:190} WARNING -  73%|#######3  | 368/501 [02:45<00:29,  4.44it/s]
+[2025-04-21T21:20:06.391+0000] {logging_mixin.py:190} WARNING -  74%|#######3  | 369/501 [02:45<00:28,  4.60it/s]
+[2025-04-21T21:20:06.618+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:06.632+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 7399 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:07.634+0000] {logging_mixin.py:190} WARNING -  74%|#######3  | 370/501 [02:47<01:08,  1.91it/s]
+[2025-04-21T21:20:07.828+0000] {logging_mixin.py:190} WARNING -  74%|#######4  | 371/501 [02:47<00:55,  2.35it/s]
+[2025-04-21T21:20:08.010+0000] {logging_mixin.py:190} WARNING -  74%|#######4  | 372/501 [02:47<00:45,  2.84it/s]
+[2025-04-21T21:20:08.205+0000] {logging_mixin.py:190} WARNING -  74%|#######4  | 373/501 [02:47<00:39,  3.28it/s]
+[2025-04-21T21:20:08.408+0000] {logging_mixin.py:190} WARNING -  75%|#######4  | 374/501 [02:47<00:34,  3.64it/s]
+[2025-04-21T21:20:08.604+0000] {logging_mixin.py:190} WARNING -  75%|#######4  | 375/501 [02:48<00:31,  3.98it/s]
+[2025-04-21T21:20:08.801+0000] {logging_mixin.py:190} WARNING -  75%|#######5  | 376/501 [02:48<00:29,  4.26it/s]
+[2025-04-21T21:20:09.004+0000] {logging_mixin.py:190} WARNING -  75%|#######5  | 377/501 [02:48<00:27,  4.44it/s]
+[2025-04-21T21:20:09.214+0000] {logging_mixin.py:190} WARNING -  75%|#######5  | 378/501 [02:48<00:27,  4.53it/s]
+[2025-04-21T21:20:09.411+0000] {logging_mixin.py:190} WARNING -  76%|#######5  | 379/501 [02:48<00:26,  4.68it/s]
+[2025-04-21T21:20:09.605+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:09.627+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 7599 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:10.628+0000] {logging_mixin.py:190} WARNING -  76%|#######5  | 380/501 [02:50<01:02,  1.94it/s]
+[2025-04-21T21:20:10.832+0000] {logging_mixin.py:190} WARNING -  76%|#######6  | 381/501 [02:50<00:50,  2.37it/s]
+[2025-04-21T21:20:11.025+0000] {logging_mixin.py:190} WARNING -  76%|#######6  | 382/501 [02:50<00:41,  2.84it/s]
+[2025-04-21T21:20:11.240+0000] {logging_mixin.py:190} WARNING -  76%|#######6  | 383/501 [02:50<00:36,  3.21it/s]
+[2025-04-21T21:20:11.444+0000] {logging_mixin.py:190} WARNING -  77%|#######6  | 384/501 [02:50<00:32,  3.58it/s]
+[2025-04-21T21:20:11.652+0000] {logging_mixin.py:190} WARNING -  77%|#######6  | 385/501 [02:51<00:29,  3.88it/s]
+[2025-04-21T21:20:11.755+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=7700&page=386&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:20:14.966+0000] {logging_mixin.py:190} WARNING -  77%|#######7  | 386/501 [02:54<02:15,  1.17s/it]
+[2025-04-21T21:20:15.184+0000] {logging_mixin.py:190} WARNING -  77%|#######7  | 387/501 [02:54<01:41,  1.13it/s]
+[2025-04-21T21:20:15.393+0000] {logging_mixin.py:190} WARNING -  77%|#######7  | 388/501 [02:54<01:17,  1.46it/s]
+[2025-04-21T21:20:15.601+0000] {logging_mixin.py:190} WARNING -  78%|#######7  | 389/501 [02:55<01:00,  1.85it/s]
+[2025-04-21T21:20:15.808+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:15.827+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 7799 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:16.833+0000] {logging_mixin.py:190} WARNING -  78%|#######7  | 390/501 [02:56<01:23,  1.34it/s]
+[2025-04-21T21:20:17.023+0000] {logging_mixin.py:190} WARNING -  78%|#######8  | 391/501 [02:56<01:03,  1.72it/s]
+[2025-04-21T21:20:17.230+0000] {logging_mixin.py:190} WARNING -  78%|#######8  | 392/501 [02:56<00:51,  2.13it/s]
+[2025-04-21T21:20:17.437+0000] {logging_mixin.py:190} WARNING -  78%|#######8  | 393/501 [02:56<00:42,  2.56it/s]
+[2025-04-21T21:20:17.647+0000] {logging_mixin.py:190} WARNING -  79%|#######8  | 394/501 [02:57<00:35,  2.97it/s]
+[2025-04-21T21:20:17.847+0000] {logging_mixin.py:190} WARNING -  79%|#######8  | 395/501 [02:57<00:31,  3.38it/s]
+[2025-04-21T21:20:18.039+0000] {logging_mixin.py:190} WARNING -  79%|#######9  | 396/501 [02:57<00:27,  3.78it/s]
+[2025-04-21T21:20:18.242+0000] {logging_mixin.py:190} WARNING -  79%|#######9  | 397/501 [02:57<00:25,  4.07it/s]
+[2025-04-21T21:20:18.444+0000] {logging_mixin.py:190} WARNING -  79%|#######9  | 398/501 [02:57<00:23,  4.30it/s]
+[2025-04-21T21:20:18.651+0000] {logging_mixin.py:190} WARNING -  80%|#######9  | 399/501 [02:58<00:22,  4.45it/s]
+[2025-04-21T21:20:18.860+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:18.888+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 7999 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:19.890+0000] {logging_mixin.py:190} WARNING -  80%|#######9  | 400/501 [02:59<00:53,  1.89it/s]
+[2025-04-21T21:20:20.146+0000] {logging_mixin.py:190} WARNING -  80%|########  | 401/501 [02:59<00:44,  2.24it/s]
+[2025-04-21T21:20:20.449+0000] {logging_mixin.py:190} WARNING -  80%|########  | 402/501 [02:59<00:39,  2.48it/s]
+[2025-04-21T21:20:20.755+0000] {logging_mixin.py:190} WARNING -  80%|########  | 403/501 [03:00<00:36,  2.67it/s]
+[2025-04-21T21:20:20.961+0000] {logging_mixin.py:190} WARNING -  81%|########  | 404/501 [03:00<00:31,  3.09it/s]
+[2025-04-21T21:20:21.703+0000] {logging_mixin.py:190} WARNING -  81%|########  | 405/501 [03:01<00:43,  2.23it/s]
+[2025-04-21T21:20:22.367+0000] {logging_mixin.py:190} WARNING -  81%|########1 | 406/501 [03:01<00:48,  1.95it/s]
+[2025-04-21T21:20:22.566+0000] {logging_mixin.py:190} WARNING -  81%|########1 | 407/501 [03:02<00:39,  2.38it/s]
+[2025-04-21T21:20:22.850+0000] {logging_mixin.py:190} WARNING -  81%|########1 | 408/501 [03:02<00:35,  2.64it/s]
+[2025-04-21T21:20:23.114+0000] {logging_mixin.py:190} WARNING -  82%|########1 | 409/501 [03:02<00:31,  2.91it/s]
+[2025-04-21T21:20:23.391+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:23.419+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 8199 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:24.426+0000] {logging_mixin.py:190} WARNING -  82%|########1 | 410/501 [03:03<00:57,  1.58it/s]
+[2025-04-21T21:20:24.717+0000] {logging_mixin.py:190} WARNING -  82%|########2 | 411/501 [03:04<00:47,  1.88it/s]
+[2025-04-21T21:20:24.991+0000] {logging_mixin.py:190} WARNING -  82%|########2 | 412/501 [03:04<00:40,  2.20it/s]
+[2025-04-21T21:20:25.280+0000] {logging_mixin.py:190} WARNING -  82%|########2 | 413/501 [03:04<00:35,  2.47it/s]
+[2025-04-21T21:20:25.549+0000] {logging_mixin.py:190} WARNING -  83%|########2 | 414/501 [03:05<00:31,  2.75it/s]
+[2025-04-21T21:20:25.832+0000] {logging_mixin.py:190} WARNING -  83%|########2 | 415/501 [03:05<00:29,  2.94it/s]
+[2025-04-21T21:20:26.085+0000] {logging_mixin.py:190} WARNING -  83%|########3 | 416/501 [03:05<00:26,  3.19it/s]
+[2025-04-21T21:20:26.370+0000] {logging_mixin.py:190} WARNING -  83%|########3 | 417/501 [03:05<00:25,  3.28it/s]
+[2025-04-21T21:20:26.686+0000] {logging_mixin.py:190} WARNING -  83%|########3 | 418/501 [03:06<00:25,  3.24it/s]
+[2025-04-21T21:20:26.963+0000] {logging_mixin.py:190} WARNING -  84%|########3 | 419/501 [03:06<00:24,  3.35it/s]
+[2025-04-21T21:20:27.253+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:27.263+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 8399 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:28.265+0000] {logging_mixin.py:190} WARNING -  84%|########3 | 420/501 [03:07<00:48,  1.67it/s]
+[2025-04-21T21:20:28.528+0000] {logging_mixin.py:190} WARNING -  84%|########4 | 421/501 [03:08<00:39,  2.00it/s]
+[2025-04-21T21:20:29.174+0000] {logging_mixin.py:190} WARNING -  84%|########4 | 422/501 [03:08<00:42,  1.84it/s]
+[2025-04-21T21:20:29.377+0000] {logging_mixin.py:190} WARNING -  84%|########4 | 423/501 [03:08<00:34,  2.27it/s]
+[2025-04-21T21:20:29.582+0000] {logging_mixin.py:190} WARNING -  85%|########4 | 424/501 [03:09<00:28,  2.70it/s]
+[2025-04-21T21:20:29.775+0000] {logging_mixin.py:190} WARNING -  85%|########4 | 425/501 [03:09<00:24,  3.15it/s]
+[2025-04-21T21:20:29.879+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=8500&page=426&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:20:33.082+0000] {logging_mixin.py:190} WARNING -  85%|########5 | 426/501 [03:12<01:31,  1.21s/it]
+[2025-04-21T21:20:33.304+0000] {logging_mixin.py:190} WARNING -  85%|########5 | 427/501 [03:12<01:07,  1.09it/s]
+[2025-04-21T21:20:33.503+0000] {logging_mixin.py:190} WARNING -  85%|########5 | 428/501 [03:13<00:51,  1.43it/s]
+[2025-04-21T21:20:33.683+0000] {logging_mixin.py:190} WARNING -  86%|########5 | 429/501 [03:13<00:39,  1.83it/s]
+[2025-04-21T21:20:33.887+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:33.903+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 8599 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:34.907+0000] {logging_mixin.py:190} WARNING -  86%|########5 | 430/501 [03:14<00:53,  1.34it/s]
+[2025-04-21T21:20:35.105+0000] {logging_mixin.py:190} WARNING -  86%|########6 | 431/501 [03:14<00:40,  1.71it/s]
+[2025-04-21T21:20:35.307+0000] {logging_mixin.py:190} WARNING -  86%|########6 | 432/501 [03:14<00:32,  2.13it/s]
+[2025-04-21T21:20:35.526+0000] {logging_mixin.py:190} WARNING -  86%|########6 | 433/501 [03:15<00:26,  2.54it/s]
+[2025-04-21T21:20:35.723+0000] {logging_mixin.py:190} WARNING -  87%|########6 | 434/501 [03:15<00:22,  2.99it/s]
+[2025-04-21T21:20:35.932+0000] {logging_mixin.py:190} WARNING -  87%|########6 | 435/501 [03:15<00:19,  3.37it/s]
+[2025-04-21T21:20:36.165+0000] {logging_mixin.py:190} WARNING -  87%|########7 | 436/501 [03:15<00:18,  3.60it/s]
+[2025-04-21T21:20:36.365+0000] {logging_mixin.py:190} WARNING -  87%|########7 | 437/501 [03:15<00:16,  3.93it/s]
+[2025-04-21T21:20:36.575+0000] {logging_mixin.py:190} WARNING -  87%|########7 | 438/501 [03:16<00:15,  4.15it/s]
+[2025-04-21T21:20:36.787+0000] {logging_mixin.py:190} WARNING -  88%|########7 | 439/501 [03:16<00:14,  4.30it/s]
+[2025-04-21T21:20:36.987+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:37.001+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 8799 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:38.003+0000] {logging_mixin.py:190} WARNING -  88%|########7 | 440/501 [03:17<00:32,  1.90it/s]
+[2025-04-21T21:20:38.196+0000] {logging_mixin.py:190} WARNING -  88%|########8 | 441/501 [03:17<00:25,  2.34it/s]
+[2025-04-21T21:20:38.393+0000] {logging_mixin.py:190} WARNING -  88%|########8 | 442/501 [03:17<00:21,  2.79it/s]
+[2025-04-21T21:20:38.605+0000] {logging_mixin.py:190} WARNING -  88%|########8 | 443/501 [03:18<00:18,  3.18it/s]
+[2025-04-21T21:20:38.801+0000] {logging_mixin.py:190} WARNING -  89%|########8 | 444/501 [03:18<00:15,  3.59it/s]
+[2025-04-21T21:20:39.003+0000] {logging_mixin.py:190} WARNING -  89%|########8 | 445/501 [03:18<00:14,  3.91it/s]
+[2025-04-21T21:20:39.179+0000] {logging_mixin.py:190} WARNING -  89%|########9 | 446/501 [03:18<00:12,  4.31it/s]
+[2025-04-21T21:20:39.378+0000] {logging_mixin.py:190} WARNING -  89%|########9 | 447/501 [03:18<00:11,  4.50it/s]
+[2025-04-21T21:20:39.570+0000] {logging_mixin.py:190} WARNING -  89%|########9 | 448/501 [03:19<00:11,  4.69it/s]
+[2025-04-21T21:20:39.765+0000] {logging_mixin.py:190} WARNING -  90%|########9 | 449/501 [03:19<00:10,  4.82it/s]
+[2025-04-21T21:20:39.966+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:39.994+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 8999 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:40.996+0000] {logging_mixin.py:190} WARNING -  90%|########9 | 450/501 [03:20<00:26,  1.94it/s]
+[2025-04-21T21:20:41.186+0000] {logging_mixin.py:190} WARNING -  90%|######### | 451/501 [03:20<00:20,  2.40it/s]
+[2025-04-21T21:20:41.386+0000] {logging_mixin.py:190} WARNING -  90%|######### | 452/501 [03:20<00:17,  2.84it/s]
+[2025-04-21T21:20:41.587+0000] {logging_mixin.py:190} WARNING -  90%|######### | 453/501 [03:21<00:14,  3.26it/s]
+[2025-04-21T21:20:41.695+0000] {SaveLinkNhatot.py:73} WARNING - Attempt 1 failed: 429 Client Error: Too Many Requests for url: https://gateway.chotot.com/v1/public/ad-listing?region_v2=12000&cg=1000&o=9060&page=454&st=s,k&limit=20&w=1&key_param_included=true
+[2025-04-21T21:20:44.984+0000] {logging_mixin.py:190} WARNING -  91%|######### | 454/501 [03:24<00:57,  1.23s/it]
+[2025-04-21T21:20:45.163+0000] {logging_mixin.py:190} WARNING -  91%|######### | 455/501 [03:24<00:42,  1.09it/s]
+[2025-04-21T21:20:45.372+0000] {logging_mixin.py:190} WARNING -  91%|#########1| 456/501 [03:24<00:31,  1.42it/s]
+[2025-04-21T21:20:45.571+0000] {logging_mixin.py:190} WARNING -  91%|#########1| 457/501 [03:25<00:24,  1.81it/s]
+[2025-04-21T21:20:45.777+0000] {logging_mixin.py:190} WARNING -  91%|#########1| 458/501 [03:25<00:19,  2.23it/s]
+[2025-04-21T21:20:45.969+0000] {logging_mixin.py:190} WARNING -  92%|#########1| 459/501 [03:25<00:15,  2.69it/s]
+[2025-04-21T21:20:46.180+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:46.259+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 9199 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:47.265+0000] {logging_mixin.py:190} WARNING -  92%|#########1| 460/501 [03:26<00:26,  1.54it/s]
+[2025-04-21T21:20:47.474+0000] {logging_mixin.py:190} WARNING -  92%|#########2| 461/501 [03:27<00:20,  1.93it/s]
+[2025-04-21T21:20:47.668+0000] {logging_mixin.py:190} WARNING -  92%|#########2| 462/501 [03:27<00:16,  2.38it/s]
+[2025-04-21T21:20:47.867+0000] {logging_mixin.py:190} WARNING -  92%|#########2| 463/501 [03:27<00:13,  2.83it/s]
+[2025-04-21T21:20:48.069+0000] {logging_mixin.py:190} WARNING -  93%|#########2| 464/501 [03:27<00:11,  3.24it/s]
+[2025-04-21T21:20:48.268+0000] {logging_mixin.py:190} WARNING -  93%|#########2| 465/501 [03:27<00:09,  3.63it/s]
+[2025-04-21T21:20:48.471+0000] {logging_mixin.py:190} WARNING -  93%|#########3| 466/501 [03:28<00:08,  3.94it/s]
+[2025-04-21T21:20:48.670+0000] {logging_mixin.py:190} WARNING -  93%|#########3| 467/501 [03:28<00:08,  4.22it/s]
+[2025-04-21T21:20:48.875+0000] {logging_mixin.py:190} WARNING -  93%|#########3| 468/501 [03:28<00:07,  4.39it/s]
+[2025-04-21T21:20:49.096+0000] {logging_mixin.py:190} WARNING -  94%|#########3| 469/501 [03:28<00:07,  4.43it/s]
+[2025-04-21T21:20:49.286+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:49.321+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 9399 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:50.323+0000] {logging_mixin.py:190} WARNING -  94%|#########3| 470/501 [03:29<00:16,  1.90it/s]
+[2025-04-21T21:20:50.525+0000] {logging_mixin.py:190} WARNING -  94%|#########4| 471/501 [03:30<00:12,  2.33it/s]
+[2025-04-21T21:20:50.721+0000] {logging_mixin.py:190} WARNING -  94%|#########4| 472/501 [03:30<00:10,  2.79it/s]
+[2025-04-21T21:20:51.564+0000] {logging_mixin.py:190} WARNING -  94%|#########4| 473/501 [03:31<00:14,  1.98it/s]
+[2025-04-21T21:20:51.763+0000] {logging_mixin.py:190} WARNING -  95%|#########4| 474/501 [03:31<00:11,  2.42it/s]
+[2025-04-21T21:20:51.948+0000] {logging_mixin.py:190} WARNING -  95%|#########4| 475/501 [03:31<00:08,  2.90it/s]
+[2025-04-21T21:20:52.151+0000] {logging_mixin.py:190} WARNING -  95%|#########5| 476/501 [03:31<00:07,  3.31it/s]
+[2025-04-21T21:20:52.343+0000] {logging_mixin.py:190} WARNING -  95%|#########5| 477/501 [03:31<00:06,  3.72it/s]
+[2025-04-21T21:20:52.551+0000] {logging_mixin.py:190} WARNING -  95%|#########5| 478/501 [03:32<00:05,  3.99it/s]
+[2025-04-21T21:20:52.753+0000] {logging_mixin.py:190} WARNING -  96%|#########5| 479/501 [03:32<00:05,  4.23it/s]
+[2025-04-21T21:20:52.940+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:52.957+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 9599 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:53.960+0000] {logging_mixin.py:190} WARNING -  96%|#########5| 480/501 [03:33<00:11,  1.90it/s]
+[2025-04-21T21:20:54.178+0000] {logging_mixin.py:190} WARNING -  96%|#########6| 481/501 [03:33<00:08,  2.30it/s]
+[2025-04-21T21:20:54.373+0000] {logging_mixin.py:190} WARNING -  96%|#########6| 482/501 [03:33<00:06,  2.76it/s]
+[2025-04-21T21:20:55.213+0000] {logging_mixin.py:190} WARNING -  96%|#########6| 483/501 [03:34<00:09,  1.98it/s]
+[2025-04-21T21:20:55.423+0000] {logging_mixin.py:190} WARNING -  97%|#########6| 484/501 [03:34<00:07,  2.40it/s]
+[2025-04-21T21:20:55.610+0000] {logging_mixin.py:190} WARNING -  97%|#########6| 485/501 [03:35<00:05,  2.87it/s]
+[2025-04-21T21:20:55.790+0000] {logging_mixin.py:190} WARNING -  97%|#########7| 486/501 [03:35<00:04,  3.36it/s]
+[2025-04-21T21:20:56.017+0000] {logging_mixin.py:190} WARNING -  97%|#########7| 487/501 [03:35<00:03,  3.62it/s]
+[2025-04-21T21:20:56.223+0000] {logging_mixin.py:190} WARNING -  97%|#########7| 488/501 [03:35<00:03,  3.92it/s]
+[2025-04-21T21:20:56.448+0000] {logging_mixin.py:190} WARNING -  98%|#########7| 489/501 [03:35<00:02,  4.06it/s]
+[2025-04-21T21:20:56.718+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:56.744+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 9799 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:20:57.774+0000] {logging_mixin.py:190} WARNING -  98%|#########7| 490/501 [03:37<00:06,  1.77it/s]
+[2025-04-21T21:20:58.260+0000] {logging_mixin.py:190} WARNING -  98%|#########8| 491/501 [03:37<00:05,  1.83it/s]
+[2025-04-21T21:20:58.529+0000] {logging_mixin.py:190} WARNING -  98%|#########8| 492/501 [03:38<00:04,  2.16it/s]
+[2025-04-21T21:20:58.761+0000] {logging_mixin.py:190} WARNING -  98%|#########8| 493/501 [03:38<00:03,  2.54it/s]
+[2025-04-21T21:20:59.050+0000] {logging_mixin.py:190} WARNING -  99%|#########8| 494/501 [03:38<00:02,  2.76it/s]
+[2025-04-21T21:20:59.316+0000] {logging_mixin.py:190} WARNING -  99%|#########8| 495/501 [03:38<00:02,  3.00it/s]
+[2025-04-21T21:20:59.573+0000] {logging_mixin.py:190} WARNING -  99%|#########9| 496/501 [03:39<00:01,  3.22it/s]
+[2025-04-21T21:20:59.832+0000] {logging_mixin.py:190} WARNING -  99%|#########9| 497/501 [03:39<00:01,  3.39it/s]
+[2025-04-21T21:21:00.084+0000] {logging_mixin.py:190} WARNING -  99%|#########9| 498/501 [03:39<00:00,  3.54it/s]
+[2025-04-21T21:21:00.336+0000] {logging_mixin.py:190} WARNING - 100%|#########9| 499/501 [03:39<00:00,  3.66it/s]
+[2025-04-21T21:21:00.676+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:21:00.694+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 9999 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:21:01.696+0000] {logging_mixin.py:190} WARNING - 100%|#########9| 500/501 [03:41<00:00,  1.67it/s]
+[2025-04-21T21:21:01.976+0000] {logging_mixin.py:190} WARNING - 100%|##########| 501/501 [03:41<00:00,  1.99it/s]
+[2025-04-21T21:21:01.977+0000] {logging_mixin.py:190} WARNING - 100%|##########| 501/501 [03:41<00:00,  2.26it/s]
+[2025-04-21T21:21:01.978+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T21:21:02.002+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10019 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T21:21:02.002+0000] {SaveLinkNhatot.py:134} INFO - ✅ Scraping completed.
+[2025-04-21T21:21:02.004+0000] {nhatot_scraping_dag.py:53} INFO - Successfully completed save_links_task
+[2025-04-21T21:21:02.005+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-21T21:21:02.040+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-21T21:21:02.040+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=nhatot_scraping, task_id=save_links, run_id=manual__2025-04-21T21:17:16.797728+00:00, execution_date=20250421T211716, start_date=20250421T211719, end_date=20250421T212102
+[2025-04-21T21:21:02.101+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-21T21:21:02.156+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-21T21:21:02.186+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -15,6 +15,9 @@ from multiprocessing import Pool, Lock, Manager
 import time
 import logging
 import random
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
 
 # Configure logging
 logging.basicConfig(

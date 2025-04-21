@@ -1,0 +1,278 @@
+[2025-04-21T22:16:55.644+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-21T22:16:55.654+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nhatot_scraping.save_links manual__2025-04-21T22:16:53.812866+00:00 [queued]>
+[2025-04-21T22:16:55.659+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nhatot_scraping.save_links manual__2025-04-21T22:16:53.812866+00:00 [queued]>
+[2025-04-21T22:16:55.659+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-04-21T22:16:55.667+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): save_links> on 2025-04-21 22:16:53.812866+00:00
+[2025-04-21T22:16:55.686+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=5610) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-21T22:16:55.681+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'nhatot_scraping', 'save_links', 'manual__2025-04-21T22:16:53.812866+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/nhatot_scraping_dag.py', '--cfg-path', '/tmp/tmpi0sotilc']
+[2025-04-21T22:16:55.687+0000] {standard_task_runner.py:72} INFO - Started process 5611 to run task
+[2025-04-21T22:16:55.687+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask save_links
+[2025-04-21T22:16:55.749+0000] {task_command.py:467} INFO - Running <TaskInstance: nhatot_scraping.save_links manual__2025-04-21T22:16:53.812866+00:00 [running]> on host 4cc4ddadcf0c
+[2025-04-21T22:16:55.818+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nhatot_scraping' AIRFLOW_CTX_TASK_ID='save_links' AIRFLOW_CTX_EXECUTION_DATE='2025-04-21T22:16:53.812866+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-21T22:16:53.812866+00:00'
+[2025-04-21T22:16:55.819+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-21T22:16:55.838+0000] {SaveLinkNhatot.py:87} INFO - Loaded 10019 existing links
+[2025-04-21T22:16:56.333+0000] {SaveLinkNhatot.py:102} INFO - Total listings: 10000, Max pages: 501
+[2025-04-21T22:16:56.342+0000] {logging_mixin.py:190} WARNING -   0%|          | 0/501 [00:00<?, ?it/s]
+[2025-04-21T22:16:56.535+0000] {logging_mixin.py:190} WARNING -   0%|          | 1/501 [00:00<01:35,  5.23it/s]
+[2025-04-21T22:16:56.812+0000] {logging_mixin.py:190} WARNING -   0%|          | 2/501 [00:00<02:00,  4.13it/s]
+[2025-04-21T22:16:57.119+0000] {logging_mixin.py:190} WARNING -   1%|          | 3/501 [00:00<02:15,  3.68it/s]
+[2025-04-21T22:16:57.400+0000] {logging_mixin.py:190} WARNING -   1%|          | 4/501 [00:01<02:16,  3.63it/s]
+[2025-04-21T22:16:57.691+0000] {logging_mixin.py:190} WARNING -   1%|          | 5/501 [00:01<02:19,  3.56it/s]
+[2025-04-21T22:16:58.489+0000] {logging_mixin.py:190} WARNING -   1%|1         | 6/501 [00:02<03:46,  2.19it/s]
+[2025-04-21T22:16:58.794+0000] {logging_mixin.py:190} WARNING -   1%|1         | 7/501 [00:02<03:21,  2.46it/s]
+[2025-04-21T22:16:59.085+0000] {logging_mixin.py:190} WARNING -   2%|1         | 8/501 [00:02<03:02,  2.70it/s]
+[2025-04-21T22:16:59.360+0000] {logging_mixin.py:190} WARNING -   2%|1         | 9/501 [00:03<02:47,  2.94it/s]
+[2025-04-21T22:16:59.617+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:16:59.640+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:00.643+0000] {logging_mixin.py:190} WARNING -   2%|1         | 10/501 [00:04<05:09,  1.58it/s]
+[2025-04-21T22:17:00.990+0000] {logging_mixin.py:190} WARNING -   2%|2         | 11/501 [00:04<04:26,  1.84it/s]
+[2025-04-21T22:17:01.263+0000] {logging_mixin.py:190} WARNING -   2%|2         | 12/501 [00:04<03:45,  2.16it/s]
+[2025-04-21T22:17:01.538+0000] {logging_mixin.py:190} WARNING -   3%|2         | 13/501 [00:05<03:17,  2.47it/s]
+[2025-04-21T22:17:01.838+0000] {logging_mixin.py:190} WARNING -   3%|2         | 14/501 [00:05<03:01,  2.68it/s]
+[2025-04-21T22:17:02.093+0000] {logging_mixin.py:190} WARNING -   3%|2         | 15/501 [00:05<02:44,  2.96it/s]
+[2025-04-21T22:17:02.406+0000] {logging_mixin.py:190} WARNING -   3%|3         | 16/501 [00:06<02:40,  3.03it/s]
+[2025-04-21T22:17:02.762+0000] {logging_mixin.py:190} WARNING -   3%|3         | 17/501 [00:06<02:43,  2.96it/s]
+[2025-04-21T22:17:03.758+0000] {logging_mixin.py:190} WARNING -   4%|3         | 18/501 [00:07<04:18,  1.87it/s]
+[2025-04-21T22:17:04.010+0000] {logging_mixin.py:190} WARNING -   4%|3         | 19/501 [00:07<03:37,  2.22it/s]
+[2025-04-21T22:17:04.290+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:04.306+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:05.309+0000] {logging_mixin.py:190} WARNING -   4%|3         | 20/501 [00:08<05:39,  1.42it/s]
+[2025-04-21T22:17:05.578+0000] {logging_mixin.py:190} WARNING -   4%|4         | 21/501 [00:09<04:35,  1.74it/s]
+[2025-04-21T22:17:05.893+0000] {logging_mixin.py:190} WARNING -   4%|4         | 22/501 [00:09<03:57,  2.01it/s]
+[2025-04-21T22:17:06.151+0000] {logging_mixin.py:190} WARNING -   5%|4         | 23/501 [00:09<03:23,  2.35it/s]
+[2025-04-21T22:17:06.402+0000] {logging_mixin.py:190} WARNING -   5%|4         | 24/501 [00:10<02:57,  2.68it/s]
+[2025-04-21T22:17:06.668+0000] {logging_mixin.py:190} WARNING -   5%|4         | 25/501 [00:10<02:42,  2.93it/s]
+[2025-04-21T22:17:06.908+0000] {logging_mixin.py:190} WARNING -   5%|5         | 26/501 [00:10<02:27,  3.22it/s]
+[2025-04-21T22:17:07.229+0000] {logging_mixin.py:190} WARNING -   5%|5         | 27/501 [00:10<02:28,  3.19it/s]
+[2025-04-21T22:17:07.497+0000] {logging_mixin.py:190} WARNING -   6%|5         | 28/501 [00:11<02:21,  3.33it/s]
+[2025-04-21T22:17:07.801+0000] {logging_mixin.py:190} WARNING -   6%|5         | 29/501 [00:11<02:22,  3.32it/s]
+[2025-04-21T22:17:08.061+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:08.079+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:09.084+0000] {logging_mixin.py:190} WARNING -   6%|5         | 30/501 [00:12<04:40,  1.68it/s]
+[2025-04-21T22:17:09.357+0000] {logging_mixin.py:190} WARNING -   6%|6         | 31/501 [00:13<03:54,  2.01it/s]
+[2025-04-21T22:17:10.179+0000] {logging_mixin.py:190} WARNING -   6%|6         | 32/501 [00:13<04:39,  1.68it/s]
+[2025-04-21T22:17:10.491+0000] {logging_mixin.py:190} WARNING -   7%|6         | 33/501 [00:14<03:59,  1.96it/s]
+[2025-04-21T22:17:10.771+0000] {logging_mixin.py:190} WARNING -   7%|6         | 34/501 [00:14<03:26,  2.26it/s]
+[2025-04-21T22:17:11.080+0000] {logging_mixin.py:190} WARNING -   7%|6         | 35/501 [00:14<03:07,  2.49it/s]
+[2025-04-21T22:17:11.371+0000] {logging_mixin.py:190} WARNING -   7%|7         | 36/501 [00:15<02:51,  2.71it/s]
+[2025-04-21T22:17:11.737+0000] {logging_mixin.py:190} WARNING -   7%|7         | 37/501 [00:15<02:50,  2.72it/s]
+[2025-04-21T22:17:12.017+0000] {logging_mixin.py:190} WARNING -   8%|7         | 38/501 [00:15<02:38,  2.93it/s]
+[2025-04-21T22:17:12.302+0000] {logging_mixin.py:190} WARNING -   8%|7         | 39/501 [00:15<02:29,  3.08it/s]
+[2025-04-21T22:17:12.625+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:12.665+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:13.678+0000] {logging_mixin.py:190} WARNING -   8%|7         | 40/501 [00:17<04:53,  1.57it/s]
+[2025-04-21T22:17:13.961+0000] {logging_mixin.py:190} WARNING -   8%|8         | 41/501 [00:17<04:05,  1.87it/s]
+[2025-04-21T22:17:14.233+0000] {logging_mixin.py:190} WARNING -   8%|8         | 42/501 [00:17<03:28,  2.20it/s]
+[2025-04-21T22:17:14.492+0000] {logging_mixin.py:190} WARNING -   9%|8         | 43/501 [00:18<03:01,  2.52it/s]
+[2025-04-21T22:17:14.755+0000] {logging_mixin.py:190} WARNING -   9%|8         | 44/501 [00:18<02:42,  2.81it/s]
+[2025-04-21T22:17:15.060+0000] {logging_mixin.py:190} WARNING -   9%|8         | 45/501 [00:18<02:35,  2.93it/s]
+[2025-04-21T22:17:15.382+0000] {logging_mixin.py:190} WARNING -   9%|9         | 46/501 [00:19<02:32,  2.98it/s]
+[2025-04-21T22:17:15.650+0000] {logging_mixin.py:190} WARNING -   9%|9         | 47/501 [00:19<02:23,  3.17it/s]
+[2025-04-21T22:17:15.912+0000] {logging_mixin.py:190} WARNING -  10%|9         | 48/501 [00:19<02:15,  3.34it/s]
+[2025-04-21T22:17:16.170+0000] {logging_mixin.py:190} WARNING -  10%|9         | 49/501 [00:19<02:09,  3.49it/s]
+[2025-04-21T22:17:16.432+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:16.452+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:17.454+0000] {logging_mixin.py:190} WARNING -  10%|9         | 50/501 [00:21<04:24,  1.71it/s]
+[2025-04-21T22:17:17.732+0000] {logging_mixin.py:190} WARNING -  10%|#         | 51/501 [00:21<03:42,  2.03it/s]
+[2025-04-21T22:17:18.000+0000] {logging_mixin.py:190} WARNING -  10%|#         | 52/501 [00:21<03:11,  2.35it/s]
+[2025-04-21T22:17:18.266+0000] {logging_mixin.py:190} WARNING -  11%|#         | 53/501 [00:21<02:49,  2.65it/s]
+[2025-04-21T22:17:18.522+0000] {logging_mixin.py:190} WARNING -  11%|#         | 54/501 [00:22<02:32,  2.93it/s]
+[2025-04-21T22:17:18.793+0000] {logging_mixin.py:190} WARNING -  11%|#         | 55/501 [00:22<02:22,  3.12it/s]
+[2025-04-21T22:17:19.072+0000] {logging_mixin.py:190} WARNING -  11%|#1        | 56/501 [00:22<02:17,  3.25it/s]
+[2025-04-21T22:17:19.380+0000] {logging_mixin.py:190} WARNING -  11%|#1        | 57/501 [00:23<02:16,  3.25it/s]
+[2025-04-21T22:17:19.634+0000] {logging_mixin.py:190} WARNING -  12%|#1        | 58/501 [00:23<02:09,  3.43it/s]
+[2025-04-21T22:17:19.881+0000] {logging_mixin.py:190} WARNING -  12%|#1        | 59/501 [00:23<02:02,  3.59it/s]
+[2025-04-21T22:17:20.139+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:20.160+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:21.161+0000] {logging_mixin.py:190} WARNING -  12%|#1        | 60/501 [00:24<04:15,  1.73it/s]
+[2025-04-21T22:17:21.417+0000] {logging_mixin.py:190} WARNING -  12%|#2        | 61/501 [00:25<03:32,  2.07it/s]
+[2025-04-21T22:17:21.684+0000] {logging_mixin.py:190} WARNING -  12%|#2        | 62/501 [00:25<03:03,  2.40it/s]
+[2025-04-21T22:17:21.964+0000] {logging_mixin.py:190} WARNING -  13%|#2        | 63/501 [00:25<02:44,  2.66it/s]
+[2025-04-21T22:17:22.249+0000] {logging_mixin.py:190} WARNING -  13%|#2        | 64/501 [00:25<02:32,  2.87it/s]
+[2025-04-21T22:17:22.534+0000] {logging_mixin.py:190} WARNING -  13%|#2        | 65/501 [00:26<02:23,  3.03it/s]
+[2025-04-21T22:17:23.055+0000] {logging_mixin.py:190} WARNING -  13%|#3        | 66/501 [00:26<02:48,  2.58it/s]
+[2025-04-21T22:17:23.338+0000] {logging_mixin.py:190} WARNING -  13%|#3        | 67/501 [00:26<02:34,  2.81it/s]
+[2025-04-21T22:17:23.659+0000] {logging_mixin.py:190} WARNING -  14%|#3        | 68/501 [00:27<02:29,  2.89it/s]
+[2025-04-21T22:17:24.056+0000] {logging_mixin.py:190} WARNING -  14%|#3        | 69/501 [00:27<02:35,  2.77it/s]
+[2025-04-21T22:17:24.351+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:24.368+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:25.371+0000] {logging_mixin.py:190} WARNING -  14%|#3        | 70/501 [00:29<04:38,  1.55it/s]
+[2025-04-21T22:17:25.690+0000] {logging_mixin.py:190} WARNING -  14%|#4        | 71/501 [00:29<03:55,  1.82it/s]
+[2025-04-21T22:17:25.944+0000] {logging_mixin.py:190} WARNING -  14%|#4        | 72/501 [00:29<03:17,  2.17it/s]
+[2025-04-21T22:17:26.222+0000] {logging_mixin.py:190} WARNING -  15%|#4        | 73/501 [00:29<02:53,  2.47it/s]
+[2025-04-21T22:17:26.489+0000] {logging_mixin.py:190} WARNING -  15%|#4        | 74/501 [00:30<02:35,  2.75it/s]
+[2025-04-21T22:17:26.758+0000] {logging_mixin.py:190} WARNING -  15%|#4        | 75/501 [00:30<02:22,  2.98it/s]
+[2025-04-21T22:17:27.039+0000] {logging_mixin.py:190} WARNING -  15%|#5        | 76/501 [00:30<02:15,  3.13it/s]
+[2025-04-21T22:17:27.326+0000] {logging_mixin.py:190} WARNING -  15%|#5        | 77/501 [00:30<02:11,  3.23it/s]
+[2025-04-21T22:17:27.587+0000] {logging_mixin.py:190} WARNING -  16%|#5        | 78/501 [00:31<02:04,  3.39it/s]
+[2025-04-21T22:17:27.881+0000] {logging_mixin.py:190} WARNING -  16%|#5        | 79/501 [00:31<02:04,  3.40it/s]
+[2025-04-21T22:17:28.177+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:28.191+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:29.192+0000] {logging_mixin.py:190} WARNING -  16%|#5        | 80/501 [00:32<04:12,  1.67it/s]
+[2025-04-21T22:17:29.444+0000] {logging_mixin.py:190} WARNING -  16%|#6        | 81/501 [00:33<03:28,  2.02it/s]
+[2025-04-21T22:17:29.718+0000] {logging_mixin.py:190} WARNING -  16%|#6        | 82/501 [00:33<02:59,  2.33it/s]
+[2025-04-21T22:17:29.976+0000] {logging_mixin.py:190} WARNING -  17%|#6        | 83/501 [00:33<02:37,  2.65it/s]
+[2025-04-21T22:17:30.305+0000] {logging_mixin.py:190} WARNING -  17%|#6        | 84/501 [00:33<02:31,  2.76it/s]
+[2025-04-21T22:17:30.595+0000] {logging_mixin.py:190} WARNING -  17%|#6        | 85/501 [00:34<02:21,  2.93it/s]
+[2025-04-21T22:17:30.859+0000] {logging_mixin.py:190} WARNING -  17%|#7        | 86/501 [00:34<02:12,  3.14it/s]
+[2025-04-21T22:17:31.118+0000] {logging_mixin.py:190} WARNING -  17%|#7        | 87/501 [00:34<02:04,  3.33it/s]
+[2025-04-21T22:17:31.360+0000] {logging_mixin.py:190} WARNING -  18%|#7        | 88/501 [00:35<01:56,  3.53it/s]
+[2025-04-21T22:17:31.639+0000] {logging_mixin.py:190} WARNING -  18%|#7        | 89/501 [00:35<01:56,  3.55it/s]
+[2025-04-21T22:17:31.977+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:32.000+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:33.008+0000] {logging_mixin.py:190} WARNING -  18%|#7        | 90/501 [00:36<04:09,  1.65it/s]
+[2025-04-21T22:17:33.991+0000] {logging_mixin.py:190} WARNING -  18%|#8        | 91/501 [00:37<04:55,  1.39it/s]
+[2025-04-21T22:17:34.311+0000] {logging_mixin.py:190} WARNING -  18%|#8        | 92/501 [00:37<04:05,  1.67it/s]
+[2025-04-21T22:17:34.569+0000] {logging_mixin.py:190} WARNING -  19%|#8        | 93/501 [00:38<03:23,  2.01it/s]
+[2025-04-21T22:17:34.845+0000] {logging_mixin.py:190} WARNING -  19%|#8        | 94/501 [00:38<02:55,  2.32it/s]
+[2025-04-21T22:17:35.109+0000] {logging_mixin.py:190} WARNING -  19%|#8        | 95/501 [00:38<02:34,  2.62it/s]
+[2025-04-21T22:17:35.389+0000] {logging_mixin.py:190} WARNING -  19%|#9        | 96/501 [00:39<02:21,  2.85it/s]
+[2025-04-21T22:17:35.654+0000] {logging_mixin.py:190} WARNING -  19%|#9        | 97/501 [00:39<02:11,  3.08it/s]
+[2025-04-21T22:17:35.921+0000] {logging_mixin.py:190} WARNING -  20%|#9        | 98/501 [00:39<02:03,  3.25it/s]
+[2025-04-21T22:17:36.255+0000] {logging_mixin.py:190} WARNING -  20%|#9        | 99/501 [00:39<02:06,  3.17it/s]
+[2025-04-21T22:17:36.500+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:36.519+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:37.521+0000] {logging_mixin.py:190} WARNING -  20%|#9        | 100/501 [00:41<04:00,  1.66it/s]
+[2025-04-21T22:17:37.791+0000] {logging_mixin.py:190} WARNING -  20%|##        | 101/501 [00:41<03:20,  1.99it/s]
+[2025-04-21T22:17:38.098+0000] {logging_mixin.py:190} WARNING -  20%|##        | 102/501 [00:41<02:56,  2.26it/s]
+[2025-04-21T22:17:38.348+0000] {logging_mixin.py:190} WARNING -  21%|##        | 103/501 [00:42<02:33,  2.60it/s]
+[2025-04-21T22:17:38.617+0000] {logging_mixin.py:190} WARNING -  21%|##        | 104/501 [00:42<02:19,  2.85it/s]
+[2025-04-21T22:17:38.892+0000] {logging_mixin.py:190} WARNING -  21%|##        | 105/501 [00:42<02:09,  3.05it/s]
+[2025-04-21T22:17:39.184+0000] {logging_mixin.py:190} WARNING -  21%|##1       | 106/501 [00:42<02:05,  3.15it/s]
+[2025-04-21T22:17:39.496+0000] {logging_mixin.py:190} WARNING -  21%|##1       | 107/501 [00:43<02:04,  3.17it/s]
+[2025-04-21T22:17:39.804+0000] {logging_mixin.py:190} WARNING -  22%|##1       | 108/501 [00:43<02:03,  3.19it/s]
+[2025-04-21T22:17:40.066+0000] {logging_mixin.py:190} WARNING -  22%|##1       | 109/501 [00:43<01:56,  3.36it/s]
+[2025-04-21T22:17:40.326+0000] {SaveLinkNhatot.py:52} INFO - Cleared file: /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:40.347+0000] {SaveLinkNhatot.py:60} INFO - ✅ Written 10020 links to /opt/***/data/nhatot_links.txt
+[2025-04-21T22:17:41.326+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2025-04-21T22:17:41.336+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-04-21T22:17:41.340+0000] {process_utils.py:132} INFO - Sending 15 to group 5611. PIDs of all processes in the group: [5611]
+[2025-04-21T22:17:41.341+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 5611
+[2025-04-21T22:17:41.342+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-21T22:17:41.358+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 990, in _execute
+    executor.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/nhatot_scraping_dag.py", line 50, in save_links_task
+    result = scraper.run()
+  File "/opt/***/dags/../scripts/SaveLinkNhatot.py", line 139, in run
+    return self.scrape_links()
+  File "/opt/***/dags/../scripts/SaveLinkNhatot.py", line 122, in scrape_links
+    time.sleep(1)  # Small delay to prevent overwhelming the API
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-04-21T22:17:41.359+0000] {logging_mixin.py:190} WARNING -  22%|##1       | 109/501 [00:45<02:41,  2.42it/s]
+[2025-04-21T22:17:41.408+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-21T22:17:41.443+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=5611, status='terminated', exitcode=0, started='22:16:55') (5611) terminated with exit code 0
