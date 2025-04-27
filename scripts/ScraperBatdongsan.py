@@ -7,10 +7,14 @@ import pandas as pd
 import os
 import tempfile
 import shutil
-from multiprocessing import Pool, Lock, Manager
-import time
+from threading import Thread, Lock
+from queue import Queue
 import logging
+import time
 import random
+
+# Constants
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
 
 # Configure logging
 logging.basicConfig(
@@ -22,7 +26,6 @@ logging.basicConfig(
 AIRFLOW_DATA_DIR = '/opt/airflow/data'
 LOCAL_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data')
 
-# Create output directories if they don't exist
 def ensure_directories_exist():
     """Create output directories if they don't exist"""
     directories = [AIRFLOW_DATA_DIR, LOCAL_DATA_DIR]
@@ -31,8 +34,20 @@ def ensure_directories_exist():
             os.makedirs(directory)
             logging.info(f"Created directory: {directory}")
 
-# Call this function at the beginning
-ensure_directories_exist()
+def load_crawled_ids(file_path):
+    """Load already crawled IDs from TSV file"""
+    try:
+        if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
+            return set()
+        
+        df = pd.read_csv(file_path, sep='\t')
+        if 'id' not in df.columns:
+            return set()
+            
+        return set(df["id"].astype(str))
+    except Exception as e:
+        logging.warning(f"Error loading crawled IDs: {e}")
+        return set()
 
 def save_data(lock, url_data, data):
     # Determine which directory to use based on environment
@@ -215,21 +230,9 @@ def scrape_one_url(args):
         shutil.rmtree(user_data_dir)
 
 
-def load_crawled_ids(tsv_file_path):
-    if not os.path.exists(tsv_file_path):
-        return set()
-    df = pd.read_csv(tsv_file_path, sep='\t', usecols=["id"])
-    return set(df["id"].astype(str))
-
-
 def scrape_data(use_multiprocessing=False):
-    """
-    Main scraping function that can be called by the Airflow DAG
-    Args:
-        use_multiprocessing (bool): Whether to use multiprocessing for parallel scraping
-    """
+    """Main scraping function that can be called by the Airflow DAG"""
     try:
-        # Ensure directories exist
         ensure_directories_exist()
         
         # Determine which input file to use based on environment
@@ -242,37 +245,45 @@ def scrape_data(use_multiprocessing=False):
         with open(input_file, 'r', encoding='utf-8') as f:
             urls = f.read().splitlines()
 
-        if use_multiprocessing:
-            # Initialize manager and lock for multiprocessing
-            with Manager() as manager:
-                lock = manager.Lock()
-                crawled_ids = load_crawled_ids(os.path.join(AIRFLOW_DATA_DIR if os.path.exists(AIRFLOW_DATA_DIR) else LOCAL_DATA_DIR, "batdongsan_url.tsv"))
-                shared_ids = manager.list(crawled_ids)
+        logging.info(f"Found {len(urls)} URLs to scrape")
 
-                # Create jobs for parallel processing
-                jobs = [(url, lock, shared_ids) for url in urls]
-
-                # Process URLs in parallel
-                with Pool(processes=5) as pool:
-                    pool.map(scrape_one_url, jobs)
-        else:
-            # Sequential processing for Airflow
-            crawled_ids = load_crawled_ids(os.path.join(AIRFLOW_DATA_DIR if os.path.exists(AIRFLOW_DATA_DIR) else LOCAL_DATA_DIR, "batdongsan_url.tsv"))
-            lock = Lock()
+        # Use threading instead of multiprocessing
+        lock = Lock()
+        crawled_ids = load_crawled_ids(os.path.join(AIRFLOW_DATA_DIR if os.path.exists(AIRFLOW_DATA_DIR) else LOCAL_DATA_DIR, "batdongsan_url.tsv"))
+        url_queue = Queue()
+        
+        # Add URLs to queue
+        for url in urls:
+            url_queue.put(url)
             
-            for url in urls:
-                item_id = extract_id_from_url(url)
-                if item_id in crawled_ids:
-                    logging.info(f"[Skipped] Already crawled: {url}")
-                    continue
-                
+        def worker():
+            while not url_queue.empty():
                 try:
-                    scrape_one_url((url, lock, crawled_ids))
-                    crawled_ids.add(item_id)
-                except Exception as e:
-                    logging.error(f"Error scraping {url}: {e}")
-                    continue
-
+                    url = url_queue.get()
+                    item_id = extract_id_from_url(url)
+                    if item_id in crawled_ids:
+                        logging.info(f"[Skipped] Already crawled: {url}")
+                        continue
+                    
+                    try:
+                        scrape_one_url((url, lock, crawled_ids))
+                        crawled_ids.add(item_id)
+                    except Exception as e:
+                        logging.error(f"Error scraping {url}: {e}")
+                finally:
+                    url_queue.task_done()
+        
+        # Create and start threads
+        threads = []
+        for _ in range(5):  # Number of concurrent threads
+            thread = Thread(target=worker)
+            thread.daemon = True
+            thread.start()
+            threads.append(thread)
+            
+        # Wait for all URLs to be processed
+        url_queue.join()
+        
         logging.info("✅ Scraping completed successfully")
         return True
 
@@ -282,4 +293,4 @@ def scrape_data(use_multiprocessing=False):
 
 if __name__ == "__main__":
     # This block only runs if the script is executed directly
-    scrape_data(use_multiprocessing=True)
+    scrape_data()

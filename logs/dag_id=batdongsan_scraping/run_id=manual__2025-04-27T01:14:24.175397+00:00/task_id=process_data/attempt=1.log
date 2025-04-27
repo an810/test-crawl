@@ -1,0 +1,20 @@
+[2025-04-27T06:09:57.709+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-27T06:09:57.757+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: batdongsan_scraping.process_data manual__2025-04-27T01:14:24.175397+00:00 [queued]>
+[2025-04-27T06:09:57.780+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: batdongsan_scraping.process_data manual__2025-04-27T01:14:24.175397+00:00 [queued]>
+[2025-04-27T06:09:57.781+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-27T06:09:57.828+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): process_data> on 2025-04-27 01:14:24.175397+00:00
+[2025-04-27T06:09:57.850+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=72437) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-27T06:09:57.852+0000] {standard_task_runner.py:72} INFO - Started process 74656 to run task
+[2025-04-27T06:09:57.847+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'batdongsan_scraping', 'process_data', 'manual__2025-04-27T01:14:24.175397+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/batdongsan_scraping_dag.py', '--cfg-path', '/tmp/tmpb6qcc807']
+[2025-04-27T06:09:57.853+0000] {standard_task_runner.py:105} INFO - Job 20: Subtask process_data
+[2025-04-27T06:09:57.967+0000] {task_command.py:467} INFO - Running <TaskInstance: batdongsan_scraping.process_data manual__2025-04-27T01:14:24.175397+00:00 [running]> on host 9ba2d9a280bc
+[2025-04-27T06:09:58.137+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='batdongsan_scraping' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-27T01:14:24.175397+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-27T01:14:24.175397+00:00'
+[2025-04-27T06:09:58.142+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-27T06:09:59.192+0000] {BatDongSanProcessor.py:51} INFO - Successfully loaded data from /opt/***/data/batdongsan.tsv
+[2025-04-27T06:10:02.637+0000] {BatDongSanProcessor.py:88} INFO - Successfully saved processed data to /opt/***/data/cleaned/batdongsan_cleaned_20250427_061000.tsv
+[2025-04-27T06:10:02.657+0000] {python.py:240} INFO - Done. Returned value was: Processing completed successfully
+[2025-04-27T06:10:02.708+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-27T06:10:02.710+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=batdongsan_scraping, task_id=process_data, run_id=manual__2025-04-27T01:14:24.175397+00:00, execution_date=20250427T011424, start_date=20250427T060957, end_date=20250427T061002
+[2025-04-27T06:10:02.867+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-27T06:10:02.902+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-27T06:10:02.913+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

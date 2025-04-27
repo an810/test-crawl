@@ -1,0 +1,249 @@
+[2025-04-26T11:12:46.891+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-26T11:12:46.913+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nhatot_scraping.scrape_data manual__2025-04-25T15:49:33.716747+00:00 [queued]>
+[2025-04-26T11:12:46.922+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nhatot_scraping.scrape_data manual__2025-04-25T15:49:33.716747+00:00 [queued]>
+[2025-04-26T11:12:46.923+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 2
+[2025-04-26T11:12:46.935+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): scrape_data> on 2025-04-25 15:49:33.716747+00:00
+[2025-04-26T11:12:46.943+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'nhatot_scraping', 'scrape_data', 'manual__2025-04-25T15:49:33.716747+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/nhatot_scraping_dag.py', '--cfg-path', '/tmp/tmpn4p0f7zi']
+[2025-04-26T11:12:46.946+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask scrape_data
+[2025-04-26T11:12:46.947+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=173) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-26T11:12:46.948+0000] {standard_task_runner.py:72} INFO - Started process 184 to run task
+[2025-04-26T11:12:46.983+0000] {task_command.py:467} INFO - Running <TaskInstance: nhatot_scraping.scrape_data manual__2025-04-25T15:49:33.716747+00:00 [running]> on host 9ba2d9a280bc
+[2025-04-26T11:12:47.043+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nhatot_scraping' AIRFLOW_CTX_TASK_ID='scrape_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-25T15:49:33.716747+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-25T15:49:33.716747+00:00'
+[2025-04-26T11:12:47.044+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-26T11:12:47.058+0000] {ScraperNhatot.py:260} INFO - Found 10062 URLs to scrape
+[2025-04-26T11:12:47.068+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/103638156.htm
+[2025-04-26T11:12:47.068+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/103046685.htm
+[2025-04-26T11:12:47.068+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/104049444.htm
+[2025-04-26T11:12:47.068+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/105632120.htm
+[2025-04-26T11:12:47.069+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/105750775.htm
+[2025-04-26T11:12:58.414+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/105904740.htm
+[2025-04-26T11:12:59.197+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/106366347.htm
+[2025-04-26T11:12:59.536+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/106376495.htm
+[2025-04-26T11:13:01.505+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/107080893.htm
+[2025-04-26T11:13:02.143+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/107577769.htm
+[2025-04-26T11:13:08.302+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/109374376.htm
+[2025-04-26T11:13:11.465+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/110126443.htm
+[2025-04-26T11:13:12.172+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/110848334.htm
+[2025-04-26T11:13:12.421+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111195533.htm
+[2025-04-26T11:13:12.663+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111405618.htm
+[2025-04-26T11:13:16.707+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111701070.htm
+[2025-04-26T11:13:20.254+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111905099.htm
+[2025-04-26T11:13:22.796+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112102337.htm
+[2025-04-26T11:13:23.146+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112456952.htm
+[2025-04-26T11:13:25.795+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112559810.htm
+[2025-04-26T11:13:30.175+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112705299.htm
+[2025-04-26T11:13:30.356+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112961462.htm
+[2025-04-26T11:13:31.178+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113082417.htm
+[2025-04-26T11:13:31.572+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113174912.htm
+[2025-04-26T11:13:35.145+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113180636.htm
+[2025-04-26T11:13:38.848+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113311957.htm
+[2025-04-26T11:13:39.941+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113602703.htm
+[2025-04-26T11:13:40.537+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113666681.htm
+[2025-04-26T11:13:41.384+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113755237.htm
+[2025-04-26T11:13:45.319+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113963880.htm
+[2025-04-26T11:13:47.732+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2025-04-26T11:13:47.734+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-04-26T11:13:47.749+0000] {process_utils.py:132} INFO - Sending 15 to group 184. PIDs of all processes in the group: [6391, 6566, 6732, 6895, 7300, 7306, 7329, 7330, 7356, 7332, 7376, 7394, 7408, 7428, 7355, 6901, 6923, 6924, 6949, 6926, 6965, 7010, 7155, 7211, 7467, 7476, 7477, 6948, 6738, 6761, 6762, 6787, 6764, 6807, 6846, 7113, 7188, 7199, 7437, 7447, 7453, 6786, 6572, 6598, 6599, 6624, 6601, 6640, 6677, 7030, 7075, 7220, 7227, 7232, 6623, 6397, 6419, 6420, 6445, 6422, 6461, 6502, 7065, 7126, 7269, 7274, 7418, 6444, 184]
+[2025-04-26T11:13:47.753+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 184
+[2025-04-26T11:13:47.761+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-26T11:13:47.794+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6422, status='terminated', started='11:13:39') (6422) terminated with exit code None
+[2025-04-26T11:13:47.763+0000] {logging_mixin.py:190} INFO - [Unhandled Error] Failed to scrape https://www.nhatot.com/mua-ban-bat-dong-san/113963880.htm: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-04-26T11:13:47.799+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe89a49a900>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/84d5cbde27d0ec59845bfe1e9d9f491d
+[2025-04-26T11:13:47.801+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe89a49ac90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/84d5cbde27d0ec59845bfe1e9d9f491d
+[2025-04-26T11:13:47.804+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe89a49ade0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/84d5cbde27d0ec59845bfe1e9d9f491d
+[2025-04-26T11:13:47.818+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114133460.htm
+[2025-04-26T11:13:47.838+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 990, in _execute
+    executor.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/nhatot_scraping_dag.py", line 69, in scrape_data_task
+    result = scrape_data()
+  File "/opt/***/dags/../scripts/ScraperNhatot.py", line 297, in scrape_data
+    url_queue.join()
+  File "/usr/local/lib/python3.12/queue.py", line 90, in join
+    self.all_tasks_done.wait()
+  File "/usr/local/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-04-26T11:13:47.858+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7467, status='terminated', started='11:13:46') (7467) terminated with exit code None
+[2025-04-26T11:13:47.860+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7030, status='terminated', started='11:13:41') (7030) terminated with exit code None
+[2025-04-26T11:13:47.860+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6444, status='terminated', started='11:13:39') (6444) terminated with exit code None
+[2025-04-26T11:13:47.878+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6640, status='terminated', started='11:13:40') (6640) terminated with exit code None
+[2025-04-26T11:13:47.899+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7356, status='terminated', started='11:13:45') (7356) terminated with exit code None
+[2025-04-26T11:13:47.901+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7332, status='terminated', started='11:13:45') (7332) terminated with exit code None
+[2025-04-26T11:13:47.901+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7418, status='terminated', started='11:13:46') (7418) terminated with exit code None
+[2025-04-26T11:13:47.904+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6787, status='terminated', started='11:13:40') (6787) terminated with exit code None
+[2025-04-26T11:13:47.905+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6502, status='terminated', started='11:13:39') (6502) terminated with exit code None
+[2025-04-26T11:13:47.906+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6461, status='terminated', started='11:13:39') (6461) terminated with exit code None
+[2025-04-26T11:13:47.906+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6397, status='terminated', started='11:13:38') (6397) terminated with exit code None
+[2025-04-26T11:13:47.907+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6901, status='terminated', started='11:13:41') (6901) terminated with exit code None
+[2025-04-26T11:13:47.908+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7075, status='terminated', started='11:13:42') (7075) terminated with exit code None
+[2025-04-26T11:13:47.910+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7188, status='terminated', started='11:13:44') (7188) terminated with exit code None
+[2025-04-26T11:13:47.911+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7199, status='terminated', started='11:13:44') (7199) terminated with exit code None
+[2025-04-26T11:13:47.912+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6924, status='terminated', started='11:13:41') (6924) terminated with exit code None
+[2025-04-26T11:13:47.913+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6598, status='terminated', started='11:13:40') (6598) terminated with exit code None
+[2025-04-26T11:13:47.914+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7408, status='terminated', started='11:13:46') (7408) terminated with exit code None
+[2025-04-26T11:13:47.914+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7220, status='terminated', started='11:13:44') (7220) terminated with exit code None
+[2025-04-26T11:13:47.914+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7232, status='terminated', started='11:13:44') (7232) terminated with exit code None
+[2025-04-26T11:13:47.915+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6926, status='terminated', started='11:13:41') (6926) terminated with exit code None
+[2025-04-26T11:13:47.915+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6807, status='terminated', started='11:13:40') (6807) terminated with exit code None
+[2025-04-26T11:13:47.916+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-26T11:13:47.916+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7453, status='terminated', started='11:13:46') (7453) terminated with exit code None
+[2025-04-26T11:13:47.916+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6786, status='terminated', started='11:13:40') (6786) terminated with exit code None
+[2025-04-26T11:13:47.934+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6732, status='terminated', started='11:13:40') (6732) terminated with exit code None
+[2025-04-26T11:13:47.935+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6624, status='terminated', started='11:13:40') (6624) terminated with exit code None
+[2025-04-26T11:13:47.935+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6601, status='terminated', started='11:13:40') (6601) terminated with exit code None
+[2025-04-26T11:13:47.936+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6623, status='terminated', started='11:13:40') (6623) terminated with exit code None
+[2025-04-26T11:13:47.936+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=184, status='terminated', exitcode=0, started='11:12:46') (184) terminated with exit code 0
+[2025-04-26T11:13:47.937+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6420, status='terminated', started='11:13:39') (6420) terminated with exit code None
+[2025-04-26T11:13:47.938+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7065, status='terminated', started='11:13:42') (7065) terminated with exit code None
+[2025-04-26T11:13:47.938+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7306, status='terminated', started='11:13:45') (7306) terminated with exit code None
+[2025-04-26T11:13:47.940+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7274, status='terminated', started='11:13:45') (7274) terminated with exit code None
+[2025-04-26T11:13:47.941+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7329, status='terminated', started='11:13:45') (7329) terminated with exit code None
+[2025-04-26T11:13:47.942+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6895, status='terminated', started='11:13:41') (6895) terminated with exit code None
+[2025-04-26T11:13:47.942+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7355, status='terminated', started='11:13:45') (7355) terminated with exit code None
+[2025-04-26T11:13:47.943+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6566, status='terminated', started='11:13:39') (6566) terminated with exit code None
+[2025-04-26T11:13:47.943+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6572, status='terminated', started='11:13:39') (6572) terminated with exit code None
+[2025-04-26T11:13:47.943+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7227, status='terminated', started='11:13:44') (7227) terminated with exit code None
+[2025-04-26T11:13:47.944+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7437, status='terminated', started='11:13:46') (7437) terminated with exit code None
+[2025-04-26T11:13:47.944+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7394, status='terminated', started='11:13:46') (7394) terminated with exit code None
+[2025-04-26T11:13:47.944+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7155, status='terminated', started='11:13:43') (7155) terminated with exit code None
+[2025-04-26T11:13:47.945+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7428, status='terminated', started='11:13:46') (7428) terminated with exit code None
+[2025-04-26T11:13:47.945+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7113, status='terminated', started='11:13:43') (7113) terminated with exit code None
+[2025-04-26T11:13:47.946+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6762, status='terminated', started='11:13:40') (6762) terminated with exit code None
+[2025-04-26T11:13:47.946+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7476, status='terminated', started='11:13:46') (7476) terminated with exit code None
+[2025-04-26T11:13:47.947+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7300, status='terminated', started='11:13:45') (7300) terminated with exit code None
+[2025-04-26T11:13:47.947+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6599, status='terminated', started='11:13:40') (6599) terminated with exit code None
+[2025-04-26T11:13:47.947+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7010, status='terminated', started='11:13:41') (7010) terminated with exit code None
+[2025-04-26T11:13:47.947+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7269, status='terminated', started='11:13:45') (7269) terminated with exit code None
+[2025-04-26T11:13:47.948+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6965, status='terminated', started='11:13:41') (6965) terminated with exit code None
+[2025-04-26T11:13:47.948+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6923, status='terminated', started='11:13:41') (6923) terminated with exit code None
+[2025-04-26T11:13:47.949+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6948, status='terminated', started='11:13:41') (6948) terminated with exit code None
+[2025-04-26T11:13:47.949+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7211, status='terminated', started='11:13:44') (7211) terminated with exit code None
+[2025-04-26T11:13:47.949+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7126, status='terminated', started='11:13:43') (7126) terminated with exit code None
+[2025-04-26T11:13:47.950+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6764, status='terminated', started='11:13:40') (6764) terminated with exit code None
+[2025-04-26T11:13:47.950+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6391, status='terminated', started='11:13:38') (6391) terminated with exit code None
+[2025-04-26T11:13:47.950+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6677, status='terminated', started='11:13:40') (6677) terminated with exit code None
+[2025-04-26T11:13:47.950+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7477, status='terminated', started='11:13:46') (7477) terminated with exit code None
+[2025-04-26T11:13:47.951+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6419, status='terminated', started='11:13:39') (6419) terminated with exit code None
+[2025-04-26T11:13:47.951+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6846, status='terminated', started='11:13:40') (6846) terminated with exit code None
+[2025-04-26T11:13:47.951+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7330, status='terminated', started='11:13:45') (7330) terminated with exit code None
+[2025-04-26T11:13:47.952+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7447, status='terminated', started='11:13:46') (7447) terminated with exit code None
+[2025-04-26T11:13:47.952+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6445, status='terminated', started='11:13:39') (6445) terminated with exit code None
+[2025-04-26T11:13:47.952+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=7376, status='terminated', started='11:13:45') (7376) terminated with exit code None
+[2025-04-26T11:13:47.953+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6949, status='terminated', started='11:13:41') (6949) terminated with exit code None
+[2025-04-26T11:13:47.953+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6738, status='terminated', started='11:13:40') (6738) terminated with exit code None
+[2025-04-26T11:13:47.953+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6761, status='terminated', started='11:13:40') (6761) terminated with exit code None

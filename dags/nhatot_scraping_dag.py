@@ -66,7 +66,7 @@ save_links_operator = PythonOperator(
 # Task 2: Scrape Data
 def scrape_data_task():
     try:
-        result = scrape_data(use_multiprocessing=False)
+        result = scrape_data()
         if not result:
             raise Exception("Scraping failed")
         return "Scraping completed successfully"

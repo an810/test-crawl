@@ -1,0 +1,270 @@
+[2025-04-25T14:48:26.762+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-25T14:48:26.795+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: batdongsan_scraping.save_links manual__2025-04-25T14:48:25.546057+00:00 [queued]>
+[2025-04-25T14:48:26.806+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: batdongsan_scraping.save_links manual__2025-04-25T14:48:25.546057+00:00 [queued]>
+[2025-04-25T14:48:26.807+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 3
+[2025-04-25T14:48:26.826+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): save_links> on 2025-04-25 14:48:25.546057+00:00
+[2025-04-25T14:48:26.839+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'batdongsan_scraping', 'save_links', 'manual__2025-04-25T14:48:25.546057+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/batdongsan_scraping_dag.py', '--cfg-path', '/tmp/tmp0ypbpama']
+[2025-04-25T14:48:26.843+0000] {standard_task_runner.py:105} INFO - Job 14: Subtask save_links
+[2025-04-25T14:48:26.841+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=11041) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-25T14:48:26.845+0000] {standard_task_runner.py:72} INFO - Started process 11047 to run task
+[2025-04-25T14:48:26.907+0000] {task_command.py:467} INFO - Running <TaskInstance: batdongsan_scraping.save_links manual__2025-04-25T14:48:25.546057+00:00 [running]> on host ddc209ddd338
+[2025-04-25T14:48:27.029+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='batdongsan_scraping' AIRFLOW_CTX_TASK_ID='save_links' AIRFLOW_CTX_EXECUTION_DATE='2025-04-25T14:48:25.546057+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-25T14:48:25.546057+00:00'
+[2025-04-25T14:48:27.033+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-25T14:48:27.133+0000] {SaveLinkBatdongsan.py:118} INFO - Loaded 62521 existing links
+[2025-04-25T14:48:29.330+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 4: https://batdongsan.com.vn/nha-dat-ban/p4?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:48:29.348+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 1: https://batdongsan.com.vn/nha-dat-ban/p1?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:48:29.351+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 5: https://batdongsan.com.vn/nha-dat-ban/p5?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:48:29.363+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 3: https://batdongsan.com.vn/nha-dat-ban/p3?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:48:29.388+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 2: https://batdongsan.com.vn/nha-dat-ban/p2?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:09.089+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 1
+[2025-04-25T14:49:09.562+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 5
+[2025-04-25T14:49:11.036+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 4
+[2025-04-25T14:49:11.350+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 6: https://batdongsan.com.vn/nha-dat-ban/p6?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:11.663+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 7: https://batdongsan.com.vn/nha-dat-ban/p7?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:12.280+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 2
+[2025-04-25T14:49:16.547+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 8: https://batdongsan.com.vn/nha-dat-ban/p8?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:18.811+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 9: https://batdongsan.com.vn/nha-dat-ban/p9?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:36.743+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 6
+[2025-04-25T14:49:39.209+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 10: https://batdongsan.com.vn/nha-dat-ban/p10?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:40.343+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 8
+[2025-04-25T14:49:44.041+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 11: https://batdongsan.com.vn/nha-dat-ban/p11?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:47.424+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 7
+[2025-04-25T14:49:50.521+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 9
+[2025-04-25T14:49:51.067+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 12: https://batdongsan.com.vn/nha-dat-ban/p12?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:49:52.825+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 13: https://batdongsan.com.vn/nha-dat-ban/p13?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:05.244+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 11
+[2025-04-25T14:50:06.637+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 10
+[2025-04-25T14:50:06.711+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 13
+[2025-04-25T14:50:07.615+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 14: https://batdongsan.com.vn/nha-dat-ban/p14?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:08.627+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 16: https://batdongsan.com.vn/nha-dat-ban/p16?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:08.643+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 15: https://batdongsan.com.vn/nha-dat-ban/p15?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:09.195+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 12
+[2025-04-25T14:50:10.743+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 62632 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:50:10.761+0000] {SaveLinkBatdongsan.py:195} INFO - Progress saved at 10/100 pages
+[2025-04-25T14:50:11.375+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 17: https://batdongsan.com.vn/nha-dat-ban/p17?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:24.250+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 16
+[2025-04-25T14:50:24.946+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 14
+[2025-04-25T14:50:26.615+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 19: https://batdongsan.com.vn/nha-dat-ban/p19?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:26.629+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 18: https://batdongsan.com.vn/nha-dat-ban/p18?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:29.214+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 17
+[2025-04-25T14:50:30.519+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 15
+[2025-04-25T14:50:31.527+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 20: https://batdongsan.com.vn/nha-dat-ban/p20?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:31.817+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 21: https://batdongsan.com.vn/nha-dat-ban/p21?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:42.015+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 18
+[2025-04-25T14:50:44.132+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 22: https://batdongsan.com.vn/nha-dat-ban/p22?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:44.237+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 19
+[2025-04-25T14:50:45.726+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 23: https://batdongsan.com.vn/nha-dat-ban/p23?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:48.136+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 21
+[2025-04-25T14:50:49.925+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 24: https://batdongsan.com.vn/nha-dat-ban/p24?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:50:50.152+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 20
+[2025-04-25T14:50:51.468+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 62711 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:50:51.472+0000] {SaveLinkBatdongsan.py:195} INFO - Progress saved at 20/100 pages
+[2025-04-25T14:50:52.380+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 25: https://batdongsan.com.vn/nha-dat-ban/p25?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:03.287+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 22
+[2025-04-25T14:51:03.963+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 23
+[2025-04-25T14:51:05.368+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 26: https://batdongsan.com.vn/nha-dat-ban/p26?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:06.055+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 27: https://batdongsan.com.vn/nha-dat-ban/p27?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:07.017+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 24
+[2025-04-25T14:51:09.612+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 28: https://batdongsan.com.vn/nha-dat-ban/p28?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:10.146+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 25
+[2025-04-25T14:51:12.149+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 29: https://batdongsan.com.vn/nha-dat-ban/p29?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:27.166+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 26
+[2025-04-25T14:51:28.610+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 28
+[2025-04-25T14:51:28.674+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 27
+[2025-04-25T14:51:29.485+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 30: https://batdongsan.com.vn/nha-dat-ban/p30?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:31.141+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 31: https://batdongsan.com.vn/nha-dat-ban/p31?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:31.142+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 32: https://batdongsan.com.vn/nha-dat-ban/p32?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:31.575+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 29
+[2025-04-25T14:51:34.475+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 33: https://batdongsan.com.vn/nha-dat-ban/p33?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:47.269+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 30
+[2025-04-25T14:51:48.790+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 32
+[2025-04-25T14:51:49.060+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 34: https://batdongsan.com.vn/nha-dat-ban/p34?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:51.017+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 35: https://batdongsan.com.vn/nha-dat-ban/p35?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:51.363+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 33
+[2025-04-25T14:51:51.407+0000] {SaveLinkBatdongsan.py:198} ERROR - Error processing page 32: Set changed size during iteration
+[2025-04-25T14:51:51.589+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 31
+[2025-04-25T14:51:53.050+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 36: https://batdongsan.com.vn/nha-dat-ban/p36?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:51:53.722+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 37: https://batdongsan.com.vn/nha-dat-ban/p37?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:12.238+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 37
+[2025-04-25T14:52:12.223+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 35
+[2025-04-25T14:52:12.872+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 34
+[2025-04-25T14:52:13.254+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 36
+[2025-04-25T14:52:13.526+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 38: https://batdongsan.com.vn/nha-dat-ban/p38?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:14.114+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 39: https://batdongsan.com.vn/nha-dat-ban/p39?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:14.552+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 40: https://batdongsan.com.vn/nha-dat-ban/p40?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:15.087+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 41: https://batdongsan.com.vn/nha-dat-ban/p41?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:33.977+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 39
+[2025-04-25T14:52:34.120+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 41
+[2025-04-25T14:52:34.663+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 38
+[2025-04-25T14:52:34.879+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 40
+[2025-04-25T14:52:36.030+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 42: https://batdongsan.com.vn/nha-dat-ban/p42?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:36.337+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 44: https://batdongsan.com.vn/nha-dat-ban/p44?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:36.475+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 43: https://batdongsan.com.vn/nha-dat-ban/p43?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:36.547+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 62902 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:52:36.551+0000] {SaveLinkBatdongsan.py:195} INFO - Progress saved at 40/100 pages
+[2025-04-25T14:52:36.749+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 45: https://batdongsan.com.vn/nha-dat-ban/p45?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:52.037+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 44
+[2025-04-25T14:52:53.142+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 42
+[2025-04-25T14:52:55.365+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 46: https://batdongsan.com.vn/nha-dat-ban/p46?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:55.518+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 47: https://batdongsan.com.vn/nha-dat-ban/p47?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:55.888+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 43
+[2025-04-25T14:52:56.092+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 45
+[2025-04-25T14:52:57.966+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 49: https://batdongsan.com.vn/nha-dat-ban/p49?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:52:58.024+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 48: https://batdongsan.com.vn/nha-dat-ban/p48?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:11.157+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 46
+[2025-04-25T14:53:13.091+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 47
+[2025-04-25T14:53:14.230+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 50: https://batdongsan.com.vn/nha-dat-ban/p50?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:14.517+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 49
+[2025-04-25T14:53:15.005+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 51: https://batdongsan.com.vn/nha-dat-ban/p51?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:16.220+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 52: https://batdongsan.com.vn/nha-dat-ban/p52?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:16.377+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 48
+[2025-04-25T14:53:18.377+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 53: https://batdongsan.com.vn/nha-dat-ban/p53?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:29.364+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 50
+[2025-04-25T14:53:29.518+0000] {SaveLinkBatdongsan.py:105} WARNING - Attempt 1 failed: Message: timeout: Timed out receiving message from renderer: 299.279
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+#0 0x559ca5ac5d6e <unknown>
+#1 0x559ca558e20b <unknown>
+#2 0x559ca55798f6 <unknown>
+#3 0x559ca55796ac <unknown>
+#4 0x559ca5577bf8 <unknown>
+#5 0x559ca55780a9 <unknown>
+#6 0x559ca55857e0 <unknown>
+#7 0x559ca559babf <unknown>
+#8 0x559ca55a0e5b <unknown>
+#9 0x559ca557861d <unknown>
+#10 0x559ca559b8b7 <unknown>
+#11 0x559ca562346c <unknown>
+#12 0x559ca5601d63 <unknown>
+#13 0x559ca55cc017 <unknown>
+#14 0x559ca55ccdc8 <unknown>
+#15 0x559ca5a9296a <unknown>
+#16 0x559ca5a95dbe <unknown>
+#17 0x559ca5a95868 <unknown>
+#18 0x559ca5a96245 <unknown>
+#19 0x559ca5a7c0cb <unknown>
+#20 0x559ca5a965b0 <unknown>
+#21 0x559ca5a64a39 <unknown>
+#22 0x559ca5ab4ee5 <unknown>
+#23 0x559ca5ab50cb <unknown>
+#24 0x559ca5ac4ec5 <unknown>
+#25 0x7f65a2b341c4 <unknown>
+
+[2025-04-25T14:53:31.641+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 54: https://batdongsan.com.vn/nha-dat-ban/p54?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:33.683+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 51
+[2025-04-25T14:53:35.571+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 52
+[2025-04-25T14:53:35.596+0000] {SaveLinkBatdongsan.py:198} ERROR - Error processing page 51: Set changed size during iteration
+[2025-04-25T14:53:35.819+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 55: https://batdongsan.com.vn/nha-dat-ban/p55?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:36.268+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 53
+[2025-04-25T14:53:38.134+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 56: https://batdongsan.com.vn/nha-dat-ban/p56?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:38.182+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 57: https://batdongsan.com.vn/nha-dat-ban/p57?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:47.767+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 54
+[2025-04-25T14:53:50.006+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 58: https://batdongsan.com.vn/nha-dat-ban/p58?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:51.246+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 55
+[2025-04-25T14:53:54.080+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 59: https://batdongsan.com.vn/nha-dat-ban/p59?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:54.773+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 3
+[2025-04-25T14:53:55.474+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 56
+[2025-04-25T14:53:56.782+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 60: https://batdongsan.com.vn/nha-dat-ban/p60?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:58.835+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 61: https://batdongsan.com.vn/nha-dat-ban/p61?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:53:59.155+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 57
+[2025-04-25T14:54:01.133+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 62: https://batdongsan.com.vn/nha-dat-ban/p62?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:06.546+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 58
+[2025-04-25T14:54:09.230+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 63: https://batdongsan.com.vn/nha-dat-ban/p63?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:10.722+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 59
+[2025-04-25T14:54:13.786+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 64: https://batdongsan.com.vn/nha-dat-ban/p64?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:13.972+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 60
+[2025-04-25T14:54:15.690+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 61
+[2025-04-25T14:54:15.696+0000] {SaveLinkBatdongsan.py:198} ERROR - Error processing page 60: Set changed size during iteration
+[2025-04-25T14:54:15.734+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 65: https://batdongsan.com.vn/nha-dat-ban/p65?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:17.865+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 66: https://batdongsan.com.vn/nha-dat-ban/p66?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:19.476+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 62
+[2025-04-25T14:54:21.327+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 67: https://batdongsan.com.vn/nha-dat-ban/p67?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:27.493+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 63
+[2025-04-25T14:54:29.556+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 68: https://batdongsan.com.vn/nha-dat-ban/p68?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:33.183+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 65
+[2025-04-25T14:54:33.305+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 64
+[2025-04-25T14:54:34.913+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 69: https://batdongsan.com.vn/nha-dat-ban/p69?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:35.669+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 70: https://batdongsan.com.vn/nha-dat-ban/p70?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:37.794+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 66
+[2025-04-25T14:54:40.111+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 67
+[2025-04-25T14:54:40.251+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 71: https://batdongsan.com.vn/nha-dat-ban/p71?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:42.248+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 72: https://batdongsan.com.vn/nha-dat-ban/p72?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:45.857+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 68
+[2025-04-25T14:54:48.683+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 73: https://batdongsan.com.vn/nha-dat-ban/p73?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:51.434+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 69
+[2025-04-25T14:54:52.192+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 70
+[2025-04-25T14:54:54.025+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 63340 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:54:54.029+0000] {SaveLinkBatdongsan.py:195} INFO - Progress saved at 70/100 pages
+[2025-04-25T14:54:54.088+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 74: https://batdongsan.com.vn/nha-dat-ban/p74?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:54.786+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 75: https://batdongsan.com.vn/nha-dat-ban/p75?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:54:58.630+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 71
+[2025-04-25T14:55:00.529+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 76: https://batdongsan.com.vn/nha-dat-ban/p76?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:00.884+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 72
+[2025-04-25T14:55:02.929+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 77: https://batdongsan.com.vn/nha-dat-ban/p77?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:05.950+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 73
+[2025-04-25T14:55:07.828+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 78: https://batdongsan.com.vn/nha-dat-ban/p78?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:12.055+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 75
+[2025-04-25T14:55:12.199+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 74
+[2025-04-25T14:55:14.171+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 80: https://batdongsan.com.vn/nha-dat-ban/p80?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:14.207+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 79: https://batdongsan.com.vn/nha-dat-ban/p79?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:19.041+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 76
+[2025-04-25T14:55:19.849+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 77
+[2025-04-25T14:55:20.946+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 81: https://batdongsan.com.vn/nha-dat-ban/p81?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:21.531+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 82: https://batdongsan.com.vn/nha-dat-ban/p82?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:28.265+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 78
+[2025-04-25T14:55:30.193+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 83: https://batdongsan.com.vn/nha-dat-ban/p83?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:30.451+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 79
+[2025-04-25T14:55:32.766+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 80
+[2025-04-25T14:55:33.746+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 84: https://batdongsan.com.vn/nha-dat-ban/p84?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:34.657+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 63490 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:55:34.658+0000] {SaveLinkBatdongsan.py:195} INFO - Progress saved at 80/100 pages
+[2025-04-25T14:55:35.355+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 85: https://batdongsan.com.vn/nha-dat-ban/p85?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:35.790+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 81
+[2025-04-25T14:55:37.696+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 86: https://batdongsan.com.vn/nha-dat-ban/p86?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:40.423+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 82
+[2025-04-25T14:55:42.053+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 87: https://batdongsan.com.vn/nha-dat-ban/p87?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:47.160+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 83
+[2025-04-25T14:55:48.719+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 88: https://batdongsan.com.vn/nha-dat-ban/p88?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:52.090+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 85
+[2025-04-25T14:55:52.297+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 84
+[2025-04-25T14:55:52.612+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 86
+[2025-04-25T14:55:53.127+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 89: https://batdongsan.com.vn/nha-dat-ban/p89?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:53.327+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 90: https://batdongsan.com.vn/nha-dat-ban/p90?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:53.466+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 91: https://batdongsan.com.vn/nha-dat-ban/p91?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:55:53.925+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 87
+[2025-04-25T14:55:56.872+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 92: https://batdongsan.com.vn/nha-dat-ban/p92?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:02.081+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 88
+[2025-04-25T14:56:03.802+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 93: https://batdongsan.com.vn/nha-dat-ban/p93?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:08.765+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 90
+[2025-04-25T14:56:08.872+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 91
+[2025-04-25T14:56:08.919+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 89
+[2025-04-25T14:56:10.379+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 63664 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:56:10.380+0000] {SaveLinkBatdongsan.py:195} INFO - Progress saved at 90/100 pages
+[2025-04-25T14:56:10.679+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 94: https://batdongsan.com.vn/nha-dat-ban/p94?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:10.923+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 96: https://batdongsan.com.vn/nha-dat-ban/p96?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:11.140+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 95: https://batdongsan.com.vn/nha-dat-ban/p95?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:13.695+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 92
+[2025-04-25T14:56:15.298+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 97: https://batdongsan.com.vn/nha-dat-ban/p97?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:18.125+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 93
+[2025-04-25T14:56:20.192+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 98: https://batdongsan.com.vn/nha-dat-ban/p98?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:22.914+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 96
+[2025-04-25T14:56:22.952+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 95
+[2025-04-25T14:56:23.186+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 94
+[2025-04-25T14:56:24.030+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 99: https://batdongsan.com.vn/nha-dat-ban/p99?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:24.136+0000] {SaveLinkBatdongsan.py:135} INFO - Scraping page 100: https://batdongsan.com.vn/nha-dat-ban/p100?gtn=7-ty&gcn=30-ty
+[2025-04-25T14:56:24.433+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 97
+[2025-04-25T14:56:26.917+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 98
+[2025-04-25T14:56:29.081+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 99
+[2025-04-25T14:56:29.139+0000] {SaveLinkBatdongsan.py:141} INFO - Found 20 links on page 100
+[2025-04-25T14:56:29.322+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 63794 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:56:29.323+0000] {SaveLinkBatdongsan.py:195} INFO - Progress saved at 100/100 pages
+[2025-04-25T14:56:29.445+0000] {SaveLinkBatdongsan.py:125} INFO - Saved 63794 links to /opt/***/data/batdongsan_links.txt
+[2025-04-25T14:56:29.446+0000] {SaveLinkBatdongsan.py:220} INFO - No error URLs to retry.
+[2025-04-25T14:56:29.446+0000] {SaveLinkBatdongsan.py:292} INFO - Scraping process completed.
+[2025-04-25T14:56:29.446+0000] {batdongsan_scraping_dag.py:51} INFO - Successfully completed save_links_task
+[2025-04-25T14:56:29.450+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-25T14:56:29.457+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-25T14:56:29.458+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=batdongsan_scraping, task_id=save_links, run_id=manual__2025-04-25T14:48:25.546057+00:00, execution_date=20250425T144825, start_date=20250425T144826, end_date=20250425T145629
+[2025-04-25T14:56:29.531+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-25T14:56:29.552+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-25T14:56:29.558+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
