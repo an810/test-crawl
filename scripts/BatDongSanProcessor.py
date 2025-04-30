@@ -43,7 +43,7 @@ class BatDongSanProcessor:
             pd.set_option('display.max_columns', None)
 
             # Read input file
-            input_file_path = os.path.join(self.input_dir, 'batdongsan.tsv')
+            input_file_path = os.path.join(self.input_dir, 'hn_batdongsan.tsv')
             if not os.path.exists(input_file_path):
                 raise FileNotFoundError(f"Input file not found: {input_file_path}")
 
@@ -83,7 +83,7 @@ class BatDongSanProcessor:
 
             # Save processed data
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_file_path = os.path.join(self.output_dir, f'batdongsan_cleaned_{timestamp}.tsv')
+            output_file_path = os.path.join(self.output_dir, f'hn_batdongsan_cleaned_{timestamp}.tsv')
             df.to_csv(output_file_path, sep='\t', index=False)
             logging.info(f"Successfully saved processed data to {output_file_path}")
 

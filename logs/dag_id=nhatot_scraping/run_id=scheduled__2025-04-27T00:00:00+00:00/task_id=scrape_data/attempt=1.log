@@ -1,0 +1,1602 @@
+[2025-04-28T00:04:03.071+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-28T00:04:03.097+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nhatot_scraping.scrape_data scheduled__2025-04-27T00:00:00+00:00 [queued]>
+[2025-04-28T00:04:03.147+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nhatot_scraping.scrape_data scheduled__2025-04-27T00:00:00+00:00 [queued]>
+[2025-04-28T00:04:03.149+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-28T00:04:03.184+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): scrape_data> on 2025-04-27 00:00:00+00:00
+[2025-04-28T00:04:03.214+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=45826) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-28T00:04:03.217+0000] {standard_task_runner.py:72} INFO - Started process 46067 to run task
+[2025-04-28T00:04:03.211+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'nhatot_scraping', 'scrape_data', 'scheduled__2025-04-27T00:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/nhatot_scraping_dag.py', '--cfg-path', '/tmp/tmp9krqh79v']
+[2025-04-28T00:04:03.222+0000] {standard_task_runner.py:105} INFO - Job 25: Subtask scrape_data
+[2025-04-28T00:04:03.321+0000] {task_command.py:467} INFO - Running <TaskInstance: nhatot_scraping.scrape_data scheduled__2025-04-27T00:00:00+00:00 [running]> on host 9ba2d9a280bc
+[2025-04-28T00:04:03.568+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nhatot_scraping' AIRFLOW_CTX_TASK_ID='scrape_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-27T00:00:00+00:00'
+[2025-04-28T00:04:03.570+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-28T00:04:03.622+0000] {ScraperNhatot.py:260} INFO - Found 10062 URLs to scrape
+[2025-04-28T00:04:03.673+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/103046685.htm
+[2025-04-28T00:04:03.693+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/103638156.htm
+[2025-04-28T00:04:03.697+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/104049444.htm
+[2025-04-28T00:04:03.699+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/105632120.htm
+[2025-04-28T00:04:03.704+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/105750775.htm
+[2025-04-28T00:04:15.800+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/105904740.htm
+[2025-04-28T00:04:18.849+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/106366347.htm
+[2025-04-28T00:04:19.044+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/106376495.htm
+[2025-04-28T00:04:21.235+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/107080893.htm
+[2025-04-28T00:04:29.607+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/107577769.htm
+[2025-04-28T00:04:32.427+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/109374376.htm
+[2025-04-28T00:04:32.896+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/110126443.htm
+[2025-04-28T00:04:32.909+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/110848334.htm
+[2025-04-28T00:04:34.561+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111195533.htm
+[2025-04-28T00:04:45.816+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111405618.htm
+[2025-04-28T00:04:46.484+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111701070.htm
+[2025-04-28T00:04:46.950+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/111905099.htm
+[2025-04-28T00:04:50.119+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112102337.htm
+[2025-04-28T00:04:53.746+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112456952.htm
+[2025-04-28T00:05:02.229+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112559810.htm
+[2025-04-28T00:05:06.071+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112705299.htm
+[2025-04-28T00:05:07.881+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/112961462.htm
+[2025-04-28T00:05:08.012+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113082417.htm
+[2025-04-28T00:05:10.559+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113174912.htm
+[2025-04-28T00:05:21.780+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113180636.htm
+[2025-04-28T00:05:24.556+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113311957.htm
+[2025-04-28T00:05:26.390+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113602703.htm
+[2025-04-28T00:05:35.764+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113666681.htm
+[2025-04-28T00:05:35.898+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113755237.htm
+[2025-04-28T00:05:40.106+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/113963880.htm
+[2025-04-28T00:05:45.474+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114133460.htm
+[2025-04-28T00:05:52.597+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114389207.htm
+[2025-04-28T00:05:57.210+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114502350.htm
+[2025-04-28T00:06:02.145+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114539540.htm
+[2025-04-28T00:06:09.466+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/112559810.htm
+[2025-04-28T00:06:13.623+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114545173.htm
+[2025-04-28T00:06:13.626+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114786524.htm
+[2025-04-28T00:06:13.639+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/114895869.htm
+[2025-04-28T00:06:13.693+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115029333.htm
+[2025-04-28T00:06:17.394+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115050951.htm
+[2025-04-28T00:06:26.836+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115160683.htm
+[2025-04-28T00:06:27.511+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115160862.htm
+[2025-04-28T00:06:29.576+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115161592.htm
+[2025-04-28T00:06:29.944+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115238315.htm
+[2025-04-28T00:06:31.214+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115243961.htm
+[2025-04-28T00:06:42.487+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115250816.htm
+[2025-04-28T00:06:42.785+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115344999.htm
+[2025-04-28T00:06:44.324+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115485935.htm
+[2025-04-28T00:06:46.090+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115502924.htm
+[2025-04-28T00:06:47.517+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115503726.htm
+[2025-04-28T00:06:58.020+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115566267.htm
+[2025-04-28T00:06:59.409+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115566547.htm
+[2025-04-28T00:07:01.937+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115566758.htm
+[2025-04-28T00:07:04.468+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115715499.htm
+[2025-04-28T00:07:05.384+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115733787.htm
+[2025-04-28T00:07:14.934+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115837812.htm
+[2025-04-28T00:07:15.408+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115875452.htm
+[2025-04-28T00:07:16.752+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115882659.htm
+[2025-04-28T00:07:17.558+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/115979606.htm
+[2025-04-28T00:07:20.981+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116040076.htm
+[2025-04-28T00:07:29.406+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116051391.htm
+[2025-04-28T00:07:30.163+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116132996.htm
+[2025-04-28T00:07:31.599+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116223312.htm
+[2025-04-28T00:07:31.944+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116281543.htm
+[2025-04-28T00:07:35.556+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116294342.htm
+[2025-04-28T00:07:44.948+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116296961.htm
+[2025-04-28T00:07:45.390+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116341244.htm
+[2025-04-28T00:07:45.722+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116386947.htm
+[2025-04-28T00:07:46.231+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116454334.htm
+[2025-04-28T00:07:49.077+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116552663.htm
+[2025-04-28T00:07:59.813+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116671163.htm
+[2025-04-28T00:08:00.190+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116681345.htm
+[2025-04-28T00:08:00.450+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116704442.htm
+[2025-04-28T00:08:00.791+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116711605.htm
+[2025-04-28T00:08:03.896+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116757414.htm
+[2025-04-28T00:08:14.646+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116860203.htm
+[2025-04-28T00:08:15.595+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116912932.htm
+[2025-04-28T00:08:16.128+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116920305.htm
+[2025-04-28T00:08:17.991+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/116967492.htm
+[2025-04-28T00:08:18.134+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117027982.htm
+[2025-04-28T00:08:27.363+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117029953.htm
+[2025-04-28T00:08:30.041+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117107836.htm
+[2025-04-28T00:08:30.621+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117108191.htm
+[2025-04-28T00:08:31.275+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117108602.htm
+[2025-04-28T00:08:32.757+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117139404.htm
+[2025-04-28T00:08:42.060+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117151677.htm
+[2025-04-28T00:08:44.952+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117171766.htm
+[2025-04-28T00:08:45.805+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117271698.htm
+[2025-04-28T00:08:46.165+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117545456.htm
+[2025-04-28T00:08:47.985+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117551544.htm
+[2025-04-28T00:08:55.930+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117582348.htm
+[2025-04-28T00:09:00.145+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117596398.htm
+[2025-04-28T00:09:00.806+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117689180.htm
+[2025-04-28T00:09:01.107+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117743817.htm
+[2025-04-28T00:09:01.638+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117824428.htm
+[2025-04-28T00:09:07.489+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/117596398.htm
+[2025-04-28T00:09:07.668+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117917158.htm
+[2025-04-28T00:09:08.531+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117917324.htm
+[2025-04-28T00:09:13.770+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117928174.htm
+[2025-04-28T00:09:13.804+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117930522.htm
+[2025-04-28T00:09:13.822+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117933604.htm
+[2025-04-28T00:09:22.136+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117952245.htm
+[2025-04-28T00:09:25.517+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117966023.htm
+[2025-04-28T00:09:28.935+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/117985506.htm
+[2025-04-28T00:09:31.152+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118027667.htm
+[2025-04-28T00:09:31.561+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118031816.htm
+[2025-04-28T00:09:38.013+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118063019.htm
+[2025-04-28T00:09:39.172+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118137247.htm
+[2025-04-28T00:09:42.188+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118137824.htm
+[2025-04-28T00:09:43.811+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118141455.htm
+[2025-04-28T00:09:44.566+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118169046.htm
+[2025-04-28T00:09:50.680+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118188379.htm
+[2025-04-28T00:09:56.053+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118266826.htm
+[2025-04-28T00:09:57.126+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118272979.htm
+[2025-04-28T00:10:00.031+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118274905.htm
+[2025-04-28T00:10:03.055+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118288173.htm
+[2025-04-28T00:10:09.361+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118320988.htm
+[2025-04-28T00:10:12.810+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118350462.htm
+[2025-04-28T00:10:14.328+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118383092.htm
+[2025-04-28T00:10:15.053+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118423762.htm
+[2025-04-28T00:10:18.419+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118469287.htm
+[2025-04-28T00:10:24.429+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118596007.htm
+[2025-04-28T00:10:27.792+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118600130.htm
+[2025-04-28T00:10:27.928+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118636500.htm
+[2025-04-28T00:10:30.809+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118669186.htm
+[2025-04-28T00:10:35.195+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118762237.htm
+[2025-04-28T00:10:41.097+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118778490.htm
+[2025-04-28T00:10:42.396+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118786282.htm
+[2025-04-28T00:10:42.853+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118826543.htm
+[2025-04-28T00:10:45.245+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118857546.htm
+[2025-04-28T00:10:49.343+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118904497.htm
+[2025-04-28T00:10:56.309+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118938820.htm
+[2025-04-28T00:10:57.606+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/118959666.htm
+[2025-04-28T00:10:57.924+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119022997.htm
+[2025-04-28T00:11:00.638+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119030713.htm
+[2025-04-28T00:11:02.054+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119044918.htm
+[2025-04-28T00:11:13.683+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119058258.htm
+[2025-04-28T00:11:13.705+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119063225.htm
+[2025-04-28T00:11:17.069+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119072001.htm
+[2025-04-28T00:11:18.268+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119102838.htm
+[2025-04-28T00:11:18.390+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119118098.htm
+[2025-04-28T00:11:26.485+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119118351.htm
+[2025-04-28T00:11:29.791+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119156037.htm
+[2025-04-28T00:11:31.183+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119192043.htm
+[2025-04-28T00:11:32.116+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119218905.htm
+[2025-04-28T00:11:33.164+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119221395.htm
+[2025-04-28T00:11:42.164+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119221600.htm
+[2025-04-28T00:11:43.828+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119224296.htm
+[2025-04-28T00:11:46.904+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119234513.htm
+[2025-04-28T00:11:47.743+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119275885.htm
+[2025-04-28T00:11:48.313+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119288002.htm
+[2025-04-28T00:11:56.700+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119288318.htm
+[2025-04-28T00:11:56.886+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119369647.htm
+[2025-04-28T00:12:01.134+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119393661.htm
+[2025-04-28T00:12:01.318+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119414451.htm
+[2025-04-28T00:12:01.567+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119423660.htm
+[2025-04-28T00:12:08.368+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119423825.htm
+[2025-04-28T00:12:09.809+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119455859.htm
+[2025-04-28T00:12:15.022+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119457039.htm
+[2025-04-28T00:12:15.256+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119470439.htm
+[2025-04-28T00:12:15.657+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119472814.htm
+[2025-04-28T00:12:21.572+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119474021.htm
+[2025-04-28T00:12:25.140+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119477070.htm
+[2025-04-28T00:12:30.923+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119485814.htm
+[2025-04-28T00:12:32.616+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119486507.htm
+[2025-04-28T00:12:34.435+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119489573.htm
+[2025-04-28T00:12:36.123+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119496869.htm
+[2025-04-28T00:12:39.450+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119507873.htm
+[2025-04-28T00:12:46.742+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119528505.htm
+[2025-04-28T00:12:48.182+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119537052.htm
+[2025-04-28T00:12:48.317+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119537193.htm
+[2025-04-28T00:12:50.073+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119557432.htm
+[2025-04-28T00:12:56.615+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119560850.htm
+[2025-04-28T00:13:03.920+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119561567.htm
+[2025-04-28T00:13:04.481+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119565543.htm
+[2025-04-28T00:13:04.985+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119569432.htm
+[2025-04-28T00:13:14.260+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119587180.htm
+[2025-04-28T00:13:23.560+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119593960.htm
+[2025-04-28T00:13:52.540+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/119528505.htm
+[2025-04-28T00:13:52.622+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119602591.htm
+[2025-04-28T00:13:53.125+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119603294.htm
+[2025-04-28T00:13:53.644+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119635582.htm
+[2025-04-28T00:13:53.663+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119662260.htm
+[2025-04-28T00:13:53.947+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119685901.htm
+[2025-04-28T00:14:03.998+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119697975.htm
+[2025-04-28T00:14:04.109+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119698803.htm
+[2025-04-28T00:14:04.263+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119725824.htm
+[2025-04-28T00:14:07.451+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119778561.htm
+[2025-04-28T00:14:10.059+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119814976.htm
+[2025-04-28T00:14:16.880+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119819857.htm
+[2025-04-28T00:14:17.629+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119834122.htm
+[2025-04-28T00:14:17.719+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119834753.htm
+[2025-04-28T00:14:23.452+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119836721.htm
+[2025-04-28T00:14:30.338+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119851031.htm
+[2025-04-28T00:14:34.405+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119860158.htm
+[2025-04-28T00:14:35.069+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119874998.htm
+[2025-04-28T00:14:35.393+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119898207.htm
+[2025-04-28T00:14:44.675+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119918186.htm
+[2025-04-28T00:14:46.065+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119929845.htm
+[2025-04-28T00:14:52.381+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/119929845.htm
+[2025-04-28T00:14:52.447+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119929931.htm
+[2025-04-28T00:15:13.005+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119932439.htm
+[2025-04-28T00:15:21.406+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119934872.htm
+[2025-04-28T00:15:28.958+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119939116.htm
+[2025-04-28T00:15:40.949+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/119860158.htm
+[2025-04-28T00:15:40.963+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/119874998.htm
+[2025-04-28T00:15:41.015+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119942254.htm
+[2025-04-28T00:15:41.032+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119943011.htm
+[2025-04-28T00:15:57.645+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/119929931.htm
+[2025-04-28T00:15:57.774+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119943451.htm
+[2025-04-28T00:16:01.065+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119983871.htm
+[2025-04-28T00:16:14.989+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119990291.htm
+[2025-04-28T00:16:21.916+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/119990711.htm
+[2025-04-28T00:16:25.068+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120001959.htm
+[2025-04-28T00:16:35.865+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120002361.htm
+[2025-04-28T00:16:36.425+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120003636.htm
+[2025-04-28T00:16:37.312+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/119939116.htm
+[2025-04-28T00:16:37.424+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120004241.htm
+[2025-04-28T00:16:46.885+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/119943011.htm
+[2025-04-28T00:16:46.970+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120007018.htm
+[2025-04-28T00:16:55.499+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120016276.htm
+[2025-04-28T00:17:11.201+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120018869.htm
+[2025-04-28T00:17:17.363+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120019091.htm
+[2025-04-28T00:17:21.938+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120020391.htm
+[2025-04-28T00:17:23.227+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120024105.htm
+[2025-04-28T00:17:23.737+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120029449.htm
+[2025-04-28T00:17:29.683+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120030935.htm
+[2025-04-28T00:17:31.819+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120032741.htm
+[2025-04-28T00:17:37.034+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120038095.htm
+[2025-04-28T00:17:37.691+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120042487.htm
+[2025-04-28T00:17:39.850+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120048819.htm
+[2025-04-28T00:17:42.910+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/120038095.htm
+[2025-04-28T00:17:43.080+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120052117.htm
+[2025-04-28T00:17:43.171+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120054582.htm
+[2025-04-28T00:17:45.563+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120102280.htm
+[2025-04-28T00:17:50.202+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120103195.htm
+[2025-04-28T00:17:56.146+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120113838.htm
+[2025-04-28T00:17:57.161+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120132486.htm
+[2025-04-28T00:17:57.791+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120141974.htm
+[2025-04-28T00:18:00.813+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120144562.htm
+[2025-04-28T00:18:04.924+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120146012.htm
+[2025-04-28T00:18:10.774+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120147781.htm
+[2025-04-28T00:18:13.260+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120164732.htm
+[2025-04-28T00:18:13.964+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120180005.htm
+[2025-04-28T00:18:15.592+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120184319.htm
+[2025-04-28T00:18:19.895+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120187461.htm
+[2025-04-28T00:18:23.926+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120197262.htm
+[2025-04-28T00:18:28.523+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120197428.htm
+[2025-04-28T00:18:36.135+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120199623.htm
+[2025-04-28T00:18:42.965+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120202748.htm
+[2025-04-28T00:18:56.435+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120218284.htm
+[2025-04-28T00:19:05.250+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120247428.htm
+[2025-04-28T00:19:09.378+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120276811.htm
+[2025-04-28T00:19:09.540+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120282130.htm
+[2025-04-28T00:19:12.236+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120298602.htm
+[2025-04-28T00:19:17.362+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120299332.htm
+[2025-04-28T00:19:17.482+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120314748.htm
+[2025-04-28T00:19:20.809+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120316525.htm
+[2025-04-28T00:19:25.708+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120324641.htm
+[2025-04-28T00:19:29.798+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/120197262.htm
+[2025-04-28T00:19:29.861+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120348551.htm
+[2025-04-28T00:19:30.574+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120352541.htm
+[2025-04-28T00:19:31.133+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/120187461.htm
+[2025-04-28T00:19:31.197+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120362285.htm
+[2025-04-28T00:19:37.105+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120364024.htm
+[2025-04-28T00:19:39.075+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120376818.htm
+[2025-04-28T00:19:43.864+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120378125.htm
+[2025-04-28T00:19:45.097+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120378976.htm
+[2025-04-28T00:19:45.444+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120407097.htm
+[2025-04-28T00:19:51.330+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120416239.htm
+[2025-04-28T00:19:58.986+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120417386.htm
+[2025-04-28T00:20:02.200+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120418838.htm
+[2025-04-28T00:20:05.636+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120421809.htm
+[2025-04-28T00:20:12.684+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120428174.htm
+[2025-04-28T00:20:14.141+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120430233.htm
+[2025-04-28T00:20:22.245+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120430757.htm
+[2025-04-28T00:20:22.390+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120432056.htm
+[2025-04-28T00:20:22.863+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120452286.htm
+[2025-04-28T00:20:23.094+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/120299332.htm
+[2025-04-28T00:20:23.519+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120468394.htm
+[2025-04-28T00:20:24.766+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120481554.htm
+[2025-04-28T00:20:31.970+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120484302.htm
+[2025-04-28T00:20:32.422+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120484653.htm
+[2025-04-28T00:20:32.559+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120503760.htm
+[2025-04-28T00:20:34.741+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120507971.htm
+[2025-04-28T00:20:35.158+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120512634.htm
+[2025-04-28T00:20:38.945+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120522297.htm
+[2025-04-28T00:20:43.017+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120532539.htm
+[2025-04-28T00:20:45.523+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120551779.htm
+[2025-04-28T00:20:45.585+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120553341.htm
+[2025-04-28T00:20:47.559+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120553462.htm
+[2025-04-28T00:20:52.432+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120558533.htm
+[2025-04-28T00:20:57.490+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120559599.htm
+[2025-04-28T00:20:58.933+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120564428.htm
+[2025-04-28T00:21:00.015+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120565871.htm
+[2025-04-28T00:21:00.577+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120573779.htm
+[2025-04-28T00:21:06.048+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120577202.htm
+[2025-04-28T00:21:07.546+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120580159.htm
+[2025-04-28T00:21:08.637+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120586237.htm
+[2025-04-28T00:21:09.101+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120598967.htm
+[2025-04-28T00:21:10.435+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120605852.htm
+[2025-04-28T00:21:15.002+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120625788.htm
+[2025-04-28T00:21:16.872+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120627377.htm
+[2025-04-28T00:21:17.797+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120628479.htm
+[2025-04-28T00:21:18.641+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120638901.htm
+[2025-04-28T00:21:21.909+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120643102.htm
+[2025-04-28T00:21:25.048+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120656661.htm
+[2025-04-28T00:21:25.294+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120661397.htm
+[2025-04-28T00:21:26.376+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120662372.htm
+[2025-04-28T00:21:28.037+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120664921.htm
+[2025-04-28T00:21:32.208+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120668179.htm
+[2025-04-28T00:21:32.705+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120668794.htm
+[2025-04-28T00:21:33.176+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120669819.htm
+[2025-04-28T00:21:34.278+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120672265.htm
+[2025-04-28T00:21:36.765+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120679715.htm
+[2025-04-28T00:21:41.311+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120686613.htm
+[2025-04-28T00:21:41.774+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120689323.htm
+[2025-04-28T00:21:42.714+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120698777.htm
+[2025-04-28T00:21:44.364+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120704209.htm
+[2025-04-28T00:21:45.398+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120706887.htm
+[2025-04-28T00:21:49.667+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120708267.htm
+[2025-04-28T00:21:50.078+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120715232.htm
+[2025-04-28T00:21:52.729+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120722202.htm
+[2025-04-28T00:21:54.246+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120729869.htm
+[2025-04-28T00:21:56.046+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120730090.htm
+[2025-04-28T00:21:57.179+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120732365.htm
+[2025-04-28T00:21:57.689+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120742514.htm
+[2025-04-28T00:22:00.457+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120753980.htm
+[2025-04-28T00:22:04.109+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120754052.htm
+[2025-04-28T00:22:05.124+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120754645.htm
+[2025-04-28T00:22:05.918+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120755320.htm
+[2025-04-28T00:22:07.121+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120759066.htm
+[2025-04-28T00:22:09.649+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120759243.htm
+[2025-04-28T00:22:12.306+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120760717.htm
+[2025-04-28T00:22:14.554+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120761447.htm
+[2025-04-28T00:22:15.535+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120762367.htm
+[2025-04-28T00:22:17.729+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120767188.htm
+[2025-04-28T00:22:18.948+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120767392.htm
+[2025-04-28T00:22:19.769+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120779226.htm
+[2025-04-28T00:22:23.655+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120780075.htm
+[2025-04-28T00:22:24.967+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120781103.htm
+[2025-04-28T00:22:26.823+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120782014.htm
+[2025-04-28T00:22:27.367+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120794752.htm
+[2025-04-28T00:22:27.712+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120795580.htm
+[2025-04-28T00:22:31.845+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120798461.htm
+[2025-04-28T00:22:32.659+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120803552.htm
+[2025-04-28T00:22:35.086+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120804791.htm
+[2025-04-28T00:22:35.554+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120807957.htm
+[2025-04-28T00:22:35.634+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120809490.htm
+[2025-04-28T00:22:40.290+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120810008.htm
+[2025-04-28T00:22:43.812+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120821290.htm
+[2025-04-28T00:22:43.839+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120823048.htm
+[2025-04-28T00:22:45.348+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120827789.htm
+[2025-04-28T00:22:45.438+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120828038.htm
+[2025-04-28T00:22:48.314+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120833993.htm
+[2025-04-28T00:22:51.789+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120834184.htm
+[2025-04-28T00:22:52.040+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120841684.htm
+[2025-04-28T00:22:53.934+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120843514.htm
+[2025-04-28T00:22:54.119+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120843625.htm
+[2025-04-28T00:22:56.589+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120843748.htm
+[2025-04-28T00:22:59.990+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120844156.htm
+[2025-04-28T00:23:00.370+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120844654.htm
+[2025-04-28T00:23:03.702+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120845431.htm
+[2025-04-28T00:23:04.416+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120848688.htm
+[2025-04-28T00:23:06.934+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120850866.htm
+[2025-04-28T00:23:09.279+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120853588.htm
+[2025-04-28T00:23:10.141+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120855681.htm
+[2025-04-28T00:23:13.334+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120857274.htm
+[2025-04-28T00:23:14.423+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120857972.htm
+[2025-04-28T00:23:15.438+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120858209.htm
+[2025-04-28T00:23:17.485+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120863773.htm
+[2025-04-28T00:23:19.490+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120871335.htm
+[2025-04-28T00:23:22.683+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120873630.htm
+[2025-04-28T00:23:22.972+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120874520.htm
+[2025-04-28T00:23:25.323+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120874980.htm
+[2025-04-28T00:23:26.223+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120876648.htm
+[2025-04-28T00:23:28.971+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120877615.htm
+[2025-04-28T00:23:31.805+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120877946.htm
+[2025-04-28T00:23:32.101+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120879709.htm
+[2025-04-28T00:23:34.069+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120887573.htm
+[2025-04-28T00:23:35.609+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120889161.htm
+[2025-04-28T00:23:36.807+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120892372.htm
+[2025-04-28T00:23:40.029+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120893555.htm
+[2025-04-28T00:23:40.243+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120894536.htm
+[2025-04-28T00:23:42.938+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120897467.htm
+[2025-04-28T00:23:43.852+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120900510.htm
+[2025-04-28T00:23:44.872+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120903321.htm
+[2025-04-28T00:23:48.105+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120912926.htm
+[2025-04-28T00:23:49.243+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120913078.htm
+[2025-04-28T00:23:51.322+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120916063.htm
+[2025-04-28T00:23:53.037+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120917782.htm
+[2025-04-28T00:23:53.043+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120922310.htm
+[2025-04-28T00:23:57.093+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120923982.htm
+[2025-04-28T00:23:57.674+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120927353.htm
+[2025-04-28T00:23:59.813+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120928432.htm
+[2025-04-28T00:24:01.434+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120928531.htm
+[2025-04-28T00:24:03.381+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120931810.htm
+[2025-04-28T00:24:05.727+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120934425.htm
+[2025-04-28T00:24:06.284+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120935266.htm
+[2025-04-28T00:24:09.738+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120943478.htm
+[2025-04-28T00:24:10.363+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120952097.htm
+[2025-04-28T00:24:11.341+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120952184.htm
+[2025-04-28T00:24:14.970+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120956201.htm
+[2025-04-28T00:24:15.083+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120957909.htm
+[2025-04-28T00:24:17.798+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120958589.htm
+[2025-04-28T00:24:19.546+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120959584.htm
+[2025-04-28T00:24:20.078+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120959815.htm
+[2025-04-28T00:24:23.601+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120960037.htm
+[2025-04-28T00:24:24.934+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120968371.htm
+[2025-04-28T00:24:26.047+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120973690.htm
+[2025-04-28T00:24:28.254+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120973760.htm
+[2025-04-28T00:24:28.453+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120975816.htm
+[2025-04-28T00:24:32.318+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120976061.htm
+[2025-04-28T00:24:33.247+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120976085.htm
+[2025-04-28T00:24:35.008+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120982638.htm
+[2025-04-28T00:24:37.792+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120985380.htm
+[2025-04-28T00:24:37.917+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/120999715.htm
+[2025-04-28T00:24:41.133+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121000659.htm
+[2025-04-28T00:24:41.796+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121002104.htm
+[2025-04-28T00:24:44.301+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121007105.htm
+[2025-04-28T00:24:47.019+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121009385.htm
+[2025-04-28T00:24:47.993+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121011817.htm
+[2025-04-28T00:24:50.200+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121016680.htm
+[2025-04-28T00:24:51.172+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121021276.htm
+[2025-04-28T00:24:53.305+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121026611.htm
+[2025-04-28T00:24:55.534+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121031667.htm
+[2025-04-28T00:24:58.755+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121031672.htm
+[2025-04-28T00:24:58.970+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121031678.htm
+[2025-04-28T00:25:00.687+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121035972.htm
+[2025-04-28T00:25:02.126+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121044220.htm
+[2025-04-28T00:25:04.827+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121051612.htm
+[2025-04-28T00:25:06.858+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121055912.htm
+[2025-04-28T00:25:07.296+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121056703.htm
+[2025-04-28T00:25:09.959+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121057317.htm
+[2025-04-28T00:25:10.061+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121075947.htm
+[2025-04-28T00:25:12.587+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121079799.htm
+[2025-04-28T00:25:15.044+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121080761.htm
+[2025-04-28T00:25:15.394+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121081504.htm
+[2025-04-28T00:25:18.956+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121100417.htm
+[2025-04-28T00:25:19.078+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121103862.htm
+[2025-04-28T00:25:21.962+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121109183.htm
+[2025-04-28T00:25:24.091+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121110428.htm
+[2025-04-28T00:25:24.864+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121110434.htm
+[2025-04-28T00:25:27.875+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121113126.htm
+[2025-04-28T00:25:29.059+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121116468.htm
+[2025-04-28T00:25:32.296+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121120231.htm
+[2025-04-28T00:25:33.717+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121120948.htm
+[2025-04-28T00:25:34.644+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121122251.htm
+[2025-04-28T00:25:36.643+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121130324.htm
+[2025-04-28T00:25:38.803+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121131940.htm
+[2025-04-28T00:25:39.951+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121132249.htm
+[2025-04-28T00:25:42.808+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121132541.htm
+[2025-04-28T00:25:43.233+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121132650.htm
+[2025-04-28T00:25:45.926+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121133348.htm
+[2025-04-28T00:25:47.786+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121134804.htm
+[2025-04-28T00:25:48.916+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121134944.htm
+[2025-04-28T00:25:50.553+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121140359.htm
+[2025-04-28T00:25:53.521+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121141882.htm
+[2025-04-28T00:25:55.965+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121143172.htm
+[2025-04-28T00:25:56.264+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121143502.htm
+[2025-04-28T00:25:57.100+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121146459.htm
+[2025-04-28T00:25:58.889+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121155370.htm
+[2025-04-28T00:26:02.486+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121155488.htm
+[2025-04-28T00:26:04.802+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121158449.htm
+[2025-04-28T00:26:05.955+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121165280.htm
+[2025-04-28T00:26:07.042+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121171615.htm
+[2025-04-28T00:26:07.204+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121173982.htm
+[2025-04-28T00:26:12.170+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121182683.htm
+[2025-04-28T00:26:13.427+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121184410.htm
+[2025-04-28T00:26:14.538+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121185412.htm
+[2025-04-28T00:26:15.464+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121191297.htm
+[2025-04-28T00:26:18.116+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121191306.htm
+[2025-04-28T00:26:20.034+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121200790.htm
+[2025-04-28T00:26:22.138+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121201911.htm
+[2025-04-28T00:26:23.734+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121203931.htm
+[2025-04-28T00:26:26.806+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121211107.htm
+[2025-04-28T00:26:29.140+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121217405.htm
+[2025-04-28T00:26:29.633+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121217450.htm
+[2025-04-28T00:26:33.128+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121225562.htm
+[2025-04-28T00:26:42.210+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121226805.htm
+[2025-04-28T00:26:45.280+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121236446.htm
+[2025-04-28T00:26:46.132+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121240719.htm
+[2025-04-28T00:26:46.161+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121242082.htm
+[2025-04-28T00:26:49.359+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121249595.htm
+[2025-04-28T00:26:52.525+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121250318.htm
+[2025-04-28T00:26:54.036+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121251897.htm
+[2025-04-28T00:26:55.165+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121252009.htm
+[2025-04-28T00:26:55.752+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121254682.htm
+[2025-04-28T00:26:57.343+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121257192.htm
+[2025-04-28T00:27:00.830+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121257324.htm
+[2025-04-28T00:27:03.933+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121257358.htm
+[2025-04-28T00:27:03.972+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121259076.htm
+[2025-04-28T00:27:04.280+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121259305.htm
+[2025-04-28T00:27:05.961+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121261497.htm
+[2025-04-28T00:27:10.352+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121261597.htm
+[2025-04-28T00:27:12.380+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121261791.htm
+[2025-04-28T00:27:12.473+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121265883.htm
+[2025-04-28T00:27:12.765+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121267226.htm
+[2025-04-28T00:27:14.819+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121279279.htm
+[2025-04-28T00:27:21.504+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121284553.htm
+[2025-04-28T00:27:21.543+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121285029.htm
+[2025-04-28T00:27:21.586+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121286438.htm
+[2025-04-28T00:27:21.663+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121289817.htm
+[2025-04-28T00:27:23.517+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121293306.htm
+[2025-04-28T00:27:30.690+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121297294.htm
+[2025-04-28T00:27:31.516+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121298734.htm
+[2025-04-28T00:27:32.336+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121303527.htm
+[2025-04-28T00:27:33.008+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121305921.htm
+[2025-04-28T00:27:38.198+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121306390.htm
+[2025-04-28T00:27:39.052+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121311021.htm
+[2025-04-28T00:27:40.034+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121311571.htm
+[2025-04-28T00:27:40.839+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121311890.htm
+[2025-04-28T00:27:47.367+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121320599.htm
+[2025-04-28T00:27:48.405+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121322111.htm
+[2025-04-28T00:27:49.203+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121333311.htm
+[2025-04-28T00:27:53.548+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121333318.htm
+[2025-04-28T00:27:54.470+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121333999.htm
+[2025-04-28T00:27:56.069+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121335081.htm
+[2025-04-28T00:27:57.072+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121335281.htm
+[2025-04-28T00:28:00.929+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121335462.htm
+[2025-04-28T00:28:01.830+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121336403.htm
+[2025-04-28T00:28:02.513+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121338782.htm
+[2025-04-28T00:28:04.331+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121346955.htm
+[2025-04-28T00:28:05.530+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121349717.htm
+[2025-04-28T00:28:09.675+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121349735.htm
+[2025-04-28T00:28:11.956+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121354474.htm
+[2025-04-28T00:28:13.606+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121354697.htm
+[2025-04-28T00:28:14.394+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121355087.htm
+[2025-04-28T00:28:16.782+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121355152.htm
+[2025-04-28T00:28:17.124+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121355324.htm
+[2025-04-28T00:28:21.159+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121355400.htm
+[2025-04-28T00:28:21.825+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121361491.htm
+[2025-04-28T00:28:24.987+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121361515.htm
+[2025-04-28T00:28:25.427+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121367037.htm
+[2025-04-28T00:28:26.229+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121368018.htm
+[2025-04-28T00:28:29.284+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121372789.htm
+[2025-04-28T00:28:29.566+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121374300.htm
+[2025-04-28T00:28:32.985+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121380248.htm
+[2025-04-28T00:28:33.360+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121391346.htm
+[2025-04-28T00:28:34.174+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121393024.htm
+[2025-04-28T00:28:38.412+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121396830.htm
+[2025-04-28T00:28:39.587+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121402848.htm
+[2025-04-28T00:28:41.824+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121403085.htm
+[2025-04-28T00:28:42.410+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121408709.htm
+[2025-04-28T00:28:42.527+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121412865.htm
+[2025-04-28T00:28:47.044+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121426085.htm
+[2025-04-28T00:28:48.192+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121431795.htm
+[2025-04-28T00:28:49.913+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121434273.htm
+[2025-04-28T00:28:52.522+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121436197.htm
+[2025-04-28T00:28:52.669+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121440103.htm
+[2025-04-28T00:28:54.923+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121441288.htm
+[2025-04-28T00:28:57.461+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121441352.htm
+[2025-04-28T00:29:00.014+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121444549.htm
+[2025-04-28T00:29:02.305+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121445096.htm
+[2025-04-28T00:29:02.306+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121450106.htm
+[2025-04-28T00:29:03.494+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121455394.htm
+[2025-04-28T00:29:07.685+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121470252.htm
+[2025-04-28T00:29:09.227+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121475491.htm
+[2025-04-28T00:29:10.730+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121477294.htm
+[2025-04-28T00:29:11.573+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121478893.htm
+[2025-04-28T00:29:11.804+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121478917.htm
+[2025-04-28T00:29:15.216+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121482142.htm
+[2025-04-28T00:29:17.933+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121483903.htm
+[2025-04-28T00:29:18.435+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121484741.htm
+[2025-04-28T00:29:21.447+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121491116.htm
+[2025-04-28T00:29:22.677+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121494883.htm
+[2025-04-28T00:29:23.683+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121495619.htm
+[2025-04-28T00:29:27.414+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121497920.htm
+[2025-04-28T00:29:29.127+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121500736.htm
+[2025-04-28T00:29:31.550+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121505879.htm
+[2025-04-28T00:29:31.757+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121509691.htm
+[2025-04-28T00:29:32.405+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121511518.htm
+[2025-04-28T00:29:35.791+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121511715.htm
+[2025-04-28T00:29:38.863+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121514317.htm
+[2025-04-28T00:29:40.292+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121517244.htm
+[2025-04-28T00:29:41.446+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121517297.htm
+[2025-04-28T00:29:41.485+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121522076.htm
+[2025-04-28T00:29:45.145+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121525106.htm
+[2025-04-28T00:29:47.245+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121525817.htm
+[2025-04-28T00:29:49.348+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121526818.htm
+[2025-04-28T00:29:50.425+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121526899.htm
+[2025-04-28T00:29:51.339+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121546033.htm
+[2025-04-28T00:29:53.047+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121547117.htm
+[2025-04-28T00:29:54.652+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121547339.htm
+[2025-04-28T00:29:57.963+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121552692.htm
+[2025-04-28T00:29:59.694+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121552693.htm
+[2025-04-28T00:30:00.472+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121555423.htm
+[2025-04-28T00:30:01.931+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121560062.htm
+[2025-04-28T00:30:04.561+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121569423.htm
+[2025-04-28T00:30:05.883+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121576821.htm
+[2025-04-28T00:30:10.431+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121581825.htm
+[2025-04-28T00:30:11.047+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121582206.htm
+[2025-04-28T00:30:11.362+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121587186.htm
+[2025-04-28T00:30:14.814+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121590135.htm
+[2025-04-28T00:30:15.527+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121595996.htm
+[2025-04-28T00:30:19.308+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121596156.htm
+[2025-04-28T00:30:19.994+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121598752.htm
+[2025-04-28T00:30:20.194+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121600332.htm
+[2025-04-28T00:30:23.241+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121602793.htm
+[2025-04-28T00:30:23.340+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121603155.htm
+[2025-04-28T00:30:25.947+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121605611.htm
+[2025-04-28T00:30:28.991+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121612174.htm
+[2025-04-28T00:30:30.649+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121612879.htm
+[2025-04-28T00:30:33.218+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121619038.htm
+[2025-04-28T00:30:33.333+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121619640.htm
+[2025-04-28T00:30:36.307+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121621271.htm
+[2025-04-28T00:30:39.399+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121623821.htm
+[2025-04-28T00:30:39.622+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121624228.htm
+[2025-04-28T00:30:41.626+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121628885.htm
+[2025-04-28T00:30:42.512+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121631350.htm
+[2025-04-28T00:30:46.408+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121633675.htm
+[2025-04-28T00:30:48.614+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121636266.htm
+[2025-04-28T00:30:48.847+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121637741.htm
+[2025-04-28T00:30:51.400+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121638263.htm
+[2025-04-28T00:30:52.545+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121638760.htm
+[2025-04-28T00:30:54.746+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121640658.htm
+[2025-04-28T00:30:57.737+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121643552.htm
+[2025-04-28T00:30:58.321+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121646916.htm
+[2025-04-28T00:31:01.197+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121647669.htm
+[2025-04-28T00:31:01.324+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121650020.htm
+[2025-04-28T00:31:04.071+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121650463.htm
+[2025-04-28T00:31:05.355+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121652328.htm
+[2025-04-28T00:31:08.639+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121656327.htm
+[2025-04-28T00:31:09.333+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121659178.htm
+[2025-04-28T00:31:12.129+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121659529.htm
+[2025-04-28T00:31:12.728+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121661943.htm
+[2025-04-28T00:31:14.791+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121664588.htm
+[2025-04-28T00:31:17.231+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121672346.htm
+[2025-04-28T00:31:20.076+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121672585.htm
+[2025-04-28T00:31:20.478+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121673956.htm
+[2025-04-28T00:31:21.280+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121676811.htm
+[2025-04-28T00:31:24.459+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121680538.htm
+[2025-04-28T00:31:25.285+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121684597.htm
+[2025-04-28T00:31:26.971+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121702054.htm
+[2025-04-28T00:31:28.864+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121705197.htm
+[2025-04-28T00:31:29.640+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121705206.htm
+[2025-04-28T00:31:32.710+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121719587.htm
+[2025-04-28T00:31:35.955+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121720614.htm
+[2025-04-28T00:31:37.653+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121724253.htm
+[2025-04-28T00:31:38.654+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121730015.htm
+[2025-04-28T00:31:39.252+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121730441.htm
+[2025-04-28T00:31:43.707+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121743503.htm
+[2025-04-28T00:31:46.830+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121744198.htm
+[2025-04-28T00:31:46.925+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121745872.htm
+[2025-04-28T00:31:46.992+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121754874.htm
+[2025-04-28T00:31:48.900+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121764741.htm
+[2025-04-28T00:31:53.257+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121764742.htm
+[2025-04-28T00:31:55.460+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121769064.htm
+[2025-04-28T00:31:55.866+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121771525.htm
+[2025-04-28T00:31:56.988+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121772282.htm
+[2025-04-28T00:31:57.342+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121776616.htm
+[2025-04-28T00:32:02.271+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121780000.htm
+[2025-04-28T00:32:03.688+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121782320.htm
+[2025-04-28T00:32:05.408+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121788566.htm
+[2025-04-28T00:32:06.497+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121791424.htm
+[2025-04-28T00:32:07.067+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121794130.htm
+[2025-04-28T00:32:09.866+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121795950.htm
+[2025-04-28T00:32:12.388+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121797579.htm
+[2025-04-28T00:32:13.319+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121803053.htm
+[2025-04-28T00:32:18.876+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121803432.htm
+[2025-04-28T00:32:18.959+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121806319.htm
+[2025-04-28T00:32:21.208+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121812020.htm
+[2025-04-28T00:32:23.768+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121814450.htm
+[2025-04-28T00:32:24.208+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121815046.htm
+[2025-04-28T00:32:28.936+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121816671.htm
+[2025-04-28T00:32:31.342+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121831485.htm
+[2025-04-28T00:32:31.438+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121832230.htm
+[2025-04-28T00:32:32.236+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121832303.htm
+[2025-04-28T00:32:36.847+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121836748.htm
+[2025-04-28T00:32:39.310+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121840158.htm
+[2025-04-28T00:32:39.450+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121841027.htm
+[2025-04-28T00:32:40.035+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121842790.htm
+[2025-04-28T00:32:40.960+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121843247.htm
+[2025-04-28T00:32:47.623+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/121843247.htm
+[2025-04-28T00:32:47.698+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121844909.htm
+[2025-04-28T00:32:47.725+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121844986.htm
+[2025-04-28T00:32:48.215+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121845467.htm
+[2025-04-28T00:32:48.826+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121848970.htm
+[2025-04-28T00:32:48.945+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121851903.htm
+[2025-04-28T00:33:00.807+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121852287.htm
+[2025-04-28T00:33:00.868+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121855248.htm
+[2025-04-28T00:33:01.437+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121858100.htm
+[2025-04-28T00:33:01.766+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121860093.htm
+[2025-04-28T00:33:04.027+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121861479.htm
+[2025-04-28T00:33:11.257+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121866112.htm
+[2025-04-28T00:33:13.712+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121866258.htm
+[2025-04-28T00:33:14.337+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121870396.htm
+[2025-04-28T00:33:17.058+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121870573.htm
+[2025-04-28T00:33:18.815+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121870908.htm
+[2025-04-28T00:33:22.446+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121871093.htm
+[2025-04-28T00:33:22.850+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121878938.htm
+[2025-04-28T00:33:25.629+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121886224.htm
+[2025-04-28T00:33:26.854+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121886227.htm
+[2025-04-28T00:33:30.350+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121894647.htm
+[2025-04-28T00:33:31.008+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121904375.htm
+[2025-04-28T00:33:33.098+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121917924.htm
+[2025-04-28T00:33:34.258+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121925537.htm
+[2025-04-28T00:33:37.574+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121933815.htm
+[2025-04-28T00:33:39.917+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121936885.htm
+[2025-04-28T00:33:41.793+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121937011.htm
+[2025-04-28T00:33:42.884+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121939513.htm
+[2025-04-28T00:33:46.767+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121940500.htm
+[2025-04-28T00:33:48.575+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121940769.htm
+[2025-04-28T00:33:48.787+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121941186.htm
+[2025-04-28T00:33:49.651+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121941864.htm
+[2025-04-28T00:33:53.980+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121948849.htm
+[2025-04-28T00:33:56.902+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121948885.htm
+[2025-04-28T00:33:58.056+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121953802.htm
+[2025-04-28T00:33:58.852+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121953936.htm
+[2025-04-28T00:34:04.030+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121954831.htm
+[2025-04-28T00:34:07.707+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121962164.htm
+[2025-04-28T00:34:08.148+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121962595.htm
+[2025-04-28T00:34:08.373+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121964428.htm
+[2025-04-28T00:34:13.202+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121966034.htm
+[2025-04-28T00:34:16.115+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121973446.htm
+[2025-04-28T00:34:16.745+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121984018.htm
+[2025-04-28T00:34:18.210+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121987766.htm
+[2025-04-28T00:34:20.993+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121987823.htm
+[2025-04-28T00:34:25.412+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121988159.htm
+[2025-04-28T00:34:25.601+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121995886.htm
+[2025-04-28T00:34:27.416+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121997553.htm
+[2025-04-28T00:34:29.806+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121998152.htm
+[2025-04-28T00:34:33.277+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/121998616.htm
+[2025-04-28T00:34:34.179+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122005176.htm
+[2025-04-28T00:34:36.312+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122005689.htm
+[2025-04-28T00:34:38.447+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122006235.htm
+[2025-04-28T00:34:41.774+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122012362.htm
+[2025-04-28T00:34:42.531+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122017172.htm
+[2025-04-28T00:34:45.794+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122018791.htm
+[2025-04-28T00:34:46.055+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122022794.htm
+[2025-04-28T00:34:50.780+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122022937.htm
+[2025-04-28T00:34:51.419+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122025331.htm
+[2025-04-28T00:34:53.467+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122026271.htm
+[2025-04-28T00:34:54.578+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122027806.htm
+[2025-04-28T00:34:56.207+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122030634.htm
+[2025-04-28T00:34:59.488+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122031320.htm
+[2025-04-28T00:35:00.277+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122034364.htm
+[2025-04-28T00:35:01.511+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122044670.htm
+[2025-04-28T00:35:03.778+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122049935.htm
+[2025-04-28T00:35:05.053+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122050260.htm
+[2025-04-28T00:35:06.907+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122058603.htm
+[2025-04-28T00:35:07.965+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122059612.htm
+[2025-04-28T00:35:12.762+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122060169.htm
+[2025-04-28T00:35:13.639+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122061187.htm
+[2025-04-28T00:35:14.537+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122063735.htm
+[2025-04-28T00:35:15.325+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122070959.htm
+[2025-04-28T00:35:16.751+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122077090.htm
+[2025-04-28T00:35:21.630+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122084653.htm
+[2025-04-28T00:35:23.257+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122087917.htm
+[2025-04-28T00:35:24.725+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122098922.htm
+[2025-04-28T00:35:25.738+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122099627.htm
+[2025-04-28T00:35:28.107+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122104646.htm
+[2025-04-28T00:35:29.837+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122105377.htm
+[2025-04-28T00:35:31.394+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122105752.htm
+[2025-04-28T00:35:34.134+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122117179.htm
+[2025-04-28T00:35:35.866+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122117521.htm
+[2025-04-28T00:35:38.232+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122119787.htm
+[2025-04-28T00:35:38.465+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122120775.htm
+[2025-04-28T00:35:40.846+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122120922.htm
+[2025-04-28T00:35:42.867+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122121182.htm
+[2025-04-28T00:35:45.209+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122122874.htm
+[2025-04-28T00:35:45.831+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122127375.htm
+[2025-04-28T00:35:49.936+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122127999.htm
+[2025-04-28T00:35:51.326+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122128337.htm
+[2025-04-28T00:35:52.611+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122128360.htm
+[2025-04-28T00:35:55.379+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122128573.htm
+[2025-04-28T00:35:56.633+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122129088.htm
+[2025-04-28T00:35:59.044+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122131838.htm
+[2025-04-28T00:35:59.925+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122134651.htm
+[2025-04-28T00:36:01.864+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122137292.htm
+[2025-04-28T00:36:04.355+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122137528.htm
+[2025-04-28T00:36:05.889+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122137985.htm
+[2025-04-28T00:36:08.300+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122139346.htm
+[2025-04-28T00:36:09.302+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122141133.htm
+[2025-04-28T00:36:10.446+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122141790.htm
+[2025-04-28T00:36:14.447+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122141844.htm
+[2025-04-28T00:36:16.116+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122152746.htm
+[2025-04-28T00:36:16.770+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122159166.htm
+[2025-04-28T00:36:17.673+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122159715.htm
+[2025-04-28T00:36:18.488+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122167327.htm
+[2025-04-28T00:36:23.280+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122173412.htm
+[2025-04-28T00:36:27.879+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122174445.htm
+[2025-04-28T00:36:27.953+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122175148.htm
+[2025-04-28T00:36:28.173+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122175208.htm
+[2025-04-28T00:36:28.851+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122179399.htm
+[2025-04-28T00:36:32.795+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122188720.htm
+[2025-04-28T00:36:35.941+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122189618.htm
+[2025-04-28T00:36:36.208+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122192623.htm
+[2025-04-28T00:36:36.758+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122197738.htm
+[2025-04-28T00:36:37.468+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122200939.htm
+[2025-04-28T00:36:41.356+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122202167.htm
+[2025-04-28T00:36:44.007+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122207890.htm
+[2025-04-28T00:36:44.841+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122208032.htm
+[2025-04-28T00:36:45.072+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122210117.htm
+[2025-04-28T00:36:47.699+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122210229.htm
+[2025-04-28T00:36:50.917+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122212546.htm
+[2025-04-28T00:36:53.168+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122213116.htm
+[2025-04-28T00:36:53.427+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122218721.htm
+[2025-04-28T00:36:54.803+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122225415.htm
+[2025-04-28T00:36:56.567+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122230561.htm
+[2025-04-28T00:36:59.224+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122232288.htm
+[2025-04-28T00:37:03.084+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122235745.htm
+[2025-04-28T00:37:03.227+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122239119.htm
+[2025-04-28T00:37:03.333+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122241342.htm
+[2025-04-28T00:37:06.639+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122243287.htm
+[2025-04-28T00:37:07.524+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122245103.htm
+[2025-04-28T00:37:11.446+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122245847.htm
+[2025-04-28T00:37:11.452+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122255819.htm
+[2025-04-28T00:37:12.083+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122258599.htm
+[2025-04-28T00:37:14.194+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122258853.htm
+[2025-04-28T00:37:18.122+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122258958.htm
+[2025-04-28T00:37:19.869+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122261278.htm
+[2025-04-28T00:37:20.756+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122262722.htm
+[2025-04-28T00:37:22.710+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122267466.htm
+[2025-04-28T00:37:22.979+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122276119.htm
+[2025-04-28T00:37:28.292+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122283866.htm
+[2025-04-28T00:37:31.702+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122284244.htm
+[2025-04-28T00:37:36.228+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122287250.htm
+[2025-04-28T00:37:36.473+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122287529.htm
+[2025-04-28T00:37:36.819+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122288417.htm
+[2025-04-28T00:37:39.879+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122293071.htm
+[2025-04-28T00:37:39.886+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122295077.htm
+[2025-04-28T00:37:44.137+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122301198.htm
+[2025-04-28T00:37:45.739+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122302631.htm
+[2025-04-28T00:37:49.509+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122308181.htm
+[2025-04-28T00:37:49.516+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122312775.htm
+[2025-04-28T00:37:49.521+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122313542.htm
+[2025-04-28T00:37:57.719+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122316595.htm
+[2025-04-28T00:37:57.721+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122318086.htm
+[2025-04-28T00:37:57.840+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122321445.htm
+[2025-04-28T00:37:57.909+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122321734.htm
+[2025-04-28T00:37:59.566+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122322760.htm
+[2025-04-28T00:38:06.302+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122324227.htm
+[2025-04-28T00:38:07.045+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122324375.htm
+[2025-04-28T00:38:07.913+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122324835.htm
+[2025-04-28T00:38:08.144+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122335236.htm
+[2025-04-28T00:38:12.861+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122338968.htm
+[2025-04-28T00:38:15.035+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122339261.htm
+[2025-04-28T00:38:16.456+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122341911.htm
+[2025-04-28T00:38:16.834+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122345605.htm
+[2025-04-28T00:38:19.052+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122348268.htm
+[2025-04-28T00:38:21.125+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122357629.htm
+[2025-04-28T00:38:25.317+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122362045.htm
+[2025-04-28T00:38:26.332+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122365332.htm
+[2025-04-28T00:38:28.333+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122365852.htm
+[2025-04-28T00:38:29.695+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122368310.htm
+[2025-04-28T00:38:30.688+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122372782.htm
+[2025-04-28T00:38:32.456+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122372913.htm
+[2025-04-28T00:38:33.324+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122374389.htm
+[2025-04-28T00:38:36.384+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122379872.htm
+[2025-04-28T00:38:38.873+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122382725.htm
+[2025-04-28T00:38:39.177+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122382763.htm
+[2025-04-28T00:38:40.881+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122383824.htm
+[2025-04-28T00:38:42.535+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122392641.htm
+[2025-04-28T00:38:44.827+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122398697.htm
+[2025-04-28T00:38:47.079+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122398905.htm
+[2025-04-28T00:38:48.035+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122398936.htm
+[2025-04-28T00:38:49.568+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122400466.htm
+[2025-04-28T00:38:51.477+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122403922.htm
+[2025-04-28T00:38:55.075+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122403993.htm
+[2025-04-28T00:38:55.905+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122404553.htm
+[2025-04-28T00:38:56.829+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122406015.htm
+[2025-04-28T00:39:00.672+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122409010.htm
+[2025-04-28T00:39:04.127+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122410427.htm
+[2025-04-28T00:39:04.872+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122412108.htm
+[2025-04-28T00:39:05.749+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122419062.htm
+[2025-04-28T00:39:07.066+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122422304.htm
+[2025-04-28T00:39:12.801+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122423052.htm
+[2025-04-28T00:39:13.047+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122423188.htm
+[2025-04-28T00:39:13.602+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122425961.htm
+[2025-04-28T00:39:14.765+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122430879.htm
+[2025-04-28T00:39:15.377+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122456514.htm
+[2025-04-28T00:39:22.053+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122462545.htm
+[2025-04-28T00:39:24.437+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122464957.htm
+[2025-04-28T00:39:26.239+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122468708.htm
+[2025-04-28T00:39:26.429+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122468794.htm
+[2025-04-28T00:39:26.989+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122470912.htm
+[2025-04-28T00:39:31.453+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122477975.htm
+[2025-04-28T00:39:45.250+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122478773.htm
+[2025-04-28T00:39:52.018+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122480683.htm
+[2025-04-28T00:40:30.468+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122485722.htm
+[2025-04-28T00:40:30.488+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122485776.htm
+[2025-04-28T00:40:30.904+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122492850.htm
+[2025-04-28T00:40:31.379+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122496125.htm
+[2025-04-28T00:40:32.284+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122498445.htm
+[2025-04-28T00:40:39.586+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122501139.htm
+[2025-04-28T00:40:39.877+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122502635.htm
+[2025-04-28T00:40:40.058+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122511073.htm
+[2025-04-28T00:40:40.322+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122514896.htm
+[2025-04-28T00:40:45.016+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122515228.htm
+[2025-04-28T00:40:48.041+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122515537.htm
+[2025-04-28T00:40:48.842+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122515654.htm
+[2025-04-28T00:40:51.014+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122515719.htm
+[2025-04-28T00:40:51.801+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122515956.htm
+[2025-04-28T00:40:53.168+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122516778.htm
+[2025-04-28T00:40:56.676+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122518532.htm
+[2025-04-28T00:40:57.824+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122522305.htm
+[2025-04-28T00:40:58.937+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122524103.htm
+[2025-04-28T00:41:01.158+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122524127.htm
+[2025-04-28T00:41:02.153+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122524594.htm
+[2025-04-28T00:41:04.363+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122527114.htm
+[2025-04-28T00:41:06.570+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122529189.htm
+[2025-04-28T00:41:08.237+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122529971.htm
+[2025-04-28T00:41:09.406+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122534123.htm
+[2025-04-28T00:41:13.092+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122534268.htm
+[2025-04-28T00:41:13.772+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122534559.htm
+[2025-04-28T00:41:15.293+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122536322.htm
+[2025-04-28T00:41:16.670+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122541401.htm
+[2025-04-28T00:41:18.848+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122541457.htm
+[2025-04-28T00:41:20.900+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122544960.htm
+[2025-04-28T00:41:21.316+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122545734.htm
+[2025-04-28T00:41:25.321+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122545875.htm
+[2025-04-28T00:41:25.331+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122547232.htm
+[2025-04-28T00:41:26.866+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122547759.htm
+[2025-04-28T00:41:28.221+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122558247.htm
+[2025-04-28T00:41:30.702+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122559977.htm
+[2025-04-28T00:41:33.859+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122563742.htm
+[2025-04-28T00:41:35.810+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122564828.htm
+[2025-04-28T00:41:36.562+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122584111.htm
+[2025-04-28T00:41:38.162+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122584431.htm
+[2025-04-28T00:41:40.464+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122584908.htm
+[2025-04-28T00:41:43.509+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122584971.htm
+[2025-04-28T00:41:44.455+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122587814.htm
+[2025-04-28T00:41:46.767+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122589817.htm
+[2025-04-28T00:41:47.245+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122591766.htm
+[2025-04-28T00:41:50.414+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122593503.htm
+[2025-04-28T00:41:50.908+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122594079.htm
+[2025-04-28T00:41:52.962+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122598077.htm
+[2025-04-28T00:41:55.145+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122598485.htm
+[2025-04-28T00:41:55.539+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122602405.htm
+[2025-04-28T00:41:58.777+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122603256.htm
+[2025-04-28T00:42:00.717+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122603894.htm
+[2025-04-28T00:42:00.983+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/122598485.htm
+[2025-04-28T00:42:01.068+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122604470.htm
+[2025-04-28T00:42:01.361+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122611172.htm
+[2025-04-28T00:42:05.731+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122613432.htm
+[2025-04-28T00:42:07.047+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122615006.htm
+[2025-04-28T00:42:09.019+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122617258.htm
+[2025-04-28T00:42:09.962+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122619180.htm
+[2025-04-28T00:42:10.158+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122622012.htm
+[2025-04-28T00:42:14.266+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122623858.htm
+[2025-04-28T00:42:14.983+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122626980.htm
+[2025-04-28T00:42:15.210+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122627488.htm
+[2025-04-28T00:42:18.968+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122629426.htm
+[2025-04-28T00:42:19.388+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122637077.htm
+[2025-04-28T00:42:23.245+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122638810.htm
+[2025-04-28T00:42:27.592+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122639249.htm
+[2025-04-28T00:42:27.603+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122639538.htm
+[2025-04-28T00:42:28.374+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122640049.htm
+[2025-04-28T00:42:30.782+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122640421.htm
+[2025-04-28T00:42:34.155+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122642113.htm
+[2025-04-28T00:42:34.766+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122642277.htm
+[2025-04-28T00:42:36.142+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122642390.htm
+[2025-04-28T00:42:36.348+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122643441.htm
+[2025-04-28T00:42:43.522+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122648301.htm
+[2025-04-28T00:42:43.639+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122648560.htm
+[2025-04-28T00:42:45.398+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122649177.htm
+[2025-04-28T00:42:45.497+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122649570.htm
+[2025-04-28T00:42:46.583+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122650636.htm
+[2025-04-28T00:42:52.711+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122650794.htm
+[2025-04-28T00:42:52.824+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122656358.htm
+[2025-04-28T00:42:54.886+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122656434.htm
+[2025-04-28T00:42:55.656+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122656599.htm
+[2025-04-28T00:42:57.173+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122657816.htm
+[2025-04-28T00:43:00.497+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122658615.htm
+[2025-04-28T00:43:01.643+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122660777.htm
+[2025-04-28T00:43:03.108+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122661945.htm
+[2025-04-28T00:43:03.611+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122665768.htm
+[2025-04-28T00:43:06.505+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122665980.htm
+[2025-04-28T00:43:10.086+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122667484.htm
+[2025-04-28T00:43:10.582+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122667690.htm
+[2025-04-28T00:43:11.952+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122671295.htm
+[2025-04-28T00:43:13.823+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122672013.htm
+[2025-04-28T00:43:15.699+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122673405.htm
+[2025-04-28T00:43:18.629+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122673949.htm
+[2025-04-28T00:43:19.407+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122677040.htm
+[2025-04-28T00:43:21.428+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122677896.htm
+[2025-04-28T00:43:23.857+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122678369.htm
+[2025-04-28T00:43:25.507+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122678531.htm
+[2025-04-28T00:43:27.035+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122679094.htm
+[2025-04-28T00:43:27.063+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122680517.htm
+[2025-04-28T00:43:31.494+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122681320.htm
+[2025-04-28T00:43:32.464+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122682728.htm
+[2025-04-28T00:43:35.643+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122683801.htm
+[2025-04-28T00:43:35.981+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122684094.htm
+[2025-04-28T00:43:36.373+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122685107.htm
+[2025-04-28T00:43:41.755+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122687579.htm
+[2025-04-28T00:43:42.033+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122687805.htm
+[2025-04-28T00:43:43.556+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122687922.htm
+[2025-04-28T00:43:43.677+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122688137.htm
+[2025-04-28T00:43:47.009+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122688912.htm
+[2025-04-28T00:43:56.893+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122692151.htm
+[2025-04-28T00:43:57.540+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122693740.htm
+[2025-04-28T00:43:58.475+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122694594.htm
+[2025-04-28T00:43:58.630+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122694753.htm
+[2025-04-28T00:43:59.400+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122697428.htm
+[2025-04-28T00:44:06.456+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122699672.htm
+[2025-04-28T00:44:07.253+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122700149.htm
+[2025-04-28T00:44:09.006+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122701956.htm
+[2025-04-28T00:44:09.034+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122702655.htm
+[2025-04-28T00:44:09.217+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122704613.htm
+[2025-04-28T00:44:14.808+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122706066.htm
+[2025-04-28T00:44:17.891+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122706934.htm
+[2025-04-28T00:44:17.989+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122707035.htm
+[2025-04-28T00:44:18.803+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122707521.htm
+[2025-04-28T00:44:21.311+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122707683.htm
+[2025-04-28T00:44:24.713+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122711871.htm
+[2025-04-28T00:44:25.862+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122712149.htm
+[2025-04-28T00:44:26.257+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122718364.htm
+[2025-04-28T00:44:36.408+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122719137.htm
+[2025-04-28T00:44:38.878+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122719788.htm
+[2025-04-28T00:44:38.902+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122720505.htm
+[2025-04-28T00:44:38.908+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122722864.htm
+[2025-04-28T00:44:40.205+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122722885.htm
+[2025-04-28T00:44:46.715+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122723343.htm
+[2025-04-28T00:44:46.844+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122725153.htm
+[2025-04-28T00:44:47.337+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122726108.htm
+[2025-04-28T00:44:47.389+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122727327.htm
+[2025-04-28T00:44:50.288+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122729945.htm
+[2025-04-28T00:44:55.915+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122732851.htm
+[2025-04-28T00:44:57.266+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122733017.htm
+[2025-04-28T00:44:58.894+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122733093.htm
+[2025-04-28T00:44:59.019+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122733339.htm
+[2025-04-28T00:44:59.399+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122733475.htm
+[2025-04-28T00:45:04.095+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122734092.htm
+[2025-04-28T00:45:06.268+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122734273.htm
+[2025-04-28T00:45:07.202+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122736838.htm
+[2025-04-28T00:45:07.811+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122737082.htm
+[2025-04-28T00:45:10.875+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122737173.htm
+[2025-04-28T00:45:13.053+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122737221.htm
+[2025-04-28T00:45:14.343+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122737241.htm
+[2025-04-28T00:45:15.154+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122737268.htm
+[2025-04-28T00:45:16.467+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122737775.htm
+[2025-04-28T00:45:20.533+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122738198.htm
+[2025-04-28T00:45:23.573+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122741255.htm
+[2025-04-28T00:45:24.246+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122741326.htm
+[2025-04-28T00:45:25.382+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122744617.htm
+[2025-04-28T00:45:25.760+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122746940.htm
+[2025-04-28T00:45:31.038+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122747172.htm
+[2025-04-28T00:45:31.890+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122747451.htm
+[2025-04-28T00:45:32.975+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122748783.htm
+[2025-04-28T00:45:34.989+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122748853.htm
+[2025-04-28T00:45:36.018+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122749675.htm
+[2025-04-28T00:45:39.998+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122749882.htm
+[2025-04-28T00:45:40.991+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122750194.htm
+[2025-04-28T00:45:41.568+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122750272.htm
+[2025-04-28T00:45:43.454+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122750348.htm
+[2025-04-28T00:45:47.494+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122751225.htm
+[2025-04-28T00:45:49.187+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122752961.htm
+[2025-04-28T00:45:49.866+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122754559.htm
+[2025-04-28T00:45:49.966+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122758464.htm
+[2025-04-28T00:45:52.230+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122759052.htm
+[2025-04-28T00:45:55.051+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122759140.htm
+[2025-04-28T00:45:56.153+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122760719.htm
+[2025-04-28T00:45:56.993+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122761214.htm
+[2025-04-28T00:45:59.989+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122761681.htm
+[2025-04-28T00:46:00.736+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122763197.htm
+[2025-04-28T00:46:03.825+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122765238.htm
+[2025-04-28T00:46:04.633+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122765765.htm
+[2025-04-28T00:46:05.826+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122768121.htm
+[2025-04-28T00:46:08.815+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122768492.htm
+[2025-04-28T00:46:09.035+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122769094.htm
+[2025-04-28T00:46:12.884+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122769444.htm
+[2025-04-28T00:46:13.947+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122769607.htm
+[2025-04-28T00:46:15.810+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122769843.htm
+[2025-04-28T00:46:16.997+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122770684.htm
+[2025-04-28T00:46:18.493+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122770830.htm
+[2025-04-28T00:46:20.872+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122771583.htm
+[2025-04-28T00:46:23.977+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122772001.htm
+[2025-04-28T00:46:24.389+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122772937.htm
+[2025-04-28T00:46:26.734+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122774441.htm
+[2025-04-28T00:46:27.845+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122775225.htm
+[2025-04-28T00:46:28.665+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122775269.htm
+[2025-04-28T00:46:32.952+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122775510.htm
+[2025-04-28T00:46:34.993+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122776190.htm
+[2025-04-28T00:46:35.205+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122779126.htm
+[2025-04-28T00:46:36.995+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122781313.htm
+[2025-04-28T00:46:39.238+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122785725.htm
+[2025-04-28T00:46:41.647+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122786089.htm
+[2025-04-28T00:46:44.315+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122786824.htm
+[2025-04-28T00:46:44.468+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122788068.htm
+[2025-04-28T00:46:45.458+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122788235.htm
+[2025-04-28T00:46:47.654+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122788343.htm
+[2025-04-28T00:46:50.847+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122788777.htm
+[2025-04-28T00:46:52.965+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122790374.htm
+[2025-04-28T00:46:53.507+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122791092.htm
+[2025-04-28T00:46:55.332+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122791628.htm
+[2025-04-28T00:46:59.695+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122791805.htm
+[2025-04-28T00:47:02.079+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122791818.htm
+[2025-04-28T00:47:02.528+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122791989.htm
+[2025-04-28T00:47:02.585+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122792773.htm
+[2025-04-28T00:47:05.809+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793089.htm
+[2025-04-28T00:47:09.344+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793183.htm
+[2025-04-28T00:47:10.885+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793231.htm
+[2025-04-28T00:47:12.918+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793291.htm
+[2025-04-28T00:47:13.786+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793420.htm
+[2025-04-28T00:47:17.110+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793512.htm
+[2025-04-28T00:47:18.744+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793547.htm
+[2025-04-28T00:47:22.565+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122793611.htm
+[2025-04-28T00:47:23.112+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122794364.htm
+[2025-04-28T00:47:23.642+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122794478.htm
+[2025-04-28T00:47:28.079+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122794483.htm
+[2025-04-28T00:47:32.564+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122794502.htm
+[2025-04-28T00:47:33.573+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122795514.htm
+[2025-04-28T00:47:33.733+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122797542.htm
+[2025-04-28T00:47:34.615+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122798295.htm
+[2025-04-28T00:47:38.272+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122799677.htm
+[2025-04-28T00:47:48.139+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122799869.htm
+[2025-04-28T00:47:48.530+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122799999.htm
+[2025-04-28T00:47:49.095+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122800199.htm
+[2025-04-28T00:47:49.152+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122801385.htm
+[2025-04-28T00:47:50.517+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122801403.htm
+[2025-04-28T00:47:56.994+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122801468.htm
+[2025-04-28T00:47:59.597+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122801823.htm
+[2025-04-28T00:47:59.688+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122801973.htm
+[2025-04-28T00:47:59.908+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122802063.htm
+[2025-04-28T00:48:00.438+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122802367.htm
+[2025-04-28T00:48:11.922+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122802715.htm
+[2025-04-28T00:48:11.930+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122802848.htm
+[2025-04-28T00:48:11.932+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122802990.htm
+[2025-04-28T00:48:12.675+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122803666.htm
+[2025-04-28T00:48:13.203+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122804744.htm
+[2025-04-28T00:48:19.649+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122804773.htm
+[2025-04-28T00:48:22.399+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122804876.htm
+[2025-04-28T00:48:23.523+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122810766.htm
+[2025-04-28T00:48:30.248+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122811416.htm
+[2025-04-28T00:48:30.559+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122811928.htm
+[2025-04-28T00:48:33.727+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122812462.htm
+[2025-04-28T00:48:37.931+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122813639.htm
+[2025-04-28T00:48:38.613+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122814012.htm
+[2025-04-28T00:48:39.154+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122814189.htm
+[2025-04-28T00:48:46.302+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122814770.htm
+[2025-04-28T00:48:49.112+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122815284.htm
+[2025-04-28T00:48:55.011+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122816556.htm
+[2025-04-28T00:48:59.019+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122817594.htm
+[2025-04-28T00:48:59.723+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122817798.htm
+[2025-04-28T00:49:01.041+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122818733.htm
+[2025-04-28T00:49:02.893+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122819377.htm
+[2025-04-28T00:49:04.125+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122819738.htm
+[2025-04-28T00:49:07.839+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122819774.htm
+[2025-04-28T00:49:12.174+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122819813.htm
+[2025-04-28T00:49:13.740+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122819881.htm
+[2025-04-28T00:49:13.903+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122819897.htm
+[2025-04-28T00:49:14.386+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122822513.htm
+[2025-04-28T00:49:27.022+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122822559.htm
+[2025-04-28T00:49:31.007+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122823425.htm
+[2025-04-28T00:49:31.816+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122825797.htm
+[2025-04-28T00:49:32.701+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122826260.htm
+[2025-04-28T00:49:38.441+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122829010.htm
+[2025-04-28T00:49:41.875+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122829012.htm
+[2025-04-28T00:49:42.150+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122829677.htm
+[2025-04-28T00:49:43.502+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122829729.htm
+[2025-04-28T00:49:44.145+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122829962.htm
+[2025-04-28T00:49:50.150+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122830069.htm
+[2025-04-28T00:49:58.143+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122832805.htm
+[2025-04-28T00:49:58.656+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122833077.htm
+[2025-04-28T00:50:00.269+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122833253.htm
+[2025-04-28T00:50:00.770+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122834002.htm
+[2025-04-28T00:50:04.421+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122835258.htm
+[2025-04-28T00:50:11.029+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122835262.htm
+[2025-04-28T00:50:11.814+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122835578.htm
+[2025-04-28T00:50:12.871+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122835792.htm
+[2025-04-28T00:50:13.807+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122836050.htm
+[2025-04-28T00:50:16.670+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122836146.htm
+[2025-04-28T00:50:22.380+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122836944.htm
+[2025-04-28T00:50:23.601+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122837874.htm
+[2025-04-28T00:50:23.787+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122838107.htm
+[2025-04-28T00:50:24.980+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122838489.htm
+[2025-04-28T00:50:27.188+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122840476.htm
+[2025-04-28T00:50:36.753+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122841870.htm
+[2025-04-28T00:50:36.794+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122842641.htm
+[2025-04-28T00:50:37.720+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122842691.htm
+[2025-04-28T00:50:38.796+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122843404.htm
+[2025-04-28T00:50:41.448+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122843435.htm
+[2025-04-28T00:50:49.359+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122844513.htm
+[2025-04-28T00:50:50.511+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122845141.htm
+[2025-04-28T00:50:52.073+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122846112.htm
+[2025-04-28T00:50:53.275+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122846443.htm
+[2025-04-28T00:50:58.148+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122848435.htm
+[2025-04-28T00:51:04.647+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122848670.htm
+[2025-04-28T00:51:05.332+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122848754.htm
+[2025-04-28T00:51:06.830+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122848864.htm
+[2025-04-28T00:51:07.485+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122849103.htm
+[2025-04-28T00:51:09.995+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122849130.htm
+[2025-04-28T00:51:16.139+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122849138.htm
+[2025-04-28T00:51:16.920+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122849401.htm
+[2025-04-28T00:51:17.252+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122849623.htm
+[2025-04-28T00:51:19.171+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122849973.htm
+[2025-04-28T00:51:22.222+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122850294.htm
+[2025-04-28T00:51:23.728+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122850697.htm
+[2025-04-28T00:51:25.809+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122851562.htm
+[2025-04-28T00:51:26.839+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122851674.htm
+[2025-04-28T00:51:35.327+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122852566.htm
+[2025-04-28T00:51:36.319+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122853776.htm
+[2025-04-28T00:51:37.196+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122854074.htm
+[2025-04-28T00:51:37.866+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122856351.htm
+[2025-04-28T00:51:38.058+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122857823.htm
+[2025-04-28T00:51:44.664+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122858320.htm
+[2025-04-28T00:51:47.594+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122859798.htm
+[2025-04-28T00:51:47.848+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122860120.htm
+[2025-04-28T00:51:48.165+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122862177.htm
+[2025-04-28T00:51:51.408+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122863893.htm
+[2025-04-28T00:51:53.703+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122864988.htm
+[2025-04-28T00:51:57.477+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122865773.htm
+[2025-04-28T00:51:58.035+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122866008.htm
+[2025-04-28T00:52:01.304+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122866140.htm
+[2025-04-28T00:52:02.197+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122869280.htm
+[2025-04-28T00:52:03.139+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122869365.htm
+[2025-04-28T00:52:08.551+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122869598.htm
+[2025-04-28T00:52:09.174+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122875709.htm
+[2025-04-28T00:52:14.705+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122880626.htm
+[2025-04-28T00:52:16.305+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122881403.htm
+[2025-04-28T00:52:16.418+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122882133.htm
+[2025-04-28T00:52:16.909+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122883027.htm
+[2025-04-28T00:52:20.047+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122884416.htm
+[2025-04-28T00:52:24.819+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122884944.htm
+[2025-04-28T00:52:24.922+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122887043.htm
+[2025-04-28T00:52:25.035+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122887507.htm
+[2025-04-28T00:52:27.984+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122888473.htm
+[2025-04-28T00:52:28.314+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122890764.htm
+[2025-04-28T00:52:34.648+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122891600.htm
+[2025-04-28T00:52:37.587+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122892178.htm
+[2025-04-28T00:52:38.225+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122892331.htm
+[2025-04-28T00:52:39.127+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122892792.htm
+[2025-04-28T00:52:39.375+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122893228.htm
+[2025-04-28T00:52:44.990+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122893512.htm
+[2025-04-28T00:52:49.476+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122893592.htm
+[2025-04-28T00:52:49.509+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122893688.htm
+[2025-04-28T00:52:53.590+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122893921.htm
+[2025-04-28T00:52:55.025+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122894054.htm
+[2025-04-28T00:52:56.010+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122894503.htm
+[2025-04-28T00:53:00.306+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122896043.htm
+[2025-04-28T00:53:00.822+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122896561.htm
+[2025-04-28T00:53:03.765+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122896620.htm
+[2025-04-28T00:53:05.201+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122897032.htm
+[2025-04-28T00:53:07.349+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122897672.htm
+[2025-04-28T00:53:07.884+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122899905.htm
+[2025-04-28T00:53:12.879+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122900860.htm
+[2025-04-28T00:53:20.807+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122902413.htm
+[2025-04-28T00:53:21.949+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122904131.htm
+[2025-04-28T00:53:22.307+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122904540.htm
+[2025-04-28T00:53:23.409+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122905486.htm
+[2025-04-28T00:53:23.411+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122905489.htm
+[2025-04-28T00:53:35.855+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122905743.htm
+[2025-04-28T00:53:37.783+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122906367.htm
+[2025-04-28T00:53:39.804+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122908007.htm
+[2025-04-28T00:53:40.687+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122910456.htm
+[2025-04-28T00:53:41.825+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122911126.htm
+[2025-04-28T00:53:45.047+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122911460.htm
+[2025-04-28T00:53:51.859+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122911645.htm
+[2025-04-28T00:53:53.876+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122912782.htm
+[2025-04-28T00:53:55.380+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122913248.htm
+[2025-04-28T00:53:58.805+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122913603.htm
+[2025-04-28T00:53:59.234+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122915062.htm
+[2025-04-28T00:54:07.004+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122915639.htm
+[2025-04-28T00:54:09.114+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122917907.htm
+[2025-04-28T00:54:10.513+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122918090.htm
+[2025-04-28T00:54:12.896+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122918302.htm
+[2025-04-28T00:54:14.076+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122919185.htm
+[2025-04-28T00:54:16.772+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122919206.htm
+[2025-04-28T00:54:18.126+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122919473.htm
+[2025-04-28T00:54:20.259+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122919936.htm
+[2025-04-28T00:54:21.656+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122919996.htm
+[2025-04-28T00:54:24.480+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122920173.htm
+[2025-04-28T00:54:29.477+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122920787.htm
+[2025-04-28T00:54:33.782+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122921098.htm
+[2025-04-28T00:54:36.722+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122921780.htm
+[2025-04-28T00:54:37.517+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122921981.htm
+[2025-04-28T00:54:40.001+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122922251.htm
+[2025-04-28T00:54:45.545+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122922444.htm
+[2025-04-28T00:54:48.583+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122922609.htm
+[2025-04-28T00:54:52.511+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122922656.htm
+[2025-04-28T00:54:52.980+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122923798.htm
+[2025-04-28T00:54:53.319+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122923841.htm
+[2025-04-28T00:55:02.727+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122923884.htm
+[2025-04-28T00:55:03.079+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122926465.htm
+[2025-04-28T00:55:29.878+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122926994.htm
+[2025-04-28T00:55:33.255+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122927125.htm
+[2025-04-28T00:55:33.444+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122927256.htm
+[2025-04-28T00:55:37.437+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122928277.htm
+[2025-04-28T00:55:44.727+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122931021.htm
+[2025-04-28T00:55:47.465+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122931023.htm
+[2025-04-28T00:55:56.839+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122931285.htm
+[2025-04-28T00:55:59.201+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122931441.htm
+[2025-04-28T00:56:04.888+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/122931285.htm
+[2025-04-28T00:56:04.950+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122931990.htm
+[2025-04-28T00:56:05.996+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122932128.htm
+[2025-04-28T00:56:08.974+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122932448.htm
+[2025-04-28T00:56:16.549+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122932472.htm
+[2025-04-28T00:56:21.368+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122932713.htm
+[2025-04-28T00:56:29.393+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122933449.htm
+[2025-04-28T00:56:29.988+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122933491.htm
+[2025-04-28T00:56:30.406+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122935524.htm
+[2025-04-28T00:56:43.777+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122937853.htm
+[2025-04-28T00:56:49.064+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122942530.htm
+[2025-04-28T00:56:54.217+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122943068.htm
+[2025-04-28T00:57:06.817+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122943377.htm
+[2025-04-28T00:57:07.783+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122946975.htm
+[2025-04-28T00:57:17.280+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122947420.htm
+[2025-04-28T00:57:17.404+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122947651.htm
+[2025-04-28T00:57:25.391+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122947938.htm
+[2025-04-28T00:57:40.356+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122948832.htm
+[2025-04-28T00:57:45.894+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122949623.htm
+[2025-04-28T00:57:51.735+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122950404.htm
+[2025-04-28T00:57:52.006+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122950608.htm
+[2025-04-28T00:58:03.419+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122950817.htm
+[2025-04-28T00:58:04.957+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122950991.htm
+[2025-04-28T00:58:18.480+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122951066.htm
+[2025-04-28T00:58:25.411+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122951455.htm
+[2025-04-28T00:58:25.960+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122951469.htm
+[2025-04-28T00:58:32.384+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122952001.htm
+[2025-04-28T00:59:05.259+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122952204.htm
+[2025-04-28T00:59:06.873+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122952227.htm
+[2025-04-28T00:59:07.463+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122952307.htm
+[2025-04-28T00:59:21.721+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122953125.htm
+[2025-04-28T00:59:48.699+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122954678.htm
+[2025-04-28T00:59:56.654+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122958655.htm
+[2025-04-28T01:00:02.523+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122959876.htm
+[2025-04-28T01:00:06.422+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122959985.htm
+[2025-04-28T01:00:19.633+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122961114.htm
+[2025-04-28T01:00:23.595+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122961150.htm
+[2025-04-28T01:00:40.396+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122961682.htm
+[2025-04-28T01:00:42.135+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122961710.htm
+[2025-04-28T01:00:49.091+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122962182.htm
+[2025-04-28T01:00:57.696+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122963458.htm
+[2025-04-28T01:01:15.417+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122964574.htm
+[2025-04-28T01:01:28.051+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122965259.htm
+[2025-04-28T01:01:39.144+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122965345.htm
+[2025-04-28T01:02:03.276+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122966989.htm
+[2025-04-28T01:02:27.963+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122967529.htm
+[2025-04-28T01:02:34.272+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122968778.htm
+[2025-04-28T01:02:36.182+0000] {selenium_manager.py:149} WARNING - Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event): operation timed out
+[2025-04-28T01:02:47.313+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122969197.htm
+[2025-04-28T01:02:58.596+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122969551.htm
+[2025-04-28T01:03:05.492+0000] {logging_mixin.py:190} INFO - [Unhandled Error] Failed to scrape https://www.nhatot.com/mua-ban-bat-dong-san/122950991.htm: Message: timeout: Timed out receiving message from renderer: 292.842
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+#0 0x55cdb3d7fd6e <unknown>
+#1 0x55cdb384820b <unknown>
+#2 0x55cdb38338f6 <unknown>
+#3 0x55cdb38336ac <unknown>
+#4 0x55cdb3831bf8 <unknown>
+#5 0x55cdb38320a9 <unknown>
+#6 0x55cdb383f7e0 <unknown>
+#7 0x55cdb3855abf <unknown>
+#8 0x55cdb385ae5b <unknown>
+#9 0x55cdb383261d <unknown>
+#10 0x55cdb38558b7 <unknown>
+#11 0x55cdb38dd46c <unknown>
+#12 0x55cdb38bbd63 <unknown>
+#13 0x55cdb3886017 <unknown>
+#14 0x55cdb3886dc8 <unknown>
+#15 0x55cdb3d4c96a <unknown>
+#16 0x55cdb3d4fdbe <unknown>
+#17 0x55cdb3d4f868 <unknown>
+#18 0x55cdb3d50245 <unknown>
+#19 0x55cdb3d360cb <unknown>
+#20 0x55cdb3d505b0 <unknown>
+#21 0x55cdb3d1ea39 <unknown>
+#22 0x55cdb3d6eee5 <unknown>
+#23 0x55cdb3d6f0cb <unknown>
+#24 0x55cdb3d7eec5 <unknown>
+#25 0x7f221b1ce1c4 <unknown>
+[2025-04-28T01:03:05.557+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122969724.htm
+[2025-04-28T01:03:20.598+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122969846.htm
+[2025-04-28T01:03:21.361+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122972545.htm
+[2025-04-28T01:03:43.776+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122972566.htm
+[2025-04-28T01:03:43.893+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122972747.htm
+[2025-04-28T01:03:44.740+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122973233.htm
+[2025-04-28T01:03:47.776+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122973576.htm
+[2025-04-28T01:04:00.885+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122973822.htm
+[2025-04-28T01:04:02.452+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122974097.htm
+[2025-04-28T01:04:02.862+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122974223.htm
+[2025-04-28T01:04:16.343+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122974576.htm
+[2025-04-28T01:04:23.000+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122975448.htm
+[2025-04-28T01:04:26.872+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122975851.htm
+[2025-04-28T01:04:37.774+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122976641.htm
+[2025-04-28T01:04:41.806+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122977185.htm
+[2025-04-28T01:04:50.702+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122978072.htm
+[2025-04-28T01:04:51.352+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/122972566.htm
+[2025-04-28T01:04:51.415+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122980186.htm
+[2025-04-28T01:05:02.392+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122980728.htm
+[2025-04-28T01:05:04.868+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122980891.htm
+[2025-04-28T01:05:14.258+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122981498.htm
+[2025-04-28T01:05:18.167+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122982207.htm
+[2025-04-28T01:05:22.846+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122985100.htm
+[2025-04-28T01:05:32.466+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122985381.htm
+[2025-04-28T01:05:45.349+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122985658.htm
+[2025-04-28T01:05:46.576+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/122977185.htm
+[2025-04-28T01:05:46.644+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122985877.htm
+[2025-04-28T01:05:49.427+0000] {logging_mixin.py:190} INFO - [Unhandled Error] Failed to scrape https://www.nhatot.com/mua-ban-bat-dong-san/122962182.htm: Message: timeout: Timed out receiving message from renderer: 293.631
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+#0 0x5655286d4d6e <unknown>
+#1 0x56552819d20b <unknown>
+#2 0x5655281888f6 <unknown>
+#3 0x5655281886ac <unknown>
+#4 0x565528186bf8 <unknown>
+#5 0x5655281870a9 <unknown>
+#6 0x5655281947e0 <unknown>
+#7 0x5655281aaabf <unknown>
+#8 0x5655281afe5b <unknown>
+#9 0x56552818761d <unknown>
+#10 0x5655281aa8b7 <unknown>
+#11 0x56552823246c <unknown>
+#12 0x565528210d63 <unknown>
+#13 0x5655281db017 <unknown>
+#14 0x5655281dbdc8 <unknown>
+#15 0x5655286a196a <unknown>
+#16 0x5655286a4dbe <unknown>
+#17 0x5655286a4868 <unknown>
+#18 0x5655286a5245 <unknown>
+#19 0x56552868b0cb <unknown>
+#20 0x5655286a55b0 <unknown>
+#21 0x565528673a39 <unknown>
+#22 0x5655286c3ee5 <unknown>
+#23 0x5655286c40cb <unknown>
+#24 0x5655286d3ec5 <unknown>
+#25 0x7f80cabbc1c4 <unknown>
+[2025-04-28T01:05:49.492+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122986201.htm
+[2025-04-28T01:05:56.587+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122986575.htm
+[2025-04-28T01:06:00.058+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122986755.htm
+[2025-04-28T01:06:00.504+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122986953.htm
+[2025-04-28T01:06:15.903+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122987066.htm
+[2025-04-28T01:06:16.972+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122987191.htm
+[2025-04-28T01:06:18.045+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122987199.htm
+[2025-04-28T01:06:23.759+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/122982207.htm
+[2025-04-28T01:06:23.821+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122988028.htm
+[2025-04-28T01:06:27.381+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122989455.htm
+[2025-04-28T01:06:27.580+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122989523.htm
+[2025-04-28T01:06:49.279+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122989541.htm
+[2025-04-28T01:06:49.826+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122989652.htm
+[2025-04-28T01:06:56.109+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122990012.htm
+[2025-04-28T01:06:56.188+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122991757.htm
+[2025-04-28T01:07:02.142+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122993360.htm
+[2025-04-28T01:07:18.092+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122993703.htm
+[2025-04-28T01:07:21.420+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122993766.htm
+[2025-04-28T01:07:21.460+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122994408.htm
+[2025-04-28T01:07:34.877+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122994419.htm
+[2025-04-28T01:07:52.721+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122995357.htm
+[2025-04-28T01:07:54.292+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122995376.htm
+[2025-04-28T01:08:07.905+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122995434.htm
+[2025-04-28T01:08:16.258+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122997313.htm
+[2025-04-28T01:08:19.895+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122998404.htm
+[2025-04-28T01:08:29.664+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122999006.htm
+[2025-04-28T01:08:34.903+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122999366.htm
+[2025-04-28T01:08:36.584+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/122999629.htm
+[2025-04-28T01:08:51.233+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123000409.htm
+[2025-04-28T01:08:51.754+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123000684.htm
+[2025-04-28T01:09:01.291+0000] {logging_mixin.py:190} INFO - [Unhandled Error] Failed to scrape https://www.nhatot.com/mua-ban-bat-dong-san/122973822.htm: Message: timeout: Timed out receiving message from renderer: 295.419
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+#0 0x556212a78d6e <unknown>
+#1 0x55621254120b <unknown>
+#2 0x55621252c8f6 <unknown>
+#3 0x55621252c6ac <unknown>
+#4 0x55621252abf8 <unknown>
+#5 0x55621252b0a9 <unknown>
+#6 0x5562125387e0 <unknown>
+#7 0x55621254eabf <unknown>
+#8 0x556212553e5b <unknown>
+#9 0x55621252b61d <unknown>
+#10 0x55621254e8b7 <unknown>
+#11 0x5562125d646c <unknown>
+#12 0x5562125b4d63 <unknown>
+#13 0x55621257f017 <unknown>
+#14 0x55621257fdc8 <unknown>
+#15 0x556212a4596a <unknown>
+#16 0x556212a48dbe <unknown>
+#17 0x556212a48868 <unknown>
+#18 0x556212a49245 <unknown>
+#19 0x556212a2f0cb <unknown>
+#20 0x556212a495b0 <unknown>
+#21 0x556212a17a39 <unknown>
+#22 0x556212a67ee5 <unknown>
+#23 0x556212a680cb <unknown>
+#24 0x556212a77ec5 <unknown>
+#25 0x7f78d8b271c4 <unknown>
+[2025-04-28T01:09:01.353+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123003595.htm
+[2025-04-28T01:09:03.099+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123005064.htm
+[2025-04-28T01:09:06.043+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123005125.htm
+[2025-04-28T01:09:20.451+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123006581.htm
+[2025-04-28T01:09:26.431+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123006590.htm
+[2025-04-28T01:09:34.429+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123008002.htm
+[2025-04-28T01:09:40.052+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123011648.htm
+[2025-04-28T01:09:49.634+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123012075.htm
+[2025-04-28T01:09:52.023+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123013314.htm
+[2025-04-28T01:09:53.986+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123013492.htm
+[2025-04-28T01:10:02.452+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123015174.htm
+[2025-04-28T01:10:06.644+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123015842.htm
+[2025-04-28T01:10:06.933+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123016716.htm
+[2025-04-28T01:10:13.947+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123019969.htm
+[2025-04-28T01:10:22.022+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123020544.htm
+[2025-04-28T01:10:23.420+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123021284.htm
+[2025-04-28T01:10:33.741+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123021359.htm
+[2025-04-28T01:10:44.569+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123021440.htm
+[2025-04-28T01:10:45.044+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123021609.htm
+[2025-04-28T01:10:52.696+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123021742.htm
+[2025-04-28T01:11:02.015+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123022064.htm
+[2025-04-28T01:11:04.445+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123022933.htm
+[2025-04-28T01:11:07.526+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123022969.htm
+[2025-04-28T01:11:15.148+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123022981.htm
+[2025-04-28T01:11:19.571+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123023056.htm
+[2025-04-28T01:11:37.012+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/123022064.htm
+[2025-04-28T01:11:37.073+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123023160.htm
+[2025-04-28T01:11:47.674+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123024343.htm
+[2025-04-28T01:11:50.294+0000] {logging_mixin.py:190} INFO - [Unhandled Error] Failed to scrape https://www.nhatot.com/mua-ban-bat-dong-san/122989652.htm: Message: timeout: Timed out receiving message from renderer: 298.766
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+#0 0x55de00143d6e <unknown>
+#1 0x55ddffc0c20b <unknown>
+#2 0x55ddffbf78f6 <unknown>
+#3 0x55ddffbf76ac <unknown>
+#4 0x55ddffbf5bf8 <unknown>
+#5 0x55ddffbf60a9 <unknown>
+#6 0x55ddffc037e0 <unknown>
+#7 0x55ddffc19abf <unknown>
+#8 0x55ddffc1ee5b <unknown>
+#9 0x55ddffbf661d <unknown>
+#10 0x55ddffc198b7 <unknown>
+#11 0x55ddffca146c <unknown>
+#12 0x55ddffc7fd63 <unknown>
+#13 0x55ddffc4a017 <unknown>
+#14 0x55ddffc4adc8 <unknown>
+#15 0x55de0011096a <unknown>
+#16 0x55de00113dbe <unknown>
+#17 0x55de00113868 <unknown>
+#18 0x55de00114245 <unknown>
+#19 0x55de000fa0cb <unknown>
+#20 0x55de001145b0 <unknown>
+#21 0x55de000e2a39 <unknown>
+#22 0x55de00132ee5 <unknown>
+#23 0x55de001330cb <unknown>
+#24 0x55de00142ec5 <unknown>
+#25 0x7ff5884b51c4 <unknown>
+[2025-04-28T01:11:50.364+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123024876.htm
+[2025-04-28T01:11:54.032+0000] {ScraperNhatot.py:144} INFO - No 'Xem thêm' button found on https://www.nhatot.com/mua-ban-bat-dong-san/123023056.htm
+[2025-04-28T01:11:54.096+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123025430.htm
+[2025-04-28T01:11:57.817+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123026085.htm
+[2025-04-28T01:12:12.173+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123026582.htm
+[2025-04-28T01:12:17.801+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123028281.htm
+[2025-04-28T01:12:18.627+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123028412.htm
+[2025-04-28T01:12:29.041+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123028415.htm
+[2025-04-28T01:12:32.548+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123029375.htm
+[2025-04-28T01:12:59.734+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123029546.htm
+[2025-04-28T01:13:10.374+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123030287.htm
+[2025-04-28T01:13:25.533+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123032284.htm
+[2025-04-28T01:13:30.100+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123033459.htm
+[2025-04-28T01:13:30.277+0000] {logging_mixin.py:190} INFO - [Unhandled Error] Failed to scrape https://www.nhatot.com/mua-ban-bat-dong-san/122999006.htm: Message: timeout: Timed out receiving message from renderer: 298.024
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+#0 0x55ae54e7dd6e <unknown>
+#1 0x55ae5494620b <unknown>
+#2 0x55ae549318f6 <unknown>
+#3 0x55ae549316ac <unknown>
+#4 0x55ae5492fbf8 <unknown>
+#5 0x55ae549300a9 <unknown>
+#6 0x55ae5493d7e0 <unknown>
+#7 0x55ae54953abf <unknown>
+#8 0x55ae54958e5b <unknown>
+#9 0x55ae5493061d <unknown>
+#10 0x55ae549538b7 <unknown>
+#11 0x55ae549db46c <unknown>
+#12 0x55ae549b9d63 <unknown>
+#13 0x55ae54984017 <unknown>
+#14 0x55ae54984dc8 <unknown>
+#15 0x55ae54e4a96a <unknown>
+#16 0x55ae54e4ddbe <unknown>
+#17 0x55ae54e4d868 <unknown>
+#18 0x55ae54e4e245 <unknown>
+#19 0x55ae54e340cb <unknown>
+#20 0x55ae54e4e5b0 <unknown>
+#21 0x55ae54e1ca39 <unknown>
+#22 0x55ae54e6cee5 <unknown>
+#23 0x55ae54e6d0cb <unknown>
+#24 0x55ae54e7cec5 <unknown>
+#25 0x7fc371f131c4 <unknown>
+[2025-04-28T01:13:30.350+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123038129.htm
+[2025-04-28T01:13:33.129+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123038794.htm
+[2025-04-28T01:13:36.214+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123039854.htm
+[2025-04-28T01:13:44.748+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123039879.htm
+[2025-04-28T01:13:46.645+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123039980.htm
+[2025-04-28T01:13:50.058+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123040348.htm
+[2025-04-28T01:13:58.924+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123040427.htm
+[2025-04-28T01:14:18.769+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123041256.htm
+[2025-04-28T01:14:23.352+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123044317.htm
+[2025-04-28T01:14:23.819+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123045049.htm
+[2025-04-28T01:14:36.139+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123045446.htm
+[2025-04-28T01:14:36.449+0000] {logging_mixin.py:190} INFO - [Scraping] https://www.nhatot.com/mua-ban-bat-dong-san/123046266.htm

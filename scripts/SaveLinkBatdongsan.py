@@ -16,9 +16,9 @@ class BatDongSanScraper:
     
     def __init__(
         self,
-        output_file: str = "/opt/airflow/data/batdongsan_links.txt",
-        error_file: str = "/opt/airflow/data/batdongsan_error_links.txt",
-        base_url: str = "https://batdongsan.com.vn/nha-dat-ban",
+        output_file: str = "/opt/airflow/data/hn_batdongsan_links.txt",
+        error_file: str = "/opt/airflow/data/hn_batdongsan_error_links.txt",
+        base_url: str = "https://batdongsan.com.vn/nha-dat-ban-ha-noi",
         filter_path: str = "?gtn=7-ty&gcn=30-ty",
         max_pages: int = 3058,
         save_interval: int = 10,
