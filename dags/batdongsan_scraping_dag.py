@@ -9,7 +9,7 @@ import logging
 # Add the scripts directory to Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
-from SaveLinkBatdongsan import scrape_links, BatDongSanScraper
+from SaveLinkBatdongsan import BatDongSanScraper
 from ScraperBatdongsan import scrape_data
 from BatDongSanProcessor import process_data
 

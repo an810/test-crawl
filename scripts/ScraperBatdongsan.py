@@ -230,7 +230,7 @@ def scrape_one_url(args):
         shutil.rmtree(user_data_dir)
 
 
-def scrape_data(use_multiprocessing=False):
+def scrape_data():
     """Main scraping function that can be called by the Airflow DAG"""
     try:
         ensure_directories_exist()

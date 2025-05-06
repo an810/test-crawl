@@ -9,8 +9,9 @@ import logging
 # Add the scripts directory to Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
-from SaveLinkNhatot import scrape_links, NhatotScraper
+from SaveLinkNhatot import NhatotScraper
 from ScraperNhatot import scrape_data
+from NhatotProcessor import process_data
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -79,5 +80,21 @@ scrape_task = PythonOperator(
     dag=dag,
 )
 
+# Task 3: Process Data
+def process_data_task():
+    try:
+        result = process_data()
+        if not result:
+            raise Exception("Data processing failed")
+        return "Data processing completed successfully"
+    except Exception as e:
+        raise Exception(f"Error in process_data_task: {str(e)}")
+
+process_task = PythonOperator(
+    task_id='process_data',
+    python_callable=process_data_task,
+    dag=dag,
+)
+
 # Set task dependencies
-save_links_operator >> scrape_task 
+save_links_operator >> scrape_task >> process_task 

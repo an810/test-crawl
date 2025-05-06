@@ -1,0 +1,21 @@
+Missing Values Summary
+=====================
+
+       Column Name  Missing Count  Missing Percentage
+         direction          48874           99.744893
+             width          46340           94.573359
+         furniture          46197           94.281516
+ number_of_toilets          41310           84.307843
+              area           7476           15.257454
+number_of_bedrooms           5357           10.932876
+             legal              2            0.004082
+             title              0            0.000000
+            url_id              0            0.000000
+             price              0            0.000000
+               lat              0            0.000000
+               lon              0            0.000000
+           address              0            0.000000
+          district              0            0.000000
+          province              0            0.000000
+
+Total number of rows: 48999
