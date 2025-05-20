@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Predict from './pages/Predict';
 import Subscribe from './pages/Subscribe';
+import VisualizationsPage from './pages/Visualizations';
 
 const theme = createTheme({
   palette: {
@@ -28,10 +29,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/predict" element={<Predict />} />
           <Route path="/subscribe" element={<Subscribe />} />
+          <Route path="/visualizations" element={<VisualizationsPage />} />
         </Routes>
       </Router>
     </ThemeProvider>
   );
 }
 
-export default App; 
+export default App;

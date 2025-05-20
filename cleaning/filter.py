@@ -36,10 +36,12 @@ district_mapping = {district: i for i, district in enumerate(df['district'].uniq
 
 # Write district mapping to a text file
 with open('cleaning/output/district_mapping.txt', 'w', encoding='utf-8') as f:
-    f.write("District Mapping\n")
-    f.write("===============\n\n")
+    # f.write("District Mapping\n")
+    # f.write("===============\n\n")
     for district, index in district_mapping.items():
         f.write(f"{index}: {district}\n")
+
+df.to_csv('cleaning/output/visualization_data.tsv', sep='\t', index=False)
 
 # Thay thế giá trị trong cột 'district' bằng các số tương ứng
 df['district'] = df['district'].map(district_mapping)

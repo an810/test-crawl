@@ -1,6 +1,3 @@
-District Mapping
-===============
-
 0: Đan Phượng
 1: Long Biên
 2: Cầu Giấy

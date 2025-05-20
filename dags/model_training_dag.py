@@ -11,6 +11,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
 from train_price_model import train_price_model
 from train_recommendation_model import train_recommendation_model
+from prepare_data import prepare_data
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -56,6 +57,13 @@ wait_for_nhatot = ExternalTaskSensor(
     dag=dag
 )
 
+# Add data preparation task
+prepare_data_task = PythonOperator(
+    task_id='prepare_data',
+    python_callable=prepare_data,
+    dag=dag
+)
+
 # Define training tasks
 train_price = PythonOperator(
     task_id='train_price_model',
@@ -70,4 +78,4 @@ train_recommendation = PythonOperator(
 )
 
 # Set task dependencies
-[wait_for_batdongsan, wait_for_nhatot] >> [train_price, train_recommendation] 
+[wait_for_batdongsan, wait_for_nhatot] >> prepare_data_task >> [train_price, train_recommendation] 
