@@ -10,6 +10,7 @@ import {
 import HomeIcon from '@mui/icons-material/Home';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import MapIcon from '@mui/icons-material/Map';
 import BarChartIcon from '@mui/icons-material/BarChart';
 
 function Navbar() {
@@ -35,6 +36,14 @@ function Navbar() {
             startIcon={<BarChartIcon />}
           >
             Visualizations
+          </Button>
+          <Button
+            color="inherit"
+            component={RouterLink}
+            to="/map"
+            startIcon={<MapIcon />}
+          >
+            Map
           </Button>
           <Button
             color="inherit"

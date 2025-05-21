@@ -10,4 +10,4 @@ const VisualizationsPage = () => {
   );
 };
 
-export default VisualizationsPage; 
+export default VisualizationsPage;

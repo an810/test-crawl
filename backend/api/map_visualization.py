@@ -73,7 +73,6 @@ GEOJSON_NAME_MAP = {
 }
 
 def infer_property_type(title):
-    title = str(title).lower()
     if pd.isna(title):
         return "Khác"
     title = str(title).lower()
@@ -169,8 +168,7 @@ def load_and_process_data() -> Dict[str, Any]:
             "type": "scatter",
             "x": df_clean["area"].tolist(),
             "y": df_clean["price"].tolist(),
-            "property_types": list(PROPERTY_TYPE_COLORS.keys()),
-            "colors": PROPERTY_TYPE_COLORS,
+            "color": [PROPERTY_TYPE_COLORS.get(pt, "#9467bd") for pt in df_clean["property_type"]],
             "title": "Price vs Area by Property Type",
             "xaxis_title": "Area (m²)",
             "yaxis_title": "Price (tỷ VND)",
@@ -180,6 +178,22 @@ def load_and_process_data() -> Dict[str, Any]:
                 "property_type": df_clean["property_type"].tolist()
             }
         }
+
+        # scatter_data = {
+        #     "type": "scatter",    
+        #     "x": df_clean["area"].tolist(),
+        #     "y": df_clean["price"].tolist(),
+        #     "property_types": list(PROPERTY_TYPE_COLORS.keys()),
+        #     "colors": PROPERTY_TYPE_COLORS,
+        #     "title": "Price vs Area by Property Type",
+        #     "xaxis_title": "Area (m²)",
+        #     "yaxis_title": "Price (tỷ VND)",
+        #     "hover_data": {
+        #         "title": df_clean["title"].tolist() if "title" in df_clean.columns else [""] * len(df_clean),
+        #         "district": df_clean["district"].tolist(),
+        #         "property_type": df_clean["property_type"].tolist()
+        #     }
+        # }
 
         # 6. Map of Listings
         listings_map = {
