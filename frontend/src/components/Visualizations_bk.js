@@ -7,6 +7,15 @@ const Visualizations = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Color mapping exactly like backend
+    const PROPERTY_TYPE_COLORS = {
+        "Chung cư": "#1f77b4",  // Blue
+        "Biệt thự": "#ff7f0e",  // Orange
+        "Nhà riêng": "#2ca02c", // Green
+        "Đất": "#d62728",       // Red
+        "Khác": "#9467bd"       // Purple
+    };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -128,22 +137,13 @@ const Visualizations = () => {
                 },
                 textinfo: 'label+percent',
                 textposition: 'outside',
-                automargin: true,
-                domain: {
-                  x: [0.1, 0.9],
-                  y: [0.1, 0.9]
-                }
+                automargin: true
               },
             ]}
             layout={{
               ...layout,
-              height: height,
-              margin: { t: 40, r: 20, l: 20, b: 40 },
-              showlegend: true,
-              legend: {
-                orientation: 'h',
-                y: -0.1
-              }
+              height: height * 1.2,
+              margin: { t: 40, r: 20, l: 20, b: 40 }
             }}
             config={config}
             style={{ width: '100%', height: '100%' }}
@@ -178,149 +178,109 @@ const Visualizations = () => {
           />
         );
 
-      case 'scatter':
-        // Create separate traces for each property type
-        const scatterTraces = plotData.property_types.map(type => ({
-            type: 'scatter',
-            mode: 'markers',
-            x: plotData.x.filter((_, i) => plotData.hover_data.property_type[i] === type),
-            y: plotData.y.filter((_, i) => plotData.hover_data.property_type[i] === type),
-            marker: { 
-              color: plotData.colors[type],
-              size: 8,
-              opacity: 0.7
-            },
-            text: plotData.hover_data.title.filter((_, i) => plotData.hover_data.property_type[i] === type),
-            customdata: plotData.hover_data.district
-              .filter((_, i) => plotData.hover_data.property_type[i] === type)
-              .map((district, i) => [district, type]),
-            hovertemplate: 
-              '<b>%{text}</b><br>' +
-              'Area: %{x:.0f} m²<br>' +
-              'Price: %{y:.1f} tỷ VND<br>' +
-              'District: %{customdata[0]}<br>' +
-              'Type: %{customdata[1]}<extra></extra>',
-            hoverlabel: {
-              bgcolor: 'white',
-              font: { size: 12 }
-            },
-            name: type,
-            showlegend: true
-          }));
-  
-          return (
-            <Plot
-              data={scatterTraces}
-              layout={{
-                ...layout,
-                showlegend: true,
-                legend: {
-                  title: {
-                    text: 'Property Type',
-                    font: { size: 14 }
-                  },
-                  orientation: 'v',
-                  y: 0.5,
-                  x: 1.02,
-                  xanchor: 'left',
-                  yanchor: 'middle',
-                  bgcolor: 'rgba(255, 255, 255, 0.8)',
-                  bordercolor: 'rgba(0, 0, 0, 0.2)',
-                  borderwidth: 1
-                }
-              }}
-              config={config}
-              style={{ width: '100%', height: '100%' }}
-              useResizeHandler={true}
-            />
-          );
-  
-        // return (
-        //   <Plot
-        //     data={[
-        //       {
-        //         type: 'scatter',
-        //         mode: 'markers',
-        //         x: plotData.x,
-        //         y: plotData.y,
-        //         marker: { 
-        //           color: plotData.color,
-        //           size: 8,
-        //           opacity: 0.7
-        //         },
-        //         text: plotData.hover_data.title,
-        //         customdata: plotData.hover_data.district.map((_, i) => [
-        //             plotData.hover_data.district[i],
-        //             plotData.hover_data.property_type[i],
-        //         ]),
-        //         hovertemplate: 
-        //           '<b>%{text}</b><br>' +
-        //           'Area: %{x:.0f} m²<br>' +
-        //           'Price: %{y:.1f} tỷ VND<br>' +
-        //           'District: %{customdata[0]}<br>' +
-        //           'Type: %{customdata[1]}<extra></extra>',
-        //         hoverlabel: {
-        //           bgcolor: 'white',
-        //           font: { size: 12 }
-        //         }
-        //       },
-        //     ]}
-        //     layout={layout}
-        //     config={config}
-        //     style={{ width: '100%', height: '100%' }}
-        //     useResizeHandler={true}
-        //   />
-        // );
+      case "scatter": {
+        const propertyTypes = [...new Set(plotData.hover_data.property_type)];
 
-      case 'scattermapbox':
+        // Prepare traces per property type
+        const traces = propertyTypes.map((ptype) => {
+          const indexes = plotData.hover_data.property_type
+            .map((pt, i) => (pt === ptype ? i : -1))
+            .filter((i) => i !== -1);
+
+          return {
+            type: "scatter",
+            mode: "markers",
+            x: indexes.map((i) => plotData.x[i]),
+            y: indexes.map((i) => plotData.y[i]),
+            marker: {
+              size: 8,
+              opacity: 0.7,
+              color: PROPERTY_TYPE_COLORS[ptype] || "gray",
+            },
+            name: ptype,
+            text: indexes.map((i) => plotData.hover_data.title[i]),
+            customdata: indexes.map((i) => [
+              plotData.hover_data.district[i],
+              plotData.hover_data.property_type[i],
+            ]),
+            hovertemplate:
+              "<b>%{text}</b><br>" +
+              "Area: %{x:.0f} m²<br>" +
+              "Price: %{y:.1f} tỷ VND<br>" +
+              "District: %{customdata[0]}<br>" +
+              "Type: %{customdata[1]}<extra></extra>",
+          };
+        });
+
         return (
           <Plot
-            data={[
-              {
-                type: 'scattermapbox',
-                lat: plotData.lat,
-                lon: plotData.lon,
-                mode: 'markers',
-                marker: {
-                  size: plotData.size,
-                  color: plotData.color,
-                  opacity: 0.7,
-                },
-                text: plotData.hover_name,
-                customdata: plotData.hover_data.district.map((_, i) => [
-                    plotData.hover_data.district[i],
-                    plotData.hover_data.price[i],
-                    plotData.hover_data.area[i],
-                    plotData.hover_data.property_type[i],
-                ]),                  
-                hovertemplate: 
-                  '<b>%{text}</b><br>' +
-                  'District: %{customdata[0]}<br>' +
-                  'Price: %{customdata[1]:.1f} tỷ VND<br>' +
-                  'Area: %{customdata[2]:.0f} m²<br>' +
-                  'Type: %{customdata[3]}<extra></extra>',
-                hoverlabel: {
-                  bgcolor: 'white',
-                  font: { size: 12 }
-                }
-              },
-            ]}
+            data={traces}
+            layout={{ ...layout }}
+            config={config}
+            style={{ width: "100%", height: "100%" }}
+            useResizeHandler={true}
+          />
+        );
+      }
+
+      case "scattermapbox": {
+        console.log('Scattermapbox plotData:', plotData);
+        const propertyTypes = [...new Set(plotData.hover_data.property_type)];
+
+        // Scatter markers per property type
+        const scatterTraces = propertyTypes.map((ptype) => {
+          const indexes = plotData.hover_data.property_type
+            .map((pt, i) => (pt === ptype ? i : -1))
+            .filter((i) => i !== -1);
+
+          return {
+            type: "scattermapbox",
+            lat: indexes.map((i) => plotData.lat[i]),
+            lon: indexes.map((i) => plotData.lon[i]),
+            mode: "markers",
+            marker: {
+              size: indexes.map((i) => plotData.size[i]),
+              color: PROPERTY_TYPE_COLORS[ptype] || "gray",
+              opacity: 0.7,
+            },
+            text: indexes.map((i) => plotData.hover_name[i]),
+            name: ptype,
+            customdata: indexes.map((i) => [
+              plotData.hover_data.district[i],
+              plotData.hover_data.price[i],
+              plotData.hover_data.area[i],
+              plotData.hover_data.property_type[i],
+            ]),
+            hovertemplate:
+              "<b>%{text}</b><br>" +
+              "District: %{customdata[0]}<br>" +
+              "Price: %{customdata[1]:.1f} tỷ VND<br>" +
+              "Area: %{customdata[2]:.0f} m²<br>" +
+              "Type: %{customdata[3]}<extra></extra>",
+          };
+        });
+
+        return (
+          <Plot
+            data={scatterTraces}
             layout={{
               ...layout,
               mapbox: {
-                style: 'open-street-map',
+                style: "open-street-map",
                 center: { lat: 21.0285, lon: 105.8542 },
                 zoom: plotData.zoom,
               },
               margin: { r: 0, t: 40, l: 0, b: 0 },
             }}
             config={config}
-            style={{ width: '100%', height: '100%' }}
+            style={{ width: "100%", height: "100%" }}
             useResizeHandler={true}
           />
         );
+      }
 
       case 'choroplethmapbox':
+        console.log('Choroplethmapbox plotData:', plotData);
         return (
           <Plot
             data={[

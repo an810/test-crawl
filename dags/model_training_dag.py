@@ -5,6 +5,7 @@ from airflow.sensors.external_task import ExternalTaskSensor
 import sys
 import os
 import logging
+import requests
 
 # Add the scripts directory to Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'scripts'))
@@ -16,6 +17,17 @@ from prepare_data import prepare_data
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+def trigger_model_reload():
+    """Trigger the backend to reload models"""
+    try:
+        response = requests.post('http://localhost:5001/reload-models')
+        response.raise_for_status()
+        logger.info("Successfully triggered model reload")
+        return True
+    except Exception as e:
+        logger.error(f"Error triggering model reload: {str(e)}")
+        return False
 
 default_args = {
     'owner': 'airflow',
@@ -77,5 +89,12 @@ train_recommendation = PythonOperator(
     dag=dag
 )
 
+# Add model reload task
+reload_models = PythonOperator(
+    task_id='reload_models',
+    python_callable=trigger_model_reload,
+    dag=dag
+)
+
 # Set task dependencies
-[wait_for_batdongsan, wait_for_nhatot] >> prepare_data_task >> [train_price, train_recommendation] 
+[wait_for_batdongsan, wait_for_nhatot] >> prepare_data_task >> [train_price, train_recommendation] >> reload_models 
