@@ -89,7 +89,7 @@ def infer_property_type(title):
 def load_and_process_data() -> Dict[str, Any]:
     try:
         # Load the real estate data
-        df = pd.read_csv("/Users/ducan/Documents/test/cleaning/output/visualization_data.tsv", sep="\t")
+        df = pd.read_csv("/home/ducan/Documents/anmd/test-crawl/cleaning/output/visualization_data.tsv", sep="\t")
         
         # Add property_type if it doesn't exist
         if 'property_type' not in df.columns:

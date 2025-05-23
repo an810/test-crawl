@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from house_price import router as house_price_router
+# from house_price import router as house_price_router
 from map_visualization import router as map_visualization_router
 
 
@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(house_price_router, prefix="/api/v1/house-price", tags=["house-price"])
+# app.include_router(house_price_router, prefix="/api/v1/house-price", tags=["house-price"])
 app.include_router(map_visualization_router, tags=["map-visualization"])
 
 @app.get("/")

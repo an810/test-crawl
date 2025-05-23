@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Predict from './pages/Predict';
 import Subscribe from './pages/Subscribe';
-import Map from './pages/Map';
 import VisualizationsPage from './pages/Visualizations';
 
 const theme = createTheme({
@@ -30,7 +29,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/predict" element={<Predict />} />
           <Route path="/subscribe" element={<Subscribe />} />
-          <Route path="/map" element={<Map />} />
           <Route path="/visualizations" element={<VisualizationsPage />} />
         </Routes>
       </Router>

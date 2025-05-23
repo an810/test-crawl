@@ -6,6 +6,7 @@ const Visualizations = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   // Color mapping exactly like backend
     const PROPERTY_TYPE_COLORS = {
@@ -28,6 +29,10 @@ const Visualizations = () => {
         const visualizationData = await response.json();
         console.log('Received data:', visualizationData);
         setData(visualizationData);
+        setTimeout(() => {
+          console.log('Map loaded, setting mapLoaded to true');
+          setMapLoaded(true);
+        }, 1000);
       } catch (error) {
         console.error('Error fetching visualization data:', error);
         setError(error.message);
@@ -114,7 +119,8 @@ const Visualizations = () => {
                 nbinsx: plotData.nbins,
                 marker: {
                   color: plotData.color
-                }
+                },
+                name: 'on/off'
               },
             ]}
             layout={layout}
@@ -142,7 +148,7 @@ const Visualizations = () => {
             ]}
             layout={{
               ...layout,
-              height: height * 1.2,
+              height: height * 1,
               margin: { t: 40, r: 20, l: 20, b: 40 }
             }}
             config={config}
@@ -161,7 +167,8 @@ const Visualizations = () => {
                 y: plotData.y,
                 marker: {
                   color: plotData.color
-                }
+                },
+                name: 'on/off'
               },
             ]}
             layout={{
@@ -271,7 +278,7 @@ const Visualizations = () => {
               mapbox: {
                 style: "open-street-map",
                 center: { lat: 21.0285, lon: 105.8542 },
-                zoom: plotData.zoom,
+                zoom: plotData.zoom || 11,
               },
               margin: { r: 0, t: 40, l: 0, b: 0 },
             }}
@@ -304,16 +311,24 @@ const Visualizations = () => {
                 text: plotData.district_labels.text,
                 textfont: { size: 11, color: 'black' },
                 hoverinfo: 'skip',
+                name: 'District Name',
               },
             ]}
             layout={{
               ...layout,
               mapbox: {
                 style: 'open-street-map',
-                center: plotData.center,
-                zoom: plotData.zoom,
+                center: plotData.center || { lat: 21.0285, lon: 105.8542 },
+                zoom: plotData.zoom || 11,
               },
               margin: { r: 0, t: 40, l: 0, b: 0 },
+              legend: {
+                orientation: 'h',
+                yanchor: 'bottom',
+                y: 1.5,
+                xanchor: 'left',
+                x: 0.5,
+              }
             }}
             config={config}
             style={{ width: '100%', height: '100%' }}
@@ -360,12 +375,12 @@ const Visualizations = () => {
         </Grid>
         <Grid item xs={12}>
           <Paper elevation={3} sx={{ p: 2, height: 600, overflow: 'hidden' }}>
-            {renderPlot(data?.listings_map, 600)}
+            {mapLoaded && renderPlot(data?.listings_map, 600)}
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper elevation={3} sx={{ p: 2, height: 600, overflow: 'hidden' }}>
-            {renderPlot(data?.choropleth_map, 600)}
+          <Paper elevation={3} sx={{ p: 2, height: 700, overflow: 'hidden' }}>
+            {mapLoaded && renderPlot(data?.choropleth_map, 700)}
           </Paper>
         </Grid>
       </Grid>
